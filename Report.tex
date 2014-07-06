@@ -1,0 +1,67 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,alltt,bera,upref,fancyvrb}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small}
+\DefineVerbatimEnvironment{example}{Verbatim}{fontsize=\small}
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+\makeindex
+
+
+\title{Technical Report}
+\author{Sheeyla Garcia, Jesus Hernandez, Kyle Nicola, Stephen Ridings, Andres Rodriguez, Mark Sandan}
+\date{ }
+\begin{document}
+\thispagestyle{plain}
+ 
+\maketitle
+ 
+\tableofcontents
+ 
+\section{The Website}
+Summary of website, layout, and design.  
+
+\section{Implementation}
+Summary of technologies used and their purpose. Highlite any particular features of technologies used.
+Django, PythonAnywhere, sqlite3? (SQL), twitter bootstrap,Apiary
+\section{RESTful  API}
+What our API does and how it interacts with the DB
+\section{Django Models}
+Detailed documentation of each of our Django models
+
+TODO: add figures such as website layout and DB schema.
+
+\end{document}
