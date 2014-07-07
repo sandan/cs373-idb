@@ -1,12 +1,13 @@
 <body style="background-color:purple">
 <h3 style="background-color:red;border-radius:25;width:50;">Artist </h3>
 <div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
-<div style="background-color:red;border-radius:75px;height:370px;width:200px;text-align:left; float:right;margin-right:100px;">
+<div style="background-color:red;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
 <ul style="list-style-type:none">
-<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"<a href="www.google.com">link</a></div>
-<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"<a href="www.google.com">link</a></div>
-<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"<a href="www.google.com">link</a></div>
-<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"<a href="www.google.com">link</a></div>
+
+<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">link</a></div></li>
+<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">link</a></div></li>
+<li><div style="background-color:yellow;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">link</a></div></li>
+
 </ul>
 </div>
 <img src="http://captainsdead.com/wp-content/uploads/2009/11/pearl-jam.jpg" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
