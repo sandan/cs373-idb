@@ -1,38 +1,299 @@
 FORMAT: 1A
-HOST: http://www.google.com
+HOST: http://theaustinites.pythonanywhere.com/api
 
-# test
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# Austin City Limits Project API
+ACL API is a representation of the bands, stages, events, and artists appearing at 
+**Austin City Limits**.
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group Stage
 
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
+## Stage [/stages/{id}]
+A single stage object. The Stage resource represents a stage.
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+The Stage resource has the following attributes:
 
-### Create a Note [POST]
-+ Request (application/json)
+- id
+- name
 
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
+The stages *id* are assigned by the ACL Project API at the moment of creation.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (integer) ... ID of the Stage in the form of a number
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Stage resource.
 
-### Retrieve a Note [GET]
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/stages/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "stages/42" }
+                },
+                "id": "42",
+                "name": "Stage name"
+            }
+
+### Retrieve a single Stage [GET]
++ Response 200 (application/json)
+
+        [Stage][]
+        
+### Edit a stage [PATCH]
+To update a Stage send a JSON with the update value(s)
+
++ Request (application/json)
+
+        {
+            "name": "Updated file contents"
+        }
+
++ Response 200
+
+    [Stage][]
+
+### Delete a Stage [DELETE]
++ Response 204
+
+
+## Stage Collection [/Stages]
+Collection of all Stages
+
+It **embeds** *Stage Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Stage Collection Resource.  The Stage resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/stages>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/stages" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "stages/42" }
+                            },
+                            "id": "42",
+                            "name": "Stage name"
+                        }
+                    ]
+                }
+            }
+            
+### List All Stages [GET]
++ Response 200
+    
+    [Stage Collection][]
+
+### Create a Stage [POST]
+To create a stage provide the JSON hash of the *name* attribute
+
++ Request (application/json)
+        
+        {
+            "name": "Name of stage"
+        }
+
++ Response 201 (application/hal+json)
+
+    [Stage][]
+    
+# Group Sponsor
+Sponsor related resources of the **ACL API**
+
+## Sponsor [/sponsors/{id}]
+A single sponsor object.  The Sponsor resource represents a sponsor
+
+The Sponsor resource has the following attributes:
+
+- id
+- name
+- business_type
+- website
+- stage
+
+The state *id* are assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (integer) ... ID of the Sponsor in the form of a number
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Sponsor resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/sponsor/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "sponsors/42" }
+                },
+                "id": "42",
+                "name": "Sponsor name",
+                "business_type": "Type of Business",
+                "website": "URL of sponsor website",
+                "stage": "Stage id"
+            }
+
+### Retrieve a single Sponsor [GET]
++ Response 200 (application/json)
+
+        [Sponsor][]
+        
+### Edit a Sponsor [PATCH]
+To update a Sponsor send a JSON with the update value(s)
+
++ Request (application/json)
+
+        {
+            "name": "Updated name",
+            "business_type": "Updated business type",
+            "website": "Updated URL",
+            "stage": "Updated stage id"
+        }
+
++ Response 200
+
+    [Sponsor][]
+
+### Delete a Sponsor [DELETE]
++ Response 204
+
+
+## Sponsor Collection [/sponsors]
+Collection of all Sponsors
+
+It **embeds** *Sponsor Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/sponsors>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/sponsors" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "sponsor/42" }
+                            },
+                            "id": "42",
+                            "name": "Sponsor name",
+                            "business_type": "Type of Buisiness",
+                            "website": "URL of sponsor"
+                            "stage": "Stage ID"
+                        }
+                    ]
+                }
+            }
+            
+### List All Sponsors [GET]
++ Response 200
+    
+    [Sponsor Collection][]
+
+### Create a Sponsor [POST]
+To create a sponsor provide the JSON hash of the *name*, *buisiness_type*, *website*, and *stage* attributes
+
++ Request (application/json)
+        
+        {
+            "name": "Name of stage",
+            "business_type": "Type of Buisiness",
+            "website": "URL of sponsor"
+            "stage": "Stage ID"
+        }
+
++ Response 201 (application/hal+json)
+
+    [Sponsor][]
+    
+# Group Artist
+Artist related resources of the **ACL API**
+
+## Artist [/artists/{id,name,stage,label,origin,website,genre}]
+A single Artist object with all its details
+
+The Artist resource has the following attributes:
+
+- id
+- name
+- label
+- origin
+- website
+- genre
+- stage
+
+The artist **ids** are assigned by the ACL Project API at the moment of creation.
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Artist to perform action with.
+    + name (required, string, `Outkast`) ... `name` of the Artist to perform action with.
+    + label (string, ``) ... Label that the Artist signed with.
+    + origin (string, ``) ... Origin of Artist.
+    + website (string, ``) ... The artist's official website or fan site.
+    + genre (string, `Hip Hop`) ... The genre of the Artist.
+    + stage (required, string, `Honda stage`) ... The ACL sponsored stage the artist is performing in.
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Artist resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "artists/42" }
+                },
+                "id": "42",
+                "name": "Artist name"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "website": "URL to the artist"
+                "genre": "Genre of the artist"
+                "stage": "Stage the artist performs in"
+            }
+            
+### Modify an Artist [PUT]
++ Request (application/json)
+        
+        {
+            "name": "Name of artist"
+            "label": "Label of artist"
+            "origin": "Where the artist was from"
+            "website": "URL to the artist"
+            "genre": "Genre of the artist"
+            "stage": "Stage the artist performs in"
+        }
+
++ Response 201 (application/hal+json)
+
+    
+
+### Retrieve an Artist [GET]
 + Response 200 (application/json)
 
     + Header
@@ -43,5 +304,9 @@ A single Note object with all its details
 
             { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a Note [DELETE]
+### Remove an Artist [DELETE]
 + Response 204
+
+
+
+
