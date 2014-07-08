@@ -306,9 +306,66 @@ The artist **ids** are assigned by the ACL Project API at the moment of creation
                 "genre": "Genre of the artist"
                 "stage": "Stage the artist performs in"
             }
+            
 
 ### Remove an Artist [DELETE]
 + Response 204
+
+## Artist Collection [/artists]
+Collection of all Artists
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Artist Collection Resource.  
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/artists" }
+                },
+                "_embedded": {
+                    "artists": [
+                        {
+                            "_links" : {
+                                "self": { "href": "artists/" }
+                            },
+                                "name": "Name of artist"
+                                "label": "Label of artist"
+                                "origin": "Where the artist was from"
+                                "website": "URL to the artist"
+                                "genre": "Genre of the artist"
+                                "stage": "Stage the artist performs in"
+            
+                        }
+                    ]
+                }
+            }
+            
+### List All Sponsors [GET]
++ Response 200
+    
+    [Sponsor Collection][]
+
+### Create a Sponsor [POST]
+To create a sponsor provide the JSON hash of the *name*, *buisiness_type*, *website*, and *stage* attributes
+
++ Request (application/json)
+        
+        {
+            "name": "Name of stage",
+            "business_type": "Type of Buisiness",
+            "website": "URL of sponsor"
+            "stage": "Stage ID"
+        }
+
++ Response 201 (application/hal+json)
+
+    [Sponsor][]
 
 
 
