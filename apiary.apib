@@ -232,7 +232,7 @@ To create a sponsor provide the JSON hash of the *name*, *buisiness_type*, *webs
 # Group Artist
 Artist related resources of the **ACL API**
 
-## Artist [/artists/{id,name,stage,label,origin,website,genre}]
+## Artist [/artists/name]
 A single Artist object with all its details
 
 The Artist resource has the following attributes:
@@ -247,13 +247,9 @@ The Artist resource has the following attributes:
 
 The artist **ids** are assigned by the ACL Project API at the moment of creation.
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Artist to perform action with.
+
     + name (required, string, `Outkast`) ... `name` of the Artist to perform action with.
-    + label (string, ``) ... Label that the Artist signed with.
-    + origin (string, ``) ... Origin of Artist.
-    + website (string, ``) ... The artist's official website or fan site.
-    + genre (string, `Hip Hop`) ... The genre of the Artist.
-    + stage (required, string, `Honda stage`) ... The ACL sponsored stage the artist is performing in.
+    
     
 + Model (application/hal+json)
     HAL+JSON representation of Artist resource.
