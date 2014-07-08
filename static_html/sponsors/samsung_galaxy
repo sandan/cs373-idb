@@ -1,5 +1,5 @@
-<body style="background-color:9966FF">
-<h3 style="background-color:FF3333;border-radius:25;width:50;">Artist </h3>
+<body style="background-color:99FF99">
+<h3 style="background-color:FF3333;border-radius:25;width:70;">Sponsor </h3>
 <div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
 <div style="background-color:FF3333;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
 <ul style="list-style-type:none">
@@ -10,29 +10,33 @@
 
 </ul>
 </div>
-<img src="http://captainsdead.com/wp-content/uploads/2009/11/pearl-jam.jpg" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
+<img src="http://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Smartphone.jpeg/1280px-Smartphone.jpeg" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
 <div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:0px;border-radius:10px"></div>
-<h3> Artist: Pearl Jam </h3>
-<h3> Label: Monkeywrench </h3>
-<h3> Origin: Seattle </h3>
-<h3> Website: <a href="www.pearljam.com">www.pearljam.com</a>
-<h3> Genre: Alternative Rock </h3>
-<h3> Stage: Bud Light </h3>
-<h3> Bio: Along with Nirvana, Pearl Jam were initially known for popularizing grunge, the Seattle sound that exploded nationwide in the early Nineties. But the band became an American rock institution by broadening their heavy, Led Zeppelin-influenced sound while maintaining the emotional depth that made their songs so resonant in the first place. Leaping from obscurity to superstardom, the band sold more than 15 million copies of its first two albums, and after a couple of years during which they got mired in high-profile controversies, Pearl Jam recovered and were still filling arenas at the close of the 2000s.
+<h3> Sponsor: Samsung Galaxy </h3>
+<h3> Headquarters: Samsung Town, Seoul </h3>
+<h3> Stage: Honda </h3>
+<h3> Artists: Eminem, Outkast, Pearl Jam </h3>
+<h3> Website: <a href="http://www.samsung.com">www.samsung.com</a> </h3>
+<h3> Facebook: <a href="www.facebook.com/SamsungMobileUSA/app_544972968896298">www.facebook.com/SamsungMobileUSA</a>
 
-Follow us: @rollingstone on Twitter | RollingStone on Facebook
-<h3><center><a href="http://www.youtube.com/channel/UClQT6Vnsm6BUm0I5kR26EkQ">Youtube Channel</a></h3></center>
+<h3> Bio: Samsung Galaxy (stylized as Samsung GALAXY) is a series of Android-powered mobile computing devices designed, manufactured and marketed by Samsung Electronics. The product line includes the Galaxy S series of high-end smartphones, the Galaxy Tab series of tablets, the Galaxy Note series of tablets and phablets with the added functionality of a stylus and the first version of the Galaxy Gear Smartwatch, with later versions dropping the Galaxy branding.
+
+<h3><center><a href="http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ">Youtube Channel</a></h3></center>
 
 <div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:50px;border-radius:10px"></div>
 
 <object align="left" style="margin-left:500">
-<iframe width="500" height="400" src="//www.youtube.com/embed/AFVlJAi3Cso" frameborder="0" allowfullscreen></iframe></object>
+<iframe width="500" height="400" src="//www.youtube.com/embed/kPHYJKKEGV4" frameborder="0" allowfullscreen></iframe></object>
 
 <div style="background-color:black;height:550px;width:5px;float:left;border-radius:10px;margin-left:75px;margin-top:-50px"></div>
 
 <object align = "right" style="margin-right:500">
-<a class="twitter-timeline" href="https://twitter.com/PearlJam" data-widget-id="485562674516729856">Tweets by @PearlJam</a>
+<a class="twitter-timeline" href="https://twitter.com/SamsungMobile" data-widget-id="486303754577117184">Tweets by @SamsungMobile</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
 
 </object>
 
