@@ -256,13 +256,13 @@ The artist **ids** are assigned by the ACL Project API at the moment of creation
 
     + Headers
     
-            Link: <https://theaustinites.pythonanywhere.com/artists/42>;rel="self"
+            Link: <https://theaustinites.pythonanywhere.com/artists/Outkast>;rel="self"
         
     + Body
     
             {
                 "_links": {
-                    "self": { "href": "artists/42" }
+                    "self": { "href": "artists/Outkast" }
                 },
                 "id": "42",
                 "name": "Artist name"
@@ -298,7 +298,14 @@ The artist **ids** are assigned by the ACL Project API at the moment of creation
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+            {
+                "name": "Name of artist"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "website": "URL to the artist"
+                "genre": "Genre of the artist"
+                "stage": "Stage the artist performs in"
+            }
 
 ### Remove an Artist [DELETE]
 + Response 204
