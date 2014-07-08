@@ -346,26 +346,27 @@ Collection of all Artists
                 }
             }
             
-### List All Sponsors [GET]
+### List All Artists[GET]
 + Response 200
     
     [Sponsor Collection][]
 
-### Create a Sponsor [POST]
-To create a sponsor provide the JSON hash of the *name*, *buisiness_type*, *website*, and *stage* attributes
+### Create an Artist [POST]
 
 + Request (application/json)
         
         {
-            "name": "Name of stage",
-            "business_type": "Type of Buisiness",
-            "website": "URL of sponsor"
-            "stage": "Stage ID"
+            "name": "Name of artist"
+            "label": "Label of artist"
+            "origin": "Where the artist was from"
+            "website": "URL to the artist"
+            "genre": "Genre of the artist"
+            "stage": "Stage the artist performs in"
         }
 
 + Response 201 (application/hal+json)
 
-    [Sponsor][]
+    [Artist][]
 
 
 
