@@ -1,0 +1,37 @@
+<body style="background-color:6666FF">
+<h3 style="background-color:FF3333;border-radius:25;width:50;">Artist </h3>
+<div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
+<div style="background-color:FF3333;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
+<ul style="list-style-type:none">
+
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">ARTISTS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">SPONSORS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">EVENTS</a></div></li>
+
+</ul>
+</div>
+<img src="http://thumbs.hh.ulximg.com/public/img/avatar/500_1346353449_eminem.jpg" height="400" width = "400" style="margin-left:300" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:0px;border-radius:10px"></div>
+<h3> Artist: Eminem </h3>
+<h3> Label: Interscope </h3>
+<h3> Origin: Detroit </h3>
+<h3> Website: <a href="www.eminem.com">www.eminem.com</a>
+<h3> Genre: Hip-Hop </h3>
+<h3> Stage: Samsung </h3>
+<h3> Bio: He released The Slim Shady LP in early 1999, and the album went multi-platinum, garnering Eminem two Grammy Awards and four MTV Video Music Awards. In 2000, the rapper released The Marshall Mathers LP, which was noted as the fastest-selling album in rap history. More recently, in 2010, Eminem released the Grammy-winning album Recovery, a highly autobiographical attempt to come to terms with his struggles with addiction and experience with rehabilitation. Eminem released his eighth album, MMLP2, in 2013. Eminem is the best-selling artist of the 2000s in the United States.</h3>
+
+<h3><center><a href=<a href="www.youtube.com/user/EminemMusic" >Youtube Channel</a></h3></center>
+
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:50px;border-radius:10px"></div>
+
+<object align="left" style="margin-left:500">
+<iframe width="500" height="400" src="//www.youtube.com/embed/EHkozMIXZ8w" frameborder="0" allowfullscreen></iframe></object>
+
+<div style="background-color:black;height:550px;width:5px;float:left;border-radius:10px;margin-left:75px;margin-top:-50px"></div>
+
+<object align = "right" style="margin-right:500">
+<a class="twitter-timeline" href="https://twitter.com/Eminem" data-widget-id="485886852818149376">Tweets by @Eminem</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</object>

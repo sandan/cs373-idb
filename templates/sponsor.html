@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Honda{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <h1>{{ sponsor.name }}</h1>
+    <h4>Type: <small>{{ sponsor.business_type }}<small></h4>
+    <h4>Website: <small><a href='http://www.honda.com/'>{{ sponsor.website }}</a><small></h4>
+    <h4>Stage: <small>{{ sponsor.stage }}<small></h4>
+</div>
+
+{% endblock %}
