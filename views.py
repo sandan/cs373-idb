@@ -9,3 +9,24 @@ def index(request):
     c = Context()
     template = loader.get_template('index.html')
     return HttpResponse(template.render(c))
+
+def loadhtml(request,f):
+    c = Context()
+    f += '.html'
+    template = loader.get_template(f)
+    return HttpResponse(template.render(c))
+
+# def honda(request):
+#     c = Context()
+#     template = loader.get_template('honda.html')
+#     return HttpResponse(template.render(c))
+
+# def millerlite(request):
+#     c = Context()
+#     template = loader.get_template('miller-lite.html')
+#     return HttpResponse(template.render(c))
+
+# def sponsors(request):
+#     c = Context()
+#     template = loader.get_template('sponsors.html')
+#     return HttpResponse(template.render(c))
