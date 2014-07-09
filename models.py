@@ -39,7 +39,7 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
-class ArtistPhoto(models.Model):
+class Photo(models.Model):
     #artist_pic     = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
     file_name       = models.CharField(max_length=400)
     artist          = models.ForeignKey(Artist)
@@ -47,7 +47,7 @@ class ArtistPhoto(models.Model):
     def __str__(self):
         return self.file_name
 
-class ArtistMember(models.Model):
+class Member(models.Model):
     first_name      = models.CharField(max_length=400)
     last_name       = models.CharField(max_length=400)
     artist          = models.ForeignKey(Artist)
