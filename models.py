@@ -64,4 +64,4 @@ class Event (models.Model):
     sponsor     = models.CharField(max_length=400)
     
     def __str__(self):
-        return self.file_name
+        return self.name
