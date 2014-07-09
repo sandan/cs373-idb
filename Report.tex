@@ -3,7 +3,7 @@
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,alltt,bera,upref,fancyvrb}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
-
+\usepackage{graphicx}
 
 \textheight=8.5truein
 \textwidth=6.0truein
@@ -63,6 +63,9 @@ Using Django's templating language we are able to reuse html files by extending 
 uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content.
 
 [UML model here]
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{UML}
+\end{figure}
 
 \subsection{App Design}
 The current directory structure on PythonAnywhere is outlined below for reference to files:
@@ -71,6 +74,7 @@ The current directory structure on PythonAnywhere is outlined below for referenc
 
 \subsection{Web Pages}
 Each web page has basic information about a particular artist, sponsor, or stage involved in the ACL music festival.
+Each page includes a bio, video, official website, Youtube channel, a Twitter feed, and Picture.
 \subsubsection{Artists}
 Artist Pages can be reached from the home page or from Stage pages depending on whether the Artist played on
 a Stage that was hosted by a Sponsor. 
@@ -95,7 +99,18 @@ The following subsections document the attributes and intended functionality of 
 \subsubsection{Stage}
 
 \subsubsection{Photo}
-The p
+The Photo class extends from the Django models.Models class and has two main attributes: 
+\begin{verbatim}
+file_name
+artist
+ \end{verbatim}
+
+The Foreign key is the artist that the Photo is associated with. Thus the Artist is a parent
+of a one-to-many relationship with a Photo. Currently the only method defined is 
+\begin{verbatim}
+__str__ 
+\end{verbatim} 
+
 \subsubsection{Event}
 
 \subsubsection{Member}
