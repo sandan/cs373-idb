@@ -93,10 +93,48 @@ The REST API for the website currently documents only GET
 The Django models created represent the entities we intend to keep in the database for the future when use dynamically loaded pages.
 The following subsections document the attributes and intended functionality of each class instance method.
 \subsubsection{Artist}
+The Artist class is implemented using the following:
+
+attributes:
+- id: Primary Key, integer type field
+- name: a character type field with a maximum length of 400 characters
+- lable: a character type field with a maximum length of 400 characters
+- origin: a character type field with a maximum length of 400 characters
+- website: a character type field with a maximum length of 400 characters
+- genre: a character type field with a maximum length of 400 characters
+- stage: Foreign Key, integer of type field
+
+methods:
+- get.url(): a character type field with a maximum of number of 400 characters.
+- __str__(): a character type field with a maximum of number of 400 characters.
+
 
 \subsubsection{Sponsor}
+The Sponsor class is implemented using the following:
+
+attributes:
+- id: Primary Key, integer type field
+- name: a character type field with a maximum length of 400 characters
+- sponsor_pic: BLOB
+- business_type: a character type field with a maximum length of 400 characters
+- website: a character type field with a maximum length of 400 characters
+- stage: Foreign Key, integer of type field
+
+methods:
+- get.url(): a character type field with a maximum of number of 400 characters.
+- __str__(): a character type field with a maximum of number of 400 characters.
 
 \subsubsection{Stage}
+The Stage class is implemented using the following:
+
+attributes:
+- id: Primary Key, integer type field
+- name: a character type field with a maximum length of 400 characters
+- sponsor: Foreign Key, integer of type field
+
+methods:
+- get.url(): a character type field with a maximum of number of 400 characters.
+- __str__(): a character type field with a maximum of number of 400 characters.
 
 \subsubsection{Photo}
 The Photo class extends from the Django models.Models class and has two main attributes: 
