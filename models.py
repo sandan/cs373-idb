@@ -4,6 +4,13 @@ from django.db import models
 
 class Stage(models.Model):
     name            = models.CharField(max_length=400, unique=True)
+    #sponsor        = models.ForeignKey(Sponsor)
+
+    # def get_name(self):
+    #     return self.name
+
+    def get_url(self):
+        return "/stages/%s/" % self.id
 
     def __str__(self):
         return self.name
@@ -14,6 +21,16 @@ class Sponsor(models.Model):
     business_type   = models.CharField(max_length=400)
     website         = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
+
+
+    # def get_name(self):
+    #     return self.name
+
+    # def get_business_type(self):
+    #     return self.busoness_type
+
+    def get_url(self):
+        return "/sponsors/%s/" % self.id
 
     def __str__(self):
         return self.name
@@ -26,10 +43,13 @@ class Artist(models.Model):
     genre           = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage)
 
+    def get_url(self):
+        return "/artists/%s/" % self.id
+
     def __str__(self):
         return self.name
 
-class ArtistPhoto(models.Model):
+class Photo(models.Model):
     #artist_pic     = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
     file_name       = models.CharField(max_length=400)
     artist          = models.ForeignKey(Artist)
@@ -37,7 +57,7 @@ class ArtistPhoto(models.Model):
     def __str__(self):
         return self.file_name
 
-class ArtistMember(models.Model):
+class Member(models.Model):
     first_name      = models.CharField(max_length=400)
     last_name       = models.CharField(max_length=400)
     artist          = models.ForeignKey(Artist)
@@ -47,4 +67,5 @@ class ArtistMember(models.Model):
         if(self.last_name):
             ret_str += " " + self.last_name
         return ret_str
+
 
