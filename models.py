@@ -6,8 +6,11 @@ class Stage(models.Model):
     name            = models.CharField(max_length=400, unique=True)
     #sponsor        = models.ForeignKey(Sponsor)
 
+    # def get_name(self):
+    #     return self.name
+
     def get_url(self):
-        return "/stages/%s/" % self.name
+        return "/stages/%s/" % self.id
 
     def __str__(self):
         return self.name
@@ -19,8 +22,15 @@ class Sponsor(models.Model):
     website         = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
 
+
+    # def get_name(self):
+    #     return self.name
+
+    # def get_business_type(self):
+    #     return self.busoness_type
+
     def get_url(self):
-        return "/sponsors/%s/" % self.name
+        return "/sponsors/%s/" % self.id
 
     def __str__(self):
         return self.name
@@ -34,7 +44,7 @@ class Artist(models.Model):
     stage           = models.ForeignKey(Stage)
 
     def get_url(self):
-        return "/artists/%s/" % self.name
+        return "/artists/%s/" % self.id
 
     def __str__(self):
         return self.name
