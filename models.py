@@ -58,10 +58,4 @@ class Member(models.Model):
             ret_str += " " + self.last_name
         return ret_str
 
-class Event (models.Model):
-    name        = models.CharField(max_length=400)
-    location    = models.CharField(max_length=400)
-    sponsor     = models.CharField(max_length=400)
-    
-    def __str__(self):
-        return self.name
+
