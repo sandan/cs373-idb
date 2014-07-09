@@ -1,47 +1,445 @@
 FORMAT: 1A
-HOST: http://www.google.com
+HOST: http://theaustinites.pythonanywhere.com/
 
-# test
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# Austin City Limits Project API
+ACL Project is a representation of the bands, stages, events, and artists appearing at 
+**Austin City Limits**.
 
-# Group Notes
-Notes related resources of the **Notes API**
+The API allows **GET** requests to the following:
 
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
+* Stages
+* Sponsors
+* Artists
+* Members
+* Photos
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+# Group Stage
+Stage related resources of the Austin City Limits Project API
 
-### Create a Note [POST]
-+ Request (application/json)
+## Stage [/stages/{id}]
+A single stage object. The Stage resource represents a stage.
 
-        { "title": "Buy cheese and bread for breakfast." }
+The Stage resource has the following attributes:
 
-+ Response 201 (application/json)
+- id
+- name
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
+The stages *id* are assigned by the ACL Project API at the moment of creation.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (integer) ... ID of the Stage in the form of a number
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Stage resource.
 
-### Retrieve a Note [GET]
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/stages/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "stages/42" }
+                },
+                "id": 42,
+                "name": "Stage name"
+            }
+
+### Retrieve a single Stage [GET]
 + Response 200 (application/json)
 
-    + Header
+    [Stage][]
+        
 
-            X-My-Header: The Value
 
+## Stage Collection [/stages]
+Collection of all Stages
+
+It **embeds** *Stage Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Stage Collection Resource.  The Stage resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/stages>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/stages" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "stages/42" }
+                            },
+                            "id": 42,
+                            "name": "Stage name"
+                        }
+                    ]
+                }
+            }
+            
+### List All Stages [GET]
++ Response 200
+    
+    [Stage Collection][]
+    
+# Group Sponsor
+Sponsor related resources of the **ACL API**
+
+## Sponsor [/sponsors/{id}]
+A single sponsor object.  The Sponsor resource represents a sponsor
+
+The Sponsor resource has the following attributes:
+
+- id
+- name
+- business_type
+- website
+- stage
+
+The state *id* is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (integer) ... ID of the Sponsor in the form of a number
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Sponsor resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/sponsor/42>;rel="self"
+        
     + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "sponsors/42" }
+                },
+                "id": 42,
+                "name": "Sponsor name",
+                "business_type": "Type of Business",
+                "website": "URL of sponsor website",
+                "stage_id": 12
+            }
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+### Retrieve a single Sponsor [GET]
++ Response 200 (application/json)
 
-### Remove a Note [DELETE]
-+ Response 204
+    [Sponsor][]
+
+
+## Sponsor Collection [/sponsors]
+Collection of all Sponsors
+
+It **embeds** *Sponsor Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/sponsors>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/sponsors" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "sponsor/42" }
+                            },
+                            "id": 42,
+                            "name": "Sponsor name",
+                            "business_type": "Type of Buisiness",
+                            "website": "URL of sponsor"
+                            "stage_id": 22
+                        }
+                    ]
+                }
+            }
+            
+### List All Sponsors [GET]
++ Response 200
+    
+    [Sponsor Collection][]
+
+    
+# Group Artist
+Artist related resources of the **ACL API**
+
+## Artist [/artists/{id}]
+A single Artist object with all its details
+
+The Artist resource has the following attributes:
+
+- id
+- name
+- label
+- origin
+- website
+- genre
+- stage
+
+The artist **id** is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Artist to perform action with.
+
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Artist resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "artists/42" }
+                },
+                "id": 42,
+                "name": "Artist name"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "website": "URL to the artist"
+                "genre": "Genre of the artist"
+                "stage": 22
+            }
+            
+
+
+### Retrieve an Artist [GET]
++ Response 200 (application/json)
+
+    [Artist][]
+    
+## Artist Collection [/artists]
+Collection of all Artists
+
+It **embeds** *Artist Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/artists" }
+                },
+                "_embedded": {
+                    "artists": [
+                        {
+                            {
+                                "_links": {
+                                    "self": { "href": "artists/42" }
+                                },
+                                "id": 42,
+                                "name": "Artist name"
+                                "label": "Label of artist"
+                                "origin": "Where the artist was from"
+                                "website": "URL to the artist"
+                                "genre": "Genre of the artist"
+                                "stage": 22
+                            }
+                        }
+                    ]
+                }
+            }
+            
+### List All Artists [GET]
++ Response 200
+    
+    [Artist Collection][]
+
+# Group Member
+Member related resources of the **ACL API**
+
+## Member [/artists/{artist_id}/members/{id}]
+A single Member object with all its details
+
+The Member resource has the following attributes:
+
+- id
+- first_name
+- last_name
+- artist_id
+
+The member **id** is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Member to perform action with.
+    + artist_id (required, number, `1`) ... Numberic `id` of the Artist.
+
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Member resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/members/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "artists/22/members/42" }
+                },
+                "id": 42,
+                "first_name": "Member's first name"
+                "last_name": "Member's last name"
+                "aritst_id": 22
+            }
+            
+
+
+### Retrieve an Member [GET]
++ Response 200 (application/json)
+
+    [Member][]
+    
+## Member Collection [/artists/{artist_id}/members]
+Collection of all Members
+
+It **embeds** *Member Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Member Collection Resource.  The Member resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/members>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/artists/22/members" }
+                },
+                "_embedded": {
+                    "members": [
+                        {
+                            "_links": {
+                                "self": { "href": "artists/22/members/42" }
+                            },
+                            "id": 42,
+                            "first_name": "Member's first name"
+                            "last_name": "Member's last name"
+                            "aritst_id": 22
+                        }
+                    ]
+                }
+            }
+            
+### List All Members [GET]
++ Response 200
+    
+    [Member Collection][]
+
+
+# Group Photo
+Photo related resources of the **ACL API**
+
+## Photo [/artists/{artist_id}/photos/{id}]
+A single Photo object with all its details
+
+The Photo resource has the following attributes:
+
+- id
+- file_name
+- artist_id
+
+The photo **id** is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Photo to perform action with.
+    + artist_id (required, number, `1`) ... Numberic `id` of the Artist.
+
+    
++ Model (application/hal+json)
+    HAL+JSON representation of Photo resource.
+
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/photos/42>;rel="self"
+        
+    + Body
+    
+            {
+                "_links": {
+                    "self": { "href": "artists/22/photos/42" }
+                },
+                "id": 42,
+                "file_name": "photo.jpg"
+                "artist_id": 22
+            }
+            
+
+
+### Retrieve an Photo [GET]
++ Response 200 (application/json)
+
+    [Photo][]
+    
+## Photo Collection [/artists/{artist_id}/photos]
+Collection of all Photos
+
+It **embeds** *Photo Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Photo Collection Resource.  The Photo resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/photos>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/artists/22/photos" }
+                },
+                "_embedded": {
+                    "photos": [
+                        {
+                            "_links": {
+                                "self": { "href": "artists/22/photos/42" }
+                            },
+                            "id": 42,
+                            "file_name": "photo.jpg"
+                            "artist_id": 22
+                        }
+                    ]
+                }
+            }
+            
+### List All Photos [GET]
++ Response 200
+    
+    [Photo Collection][]
+
+
+
+
+
