@@ -1,12 +1,13 @@
-\documentclass[12pt,english]{article}
+\documentclass[12pt,english]{scrartcl}
 
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,alltt,bera,upref,fancyvrb}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
 \usepackage{graphicx}
+\usepackage{tikz}
 
-\textheight=8.5truein
-\textwidth=6.0truein
+\textheight=10.5truein
+\textwidth=6.8truein
 \hoffset=-.5truein
 \voffset=-.5truein
 \pagestyle{headings}
@@ -15,8 +16,24 @@
 \DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small}
 \DefineVerbatimEnvironment{example}{Verbatim}{fontsize=\small}
 
+\usepackage{xcolor}
+\definecolor{shade}{RGB}{240,255,255}
+\definecolor{nw}{RGB}{255,239,213}
 
 \makeatletter
+    \setkomafont{section}{\color{shade}%
+        \bfseries\Large
+        \begin{tikzpicture}[overlay]
+        \draw[fill=nw] (0,-2pt) rectangle
+        (\linewidth,16.4pt);
+        \end{tikzpicture}}
+    \setkomafont{subsection}{\color{nw}%
+        \bfseries\Large
+        \begin{tikzpicture}[overlay]
+        \draw[fill=shade] (0,-2pt) rectangle
+        (\linewidth,16.4pt);
+        \end{tikzpicture}}
+
 \def\and{%
   \end{tabular}%
   \hskip 1em \@plus.10fil\relax
@@ -39,38 +56,39 @@
   \and
   Mark Sandan\\  
 }
-\date{ }
+\date{ July 10, 2014 }
 \begin{document}
 \thispagestyle{plain}
 \maketitle
- 
- [splash page]
- 
 \tableofcontents
 
-\section{Introduction} 
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{home}
+ \caption{Example Home page showing the group name and the links to the three main pages.}
+\end{figure}
+
+\section{Introduction}
 The website we are designing is about the 2014 Austin City Limits (ACL) music festival. The website design has three main pages: Artists, Stages, and Sponsors.
-The website allows anyone to view pages about current Artists, Sponsors, and Stages. The technologies used are PythonAnywhere, Python 3.4, Django 1.6,
+The website allows anyone to view pages about current Artists, Sponsors, and Stages.
+
+The technologies used are PythonAnywhere, Python 3.4, Django 1.6,
 Twitter Bootstrap 3.2, Apiary, and the database sqlite3. PythonAnywhere is used to host the site using the Django web-framework to 
 construct the necessary models and views to handle HTTP requests. Twitter Bootstrap is used to organize common data among different
 types of pages into a base template HTML file. 
 
-The database we chose to test with (see Tests) is sqlite3. We currently don't use it to load any data to render the HTML pages.
+A problem that we are facing is that the information we need to complete the project hasn't been published as of the dat this report
+is being written. Currently we are using stubbed relationships to 
 
 \section{Design}
 Our current design of the website uses HTML and Twitter Bootstrap to stylize each page and PythonAnywhere to host the page. 
 Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that
 uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content.
 
-[UML model here]
-\begin{figure}[h]
+
+\begin{figure}[h!]
 \includegraphics[width=\textwidth]{UML}
+ \caption{The current UML schema depicting the relationships between the Django models.}
 \end{figure}
-
-\subsection{App Design}
-The current directory structure on PythonAnywhere is outlined below for reference to files:
-
-[tree -d layout here]
 
 \subsection{Web Pages}
 Each web page has basic information about a particular artist, sponsor, or stage involved in the ACL music festival.
@@ -84,17 +102,99 @@ Sponsor pages can be reached from the home page or from
 \subsubsection{Stages}
 
 
-[Example Relation scheme here]
-
 \subsection{RESTful  API}
-The REST API for the website currently documents only GET 
+The API allows GET requests to the following models: Stages, Sponsors, Artists, Members, and  Photos.
+The following section will detail the attributes for the modules, and how the server will respond to the GET requests.
+\subsubsection{Stages}
+When a GET is called on $[/stages]$ it will return a HAL+JSON representation all the Stages in the database.  It will be a list of the stages along with their attributes.
+When a GET is called on $[/stages/{id}]$ it will return a HAL+JSON representation of a single Stage in the database with the given id.  It will list the stage and all of it's attributes
+Example of single stage:
+\begin{verbatim}
+{
+         "_links": {
+                "self": { "href": "stages/42" }
+         },
+         "id": 42,
+         "name": "Stage name"
+}
+\end{verbatim}
+\subsubsection{Sponsor}
+When a GET is called on $[/sponsors]$ it will return a HAL+JSON representation all the Sponsors in the database.  It will be a list of the sponsors along with their attributes.
+When a GET is called on $[/sponsors/{id}]$ it will return a HAL+JSON representation of a single Sponsor in the database with the given id.  It will list the sponsor and all of it's attributes
+Example of single sponsor:
+\begin{verbatim}
+{
+        "_links": {
+                "self": { "href": "sponsors/42" }
+        },
+        "id": 42,
+        "name": "Sponsor name",
+        "business_type": "Type of Business",
+        "website": "URL of sponsor website",
+        "stage": 12
+}
+\end{verbatim}
+
+\subsubsection{Artist}
+When a GET is called on $[/artists]$ it will return a HAL+JSON representation all the Artists in the database.  It will be a list of the artists along with their attributes.
+When a GET is called on $[/artists/{id}]$ it will return a HAL+JSON representation of a single Artist in the database with the given id.  It will list the artist and all of it's attributes
+
+Example of single artist:
+\begin{verbatim}
+{
+        "_links": {
+               "self": { "href": "artists/42" }
+        },
+        "id": 42,
+        "name": "Artist name"
+        "label": "Label of artist"
+        "origin": "Where the artist was from"
+        "website": "URL to the artist"
+        "genre": "Genre of the artist"
+        "stage": 22
+}
+\end{verbatim}
+\subsubsection{Member}
+When a GET is called on $[/artists/{artist\_id}/members/]$ it will return a HAL+JSON representation all the Members in the database for the given artist id.  It will be a list of the members along with their attributes.
+When a GET is called on $[/artists/{artist\_id}/members/{id}]$ it will return a HAL+JSON representation of a single Member in the database with the given id.  It will list the member and all of it's attributes
+
+Example of single member:
+\begin{verbatim}
+{
+        "_links": {
+               "self": { "href": "artists/22/members/42" }
+        },
+        "id": 42,
+        "first_name": "Member's first name"
+        "last_name": "Member's last name"
+        "artist_id": 22
+}
+\end{verbatim}
+\subsubsection{Photo}
+When a GET is called on $[/artists/{artist\_id}/photos/]$ it will return a HAL+JSON representation all the Photos in the database for the given artist id.  It will be a list of the photos along with their attributes.
+When a GET is called on $[/artists/{artist\_id}/photos/{id}]$ it will return a HAL+JSON representation of a single Photo in the database with the given id.  It will list the photo and all of it's attributes
+
+Example of single photo:
+\begin{verbatim}
+{
+        "_links": {
+               "self": { "href": "artists/22/photos/42" }
+        },
+        "id": 42,
+        "file_name": "photo.jpg"
+        "artist_id": 22
+}
+\end{verbatim}
 
 \subsection{Django Models}
 The Django models created represent the entities we intend to keep in the database for the future when use dynamically loaded pages.
 The following subsections document the attributes and intended functionality of each class instance method.
 \subsubsection{Artist}
+The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
+stage depending on whether they are playing that Stage or not. We are assuming that an Artist will play on 
+exactly one stage.
 The Artist class is implemented using the following:
-
+\begin{verbatim}
 attributes:
 - id: Primary Key, integer type field
 - name: a character type field with a maximum length of 400 characters
@@ -107,15 +207,19 @@ attributes:
 methods:
 - get.url(): a character type field with a maximum of number of 400 characters.
 - __str__(): a character type field with a maximum of number of 400 characters.
+\end{verbatim}
 
 
 \subsubsection{Sponsor}
-The Sponsor class is implemented using the following:
+The Sponsor class represents the ACL sponsors that sponsor a Stage for the Artist to perform on.
+This relationship is expressed using the one-to-many relationship between the Sponsor and the Stage
+class. 
 
+The Sponsor class has the following attributes and methods:
+\begin{verbatim}
 attributes:
 - id: Primary Key, integer type field
 - name: a character type field with a maximum length of 400 characters
-- sponsor_pic: BLOB
 - business_type: a character type field with a maximum length of 400 characters
 - website: a character type field with a maximum length of 400 characters
 - stage: Foreign Key, integer of type field
@@ -123,38 +227,53 @@ attributes:
 methods:
 - get.url(): a character type field with a maximum of number of 400 characters.
 - __str__(): a character type field with a maximum of number of 400 characters.
+\end{verbatim}
 
 \subsubsection{Stage}
-The Stage class is implemented using the following:
+The Stage class is meant to represent the stage that an Artist will perform on. All stages
+have one sponsor. The Stage class extends from the Django models.Models class.
 
+The Stage class has the following attributes and methods:
+\begin{verbatim}
 attributes:
 - id: Primary Key, integer type field
 - name: a character type field with a maximum length of 400 characters
 - sponsor: Foreign Key, integer of type field
 
 methods:
-- get.url(): a character type field with a maximum of number of 400 characters.
-- __str__(): a character type field with a maximum of number of 400 characters.
+- get.url(): returns the string "/stages/%s/{name}" where name is the stage name.
+- __str__(): returns a string that represents the name of the stage
+\end{verbatim}
 
 \subsubsection{Photo}
-The Photo class extends from the Django models.Models class and has two main attributes: 
+The Photo class represents a path to a photo of an Artist. 
+All Photo's are associated with an Artist in a many-to-one relationship.
+This is expressed with the Foreign key being an Artist that the Photo is associated with. 
+The Photo class has the following attributes and methods:
 \begin{verbatim}
-file_name
-artist
- \end{verbatim}
+attributes:
+-file_name: A CharField of 400 characters. 
+-artist: The ForeignKey relating a Photo to an Artist.
 
-The Foreign key is the artist that the Photo is associated with. Thus the Artist is a parent
-of a one-to-many relationship with a Photo. Currently the only method defined is 
-\begin{verbatim}
-__str__ 
-\end{verbatim} 
-
-\subsubsection{Event}
+methods:
+- __str__(): returns the file_name of the photo.
+\end{verbatim}
 
 \subsubsection{Member}
+The Member class is meant to represent the members of the Artist group. 
 
-Detailed documentation of each of our Django models
-\section{Tests}
+The Member class has the following attributes and methods:
+\begin{verbatim}
+attributes:
+-first_name: A CharField of 400 characters. 
+-last_name: A CharField of 400 characters.
+-artist 
+
+methods:
+- __str__(): 
+\end{verbatim}
+
+\section{Unit Tests}
 
 
 
