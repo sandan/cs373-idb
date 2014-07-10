@@ -125,7 +125,15 @@ class DjangoMethodTests(TestCase):
         s = Stage(name='Stage Name')
         s.save()
 
-        a = Artist(stage=s)
+        a = Artist(name=n,stage=s)
+
+        try :
+            a.save()
+            self.fail('Should have thrown an Exception')
+        except :
+            pass
+
+        a = Artist(label=n,stage=s)
 
         try :
             a.save()
@@ -190,6 +198,15 @@ class DjangoMethodTests(TestCase):
         s = Sponsor.objects.get(pk=1)
         self.assertIsNotNone(s)
         self.assertEqual(s.name,'Sponsor Name')
+
+    def test_sponsor_name(self):
+        n = 'n'*401
+        s = Sponsor(name=n)
+        try:
+            s.save()
+            self.fail('Should have thrown an exception')
+        except:
+            pass
 
     def test_get_sponsor_name(self):
         s = Sponsor(name='Sponsor Name')
