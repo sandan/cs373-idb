@@ -273,6 +273,18 @@ methods:
 
 \section{Unit Tests}
 
-
+\section{Expansions}
+In future releases our website will include an SQLite database. This database will store all information regarding the models and will interact as documented in the RESTful API section.
+In turn, our HTML pages will utilize this database to work dynamically, as opposed to the static pages currently implemented.
+We also plan to display more information in the HTML pages.
+For example, artist pages will include information on members or link to more social media accounts, such as Instagram or SoundCloud.
+Stage pages will also link to a map of the festival so users can see their location.
+The Django models will also grow. All models will include a set method in addtition to the get method that is already provided.
+The Sponsor model will also include a sponsor_pic attribute for its logo. 
+Sponsor models might also include include an attribute to store the location of their headquarters or the name of their respective CEOs.
+Optionally, Member models might also include an attribute to store the insturment(s) the member plays.
+In response to the growth of the models the unit tests will become more robust.
+These tests will will check that the database is correctly populated with its new attributes as well as test all the new methods included.
+In addition to the growth of the models, the API will also grow to accomodate. The updated API will include the option to make put requests or delete requests.
 
 \end{document}
