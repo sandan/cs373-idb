@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 
-\textheight=10.5truein
+\textheight=10.0truein
 \textwidth=6.8truein
 \hoffset=-.5truein
 \voffset=-.5truein
@@ -41,7 +41,6 @@
 \makeatother
 \makeindex
 
-
 \title{Technical Report: The Austinites}
 \author{
   Sheeyla Garcia\\
@@ -68,23 +67,21 @@
 \end{figure}
 
 \section{Introduction}
-The website we are designing is about the 2014 Austin City Limits (ACL) music festival. The website design has three main pages: Artists, Stages, and Sponsors.
-The website allows anyone to view pages about current Artists, Sponsors, and Stages.
-
+The website we are designing is about the 2014 Austin City Limits (ACL) music festival,
+ an annual three-day American music festival that takes place on 46-acres in Zilker Park in Austin, Texas. 
+The website design has three main pages: Artists, Stages, and Sponsors.
+The website allows anyone to view pages about the current Artists, Sponsors, and Stages involved in the festival.
 The technologies used are PythonAnywhere, Python 3.4, Django 1.6,
 Twitter Bootstrap 3.2, Apiary, and the database sqlite3. PythonAnywhere is used to host the site using the Django web-framework to 
 construct the necessary models and views to handle HTTP requests. Twitter Bootstrap is used to organize common data among different
-types of pages into a base template HTML file. 
-
-A problem that we are facing is that the information we need to complete the project hasn't been published as of the dat this report
-is being written. Currently we are using stubbed relationships to 
+types of pages into a base template HTML file. Apiary is used to provide an API for client-side web access to the information on our webpage.
+A problem that we are facing is that the information we need to complete the project hasn't been published as of the date this report
+is being written. Currently we are using static HTML pages to stub the relationships betwen HTML pages.
 
 \section{Design}
-Our current design of the website uses HTML and Twitter Bootstrap to stylize each page and PythonAnywhere to host the page. 
+Our current design of the website uses static HTML pages and Twitter Bootstrap to stylize each page.
 Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that
 uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content.
-
-
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{UML}
  \caption{The current UML schema depicting the relationships between the Django models.}
@@ -95,25 +92,54 @@ Each web page has basic information about a particular artist, sponsor, or stage
 Each page includes a bio, video, official website, Youtube channel, a Twitter feed, and Picture. All pages will include a navigation
 bar at the top of their page that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
 Stages pages. In future phases we are considering incorporating a search bar inside of the navigation bar, so that the user can search
-all categories.
+all categories. Mobile browsers are able to view the webpage correctly and set the height and width to a percentage of the size of the screen.
 
 \subsubsection{Splash Page}
+\begin{itemize}
+ \item Location: https://theaustinites.pythonanywhere.com/
+\end{itemize}
+
 The "splash" page will be the first page a visitor to the site will see. It will provide button style links to all subcategories (Artists,
-Sponsors, Stages).
+Sponsors, Stages). Currently the page lists the group name and group members.
+
 \subsubsection{Artists}
+\begin{itemize}
+ \item Location: https://theaustinites.pythonanywhere.com/artists
+\end{itemize}
+
 Artist Pages can be reached from the home page as well as from the Stage or Sponsor pages depending on whether the Artist played on
-a Stage that was hosted by a Sponsor.
+a Stage that was hosted by a Sponsor.The page currently lists the static html pages for music artists Eminem, Pearl Jam, and Outkast
+
+Each Artist page includes the Artist name, an Artist photo, the label, the origin, genre, the sponsor,the stage, a bio,
+the official website to the sponsor, a facebook page, a bio, youtube video, youtube channel, and twitter feed.
+
 \subsubsection{Sponsors}
+\begin{itemize}
+ \item Location: https://theaustinites.pythonanywhere.com/sponsors
+\end{itemize}
+
 Sponsor pages can be reached from the home page as well as from the Artist or Stages pages depending on whether the Sponsor hosted a
-Stage, and that particular Artist played on that Stage.
+Stage, and that particular Artist played on that Stage. The page currently lists ACL festival sponsors Honda, Miller Lite, and Samsung Galaxy.
+
+Each Sponsor page includes the Sponsor name, a sponsor logo, the origin, stage sponsored, the artists playing the stage, the official website to the sponsor,
+a facebook page, a bio, youtube video, and twitter feed.
 
 \subsubsection{Stages}
+\begin{itemize}
+ \item Location: https://theaustinites.pythonanywhere.com/stages/
+\end{itemize}
+
 Stages pages can be reached from the home page as well as from the Artist or Sponsor pages depending on whether the Sponsor hosted a
-Stage, and that particular Artist played on that Stage.
+Stage, and that particular Artist played on that Stage. The page currently lists sponsored stages Honda Stage, Miller Lite Stage, and Samsung Stage.
+
+Each Stage page includes the Stage name, a Stage logo, the artists playing the stage, the official website to the sponsor,
+a facebook page, youtube video, and twitter feed.
 
 \subsection{RESTful  API}
 The API allows GET requests to the following models: Stages, Sponsors, Artists, Members, and  Photos.
-The following section will detail the attributes for the modules, and how the server will respond to the GET requests.
+The following section will detail the attributes for the modules, and how the server will respond to the GET requests. See 
+the Links section below to view the Apiary API.
+
 \subsubsection{Stages}
 When a GET is called on $[/stages]$ it will return a HAL+JSON representation all the Stages in the database.  It will be a list of the stages along with their attributes.
 When a GET is called on $[/stages/{id}]$ it will return a HAL+JSON representation of a single Stage in the database with the given id.  It will list the stage and all of it's attributes
@@ -270,7 +296,8 @@ methods:
 \end{verbatim}
 
 \subsubsection{Member}
-The Member class is meant to represent the members of the Artist group. The Member class has the following attributes and methods:
+The Member class is meant to represent the members of the Artist group.Thus there is a many-to-one relationship between Member and Artist.
+The Member class has the following attributes and methods:
 \begin{verbatim}
 attributes:
 -first_name: A CharField of 400 characters. 
@@ -285,7 +312,7 @@ methods:
 \section{Unit Tests}
 The unit tests currently implemented reflect the expected functionality of the django models and database.
 Currently we are using the sqlite3 database as a backend. We assume for each function in the set of tests that the state of the database is reset.
-The following give descriptions of each model test.
+There are currently 30 tests with at least 4 tests for each mdoel. The following give descriptions of each model test. 
 
 \subsection{Stage Test}
 Total tests: 7
@@ -317,7 +344,7 @@ that were passed when constructed (including a Stage instance)
 \item test\_artist\_name: Tests the $max\_length$ property of CharField when setting the name of Artist.
  
 \item test\_artist\_url\_1, test\_artist\_url\_2, test\_artist\_url\_3: Tests that the many-to-one relationship between
-Artists and Stages is valid. Also tests the $get_url$ method returns the correct url according the id of the instance.
+Artists and Stages is valid. Also tests the $get\_url$ method returns the correct url according the id of the instance.
 \end{itemize} 
 
 \subsection{Sponsor Test} 
@@ -329,7 +356,7 @@ Total tests: 6
  
 \item test\_get\_sponsor\_name: Tests the $max\_length$ property of CharField when setting the name of Sponsor.
 
-\item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2: Tests that the $get_url$ is returned in the proper format.
+\item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2: Tests that the $get\_url$ is returned in the proper format.
 \end{itemize}
 
 \subsection{Member Test} 
@@ -338,28 +365,53 @@ Total tests: 5
 \begin{itemize} 
 \item test\_empty\_member:  Tests that a Member can be made with no exceptions when created with an Artist. Tests the default values of Member are empty.
  
-\item  test\_get\_empty\_member: ???
+\item  test\_get\_empty\_member: asserts that the Member instance is not of type None and that the first\_name attribute is an empty string. 
+It also asserts that the Member’s artist attribute is equal to the previously created Artist instance.
  
 \item  test\_create\_member: Tests that the attributes are correctly set in Member.
  
-\item  test\_get\_member: : Creates an instance of Stage,Artist and Member with particular values some 
-attributes. They are all saved into the database after being created. It then asserts that the 
-Member instance is not of type None and that all the values passed when constructed are 
-actually the values.  
+\item  test\_get\_member: Tests that the saved Member instance is able to be retrieved from the database and all the values passed 
+are correct.
  
-\item  test\_str\_member:: Creates an instance of Stage,Artist and Member with particular values some 
-attributes. They are all saved into the database after being created.  A particular row with a 
-private key is then requested and It then asserts that the the values are equal to the values 
-passed when constructed.  
+\item  test\_str\_member: Tests that the Member string returns the correct $first\_name$ and $last\_name$ of Member.
 \end{itemize}
 
 \subsection{Photo Test} 
 Total tests: 4
 \begin{itemize}
-\item test\_empty\_photo: 
-\item test\_create\_photo: 
-\item test\_get\_photo: 
-\item test\_str\_photo: 
+\item test\_empty\_photo: Method is testing whether an instance of Photo is empty.
+
+\item test\_create\_photo: Method is checking that the constructor of the Photo class is working properly when given particular parameters. 
+
+\item test\_get\_photo: Method check the get\_photo method of the Photo class.
+
+\item test\_str\_photo: Method checks the \_\_str\_\_ photo method of the Photo class.
+\end{itemize}
+
+\section{Expansions}
+This section outlines probable features and functions for the next release.
+\begin{itemize}
+\item SQLite database to store all information regarding the models and will interact as documented in the RESTful API section
+
+\item HTML pages that utilize the database to work dynamically, as opposed to the static pages currently implemented.
+
+\item More information in the HTML pages such as information on members or link to more social media accounts (Instagram or SoundCloud) for Artist pages.
+
+\item Stage pages will link to a map of the festival so users can see their location.
+
+\item Sponsor models might also include include an attribute to store the location of their headquarters or the name of their respective CEOs.
+
+\item In response to the growth of the models the unit tests will become more robust.
+
+\item  Tests that will check that the database is correctly populated with its new attributes as well as test all the new methods included.
+
+\item An API that will also grow to accomodate. The updated API will include the option to make put requests or delete requests.
+\end{itemize}
+\section{Links}
+\begin{itemize}
+ \item Home Page: https://theaustinites.pythonanywhere.com/
+ \item Apiary API: http://docs.aclprojectapi.apiary.io/
+ \item Github: https://github.com/sandan/
 \end{itemize}
 
 
