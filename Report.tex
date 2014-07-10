@@ -92,15 +92,24 @@ uses Twitter Bootstrap. We have nine pages in static HTML that provide examples 
 
 \subsection{Web Pages}
 Each web page has basic information about a particular artist, sponsor, or stage involved in the ACL music festival.
-Each page includes a bio, video, official website, Youtube channel, a Twitter feed, and Picture.
+Each page includes a bio, video, official website, Youtube channel, a Twitter feed, and Picture. All pages will include a navigation
+bar at the top of their page that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
+Stages pages. In future phases we are considering incorporating a search bar inside of the navigation bar, so that the user can search
+all categories.
+
+\subsubsection{Splash Page}
+The "splash" page will be the first page a visitor to the site will see. It will provide button style links to all subcategories (Artists,
+Sponsors, Stages).
 \subsubsection{Artists}
-Artist Pages can be reached from the home page or from Stage pages depending on whether the Artist played on
-a Stage that was hosted by a Sponsor. 
+Artist Pages can be reached from the home page as well as from the Stage or Sponsor pages depending on whether the Artist played on
+a Stage that was hosted by a Sponsor.
 \subsubsection{Sponsors}
-Sponsor pages can be reached from the home page or from 
+Sponsor pages can be reached from the home page as well as from the Artist or Stages pages depending on whether the Sponsor hosted a
+Stage, and that particular Artist played on that Stage.
 
 \subsubsection{Stages}
-
+Stages pages can be reached from the home page as well as from the Artist or Sponsor pages depending on whether the Sponsor hosted a
+Stage, and that particular Artist played on that Stage.
 
 \subsection{RESTful  API}
 The API allows GET requests to the following models: Stages, Sponsors, Artists, Members, and  Photos.
@@ -188,7 +197,9 @@ Example of single photo:
 
 \subsection{Django Models}
 The Django models created represent the entities we intend to keep in the database for the future when use dynamically loaded pages.
-The following subsections document the attributes and intended functionality of each class instance method. 
+The following subsections document the attributes and intended functionality of each class instance method. When running the tests
+using the Django framework a temporary. 
+
 \subsubsection{Artist}
 The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
 stage depending on whether they are playing that Stage or not. We are assuming that an Artist will play on 
@@ -272,19 +283,84 @@ methods:
 \end{verbatim}
 
 \section{Unit Tests}
+The unit tests currently implemented reflect the expected functionality of the django models and database.
+Currently we are using the sqlite3 database as a backend. We assume for each function in the set of tests that the state of the database is reset.
+The following give descriptions of each model test.
 
-\section{Expansions}
-In future releases our website will include an SQLite database. This database will store all information regarding the models and will interact as documented in the RESTful API section.
-In turn, our HTML pages will utilize this database to work dynamically, as opposed to the static pages currently implemented.
-We also plan to display more information in the HTML pages.
-For example, artist pages will include information on members or link to more social media accounts, such as Instagram or SoundCloud.
-Stage pages will also link to a map of the festival so users can see their location.
-The Django models will also grow. All models will include a set method in addtition to the get method that is already provided.
-The Sponsor model will also include a sponsor_pic attribute for its logo. 
-Sponsor models might also include include an attribute to store the location of their headquarters or the name of their respective CEOs.
-Optionally, Member models might also include an attribute to store the insturment(s) the member plays.
-In response to the growth of the models the unit tests will become more robust.
-These tests will will check that the database is correctly populated with its new attributes as well as test all the new methods included.
-In addition to the growth of the models, the API will also grow to accomodate. The updated API will include the option to make put requests or delete requests.
+\subsection{Stage Test}
+Total tests: 7
+\begin{itemize}
+\item test\_create\_empty\_stage: Tests that uninitialized (stateless) Stages can be created.
+
+\item test\_create\_stage : Tests that the $name$ attribute is set correctly when initialized.
+ 
+\item test\_get\_stage: Tests that the $get\_stage$ method returns the Stage instance we saved into the database. Also tests the filtering functionality of setting the id of the instance.
+
+\item test\_stage\_name: Tests the $max\_length$ property of CharField when setting the name of Stage.
+
+\item test\_stage\_url\_1, test\_stage\_url\_2,test\_stage\_url\_3: Tests whether an instance of the desired Stage class 
+is saved in the database table and returns the correct $url$ attribute. 
+\end{itemize} 
+
+\subsection{Artist Test}
+Total tests: 8
+\begin{itemize}
+\item test\_create\_artist: Tests the Artist instance attributes actually match the given values
+that were passed when constructed (including a Stage instance)
+ 
+\item test\_get\_artist: Tests that an instance of Artist can be retrieved from the database with the attributes used to create it.
+ 
+\item test\_empty\_artist: Tests that an IntegrityError is thrown when an Artist instance is saved in the database without setting a ForeignKey.
+ 
+\item test\_empty\_artist\_with\_stage: Tests the default values of an Artist instance with a ForeignKey.
+ 
+\item test\_artist\_name: Tests the $max\_length$ property of CharField when setting the name of Artist.
+ 
+\item test\_artist\_url\_1, test\_artist\_url\_2, test\_artist\_url\_3: Tests that the many-to-one relationship between
+Artists and Stages is valid. Also tests the $get_url$ method returns the correct url according the id of the instance.
+\end{itemize} 
+
+\subsection{Sponsor Test} 
+Total tests: 6
+\begin{itemize}
+\item test\_empty\_sponsor: Tests that a Sponsor's default values and ID are set correctly.
+ 
+\item test\_save\_sponsor: Tests that the name matches the passed value given when the Sponsor instance was created.  
+ 
+\item test\_get\_sponsor\_name: Tests the $max\_length$ property of CharField when setting the name of Sponsor.
+
+\item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2: Tests that the $get_url$ is returned in the proper format.
+\end{itemize}
+
+\subsection{Member Test} 
+Total tests: 5
+
+\begin{itemize} 
+\item test\_empty\_member:  Tests that a Member can be made with no exceptions when created with an Artist. Tests the default values of Member are empty.
+ 
+\item  test\_get\_empty\_member: ???
+ 
+\item  test\_create\_member: Tests that the attributes are correctly set in Member.
+ 
+\item  test\_get\_member: : Creates an instance of Stage,Artist and Member with particular values some 
+attributes. They are all saved into the database after being created. It then asserts that the 
+Member instance is not of type None and that all the values passed when constructed are 
+actually the values.  
+ 
+\item  test\_str\_member:: Creates an instance of Stage,Artist and Member with particular values some 
+attributes. They are all saved into the database after being created.  A particular row with a 
+private key is then requested and It then asserts that the the values are equal to the values 
+passed when constructed.  
+\end{itemize}
+
+\subsection{Photo Test} 
+Total tests: 4
+\begin{itemize}
+\item test\_empty\_photo: 
+\item test\_create\_photo: 
+\item test\_get\_photo: 
+\item test\_str\_photo: 
+\end{itemize}
+
 
 \end{document}
