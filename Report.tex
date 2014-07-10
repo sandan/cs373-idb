@@ -21,16 +21,16 @@
 \definecolor{nw}{RGB}{255,239,213}
 
 \makeatletter
-    \setkomafont{section}{\color{shade}%
+    \setkomafont{section}{\color{white}%
         \bfseries\Large
         \begin{tikzpicture}[overlay]
-        \draw[fill=nw] (0,-2pt) rectangle
+        \draw[fill=black] (0,-2pt) rectangle
         (\linewidth,16.4pt);
         \end{tikzpicture}}
-    \setkomafont{subsection}{\color{nw}%
+    \setkomafont{subsection}{\color{black}%
         \bfseries\Large
         \begin{tikzpicture}[overlay]
-        \draw[fill=shade] (0,-2pt) rectangle
+        \draw[fill=white] (0,-2pt) rectangle
         (\linewidth,16.4pt);
         \end{tikzpicture}}
 
@@ -188,25 +188,24 @@ Example of single photo:
 
 \subsection{Django Models}
 The Django models created represent the entities we intend to keep in the database for the future when use dynamically loaded pages.
-The following subsections document the attributes and intended functionality of each class instance method.
+The following subsections document the attributes and intended functionality of each class instance method. 
 \subsubsection{Artist}
 The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
 stage depending on whether they are playing that Stage or not. We are assuming that an Artist will play on 
-exactly one stage.
-The Artist class is implemented using the following:
+exactly one stage. The Artist class is implemented using the following:
 \begin{verbatim}
 attributes:
-- id: Primary Key, integer type field
-- name: a character type field with a maximum length of 400 characters
-- lable: a character type field with a maximum length of 400 characters
-- origin: a character type field with a maximum length of 400 characters
-- website: a character type field with a maximum length of 400 characters
-- genre: a character type field with a maximum length of 400 characters
-- stage: Foreign Key, integer of type field
+- id: Primary Key, integer type field.
+- name: the name of max length 400 characters.
+- label: the artist label with a maximum length of 400 characters.
+- origin: the place of origin the artist/group formed with a maximum length of 400 characters.
+- website: the official website of the artist or fan site if none. Maximum length of 400 characters.
+- genre: the genre associated with the artist. May span more than one. maximum length of 400 characters.
+- stage: Foreign Key, integer of type field.
 
 methods:
-- get.url(): a character type field with a maximum of number of 400 characters.
-- __str__(): a character type field with a maximum of number of 400 characters.
+- get.url(): returns the string "/artists/{id}" . Maximum of number of 400 characters.
+- __str__(): returns the name string of the artist.
 \end{verbatim}
 
 
@@ -225,8 +224,8 @@ attributes:
 - stage: Foreign Key, integer of type field
 
 methods:
-- get.url(): a character type field with a maximum of number of 400 characters.
-- __str__(): a character type field with a maximum of number of 400 characters.
+- get.url(): returns the string "/sponsors/{id}". Maximum number of 400 characters.
+- __str__(): returns a string that represents the name of the sponsor.
 \end{verbatim}
 
 \subsubsection{Stage}
@@ -252,7 +251,7 @@ This is expressed with the Foreign key being an Artist that the Photo is associa
 The Photo class has the following attributes and methods:
 \begin{verbatim}
 attributes:
--file_name: A CharField of 400 characters. 
+-file_name: A CharField of 400 characters. File name of the photo. 
 -artist: The ForeignKey relating a Photo to an Artist.
 
 methods:
@@ -260,17 +259,16 @@ methods:
 \end{verbatim}
 
 \subsubsection{Member}
-The Member class is meant to represent the members of the Artist group. 
-
-The Member class has the following attributes and methods:
+The Member class is meant to represent the members of the Artist group. The Member class has the following attributes and methods:
 \begin{verbatim}
 attributes:
 -first_name: A CharField of 400 characters. 
 -last_name: A CharField of 400 characters.
--artist 
+-artist: ForeignKey relating the Member to Artist. Integer type field.
 
 methods:
-- __str__(): 
+- __str__(): returns the string of form "{first_name} {last_name}" if there is
+             a last anme available. Otherwise "{first_name}" is returned.
 \end{verbatim}
 
 \section{Unit Tests}
