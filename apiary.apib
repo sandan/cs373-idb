@@ -24,7 +24,7 @@ The Stage resource has the following attributes:
 - id
 - name
 
-The stages *id* are assigned by the ACL Project API at the moment of creation.
+The stages *id* is assigned by the ACL Project API at the moment of creation.
 
 + Parameters
     + id (integer) ... ID of the Stage in the form of a number
@@ -126,7 +126,7 @@ The state *id* is assigned by the ACL Project API at the moment of creation.
                 "name": "Sponsor name",
                 "business_type": "Type of Business",
                 "website": "URL of sponsor website",
-                "stage_id": 12
+                "stage": 12
             }
 
 ### Retrieve a single Sponsor [GET]
@@ -164,7 +164,7 @@ It **embeds** *Sponsor Resources* in the ACL Project API
                             "name": "Sponsor name",
                             "business_type": "Type of Buisiness",
                             "website": "URL of sponsor"
-                            "stage_id": 22
+                            "stage": 22
                         }
                     ]
                 }
@@ -438,8 +438,4 @@ It **embeds** *Photo Resources* in the ACL Project API
 + Response 200
     
     [Photo Collection][]
-
-
-
-
 
