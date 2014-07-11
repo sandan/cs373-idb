@@ -80,8 +80,8 @@ is being written. Currently we are using static HTML pages to stub the relations
 
 \section{Design}
 Our current design of the website uses static HTML pages and Twitter Bootstrap to stylize each page.
-Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that
-uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content.
+Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that is extended from and 
+uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content. The design and content of each page is outlined below.
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{UML}
  \caption{The current UML schema depicting the relationships between the Django models.}
@@ -89,8 +89,7 @@ uses Twitter Bootstrap. We have nine pages in static HTML that provide examples 
 
 \subsection{Web Pages}
 Each web page has basic information about a particular artist, sponsor, or stage involved in the ACL music festival.
-Each page includes a bio, video, official website, Youtube channel, a Twitter feed, and Picture. All pages will include a navigation
-bar at the top of their page that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
+All pages will include a navigation bar at the top of their page that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
 Stages pages. In future phases we are considering incorporating a search bar inside of the navigation bar, so that the user can search
 all categories. Mobile browsers are able to view the webpage correctly and set the height and width to a percentage of the size of the screen.
 
@@ -129,7 +128,7 @@ a facebook page, a bio, youtube video, and twitter feed.
  \item Location: https://theaustinites.pythonanywhere.com/stages/
 \end{itemize}
 
-Stages pages can be reached from the home page as well as from the Artist or Sponsor pages depending on whether the Sponsor hosted a
+Stage pages can be reached from the Home page (splash) as well as from the Artist or Sponsor pages depending on whether the Sponsor hosted a
 Stage, and that particular Artist played on that Stage. The page currently lists sponsored stages Honda Stage, Miller Lite Stage, and Samsung Stage.
 
 Each Stage page includes the Stage name, a Stage logo, the artists playing the stage, the official website to the sponsor,
@@ -141,8 +140,9 @@ The following section will detail the attributes for the modules, and how the se
 the Links section below to view the Apiary API.
 
 \subsubsection{Stages}
-When a GET is called on $[/stages]$ it will return a HAL+JSON representation all the Stages in the database.  It will be a list of the stages along with their attributes.
+When a GET is called on $[/stages]$ it will return a HAL+JSON representation of all the Stages in the database.  It will be a list of the stages along with their attributes.
 When a GET is called on $[/stages/{id}]$ it will return a HAL+JSON representation of a single Stage in the database with the given id.  It will list the stage and all of it's attributes
+\\
 Example of single stage:
 \begin{verbatim}
 {
@@ -154,9 +154,10 @@ Example of single stage:
 }
 \end{verbatim}
 \subsubsection{Sponsor}
-When a GET is called on $[/sponsors]$ it will return a HAL+JSON representation all the Sponsors in the database.  It will be a list of the sponsors along with their attributes.
+When a GET is called on $[/sponsors]$ it will return a HAL+JSON representation of all the Sponsors in the database.  It will be a list of the sponsors along with their attributes.
 When a GET is called on $[/sponsors/{id}]$ it will return a HAL+JSON representation of a single Sponsor in the database with the given id.  It will list the sponsor and all of it's attributes
-Example of single sponsor:
+\\
+Example of single sponsor response:
 \begin{verbatim}
 {
         "_links": {
@@ -171,9 +172,9 @@ Example of single sponsor:
 \end{verbatim}
 
 \subsubsection{Artist}
-When a GET is called on $[/artists]$ it will return a HAL+JSON representation all the Artists in the database.  It will be a list of the artists along with their attributes.
-When a GET is called on $[/artists/{id}]$ it will return a HAL+JSON representation of a single Artist in the database with the given id.  It will list the artist and all of it's attributes
-
+When a GET is called on $[/artists]$ it will return a HAL+JSON representation of all the Artists in the database.  It will be a list of the artists along with their attributes.
+When a GET is called on $[/artists/{id}]$ it will return a HAL+JSON representation of a single Artist in the database with the given id.  It will list the artist and all of it's attributes.
+\\
 Example of single artist:
 \begin{verbatim}
 {
@@ -192,7 +193,7 @@ Example of single artist:
 \subsubsection{Member}
 When a GET is called on $[/artists/{artist\_id}/members/]$ it will return a HAL+JSON representation all the Members in the database for the given artist id.  It will be a list of the members along with their attributes.
 When a GET is called on $[/artists/{artist\_id}/members/{id}]$ it will return a HAL+JSON representation of a single Member in the database with the given id.  It will list the member and all of it's attributes
-
+\\
 Example of single member:
 \begin{verbatim}
 {
@@ -206,9 +207,9 @@ Example of single member:
 }
 \end{verbatim}
 \subsubsection{Photo}
-When a GET is called on $[/artists/{artist\_id}/photos/]$ it will return a HAL+JSON representation all the Photos in the database for the given artist id.  It will be a list of the photos along with their attributes.
+When a GET is called on $[/artists/{artist\_id}/photos/]$ it will return a HAL+JSON representation of all the Photos in the database for the given artist id.  It will be a list of the photos along with their attributes.
 When a GET is called on $[/artists/{artist\_id}/photos/{id}]$ it will return a HAL+JSON representation of a single Photo in the database with the given id.  It will list the photo and all of it's attributes
-
+\\
 Example of single photo:
 \begin{verbatim}
 {
@@ -222,9 +223,10 @@ Example of single photo:
 \end{verbatim}
 
 \subsection{Django Models}
-The Django models created represent the entities we intend to keep in the database for the future when use dynamically loaded pages.
-The following subsections document the attributes and intended functionality of each class instance method. When running the tests
-using the Django framework a temporary. 
+The Django models created represent the entities we intend to keep in the database for the future when using dynamically loaded pages.
+The following subsections document the attributes and intended functionality of each class instance method. The following sections use
+$child$ and $parent$ in the sense of the schema relationship depicted by the UML diagram in Figure 2 and not in the sense of the object oriented inheritance 
+(the only object each model extends is models.Model). Currently there are a total of five models.
 
 \subsubsection{Artist}
 The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
@@ -312,7 +314,7 @@ methods:
 \section{Unit Tests}
 The unit tests currently implemented reflect the expected functionality of the django models and database.
 Currently we are using the sqlite3 database as a backend. We assume for each function in the set of tests that the state of the database is reset.
-There are currently 30 tests with at least 4 tests for each mdoel. The following give descriptions of each model test. 
+There are currently 30 tests with at least 4 tests for each model. The following give descriptions of each model test. 
 
 \subsection{Stage Test}
 Total tests: 7
@@ -405,14 +407,15 @@ This section outlines probable features and functions for the next release.
 
 \item  Tests that will check that the database is correctly populated with its new attributes as well as test all the new methods included.
 
-\item An API that will also grow to accomodate. The updated API will include the option to make put requests or delete requests.
+\item An updated API that will include the option to make put requests or delete requests.
 \end{itemize}
+
 \section{Links}
 \begin{itemize}
  \item Home Page: https://theaustinites.pythonanywhere.com/
  \item Apiary API: http://docs.aclprojectapi.apiary.io/
- \item Github: https://github.com/sandan/
+ \item Github: https://github.com/sandan/cs373-idb
+ \item http://www.aclfestival.com/
 \end{itemize}
-
 
 \end{document}
