@@ -1,0 +1,38 @@
+<body style="background-color:9966FF">
+<h3 style="background-color:FF3333;border-radius:25;width:50;">Artist </h3>
+<div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
+<div style="background-color:FF3333;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
+<ul style="list-style-type:none">
+
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">ARTISTS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">SPONSORS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">EVENTS</a></div></li>
+
+</ul>
+</div>
+<img src="http://captainsdead.com/wp-content/uploads/2009/11/pearl-jam.jpg" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:0px;border-radius:10px"></div>
+<h3> Artist: Pearl Jam </h3>
+<h3> Label: Monkeywrench </h3>
+<h3> Origin: Seattle </h3>
+<h3> Website: <a href="www.pearljam.com">www.pearljam.com</a>
+<h3> Genre: Alternative Rock </h3>
+<h3> Stage: Bud Light </h3>
+<h3> Bio: Along with Nirvana, Pearl Jam were initially known for popularizing grunge, the Seattle sound that exploded nationwide in the early Nineties. But the band became an American rock institution by broadening their heavy, Led Zeppelin-influenced sound while maintaining the emotional depth that made their songs so resonant in the first place. Leaping from obscurity to superstardom, the band sold more than 15 million copies of its first two albums, and after a couple of years during which they got mired in high-profile controversies, Pearl Jam recovered and were still filling arenas at the close of the 2000s.
+
+Follow us: @rollingstone on Twitter | RollingStone on Facebook
+<h3><center><a href="http://www.youtube.com/channel/UClQT6Vnsm6BUm0I5kR26EkQ">Youtube Channel</a></h3></center>
+
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:50px;border-radius:10px"></div>
+
+<object align="left" style="margin-left:500">
+<iframe width="500" height="400" src="//www.youtube.com/embed/AFVlJAi3Cso" frameborder="0" allowfullscreen></iframe></object>
+
+<div style="background-color:black;height:550px;width:5px;float:left;border-radius:10px;margin-left:75px;margin-top:-50px"></div>
+
+<object align = "right" style="margin-right:500">
+<a class="twitter-timeline" href="https://twitter.com/PearlJam" data-widget-id="485562674516729856">Tweets by @PearlJam</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</object>
+
