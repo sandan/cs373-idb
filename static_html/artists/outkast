@@ -1,0 +1,40 @@
+<body style="background-color:0066FF">
+<h3 style="background-color:FF3333;border-radius:25;width:50;">Artist </h3>
+<div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
+<div style="background-color:FF3333;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
+<ul style="list-style-type:none">
+
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">ARTISTS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">SPONSORS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">EVENTS</a></div></li>
+
+</ul>
+</div>
+<img src="http://www.relix.com/images/uploads/about/outkast-that-grape-juice.jpg"  height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:0px;border-radius:10px"></div>
+<h3> Artist: Outkast </h3>
+<h3> Label: Monkeywrench </h3>
+<h3> Origin: Atlanta </h3>
+<h3> Website: <a href="www.outkast.com">www.outkast.com</a>
+<h3> Genre: Hip-Hop </h3>
+<h3> Stage: Honda </h3>
+<h3> Bio: Outkast (stylized as OutKast) is an American hip hop duo formed in 1992, in East Point, Atlanta, Georgia, composed of Atlanta-based rappers André "André 3000" Benjamin and Antwan "Big Boi" Patton. They were originally known as Two Shades Deep but later changed the group's name to OutKast. The group's original musical style was a mixture of Dirty South and G-funk. Subsequently however, funk, soul, rock, electronic music, spoken word poetry, jazz and blues elements have been added to the group's musical palette.The duo is one of the most successful hip-hop groups of all time, having received six Grammy Awards. Between six studio albums and a greatest hits release, Outkast has sold over 25 million records. Meanwhile they have garnered widespread critical acclaim, with publications such as Rolling Stone and Pitchfork Media listing albums such as Aquemini and Stankonia among the best of their era.
+
+
+
+<h3><center><a href="www.youtube.com/user/OutkastVEVO">Youtube Channel</a></h3></center>
+
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:50px;border-radius:10px"></div>
+
+<object align="left" style="margin-left:500">
+<iframe width="500" height="400" src="//www.youtube.com/embed/PWgvGjAhvIw" frameborder="0" allowfullscreen></iframe></object>
+
+<div style="background-color:black;height:550px;width:5px;float:left;border-radius:10px;margin-left:75px;margin-top:-50px"></div>
+
+<object align = "right" style="margin-right:500">
+<a class="twitter-timeline" href="https://twitter.com/Outkast" data-widget-id="485572727881728001">Tweets by @Outkast</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</object>
+

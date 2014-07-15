@@ -1,0 +1,42 @@
+<body style="background-color:99FF99">
+<h3 style="background-color:FF3333;border-radius:25;width:70;">Sponsor </h3>
+<div style="background-color:black;height:5px;width:1809px; margin-top:-10px;margin-bottom:50px;border-radius:10px"></div>
+<div style="background-color:FF3333;border-radius:75px;height:280px;width:200px;text-align:left; float:right;margin-right:100px">
+<ul style="list-style-type:none">
+
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:30px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">ARTISTS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">SPONSORS</a></div></li>
+<li><div style="background-color:FFFF66;height:30px;text-align:center;width:150px;border-radius:40px;padding-top:10px;margin-bottom:10px;margin-top:50px;margin-left:-15px"><a href="www.google.com" style="text-decoration:none">EVENTS</a></div></li>
+
+</ul>
+</div>
+<img src="http://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Smartphone.jpeg/1280px-Smartphone.jpeg" height="400" width = "400"style="margin-left:300;margin-top:-20px"/>
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:0px;border-radius:10px"></div>
+<h3> Sponsor: Samsung Galaxy </h3>
+<h3> Headquarters: Samsung Town, Seoul </h3>
+<h3> Stage: Honda </h3>
+<h3> Artists: Eminem, Outkast, Pearl Jam </h3>
+<h3> Website: <a href="http://www.samsung.com">www.samsung.com</a> </h3>
+<h3> Facebook: <a href="www.facebook.com/SamsungMobileUSA/app_544972968896298">www.facebook.com/SamsungMobileUSA</a>
+
+<h3> Bio: Samsung Galaxy (stylized as Samsung GALAXY) is a series of Android-powered mobile computing devices designed, manufactured and marketed by Samsung Electronics. The product line includes the Galaxy S series of high-end smartphones, the Galaxy Tab series of tablets, the Galaxy Note series of tablets and phablets with the added functionality of a stylus and the first version of the Galaxy Gear Smartwatch, with later versions dropping the Galaxy branding.
+
+<h3><center><a href="http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ">Youtube Channel</a></h3></center>
+
+<div style="background-color:black;height:5px;width:1809px; margin-top:30px;margin-bottom:50px;border-radius:10px"></div>
+
+<object align="left" style="margin-left:500">
+<iframe width="500" height="400" src="//www.youtube.com/embed/kPHYJKKEGV4" frameborder="0" allowfullscreen></iframe></object>
+
+<div style="background-color:black;height:550px;width:5px;float:left;border-radius:10px;margin-left:75px;margin-top:-50px"></div>
+
+<object align = "right" style="margin-right:500">
+<a class="twitter-timeline" href="https://twitter.com/SamsungMobile" data-widget-id="486303754577117184">Tweets by @SamsungMobile</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+
+</object>
+
