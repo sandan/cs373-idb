@@ -2,14 +2,28 @@
 
 {% block title %}Stages{% endblock %}
 
-{% block content %}
+{% block main %}
 <div class='container'>
-    <h1>Stages</h1>
-    <ul>
-        <li><a href='/stages/1/'>Honda Stage</a></li>
-        <li><a href='/stages/2/'>Miller Lite Stage</a></li>
-        <li><a href='/stages/3/'>Samsung Stage</a></li>
-    </ul>
+    <div class='row'>
+        <div class='col-sm-8 col-sm-push-4 col-md-8 col-md-push-4'>
+            <img id='map' src='/media/map.jpeg'>
+        </div>
+        <div class='col-sm-4 col-sm-pull-8 col-md-4 col-md-pull-8'>
+            {% if stages%}
+            <ul id='stages-list' class='list-unstyled text-center'>
+                {% for stage in stages %}
+                <li><a href='{{stage.get_url}}'>{{stage.name}}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No stages in Database</p>
+            {% endif %}
+        </div>
+    </div>
 </div>
 
+{% endblock %}
+
+
+{% block content %}
 {% endblock %}

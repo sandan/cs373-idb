@@ -48,6 +48,9 @@ class Sponsor(models.Model):
         """
         return "/sponsors/%s/" % self.id
 
+    def img_url(self):
+        return '/media/sponsors/sponsor.png'
+
     def __str__(self):
         """
         returns Sponsor name

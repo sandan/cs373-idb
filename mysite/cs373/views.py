@@ -6,52 +6,47 @@ from django.http import Http404
 from django.http import HttpResponse
 from django.template import Context, loader
 
-# from cs373.models import Sponsor
+from cs373.models import Artist, Stage, Sponsor
 
 def index(request):
-    c = Context()
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render(c))
+    return render(request, 'index.html')
 
 def stages(request,stage=0):
     stage = int(stage)
     if stage is 0:
-        return render(request, 'stages.html')
-    elif stage is 1:
-        return render(request, 'honda-stage.html')
-    elif stage is 2:
-        return render(request, 'miller-lite-stage.html')
-    elif stage is 3:
-        return render(request, 'samsung-stage.html')
+        s = Stage.objects.all()
+        return render(request, 'stages.html',{'stages':s})
     else:
-        raise Http404
+        try:
+            s = Stage.objects.get(pk=stage)
+            return render(request, 'stage.html',{'stage':s})
+        except Stage.DoesNotExist:
+            raise Http404
 
 def sponsors(request,sponsor=0):
     sponsor = int(sponsor)
     if sponsor is 0:
-        return render(request, 'sponsors.html')
-    elif sponsor is 1:
-        return render(request, 'honda.html')
-    elif sponsor is 2:
-        return render(request, 'miller-lite.html')
-    elif sponsor is 3:
-        return render(request, 'samsung-galaxy.html')
+        s = Sponsor.objects.all()
+        return render(request, 'sponsors.html',{'sponsors':s})
     else:
-        raise Http404
+        try:
+            s = Sponsor.objects.get(pk=sponsor)
+            return render(request, 'sponsor.html',{'sponsor':s})
+        except Sponsor.DoesNotExist:
+            raise Http404
 
 
 def artists(request,artist=0):
     artist = int(artist)
     if artist is 0:
-        return render(request, 'artists.html')
-    elif artist is 1:
-        return render(request, 'eminem.html')
-    elif artist is 2:
-        return render(request, 'outkast.html')
-    elif artist is 3:
-        return render(request, 'pearljam.html')
+        a = Artist.objects.all()
+        return render(request, 'artists.html',{'artists':a})
     else:
-        raise Http404
+        try:
+            a = Artist.objects.get(pk=artist)
+            return render(request, 'artist.html',{'artist':a})
+        except Artist.DoesNotExist:
+            raise Http404
 
 def members(request,artist,member=0):
     member = int(member)

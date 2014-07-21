@@ -2,14 +2,26 @@
 
 {% block title %}Artists{% endblock %}
 
-{% block content %}
+{% block main %}
 <div class='container'>
-    <h1>Artists</h1>
-    <ul>
-        <li><a href='/artists/1/'>Eminem</a></li>
-        <li><a href='/artists/2/'>Outkast</a></li>
-        <li><a href='/artists/3/'>Pearl Jam</a></li>
-    </ul>
+  <div class='row text-center'>
+    <div>
+      <h1 class='title'>2014 Artist Lineup</h1>
+  <ul id='artists' class='list-inline'>
+  {% if artists %}
+    {% for artist in artists %}
+      <li><h2><a href='{{artist.get_url}}'>{{artist.name}}</a></h2></li>
+    {% endfor %}
+  {% else %}
+    <li><h2>There are no artists. Check back later</h2></li>
+  {% endif %}
+  </ul>
+    </div>
+  </div>
 </div>
 
+{% endblock %}
+
+
+{% block content %}
 {% endblock %}
