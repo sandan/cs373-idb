@@ -9,10 +9,10 @@
 {% block content %}
 <div id='artist' class='container'>
     <div class='row'>
-        <div class='col-sm-7 col-md-5 col-lg-4 col-lg-offset-2 col-md-offset-1'>
+        <div class='col-sm-7 col-md-5 col-lg-6 col-lg-offset-1 col-md-offset-1'>
             <div class='media'>
                 <a class="pull-left" href="#">
-                    <img class="media-object img-thumbnail" src="http://redutodorock.com.br/redutodorock/site/wp-content/uploads/2013/03/Beco-SP-Pearl-Jam-140x140.jpg" alt="...">
+                    <img class="media-object img-thumbnail" src="{{artist.photo}}" alt="...">
                 </a>
                 <div class="media-body">
                     <h2 class="media-heading">{{artist.name}}</h1>
@@ -22,12 +22,14 @@
                     <h4><small><span title='WEBSITE' class='glyphicon glyphicon-link'></span> </small><a href='{{artist.website}}'>{{artist.website}}</a></h4>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus nibh sed velit tristique imperdiet. Sed augue enim, ultricies vitae malesuada quis, porttitor non nibh. Phasellus venenatis consequat aliquet. Quisque ac ornare lacus. Praesent at ante vel sem pellentesque porttitor et in elit. Proin vel volutpat est, non dictum nibh. Sed lacinia dui eu euismod porta. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec libero ligula, pretium non rhoncus vitae, interdum consectetur ligula. Ut quis ipsum vehicula, sollicitudin nisl id, fermentum eros. Donec semper orci tellus, nec dictum metus volutpat vitae. Nulla fermentum, augue in ullamcorper rutrum, nisi ipsum condimentum odio, in porta sem eros quis lorem. Fusce placerat, purus lacinia lobortis interdum, metus dolor suscipit risus, ac viverra enim odio ac tortor. Cras vel erat bibendum, euismod felis eu, luctus quam.</p>
+            <p>{{artist.bio}}</p>
         </div>
         <div class='col-sm-5 col-md-5 col-lg-4'>
-        <iframe class='youtube' src="//www.youtube.com/embed/AFVlJAi3Cso?rel=0" frameborder="0" allowfullscreen></iframe>
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PearlJam"  data-chrome="nofooter noscrollbar" data-widget-id="489195429154652161">Tweets by @PearlJam</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        {{artist.youtube | safe}}
+        <!--{{artist.twitterWidget | safe}}-->
+        <!--<iframe class='youtube' src="//www.youtube.com/embed/AFVlJAi3Cso?rel=0" frameborder="0" allowfullscreen></iframe>-->
+<!--<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PearlJam"  data-chrome="nofooter noscrollbar" data-widget-id="489195429154652161">Tweets by @PearlJam</a>-->
+<!--    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
         </div>
     </div>
 </div>

@@ -49,7 +49,7 @@ class Sponsor(models.Model):
         return "/sponsors/%s/" % self.id
 
     def img_url(self):
-        return '/media/sponsors/sponsor.png'
+        return '/images/sponsor/%i.jpg' % self.name.lower().replace(' ','')
 
     def __str__(self):
         """
@@ -67,6 +67,8 @@ class Artist(models.Model):
     origin          = models.CharField(max_length=400)
     website         = models.CharField(max_length=400)
     genre           = models.CharField(max_length=400)
+    bio             = models.CharField(max_length=500)
+    youtube         = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage)
 
     def get_url(self):
@@ -74,6 +76,9 @@ class Artist(models.Model):
         returns url
         """
         return "/artists/%s/" % self.id
+
+    def photo(self):
+        return '/static/images/artist/%s.jpg' % self.name.replace(' ','').lower()
 
     def __str__(self):
         """
