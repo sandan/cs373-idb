@@ -1,0 +1,73 @@
+Name: Honda Stage
+Sponsor: Honda
+Artists on Stage: Eminem
+Image: http://fifehonda.hondaoffife.com/wp-content/uploads/2014/06/hondastage.png
+Website:http://automobiles.honda.com
+Facebook:www.facebook.com/hondaStage
+Bio:The Honda stage is one of seven stages at the festival, and will include such artists as Eminem, Fitz and the Tantrums, and Blue Bear
+Youtube channel:http://www.youtube.com/channel/UCZbfu5wMBlJHXFAWNgzgOcg
+Youtube video:http://www.youtube.com/embed/08H7_vTuq1U
+Twitter: https://twitter.com/HondaStage
+
+Name: Miller Lite Stage
+Sponsor: Miller Lite
+Artists on Stage: Pearl Jam
+Image: http://livedesignonline.com/site-files/livedesignonline.com/files/uploads/2013/08/1.jpg
+Website:http://www.millerlite.com
+Facebook:www.facebook.com/millerLite
+Bio:The Miller Lite stage is one of seven stages at the festival, and will include such artists as Pearl Jam, Lorde, and the Glitch Mob
+Youtube channel:http://www.youtube.com/channel/MillerLite
+Youtube video:http://www.youtube.com/embed/SS672gJ2ISU
+Twitter: https://twitter.com/MillerLite
+
+Name: Samsung Galaxy Stage
+Sponsor: Samsung Galaxy
+Artists on Stage: Outkast
+Image: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/11/SamsungBoothCES20091-640x245.jpg
+Website:http://www.samsung.com
+Facebook:https://www.facebook.com/SamsungMobileUSA
+Bio:The Samsung stage is one of seven stages at the festival, and will include such artists as Outkast, Interpol, and St. Vincent
+Youtube channel:http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
+Youtube video:http:///www.youtube.com/embed/6UixED1WM0E
+Twitter: https://twitter.com/SamsungMobile
+
+Name: Austin ventures stage
+Sponsor: Austin Ventures
+Artists on Stage: Beck
+Image: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
+Website:http://www.austinventures.com
+Facebook:www.facebook.com/austinventures
+Bio:The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
+Youtube video:<iframe width="560" height="315" src="//www.youtube.com/embed/W1ClmSpViho" frameborder="0" allowfullscreen></iframe>
+Twitter:https://twitter.com/AustinVentures
+
+Name: Bacardi Stage
+Sponsor: Bacardi
+Image: http://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2012/10/12/Photos/Bacardi%20NH7%20Weekender%20%202011%20-%20Bacardi%20Together%20Stage%20-%20NH7%20All%20Stars--621x414.jpg
+Artists on stage: Skrillex
+Website:http://www.bacardi.com
+Facebook:https://www.facebook.com/pages/Bacardi-Rum/122379137879986
+Bio:The Bacardi stage will be introduced to the festival in 2014, and will feature such artists as Skrillex, the districts, and AFI
+Video:<iframe width="560" height="315" src="//www.youtube.com/embed/aEjzAvV_ID8" frameborder="0" allowfullscreen></iframe>
+Twitter:https://twitter.com/BACARDI
+
+Name: BMI Stage
+Sponsor: BMI
+Image: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
+Artists on Stage: Foster the people
+Website: http://www.bmi.com
+Facebook:www.facebook.com/broadcastmusicinc
+Bio:The BMI has been a part of the Austin City Limits festival for years, and will feature such artists as Foster the People, Sphinx, and Blue Bear
+Video:<iframe width="420" height="315" src="//www.youtube.com/embed/x_0KDgBlZOY" frameborder="0" allowfullscreen></iframe>
+Twitter:https://twitter.com/bmi
+
+Name: Tito's
+Sponsor: Tito's handmade vodka
+Image: http://www.austinpost.org/files/dawes2.jpg
+Artists on stage:Phantogram
+Website:http://www.titosvodka.com/
+Facebook:https://www.facebook.com/pages/Titos-Handmade-Vodka/108493875838068
+Bio:Tito's has been a sponsor of the Austin City limits festival for years, and it's stage will feature such artists as Phantogram, Empires, and the Districts
+Video: VIDEO NEEDED
+Twitter:https://twitter.com/TitosVodka
+
