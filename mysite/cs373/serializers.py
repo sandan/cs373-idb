@@ -14,7 +14,7 @@ class SponsorSerializer(serializers.ModelSerializer):
 class ArtistSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Artist
-		fields = ('id', 'name', 'label', 'origin', 'website', 'genre', 'stage')
+		fields = ('id', 'name', 'label', 'origin', 'website', 'genre', 'stage', 'bio', 'youtube')
 
 class PhotoSerializer(serializers.ModelSerializer):
 	class Meta:
