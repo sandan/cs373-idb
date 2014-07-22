@@ -45,7 +45,7 @@ Twitter: https://twitter.com/fosterthepeople
 Facebook: https://www.facebook.com/fosterthepeople
 Webpage: http://www.fosterthepeople.com/
 
-Artist: 
+Artist: Skrillex
 Bio: 
 Image: 
 Youtube: 
@@ -54,7 +54,7 @@ Twitter:
 Facebook: 
 Webpage: 
 
-Artist: 
+Artist: Lana Del Rey
 Bio: 
 Image: 
 Youtube: 
@@ -63,7 +63,7 @@ Twitter:
 Facebook: 
 Webpage: 
 
-Artist: 
+Artist: Calvin Harris
 Bio: 
 Image: 
 Youtube: 
@@ -72,7 +72,7 @@ Twitter:
 Facebook: 
 Webpage: 
 
-Artist: 
+Artist: Phantogram
 Bio: 
 Image: 
 Youtube: 
@@ -81,7 +81,7 @@ Twitter:
 Facebook: 
 Webpage: 
 
-Artist: 
+Artist: Childish Gambino
 Bio: 
 Image: 
 Youtube: 
