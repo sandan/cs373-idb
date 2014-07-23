@@ -6,7 +6,7 @@ from django.http import Http404
 from django.http import HttpResponse
 from django.template import Context, loader
 
-from cs373.models import Artist, Stage, Sponsor, Photo, Member
+from cs373.models import *
 
 # API imports
 from cs373.serializers import *
