@@ -86,12 +86,12 @@ class Artist(models.Model):
         """
         return self.name
 
-class Photo(models.Model):
+class Media(models.Model):
     """
-    A representation of a Photo
+    Media resource for Artist, Sponsor, Stage
     """
-    #artist_pic     = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-    file_name       = models.CharField(max_length=400)
+    
+    
     artist          = models.ForeignKey(Artist)
 
     def __str__(self):
@@ -100,6 +100,8 @@ class Photo(models.Model):
         """
         return self.file_name
 
+"""
+DEPRECATED
 class Member(models.Model):
     """
     A representation of a Model
@@ -118,3 +120,4 @@ class Member(models.Model):
         return ret_str
 
 
+"""
