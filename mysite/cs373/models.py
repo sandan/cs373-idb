@@ -67,7 +67,7 @@ class Artist(models.Model):
     origin          = models.CharField(max_length=400)
     website         = models.CharField(max_length=400)
     genre           = models.CharField(max_length=400)
-    bio             = models.CharField(max_length=500)
+    bio             = models.TextField(max_length=5000)
     youtube         = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage)
 
@@ -91,8 +91,14 @@ class Media(models.Model):
     Media resource for Artist, Sponsor, Stage
     """
     
+    Bio=models.TextField(max_length=5000)
+    Image= models.CharField(max_length=400)
+    Youtube=models.CharField(max_length=400)
+    Video=models.CharField(max_length=400)
+    Twitter=models.CharField(max_length=400)
+    Facebook=models.CharField(max_length=400)
+    Webpage=models.CharField(max_length=400)
     
-    artist          = models.ForeignKey(Artist)
 
     def __str__(self):
         """
@@ -103,17 +109,17 @@ class Media(models.Model):
 """
 DEPRECATED
 class Member(models.Model):
-    """
-    A representation of a Model
-    """
+    
+    
+    
     first_name      = models.CharField(max_length=400)
     last_name       = models.CharField(max_length=400)
     artist          = models.ForeignKey(Artist)
 
     def __str__(self):
-        """
-        Returns the name of the member
-        """
+    
+    
+    
         ret_str = self.first_name
         if(self.last_name):
             ret_str += " " + self.last_name
