@@ -77,8 +77,8 @@ class Artist(models.Model):
         """
         return "/artists/%s/" % self.id
 
-    def photo(self):
-        return '/static/images/artist/%s.jpg' % self.name.replace(' ','').lower()
+   # def photo(self):
+    #    return '/static/images/artist/%s.jpg' % self.name.replace(' ','').lower()
 
     def __str__(self):
         """
@@ -92,7 +92,7 @@ class Media(models.Model):
     """
     
     Bio=models.TextField(max_length=5000)
-    Image= models.CharField(max_length=400)
+    Photo= models.CharField(max_length=400)
     Youtube=models.CharField(max_length=400)
     Video=models.CharField(max_length=400)
     Twitter=models.CharField(max_length=400)
