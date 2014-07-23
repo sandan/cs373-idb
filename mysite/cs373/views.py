@@ -50,7 +50,12 @@ def artists(request,artist=0):
     else:
         try:
             a = Artist.objects.get(pk=artist)
-            return render(request, 'artist.html',{'artist':a})
+            d = {'name':a.name,'label':a.label,'genre':a.genre,'origin':a.origin,'stage':a.stage}
+            d['website'] = ''
+            d['twitterwidget'] = ''
+            d['youtubevideo'] = ''
+            d['photo'] = ''
+            return render(request, 'artist.html',d)
         except Artist.DoesNotExist:
             raise Http404
 

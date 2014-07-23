@@ -92,6 +92,11 @@ class Media(models.Model):
     Video=models.CharField(max_length=400)
     Twitter=models.CharField(max_length=400)
     Facebook=models.CharField(max_length=400)
+    # holds the html code for twitter timeline widget
+    twitterwidget = models.CharField(max_length=400)
+    # holds the src of youtube video
+    # ex. src='{{media.youtubevideo}}'
+    youtubevideo = models.CharField(max_length=400)
     Webpage=models.CharField(max_length=400)
     
     def __str__(self):
