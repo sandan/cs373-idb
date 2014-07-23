@@ -99,12 +99,15 @@ class Media(models.Model):
     Facebook=models.CharField(max_length=400)
     Webpage=models.CharField(max_length=400)
     
+    st = models.ForeignKey(Stage,blank=True, null=True)
+    ar = models.ForeignKey(Artist,blank=True, null=True)
+    sp = models.ForeignKey(Sponsor,blank=True, null=True)
 
     def __str__(self):
         """
         returns Photo file_name
         """
-        return self.file_name
+        return self.Webpage
 
 """
 DEPRECATED
