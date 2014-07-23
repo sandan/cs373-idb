@@ -1,93 +1,81 @@
+Sponsors: 10
 Name: Honda
 Bio: Honda Motor Co., Ltd. is a Japanese public multinational corporation primarily known as a manufacturer of automobiles and motorcycles. Honda has been the world's largest motorcycle manufacturer since 1959, as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year. Honda became the second-largest Japanese automobile manufacturer in 2001. Honda was the eighth largest automobile manufacturer in the world behind General Motors, Volkswagen Group, Toyota, Hyundai Motor Group, Ford, Nissan, and PSA in 2011. Honda was the first Japanese automobile manufacturer to release a dedicated luxury brand, Acura, in 1986. Aside from their core automobile and motorcycle businesses, Honda also manufactures garden equipment, marine engines, personal watercraft and power generators, amongst others. Since 1986, Honda has been involved with artificial intelligence/robotics research and released their ASIMO robot in 2000. They have also ventured into aerospace with the establishment of GE Honda Aero Engines in 2004 and the Honda HA-420 HondaJet, which began production in 2012. Honda has three joint-ventures in China (Honda China, Dongfeng Honda, and Guangqi Honda). In 2013, Honda invested about 5.7% (US$ 6.8 billion) of its revenues in research and development. Also in 2013, Honda became the first Japanese automaker to be a net exporter from the United States, exporting 108,705 Honda and Acura models while importing only 88,357.
 Image: http://sequelmagazine.org/wp-content/uploads/2014/05/Honda.jpg
 Video: http://www.youtube.com/watch?v=DBqVgNob9Mw
-YouTube: http://www.youtube.com/user/Honda
+Youtube: http://www.youtube.com/user/Honda
 Website: http://automobiles.honda.com/
-Facebok: https://www.facebook.com/Honda
+Facebook: https://www.facebook.com/Honda
 Twitter: https://twitter.com/Honda
-
 Name: Miller Lite
 Bio: Miller Lite was essentially the first mainstream light beer. After its first inception as "Gablinger's Diet Beer," developed in 1967 by Joseph L. Owades, PhD, a biochemist working for New York's Rheingold Brewery, the recipe was given (by the inventor of the light beer process) to one of Miller's competing breweries, Chicago's Meister Brau, which came out with the Meister Brau "Lite" brand in the late 1960s. When Miller acquired Meister Brau's labels the recipe was reformulated and relaunched as "Lite Beer from Miller" (which was its official name until the mid 80s) in the test markets of Springfield, IL, Knoxville, TN and San Diego, CA in 1973, and heavily marketed using masculine pro sports players and other, so-called, macho figures of the day in an effort to sell to the key beer-drinking male demographic. Miller Lite was introduced nationally in 1975. Miller's approach worked where the two previous light beers had failed, and Miller's early production totals of 12.8 million barrels quickly increased to 24.2 million barrels by 1977 as Miller rose to 2nd place in the American brewing marketplace. Other brewers responded, especially Anheuser-Busch with its heavily advertised Bud Light in 1982, which eventually overtook Lite in 1994. In 1992 light beer became the biggest domestic beer in America. In 2008 Miller Brewing Company test-marketed three new recipes – an amber, a blonde ale, and a wheat – under the Miller Lite brand, marketed as Miller Lite Brewers Collection.
 Image: http://img.sxsw.com/2013/events/MillerLite.jpg
 Video: https://www.youtube.com/watch?v=ORh3JaJRtuw
-YouTube: https://www.youtube.com/user/MillerLite
+Youtube: https://www.youtube.com/user/MillerLite
 Website: http://www.millerlite.com/
+Facebook: https://www.facebook.com/MillerLite
 Twitter: https://twitter.com/MillerLite
-Facebok: https://www.facebook.com/MillerLite
-
 Name: Samsung Galaxy
 Bio: Samsung Galaxy (stylized as Samsung GALAXY) is a series of Android-powered mobile computing devices designed, manufactured and marketed by Samsung Electronics. The product line includes the Galaxy S series of high-end smartphones, the Galaxy Tab series of tablets, the Galaxy Note series of tablets and phablets with the added functionality of a stylus and the first version of the Galaxy Gear Smartwatch, with later versions dropping the Galaxy branding.
 Image: http://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Smartphone.jpeg/1280px-Smartphone.jpeg
 Video: http://www.youtube.com/watch?v=-XseHZyvGtg
-YouTube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
+Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
 Website: http://www.samsung.com/us/?cid=ppc-
-Facebok: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
+Facebook: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
 Twitter: https://twitter.com/SamsungMobileUS
-
-Name:Austin Ventures
-Bio:Austin Ventures (AV) is a private equity firm focused on venture capital and growth equity investments in business services and supply chain, financial services, new media, Internet, and information services companies nationally with a focus on Texas. The firm, which is based in Austin, Texas, was founded in 1984.[1] AV has raised approximately $3.9 billion since inception across ten private equity funds. In September 2008, the firm announced the closing of Austin Ventures X with $900 million of investor commitments which will be used to fund start-up capital for emerging companies and growth capital for expansion rounds and recapitalizations
-Image:http://d7txhf74xpsji.cloudfront.net/img/logo.png
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/u8iB84-oRz8" frameborder="0" allowfullscreen></iframe>
-Youtube:PAGE NEEDED
-Website:http://www.austinventures.com
-Facebook:http://www.facebook.com/austinventures
-Twitter:https://twitter.com/AustinVentures
-
+Name: Austin Ventures
+Bio: Austin Ventures (AV) is a private equity firm focused on venture capital and growth equity investments in business services and supply chain, financial services, new media, Internet, and information services companies nationally with a focus on Texas. The firm, which is based in Austin, Texas, was founded in 1984.[1] AV has raised approximately $3.9 billion since inception across ten private equity funds. In September 2008, the firm announced the closing of Austin Ventures X with $900 million of investor commitments which will be used to fund start-up capital for emerging companies and growth capital for expansion rounds and recapitalizations
+Image: http://d7txhf74xpsji.cloudfront.net/img/logo.png
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/u8iB84-oRz8" frameborder="0" allowfullscreen></iframe>
+Youtube: PAGE NEEDED
+Website: http://www.austinventures.com
+Facebook: http://www.facebook.com/austinventures
+Twitter: https://twitter.com/AustinVentures
 Name: Bacardi
 Bio: Bacardi Limited is the largest privately held, family-owned spirits company in the world. Originally known for its eponymous Bacardi white rum, it now has a portfolio of more than 200 brands and labels. Founded in 1862, and family-owned for seven generations, Bacardi employs 6,000 people, manufactures at 27 facilities in 16 markets on four continents, with sales in more than 150 countries. Bacardi Limited refers to the Bacardi group of companies, including Bacardi International Limited. The company sells in excess of 200 million bottles per year.The company's sales in 2007 were US$5.5 billion, up from $4.9 billion in 2006.Bacardi Limited is headquartered in Hamilton, Bermuda, and has a 16-member board of directors led by the original founder's great-great grandson, Facundo L. Bacardí.
-Image:http://www.bostonsuperblog.com/blog/wp-content/uploads/2014/06/bacardi.jpeg
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/MUUy6Kdn1Rw" frameborder="0" allowfullscreen></iframe>
-Youtube:http://www.youtube.com/user/BACARDI
-Website:http://www.bacardi.com
-Facebook:https://www.facebook.com/pages/Bacardi-Rum/122379137879986
-Twitter:https://twitter.com/BACARDI
-
+Image: http://www.bostonsuperblog.com/blog/wp-content/uploads/2014/06/bacardi.jpeg
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/MUUy6Kdn1Rw" frameborder="0" allowfullscreen></iframe>
+Youtube: http://www.youtube.com/user/BACARDI
+Website: http://www.bacardi.com
+Facebook: https://www.facebook.com/pages/Bacardi-Rum/122379137879986
+Twitter: https://twitter.com/BACARDI
 Name: BMI
-Bio:Broadcast Music, Inc. (BMI) is one of three United States performing rights organizations, along with ASCAP and SESAC. It collects license fees on behalf of songwriters, composers, and music publishers and distributes them as royalties to those members whose works have been performed. In FY 2013, BMI collected more than $944 million in licensing fees and distributed $814 million in royalties.BMI songwriters create all forms of music in all genres, from mainstream pop and country, to death metal and even hiphop. BMI represents artists such as Fifth Harmony, Lil Wayne, Birdman, Mariah Carey, Lady Gaga, Taylor Swift, Eminem, Rihanna and Shakira; bands as diverse as Maroon 5, Evanescence, Nickelback and Linkin Park; legends such as Sam Cooke, Willie Nelson, Fats Domino and Dolly Parton; as well as composers such as Harry Gregson-Williams, John Williams and Danny Elfman and musical songwriters Richard & Robert Sherman.
-Image:http://rbr.com/wp-content/uploads/BMI.jpg
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/GDKEFyyTdzU" frameborder="0" allowfullscreen></iframe>
-Youtube:www.youtube.com/user/bmivideo
-Website:http://www.bmi.com
-Facebook:www.facebook.com/broadcastmusicinc
-Twitter:https://twitter.com/bmi
-
+Bio: Broadcast Music, Inc. (BMI) is one of three United States performing rights organizations, along with ASCAP and SESAC. It collects license fees on behalf of songwriters, composers, and music publishers and distributes them as royalties to those members whose works have been performed. In FY 2013, BMI collected more than $944 million in licensing fees and distributed $814 million in royalties.BMI songwriters create all forms of music in all genres, from mainstream pop and country, to death metal and even hiphop. BMI represents artists such as Fifth Harmony, Lil Wayne, Birdman, Mariah Carey, Lady Gaga, Taylor Swift, Eminem, Rihanna and Shakira; bands as diverse as Maroon 5, Evanescence, Nickelback and Linkin Park; legends such as Sam Cooke, Willie Nelson, Fats Domino and Dolly Parton; as well as composers such as Harry Gregson-Williams, John Williams and Danny Elfman and musical songwriters Richard & Robert Sherman.
+Image: http://rbr.com/wp-content/uploads/BMI.jpg
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/GDKEFyyTdzU" frameborder="0" allowfullscreen></iframe>
+Youtube: www.youtube.com/user/bmivideo
+Website: http://www.bmi.com
+Facebook: www.facebook.com/broadcastmusicinc
+Twitter: https://twitter.com/bmi
 Name: H.E.B.
-Bio:HEB Grocery Company, LP (stylized as H-E-B), also known as H-E-B Grocery Stores, is a privately held supermarket chain based in San Antonio, Texas, with more than 350 stores throughout the U.S. state of Texas, as well as in northern Mexico. The company also operates Central Market, an upscale organic and fine foods retailer. As of 2012, the company has a total revenue surpassing $18 billion USD (2012). H-E-B ranked No. 12 on Forbes' 2012 list of "America's Largest Private Companies." H-E-B was named Retailer of the Year in 2010 by Progressive Grocer. Supermarket News ranked H-E-B No. 13 in the 2008 "Top 75 North American Food Retailers." Based on 2010 revenues, H-E-B is the twenty-fifth largest retailer in the United States It donates 5 percent of pre-tax profits to charity.
-Image:http://blogs.dallasobserver.com/unfairpark/HEB.jpg
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/9YDZfdsveHk" frameborder="0" allowfullscreen></iframe>
-Youtube:http://www.youtube.com/user/HEB
-Website:http://www.heb.com
-Facebook:http://www.facebook.com/HEB
-Twitter:https://twitter.com/HEB
-
+Bio: HEB Grocery Company, LP (stylized as H-E-B), also known as H-E-B Grocery Stores, is a privately held supermarket chain based in San Antonio, Texas, with more than 350 stores throughout the U.S. state of Texas, as well as in northern Mexico. The company also operates Central Market, an upscale organic and fine foods retailer. As of 2012, the company has a total revenue surpassing $18 billion USD (2012). H-E-B ranked No. 12 on Forbes' 2012 list of "America's Largest Private Companies." H-E-B was named Retailer of the Year in 2010 by Progressive Grocer. Supermarket News ranked H-E-B No. 13 in the 2008 "Top 75 North American Food Retailers." Based on 2010 revenues, H-E-B is the twenty-fifth largest retailer in the United States It donates 5 percent of pre-tax profits to charity.
+Image: http://blogs.dallasobserver.com/unfairpark/HEB.jpg
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/9YDZfdsveHk" frameborder="0" allowfullscreen></iframe>
+Youtube: http://www.youtube.com/user/HEB
+Website: http://www.heb.com
+Facebook: http://www.facebook.com/HEB
+Twitter: https://twitter.com/HEB
 Name: Sweet Leaf Iced Teas
-Bio:Sweet Leaf Tea was founded in 1998 in Beaumont, TX by Clayton Christopher, using $10,000 and his grandmother's recipe for home-brewed iced tea made with cane sugar. Christopher was inspired to create the business after returning from a road trip throughout Alabama and Mississippi, where he saw the abundance of homemade iced tea that all the local "mom and pop" restaurants served. He could not find bottled tea on the market that tasted like homemade iced tea and thus decided to make a bottled tea as tasty as the one his grandmother Mimi used to make. In 1999, Christopher's childhood friend David Smith joined him at the company. Early production consisted of brewing tea in crawfish pots in Hen's kitchen, using pillow cases as "tea bags" and; then using garden hoses to transport the tea to plastic bottles.
-Image:http://revimgs.bevnet.com/media/sweetleaf/231391.slt-grannylogo-icedteas.jpg
-Video:<iframe width="420" height="315" src="//www.youtube.com/embed/Lcmn_tUYTIM" frameborder="0" allowfullscreen></iframe>
-Youtube:www.youtube.com/user/sweetleaftealive
-Website:http://www.sweetleaftea.com/
-Facebook:www.facebook.com/sweetleaftea
-Twitter:https://twitter.com/SweetLeafTea
-
+Bio: Sweet Leaf Tea was founded in 1998 in Beaumont, TX by Clayton Christopher, using $10,000 and his grandmother's recipe for home-brewed iced tea made with cane sugar. Christopher was inspired to create the business after returning from a road trip throughout Alabama and Mississippi, where he saw the abundance of homemade iced tea that all the local "mom and pop" restaurants served. He could not find bottled tea on the market that tasted like homemade iced tea and thus decided to make a bottled tea as tasty as the one his grandmother Mimi used to make. In 1999, Christopher's childhood friend David Smith joined him at the company. Early production consisted of brewing tea in crawfish pots in Hen's kitchen, using pillow cases as "tea bags" and; then using garden hoses to transport the tea to plastic bottles.
+Image: http://revimgs.bevnet.com/media/sweetleaf/231391.slt-grannylogo-icedteas.jpg
+Video: <iframe width="420" height="315" src="//www.youtube.com/embed/Lcmn_tUYTIM" frameborder="0" allowfullscreen></iframe>
+Youtube: www.youtube.com/user/sweetleaftealive
+Website: http://www.sweetleaftea.com/
+Facebook: www.facebook.com/sweetleaftea
+Twitter: https://twitter.com/SweetLeafTea
 Name: Tito's handmade vodka
-Bio:Tito's Handmade Vodka is a vodka produced in Austin, Texas, in the first legal distillery in Texas, established by Bert Butler "Tito" Beveridge II. A native of San Antonio, Texas, Beveridge received the diminutive nickname "Bertito", shortened to "Tito", from his Latino caretakers in childhood. Tito's Handmade Vodka is made from yellow corn, instead of the more commonly used wheat or potatoes, resulting in a mildly sweet aftertaste, and is distilled six times.Commercial production began in 1997 when Beveridge formed Fifth Generation, Inc., and established the Mockingbird Distillery, producing just 1,000 cases that year. In 2007, he sold over 160,000 cases. All production is still maintained at the southeast Austin distillery, where he has expanded from one pot still to ten and from one bottling line to four. Despite the growing distribution, Fifth Generation, Inc. employs fewer than 18 people
-Image:http://manoavino.typepad.com/mano_a_vino_montclair/images/2008/01/13/titosvodka_2.jpg
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/DssKEkOefdc" frameborder="0" allowfullscreen></iframe>
-Youtube:www.youtube.com/user/titosvodka
+Bio: Tito's Handmade Vodka is a vodka produced in Austin, Texas, in the first legal distillery in Texas, established by Bert Butler "Tito" Beveridge II. A native of San Antonio, Texas, Beveridge received the diminutive nickname "Bertito", shortened to "Tito", from his Latino caretakers in childhood. Tito's Handmade Vodka is made from yellow corn, instead of the more commonly used wheat or potatoes, resulting in a mildly sweet aftertaste, and is distilled six times.Commercial production began in 1997 when Beveridge formed Fifth Generation, Inc., and established the Mockingbird Distillery, producing just 1,000 cases that year. In 2007, he sold over 160,000 cases. All production is still maintained at the southeast Austin distillery, where he has expanded from one pot still to ten and from one bottling line to four. Despite the growing distribution, Fifth Generation, Inc. employs fewer than 18 people
+Image: http://manoavino.typepad.com/mano_a_vino_montclair/images/2008/01/13/titosvodka_2.jpg
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/DssKEkOefdc" frameborder="0" allowfullscreen></iframe>
+Youtube: www.youtube.com/user/titosvodka
 Website: http://www.titosvodka.com/
-Facebook:https://www.facebook.com/pages/Titos-Handmade-Vodka/108493875838068
-Twitter:https://twitter.com/TitosVodka
-
-Name:WD
-Bio:Western Digital Corporation (often abbreviated as WDC or WD) is one of the largest computer hard disk drive manufacturers (along with Seagate Technology) in the world.Western Digital Corporation has a long history in the electronics industry as an integrated circuit maker and a storage products company. Western Digital was founded on April 23, 1970 by Alvin B. Phillips, a Motorola employee, as General Digital, initially (and briefly) a manufacturer of MOS test equipment. It rapidly became a speciality semiconductor maker, with start-up capital provided by several individual investors and industrial giant Emerson Electric Company. 
-Image:http://i4.sdlcdn.com/img/brand/logo/2012-11-21-10-43-06-Western-Digital.gif
-Video:<iframe width="560" height="315" src="//www.youtube.com/embed/j4bwyEpojn4" frameborder="0" allowfullscreen></iframe>
-Youtube:http://www.youtube.com/user/westerndigital
-Website:http://www.wdc.com
-Facebook:http://www.facebook.com/WesternDigital
-Twitter:https://twitter.com/WesternDigital
-
-
-
-
+Facebook: https://www.facebook.com/pages/Titos-Handmade-Vodka/108493875838068
+Twitter: https://twitter.com/TitosVodka
+Name: WD
+Bio: Western Digital Corporation (often abbreviated as WDC or WD) is one of the largest computer hard disk drive manufacturers (along with Seagate Technology) in the world.Western Digital Corporation has a long history in the electronics industry as an integrated circuit maker and a storage products company. Western Digital was founded on April 23, 1970 by Alvin B. Phillips, a Motorola employee, as General Digital, initially (and briefly) a manufacturer of MOS test equipment. It rapidly became a speciality semiconductor maker, with start-up capital provided by several individual investors and industrial giant Emerson Electric Company. 
+Image: http://i4.sdlcdn.com/img/brand/logo/2012-11-21-10-43-06-Western-Digital.gif
+Video: <iframe width="560" height="315" src="//www.youtube.com/embed/j4bwyEpojn4" frameborder="0" allowfullscreen></iframe>
+Youtube: http://www.youtube.com/user/westerndigital
+Website: http://www.wdc.com
+Facebook: http://www.facebook.com/WesternDigital
+Twitter: https://twitter.com/WesternDigital
