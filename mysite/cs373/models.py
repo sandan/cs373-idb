@@ -30,9 +30,7 @@ class Sponsor(models.Model):
     """
 
     name            = models.CharField(max_length=400)
-    #sponsor_pic    = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
     business_type   = models.CharField(max_length=400)
-    #website         = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
 
 
@@ -65,10 +63,7 @@ class Artist(models.Model):
     name            = models.CharField(max_length=400, unique=True)
     label           = models.CharField(max_length=400)
     origin          = models.CharField(max_length=400)
-    #website         = models.CharField(max_length=400)
-     genre           = models.CharField(max_length=400)
-    #bio             = models.TextField(max_length=5000)
-    #youtube         = models.CharField(max_length=400)
+    genre           = models.CharField(max_length=400)
     stage           = models.ForeignKey(Stage)
 
     def get_url(self):
@@ -99,16 +94,21 @@ class Media(models.Model):
     Facebook=models.CharField(max_length=400)
     Webpage=models.CharField(max_length=400)
     
-    st = models.ForeignKey(Stage,blank=True, null=True)
-    ar = models.ForeignKey(Artist,blank=True, null=True)
-    sp = models.ForeignKey(Sponsor,blank=True, null=True)
-
     def __str__(self):
         """
-        returns Photo file_name
+        returns Webpage link
         """
         return self.Webpage
+        
+class ArtistMedia(Media):
+    ar = models.ForeignKey(Artist)
 
+class StageMedia(Media):
+    st = models.ForeignKey(Stage)
+    
+class SponsorMedia(Media):
+    sp = models.ForeignKey(Sponsor)
+    
 """
 DEPRECATED
 class Member(models.Model):
