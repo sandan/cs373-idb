@@ -7,11 +7,6 @@ class Stage(models.Model):
     A reprentation of a stage
     """
     name            = models.CharField(max_length=400, unique=True)
-    bio             = models.CharField(max_length=400)
-    photo           = models.CharField(max_length=60)
-    webpage         = models.CharField(max_length=60)
-    video           = models.CharField(max_length=300)
-    twitterwidget   = models.CharField(max_length=300)
     #sponsor        = models.ForeignKey(Sponsor)
 
     # def get_name(self):
@@ -36,11 +31,6 @@ class Sponsor(models.Model):
 
     name            = models.CharField(max_length=400)
     business_type   = models.CharField(max_length=400)
-    bio             = models.CharField(max_length=400)
-    photo           = models.CharField(max_length=60)
-    webpage         = models.CharField(max_length=60)
-    video           = models.CharField(max_length=300)
-    twitterwidget   = models.CharField(max_length=300)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
 
 
@@ -74,11 +64,6 @@ class Artist(models.Model):
     label           = models.CharField(max_length=400)
     origin          = models.CharField(max_length=400)
     genre           = models.CharField(max_length=400)
-    bio             = models.CharField(max_length=400)
-    photo           = models.CharField(max_length=60)
-    webpage         = models.CharField(max_length=60)
-    video           = models.CharField(max_length=300)
-    twitterwidget   = models.CharField(max_length=300)
     stage           = models.ForeignKey(Stage)
 
     def get_url(self):
@@ -96,11 +81,9 @@ class Artist(models.Model):
         """
         return self.name
 
-"""
-DEPRECATED
 class Media(models.Model):
     """
-    #Media resource for Artist, Sponsor, Stage
+    Media resource for Artist, Sponsor, Stage
     """
     
     Bio=models.TextField(max_length=5000)
@@ -113,7 +96,7 @@ class Media(models.Model):
     
     def __str__(self):
         """
-        #returns Webpage link
+        returns Webpage link
         """
         return self.Webpage
         
@@ -126,7 +109,8 @@ class StageMedia(Media):
 class SponsorMedia(Media):
     sp = models.ForeignKey(Sponsor)
     
-
+"""
+DEPRECATED
 class Member(models.Model):
     
     

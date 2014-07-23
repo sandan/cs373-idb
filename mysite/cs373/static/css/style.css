@@ -1,0 +1,158 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+
+html
+{
+  height: 100%;
+}
+
+body
+{
+  background: #FFF;
+  color: #556270;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+}
+
+#main
+{
+  background: #FFFFFF;
+}
+
+.logo
+{
+  border-radius: 5px;
+  border: #556270 solid 1px;
+  background: #556270;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+   -o-transition: all .25s .25s;
+   -ms-transition: all .25s .25s;
+   -moz-transition: all .25s .25s;
+   -webkit-transition: all .25s .25s;
+    transition: all .25s .25s;
+}
+
+.logo:hover
+{
+  background: #FFFFFF !important;
+  border: #FFFFFF solid 1px;
+  color: #4ECDC4 !important;
+}
+
+.jumbotron
+{
+  background-color: transparent;
+}
+
+.jumbotron p .btn
+{
+  border-width: 0;
+}
+
+.navbar-default
+{
+  border:0;
+  border-radius: 0;
+  background: #4ECDC4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-default li a
+{
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #4ECDC4;
+  margin-left: 20px;
+  text-transform: uppercase;
+   -ms-transition: all .15s .15s;
+   -moz-transition: all .15s .15s;
+   -webkit-transition: all .15s .15s;
+   -o-transition: all .15s .15s;
+    transition: all .15s .15s;
+}
+
+.navbar-default li a:hover
+{
+  border-bottom-color: #FFFFFF;
+}
+
+#info
+{
+  background-color: #FFFFFF;
+  color: #556270;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#info h2
+{
+  font-family: 'Vollkorn', serif;
+}
+
+.icon-wrap
+{
+  color: #FFFFFF;
+  background: #556270;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  font-size: 40px;
+  padding:30px;
+}
+
+.content
+{
+  background: #FFFFFF;
+}
+
+#artists
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+#artist h1
+{
+  font-weight: 300;
+}
+
+.title
+{
+  font-size: 62px;
+}
+
+.twitter-timeline
+{
+  width:100% !important;
+}
+
+#map
+{
+  width:100%;
+}
+
+#stages-list
+{
+}
+
+#stages-list li
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    background: #556270;
+}
+
+#stages-list li:not(:last-child)
+{
+    margin-bottom:10px;
+}
+
+#stages-list a
+{
+    display:block;
+    color: #FFF !important;
+}
