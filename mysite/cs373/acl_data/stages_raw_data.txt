@@ -21,7 +21,7 @@ Video: http://www.youtube.com/embed/SS672gJ2ISU
 Twitter: https://twitter.com/MillerLite
 Name: Samsung Galaxy stage
 Sponsor: Samsung Galaxy
-Artists on Stage: Outkast
+Artists on Stage: Outkast, Childish Gambino
 Image: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/11/SamsungBoothCES20091-640x245.jpg
 Website: http://www.samsung.com
 Facebook: https://www.facebook.com/SamsungMobileUSA
@@ -31,7 +31,7 @@ Video: http:///www.youtube.com/embed/6UixED1WM0E
 Twitter: https://twitter.com/SamsungMobile
 Name: Austin Ventures stage
 Sponsor: Austin Ventures
-Artists on Stage: Beck
+Artists on Stage: Beck, Calvin Harris
 Image: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
 Website: http://www.austinventures.com
 Facebook: www.facebook.com/austinventures
@@ -42,7 +42,7 @@ Twitter: https://twitter.com/AustinVentures
 Name: Bacardi stage
 Sponsor: Bacardi
 Image: http://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2012/10/12/Photos/Bacardi%20NH7%20Weekender%20%202011%20-%20Bacardi%20Together%20Stage%20-%20NH7%20All%20Stars--621x414.jpg
-Artists on Stage: Skrillex
+Artists on Stage: Skrillex, Lana Del Rey
 Website: http://www.bacardi.com
 Facebook: https://www.facebook.com/pages/Bacardi-Rum/122379137879986
 Bio: The Bacardi stage will be introduced to the festival in 2014, and will feature such artists as Skrillex, the districts, and AFI
@@ -50,7 +50,7 @@ Youtube channel: NULL
 Video: <iframe width="560" height="315" src="//www.youtube.com/embed/aEjzAvV_ID8" frameborder="0" allowfullscreen></iframe>
 Twitter: https://twitter.com/BACARDI
 Name: BMI Stage
-Sponsor: sMI
+Sponsor: BMI
 Image: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
 Artists on Stage: Foster the people
 Website: http://www.bmi.com
