@@ -10,7 +10,7 @@
   <ul id='artists' class='list-inline'>
   {% if object_list %}
     {% for a in object_list %}
-      <li><h2><a href='{{artist.get_url}}'>{{a.name}}</a></h2></li>
+      <li><h2><a href='{{a.get_url}}'>{{a.name}}</a></h2></li>
     {% endfor %}
   {% else %}
     <li><h2>There are no artists. Check back later</h2></li>
