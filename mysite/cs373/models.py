@@ -33,7 +33,6 @@ class Sponsor(models.Model):
     business_type   = models.CharField(max_length=255)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
 
-
     # def get_name(self):
     #     return self.name
 
@@ -46,8 +45,8 @@ class Sponsor(models.Model):
         """
         return "/sponsors/%s/" % self.id
 
-    def img_url(self):
-        return '/images/sponsor/%i.jpg' % self.name.lower().replace(' ','')
+    def photo(self):
+        return SponsorMedia.objects.get(sp=self)
 
     def __str__(self):
         """
