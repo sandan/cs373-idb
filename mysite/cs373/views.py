@@ -81,10 +81,11 @@ def sponsors(request,sponsor=0):
 """
 class ArtistsIndex(ListView):
     model=Artist
-    contex_object_name='artists'
+    context_object_name='artists'
     template_name='artists.html'
 
 class ArtistPage(DetailView):
+    model=Artist
     template_name='artist.html'
 
     def get_context_data(self, **kwargs):
