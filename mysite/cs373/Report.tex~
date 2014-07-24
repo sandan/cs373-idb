@@ -282,22 +282,12 @@ methods:
 
 \subsubsection{Media}
 The Media class represents all media informaton that is associated with a sponsor, artist, or stage. 
-The Entity relationships are as follows:
-Each Media has a  1 to 0..1 relation with Stage
-Each Media has a  1 to 0..1 relation with Sponsor
-Each Media has a  1 to 0..1 relation with Artist
+The Enti
 
 \begin{verbatim}
 attributes:
--id: Integer
--Bio: A CharField of 255 characters. Biography. 
--Photo: A CharField of 255 characters.
--Youtube: A CharField of 255 characters. url for Youtube Channel
--Video: A CharField of 255 characters.
--Twitter: A CharField of 255 characters. url for Twitter
--Facebook:A CharField of 255 characters. url for Facebook
--twitterwidget: A CharField of 255 characters.
--webpage: 
+-file_name: A CharField of 400 characters. File name of the photo. 
+-artist: The ForeignKey relating a Photo to an Artist.
 
 methods:
 - __str__(): returns the file_name of the photo.
