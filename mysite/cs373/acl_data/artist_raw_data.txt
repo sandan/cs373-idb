@@ -6,7 +6,7 @@ Stage: Samsung Galaxy stage
 Bio: Outkast (stylized as OutKast) is an American hip hop duo formed in 1992, in East Point, Atlanta, Georgia, composed of Atlanta-based rappers André "André 3000" Benjamin and Antwan "Big Boi" Patton. They were originally known as Two Shades Deep but later changed the group's name to OutKast. The group's original musical style was a mixture of Dirty South and G-funk. Subsequently however, funk, soul, rock, electronic music, spoken word poetry, jazz and blues elements have been added to the group's musical palette.The duo is one of the most successful hip-hop groups of all time, having received six Grammy Awards. Between six studio albums and a greatest hits release, Outkast has sold over 25 million records. Meanwhile they have garnered widespread critical acclaim, with publications such as Rolling Stone and Pitchfork Media listing albums such as Aquemini and Stankonia among the best of their era.
 Photo:  http://factmag-images.s3.amazonaws.com/wp-content/uploads/2014/01/OutKast-bestival-1.28.2014.jpg
 Youtube: www.youtube.com/user/OutkastVEVO
-Video: //www.youtube.com/embed/PWgvGjAhvIw&list=TL147enjedJaFuWQ_-w9yOdlOddnunFTyK
+Video: //www.youtube.com/embed/PWgvGjAhvIw
 Twitter: https://twitter.com/Outkast
 Facebook: https://www.facebook.com/outkast
 Webpage: http://www.outkast.com/
@@ -97,7 +97,7 @@ Stage: Austin Ventures stage
 Bio: Calvin Harris (born Adam Richard Wiles on 17 January 1984) is a Scottish singer-songwriter, record producer and DJ. His gold-selling debut album, I Created Disco, was released in 2007 and contained the top ten singles "Acceptable in the 80s" and "The Girls". He has written and produced records for other recording artists including Kylie Minogue's X and his number-one collaboration with English rapper Dizzee Rascal, "Dance wiv Me". His second studio album Ready for the Weekend was released on 17 August 2009 and reached number one in the UK Album Charts on 23 August. It includes the chart-topper "I'm Not Alone", the UK top five hit "Ready for the Weekend", which was released on 10 August, and the track "Flashback", which was released as the third single from the album on 2 November 2009. The fourth single from the album, "You Used to Hold Me", was released on 8 February 2010 as a CD single and download. A remix album titled L.E.D. Festival was released in July 2010 as a free album in the August issue of Mixmag.
 Photo:  http://images.forwallpaper.com/files/images/2/2a03/2a03d7d9/79288/calvin-harris.jpg
 Youtube: https://www.youtube.com/user/CalvinHarrisVEVO
-Video: //www.youtube.com/embed/list=TLz5tMAe9W8u_eWTqfTtOnAE3h2XuOiViD&feature=player_detailpage&v=ebXbLfLACGM
+Video: //www.youtube.com/embed/ebXbLfLACGM
 Twitter: https://twitter.com/calvinharris
 Facebook: https://www.facebook.com/calvinharris
 Webpage: http://www.calvinharris.co.uk/
