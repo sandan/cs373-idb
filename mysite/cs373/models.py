@@ -6,7 +6,7 @@ class Stage(models.Model):
     """
     A reprentation of a stage
     """
-    name            = models.CharField(max_length=400, unique=True)
+    name            = models.CharField(max_length=250, unique=True)
     #sponsor        = models.ForeignKey(Sponsor)
 
     # def get_name(self):
@@ -60,7 +60,7 @@ class Artist(models.Model):
     """
     A representation of an artist
     """
-    name            = models.CharField(max_length=400, unique=True)
+    name            = models.CharField(max_length=250, unique=True)
     label           = models.CharField(max_length=400)
     origin          = models.CharField(max_length=400)
     genre           = models.CharField(max_length=400)
