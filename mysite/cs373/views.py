@@ -28,7 +28,7 @@ def stages(request,stage=0):
 """
 class StagesIndex(ListView):
     model=Stage
-    contex_object_name='stages'
+    contex_object_name='stage_list'
     template_name='stages.html'
 
 class StagePage(DetailView):
