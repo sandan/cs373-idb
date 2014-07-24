@@ -1,4 +1,3 @@
-Stages: 7
 Name: Honda stage
 Sponsor: Honda
 Artists on Stage: Eminem
@@ -9,6 +8,7 @@ Bio: The Honda stage is one of seven stages at the festival, and will include su
 Youtube channel: http://www.youtube.com/channel/UCZbfu5wMBlJHXFAWNgzgOcg
 Video: http://www.youtube.com/embed/08H7_vTuq1U
 Twitter: https://twitter.com/HondaStage
+
 Name: Miller Lite stage
 Sponsor: Miller Lite
 Artists on Stage: Pearl Jam
@@ -19,6 +19,7 @@ Bio: The Miller Lite stage is one of seven stages at the festival, and will incl
 Youtube channel: http://www.youtube.com/channel/MillerLite
 Video: http://www.youtube.com/embed/SS672gJ2ISU
 Twitter: https://twitter.com/MillerLite
+
 Name: Samsung Galaxy stage
 Sponsor: Samsung Galaxy
 Artists on Stage: Outkast, Childish Gambino
@@ -29,6 +30,7 @@ Bio: The Samsung stage is one of seven stages at the festival, and will include 
 Youtube channel: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
 Video: http:///www.youtube.com/embed/6UixED1WM0E
 Twitter: https://twitter.com/SamsungMobile
+
 Name: Austin Ventures stage
 Sponsor: Austin Ventures
 Artists on Stage: Beck, Calvin Harris
@@ -39,6 +41,7 @@ Bio: The Austin Ventures stage has been a part of the Austin City limits festiva
 Youtube channel: NULL
 Video: <iframe width="560" height="315" src="//www.youtube.com/embed/W1ClmSpViho" frameborder="0" allowfullscreen></iframe>
 Twitter: https://twitter.com/AustinVentures
+
 Name: Bacardi stage
 Sponsor: Bacardi
 Image: http://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2012/10/12/Photos/Bacardi%20NH7%20Weekender%20%202011%20-%20Bacardi%20Together%20Stage%20-%20NH7%20All%20Stars--621x414.jpg
@@ -49,6 +52,7 @@ Bio: The Bacardi stage will be introduced to the festival in 2014, and will feat
 Youtube channel: NULL
 Video: <iframe width="560" height="315" src="//www.youtube.com/embed/aEjzAvV_ID8" frameborder="0" allowfullscreen></iframe>
 Twitter: https://twitter.com/BACARDI
+
 Name: BMI Stage
 Sponsor: BMI
 Image: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
@@ -59,6 +63,7 @@ Bio: The BMI has been a part of the Austin City Limits festival for years, and w
 Youtube channel: NULL
 Video: <iframe width="420" height="315" src="//www.youtube.com/embed/x_0KDgBlZOY" frameborder="0" allowfullscreen></iframe>
 Twitter: https://twitter.com/bmi
+
 Name: Tito's handmade vodka stage
 Sponsor: Tito's handmade vodka
 Image: http://www.austinpost.org/files/dawes2.jpg
