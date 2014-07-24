@@ -1,3 +1,4 @@
+"""
 from rest_framework import serializers
 from cs373.models import Stage, Sponsor, Artist, Photo, Member
 
@@ -25,3 +26,4 @@ class MemberSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Member
 		fields = ('id', 'first_name', 'last_name', 'artist')
+"""
