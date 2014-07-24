@@ -4,7 +4,7 @@ Webpage: http://automobiles.honda.com
 Facebook: www.facebook.com/hondaStage
 Bio: The Honda stage is one of seven stages at the festival, and will include such artists as Eminem, Fitz and the Tantrums, and Blue Bear
 Youtube: http://www.youtube.com/channel/UCZbfu5wMBlJHXFAWNgzgOcg
-Video: http://www.youtube.com/embed/08H7_vTuq1U
+Video: //www.youtube.com/embed/08H7_vTuq1U
 Twitter: https://twitter.com/HondaStage
 
 Name: Miller Lite stage
@@ -13,7 +13,7 @@ Webpage: http://www.millerlite.com
 Facebook: www.facebook.com/millerLite
 Bio: The Miller Lite stage is one of seven stages at the festival, and will include such artists as Pearl Jam, Lorde, and the Glitch Mob
 Youtube: http://www.youtube.com/channel/MillerLite
-Video: http://www.youtube.com/embed/SS672gJ2ISU
+Video: //www.youtube.com/embed/SS672gJ2ISU
 Twitter: https://twitter.com/MillerLite
 
 Name: Samsung Galaxy stage
@@ -22,7 +22,7 @@ Webpage: http://www.samsung.com
 Facebook: https://www.facebook.com/SamsungMobileUSA
 Bio: The Samsung stage is one of seven stages at the festival, and will include such artists as Outkast, Interpol, and St. Vincent
 Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
-Video: http:///www.youtube.com/embed/6UixED1WM0E
+Video: //www.youtube.com/embed/6UixED1WM0E
 Twitter: https://twitter.com/SamsungMobile
 
 Name: Austin Ventures stage
@@ -31,7 +31,7 @@ Webpage: http://www.austinventures.com
 Facebook: www.facebook.com/austinventures
 Bio: The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
 Youtube: NULL
-Video: <iframe width="560" height="315" src="//www.youtube.com/embed/W1ClmSpViho" frameborder="0" allowfullscreen></iframe>
+Video: //www.youtube.com/embed/W1ClmSpViho
 Twitter: https://twitter.com/AustinVentures
 
 Name: Bacardi stage
@@ -40,7 +40,7 @@ Webpage: http://www.bacardi.com
 Facebook: https://www.facebook.com/pages/Bacardi-Rum/122379137879986
 Bio: The Bacardi stage will be introduced to the festival in 2014, and will feature such artists as Skrillex, the districts, and AFI
 Youtube: NULL
-Video: <iframe width="560" height="315" src="//www.youtube.com/embed/aEjzAvV_ID8" frameborder="0" allowfullscreen></iframe>
+Video: //www.youtube.com/embed/aEjzAvV_ID8
 Twitter: https://twitter.com/BACARDI
 
 Name: BMI Stage
@@ -49,7 +49,7 @@ Webpage: http://www.bmi.com
 Facebook: www.facebook.com/broadcastmusicinc
 Bio: The BMI has been a part of the Austin City Limits festival for years, and will feature such artists as Foster the People, Sphinx, and Blue Bear
 Youtube: NULL
-Video: <iframe width="420" height="315" src="//www.youtube.com/embed/x_0KDgBlZOY" frameborder="0" allowfullscreen></iframe>
+Video: //www.youtube.com/embed/x_0KDgBlZOY
 Twitter: https://twitter.com/bmi
 
 Name: Tito's handmade vodka stage
