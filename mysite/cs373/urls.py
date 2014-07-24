@@ -21,13 +21,13 @@ urlpatterns = patterns('',
     url(r'^$', index, name='index'),
 
     url(r'stages/$', StagesIndex.as_view()),
-    url(r'stages/([0-9]{1,2})/$', StagePage.as_view()),
+    url(r'stages/(?P<pk>\d+)/$', StagePage.as_view()),
 
     url(r'sponsors/$', SponsorsIndex.as_view()),
-    url(r'sponsors/([0-9]{1,2})/$', SponsorPage.as_view()),
+    url(r'sponsors/(?P<pk>\d+)/$', SponsorPage.as_view()),
 
     url(r'artists/$', ArtistsIndex.as_view()),
-    url(r'artists/([0-9]{1,2})/$', ArtistPage.as_view()),
+    url(r'artists/(?P<pk>\d+)/$', ArtistPage.as_view()),
 
     #DEPRECATED
     #url(r'artists/([0-9]{1,2})/members/$', views.members),
