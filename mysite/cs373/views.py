@@ -6,11 +6,11 @@ from django.views.generic.detail import DetailView
 from django.template import Context, loader
 from cs373.models import *
 
-# API imports
-#from cs373.serializers import *
-#from rest_framework.views import APIView
-#from rest_framework.response import Response
-#from rest_framework import status
+### API imports
+from cs373.serializers import *
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 def index(request):
     return render(request, 'index.html')
@@ -98,7 +98,7 @@ class ArtistPage(DetailView):
 #                         #
 ###########################
 
-"""
+
 class StageList(APIView):
 
 
@@ -151,7 +151,7 @@ class SponsorDetail(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         serializer = SponsorSerializer(sponsor)
-        return Response(serializer.data)
+        return Response(serializer.data, content_type="application/json")
 
     def put(self, request, artist_id, pk):
         return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
@@ -180,79 +180,47 @@ class ArtistDetail(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         serializer = ArtistSerializer(artist)
-        return Response(serializer.data)
-
-    def put(self, request, artist_id, pk):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
-
-    def delete(self, request, artist_id, pk):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
-
-class MemberList(APIView):
-
-
-
-    def get(self, request, artist_id):
-        try:
-            members = Member.objects.filter(artist=artist_id)
-        except:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-
-        serializer = MemberSerializer(members, many=True)
         return Response(serializer.data, content_type="application/json")
 
-    def post(self, request):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
-
-class MemberDetail(APIView):
-
-
-    def get(self, request, artist_id, pk):
-        try:
-            member = Member.objects.get(pk=pk, artist=artist_id)
-        except:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-
-        serializer = MemberSerializer(member)
-        return Response(serializer.data)
-
     def put(self, request, artist_id, pk):
         return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
     def delete(self, request, artist_id, pk):
         return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
-class PhotoList(APIView):
 
+class ArtistMediaDetail(APIView):
 
     def get(self, request, artist_id):
-        try:
-            photo = Photo.objects.filter(artist=artist_id)
+        try: 
+            detail = ArtistMedia.objects.get(ar=Artist.objects.get(pk=artist_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        serializer = PhotoSerializer(members, many=True)
+        serializer = ArtistMediaSerializer(detail)
+
         return Response(serializer.data, content_type="application/json")
 
-    def post(self, request):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+class StageMediaDetail(APIView):
 
-class PhotoDetail(APIView):
-
-
-    def get(self, request, artist_id, pk):
-        try:
-            photo = Photo.objects.get(pk=pk, artist=artist_id)
+    def get(self, request, stage_id):
+        try: 
+            detail = StageMedia.objects.get(st=Stage.objects.get(pk=stage_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        serializer = PhotoSerializer(photo)
-        return Response(serializer.data)
+        serializer = StageMediaSerializer(detail)
 
-    def put(self, request, artist_id, pk):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        return Response(serializer.data, content_type="application/json")
 
-    def delete(self, request, artist_id, pk):
-        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+class SponsorMediaDetail(APIView):
 
-"""
+    def get(self, request, sponsor_id):
+        try: 
+            detail = SponsorMedia.objects.get(sp=Sponsor.objects.get(pk=sponsor_id))
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        serializer = SponsorMediaSerializer(detail)
+
+        return Response(serializer.data, content_type="application/json")

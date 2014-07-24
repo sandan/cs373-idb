@@ -15,7 +15,16 @@ from cs373.views import *
     url(r'api/artists/(?P<artist_id>[0-9]+)/photos/(?P<pk>[0-9]+)/$', views.PhotoDetail.as_view()),
 """
 urlpatterns = patterns('',
+    url(r'api/stages/$', StageList.as_view()),
+    url(r'api/stages/(?P<pk>[0-9]+)/$', StageDetail.as_view()),
+    url(r'api/sponsors/$', SponsorList.as_view()),
+    url(r'api/sponsors/(?P<pk>[0-9]+)/$', SponsorDetail.as_view()),
+    url(r'api/artists/$', ArtistList.as_view()),
+    url(r'api/artists/(?P<pk>[0-9]+)/$', ArtistDetail.as_view()),
 
+    url(r'api/stages/(?P<stage_id>[0-9]+)/media/$', StageMediaDetail.as_view()),
+    url(r'api/sponsors/(?P<sponsor_id>[0-9]+)/media/$', SponsorMediaDetail.as_view()),
+    url(r'api/artists/(?P<artist_id>[0-9]+)/media/$', ArtistMediaDetail.as_view()),
 
     url(r'^$', index, name='index'),
 

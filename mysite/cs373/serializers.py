@@ -1,29 +1,32 @@
-"""
 from rest_framework import serializers
-from cs373.models import Stage, Sponsor, Artist, Photo, Member
+from cs373 import models
 
 class StageSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Stage
-		fields = ('id', 'name')
+		model = models.Stage
+		fields = ('name',)
 
 class SponsorSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Sponsor
-		fields = ('id', 'name', 'business_type', 'website', 'stage')
+		model = models.Sponsor
+		fields = ('name', 'business_type', 'stage')
 
 class ArtistSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Artist
-		fields = ('id', 'name', 'label', 'origin', 'website', 'genre', 'stage', 'bio', 'youtube')
+		model = models.Artist
+		fields = ('name', 'label', 'origin', 'genre', 'stage')
 
-class PhotoSerializer(serializers.ModelSerializer):
+class ArtistMediaSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Photo
-		fields = ('id', 'file_name', 'artist')
+		model = models.ArtistMedia
+		fields = ('bio', 'photo', 'youtube', 'video', 'twitter', 'facebook', 'twitterwidget', 'youtubevideo', 'webpage')
 
-class MemberSerializer(serializers.ModelSerializer):
+class StageMediaSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Member
-		fields = ('id', 'first_name', 'last_name', 'artist')
-"""
+		model = models.StageMedia
+		fields = ('bio', 'photo', 'youtube', 'video', 'twitter', 'facebook', 'twitterwidget', 'youtubevideo', 'webpage')
+
+class SponsorMediaSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.SponsorMedia
+		fields = ('bio', 'photo', 'youtube', 'video', 'twitter', 'facebook', 'twitterwidget', 'youtubevideo', 'webpage')
