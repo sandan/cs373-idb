@@ -81,7 +81,7 @@ def sponsors(request,sponsor=0):
 """
 class ArtistsIndex(ListView):
     model=Artist
-    context_object_name='artists'
+    context_object_name='artists_list'
     template_name='artists.html'
 
 class ArtistPage(DetailView):
