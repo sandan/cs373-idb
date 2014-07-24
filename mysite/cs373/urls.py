@@ -20,8 +20,8 @@ urlpatterns = patterns('',
 
     url(r'^$', index, name='index'),
 
-    url(r'stages/$', StagesIndex),
-    url(r'stages/([0-9]{1,2})/$', StagePage),
+    url(r'stages/$', StagesIndex.as_view()),
+    url(r'stages/([0-9]{1,2})/$', StagePage.as_view()),
 
     url(r'sponsors/$', SponsorsIndex.as_view()),
     url(r'sponsors/([0-9]{1,2})/$', SponsorPage.as_view()),

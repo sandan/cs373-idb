@@ -19,7 +19,7 @@
                     <h4><small><span title='LABEL' class='glyphicon glyphicon-briefcase'></span> </small>{{artist.label}}</h4>
                     <h4><small><span title='GENRE' class='glyphicon glyphicon-headphones'></span> </small>{{artist.genre}}</h4>
                     <h4><small><span title='ORIGIN' class='glyphicon glyphicon-map-marker'></span> </small>{{artist.origin}}</h4>
-                    <h4><small><span title='WEBSITE' class='glyphicon glyphicon-link'></span> </small><a href='{{website}}'>{{artist.website}}</a></h4>
+                    <h4><small><span title='WEBSITE' class='glyphicon glyphicon-link'></span> </small><a href='{{artist.website}}'>{{artist.website}}</a></h4>
                 </div>
             </div>
             <p>{{media.bio}}</p>
@@ -27,7 +27,7 @@
         <div class='col-sm-5 col-md-5 col-lg-4'>
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-4by3">
-                <iframe class='embed-responsive-item' src='{{youtubevideo}}?rel=0' frameborder="0" allowfullscreen></iframe>
+                <iframe class='embed-responsive-item' src='{{media.youtubevideo}}?rel=0' frameborder="0" allowfullscreen></iframe>
             </div>
             {{media.twitterwidget | safe}}
         </div>

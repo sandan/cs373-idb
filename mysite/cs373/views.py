@@ -2,9 +2,6 @@ from django.shortcuts import render
 from django.http import Http404
 from django.views.generic import ListView,DetailView
 
-# Create your views here.
-
-from django.http import HttpResponse
 from django.template import Context, loader
 from cs373.models import *
 
@@ -41,9 +38,9 @@ class StagePage(DetailView):
     def get_context_data(self, **kwargs):
         context = super(StagePage, self).get_context_data(**kwargs)
         try:
-            sp = Sponsor.objects.get(pk=self.args[0])
-            m = StageMedia.objects.get()
-            context['artist']=sp
+            s = Stage.objects.get(pk=self.args[0])
+            m = StageMedia.objects.get(st=s)
+            context['stage']=s
             context['media']=m
         except Stage.DoesNotExist or StageMedia.DoesNotExist:
             raise Http404
@@ -98,7 +95,7 @@ class ArtistPage(DetailView):
             context['artist']=a
             context['media']=m
 
-        except Artist.DoesNotExist or ArtistMedia.DoesnotExist:
+        except Artist.DoesNotExist or ArtistMedia.DoesNotExist:
             raise Http404
 """
 DEPRECATED
