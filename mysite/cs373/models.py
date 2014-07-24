@@ -92,7 +92,7 @@ class Media(models.Model):
         """
         returns Webpage link
         """
-        return self.Webpage
+        return self.webpage
 
 class ArtistMedia(Media):
     ar = models.ForeignKey(Artist)
