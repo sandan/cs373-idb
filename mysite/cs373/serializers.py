@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from cs373.models import Stage, Sponsor, Artist, Photo, Member
+from cs373.models import *
 
 class StageSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -15,7 +15,7 @@ class ArtistSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Artist
 		fields = ('id', 'name', 'label', 'origin', 'website', 'genre', 'stage', 'bio', 'youtube')
-
+"""
 class PhotoSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Photo
@@ -25,3 +25,4 @@ class MemberSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Member
 		fields = ('id', 'first_name', 'last_name', 'artist')
+"""

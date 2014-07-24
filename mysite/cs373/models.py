@@ -86,7 +86,7 @@ class Media(models.Model):
     Media resource for Artist, Sponsor, Stage
     """
     
-    Bio=models.TextField(max_length=5000)
+    Bio=models.CharField(max_length=5000)
     Photo= models.CharField(max_length=400)
     Youtube=models.CharField(max_length=400)
     Video=models.CharField(max_length=400)
