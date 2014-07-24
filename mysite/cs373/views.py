@@ -16,7 +16,7 @@ from cs373.models import *
 
 def index(request):
     return render(request, 'index.html')
-
+"""
 def stages(request,stage=0):
     stage = int(stage)
     if stage is 0:
@@ -27,6 +27,25 @@ def stages(request,stage=0):
             s = Stage.objects.get(pk=stage)
             return render(request, 'stage.html',{'stage':s})
         except Stage.DoesNotExist:
+            raise Http404
+"""
+class StagesIndex(ListView):
+    model=Stage
+    contex_object_name='stages'
+    template_name='stages.html'
+
+class StagePage(DetailView):
+
+    template_name='stage.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(StagePage, self).get_context_data(**kwargs)
+        try:
+            sp = Sponsor.objects.get(pk=self.args[0])
+            m = StageMedia.objects.get()
+            context['artist']=sp
+            context['media']=m
+        except Stage.DoesNotExist or StageMedia.DoesNotExist:
             raise Http404
 
 class SponsorsIndex(ListView):
@@ -43,9 +62,9 @@ class SponsorPage(DetailView):
         try:
             sp = Sponsor.objects.get(pk=self.args[0])
             m = SponsorMedia.objects.get()
-            context['artist']=sp
+            context['sponsor']=sp
             context['media']=m
-        except Sponsor.DoesNotExist or SponsorMedia.DoesnotExist:
+        except Sponsor.DoesNotExist or SponsorMedia.DoesNotExist:
             raise Http404
 
 """

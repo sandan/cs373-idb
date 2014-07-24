@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from cs373.views import ArtistPage, ArtistsIndex, SponsorsIndex, SponsorPage, stages, index
+from cs373.views import ArtistPage, ArtistsIndex, SponsorsIndex, SponsorPage, StagesIndex, StagePage, index
 
 """
     url(r'api/stages/$', views.StageList.as_view()),
@@ -20,8 +20,8 @@ urlpatterns = patterns('',
 
     url(r'^$', index, name='index'),
 
-    url(r'stages/$', stages),
-    url(r'stages/([0-9]{1,2})/$', stages),
+    url(r'stages/$', StagesIndex),
+    url(r'stages/([0-9]{1,2})/$', StagePage),
 
     url(r'sponsors/$', SponsorsIndex.as_view()),
     url(r'sponsors/([0-9]{1,2})/$', SponsorPage.as_view()),
