@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, url
-
-from cs373.views import ArtistPage, ArtistsIndex, SponsorsIndex, SponsorPage, StagesIndex, StagePage, index
+from cs373.views import *
 
 """
     url(r'api/stages/$', views.StageList.as_view()),
@@ -27,7 +26,7 @@ urlpatterns = patterns('',
     url(r'sponsors/([0-9]{1,2})/$', SponsorPage.as_view()),
 
     url(r'artists/$', ArtistsIndex.as_view()),
-    url(r'artists/([0-9]{1,2})/$', ArtistPage.as_view()),
+    url(r'artists/(?P<pk>\d+)/$', ArtistPage.as_view(), name='artist_detail'),
 
     #DEPRECATED
     #url(r'artists/([0-9]{1,2})/members/$', views.members),

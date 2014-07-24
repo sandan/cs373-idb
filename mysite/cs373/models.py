@@ -1,5 +1,5 @@
-
 from django.db import models
+
 
 
 class Stage(models.Model):
@@ -8,9 +8,6 @@ class Stage(models.Model):
     """
     name            = models.CharField(max_length=255, unique=True)
     #sponsor        = models.ForeignKey(Sponsor)
-
-    # def get_name(self):
-    #     return self.name
 
     def get_url(self):
         """
@@ -33,12 +30,6 @@ class Sponsor(models.Model):
     business_type   = models.CharField(max_length=255)
     stage           = models.ForeignKey(Stage, blank=True, null=True)
 
-
-    # def get_name(self):
-    #     return self.name
-
-    # def get_business_type(self):
-    #     return self.busoness_type
 
     def get_url(self):
         """
@@ -66,14 +57,12 @@ class Artist(models.Model):
     genre           = models.CharField(max_length=255)
     stage           = models.ForeignKey(Stage)
 
+
     def get_url(self):
         """
         returns url
         """
         return "/artists/%s/" % self.id
-
-   # def photo(self):
-    #    return '/static/images/artist/%s.jpg' % self.name.replace(' ','').lower()
 
     def __str__(self):
         """
@@ -86,18 +75,18 @@ class Media(models.Model):
     Media resource for Artist, Sponsor, Stage
     """
 
-    Bio=models.CharField(max_length=255)
-    Photo= models.CharField(max_length=255)
-    Youtube=models.CharField(max_length=255)
-    Video=models.CharField(max_length=255)
-    Twitter=models.CharField(max_length=255)
-    Facebook=models.CharField(max_length=255)
+    bio=models.TextField()
+    photo= models.CharField(max_length=255)
+    youtube=models.URLField(max_length=255)
+    video=models.CharField(max_length=255)
+    twitter=models.CharField(max_length=255)
+    facebook=models.URLField(max_length=255)
     # holds the html code for twitter timeline widget
     twitterwidget = models.CharField(max_length=255)
     # holds the src of youtube video
     # ex. src='{{media.youtubevideo}}'
-    youtubevideo = models.CharField(max_length=255)
-    Webpage=models.CharField(max_length=255)
+    youtubevideo = models.URLField(max_length=255)
+    webpage=models.URLField(max_length=255)
 
     def __str__(self):
         """
@@ -114,24 +103,4 @@ class StageMedia(Media):
 class SponsorMedia(Media):
     sp = models.ForeignKey(Sponsor)
 
-"""
-DEPRECATED
-class Member(models.Model):
 
-
-
-    first_name      = models.CharField(max_length=255)
-    last_name       = models.CharField(max_length=255)
-    artist          = models.ForeignKey(Artist)
-
-    def __str__(self):
-
-
-
-        ret_str = self.first_name
-        if(self.last_name):
-            ret_str += " " + self.last_name
-        return ret_str
-
-
-"""

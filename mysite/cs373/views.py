@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
-from django.views.generic import ListView,DetailView
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 from django.template import Context, loader
 from cs373.models import *
@@ -13,26 +14,19 @@ from cs373.models import *
 
 def index(request):
     return render(request, 'index.html')
-"""
-def stages(request,stage=0):
-    stage = int(stage)
-    if stage is 0:
-        s = Stage.objects.all()
-        return render(request, 'stages.html',{'stages':s})
-    else:
-        try:
-            s = Stage.objects.get(pk=stage)
-            return render(request, 'stage.html',{'stage':s})
-        except Stage.DoesNotExist:
-            raise Http404
-"""
+
+###########################
+#                         #
+#       Stage             #
+#                         #
+###########################
 class StagesIndex(ListView):
     model=Stage
-    contex_object_name='stages'
+    context_object_name='stages'
     template_name='stages.html'
 
 class StagePage(DetailView):
-
+    model=Stage
     template_name='stage.html'
 
     def get_context_data(self, **kwargs):
@@ -45,13 +39,19 @@ class StagePage(DetailView):
         except Stage.DoesNotExist or StageMedia.DoesNotExist:
             raise Http404
 
+###########################
+#                         #
+#       Sponsor           #
+#                         #
+###########################
+
 class SponsorsIndex(ListView):
     model=Sponsor
-    contex_object_name='sponsor'
+    context_object_name='sponsor'
     template_name='sponsors.html'
 
 class SponsorPage(DetailView):
-
+    model=Sponsor
     template_name='sponsor.html'
 
     def get_context_data(self, **kwargs):
@@ -64,59 +64,32 @@ class SponsorPage(DetailView):
         except Sponsor.DoesNotExist or SponsorMedia.DoesNotExist:
             raise Http404
 
-"""
-DEPRECATED
-def sponsors(request,sponsor=0):
-    sponsor = int(sponsor)
-    if sponsor is 0:
-        s = Sponsor.objects.all()
-        return render(request, 'sponsors.html',{'sponsors':s})
-    else:
-        try:
-            s = Sponsor.objects.get(pk=sponsor)
-            return render(request, 'sponsor.html',{'sponsor':s})
-        except Sponsor.DoesNotExist:
-            raise Http404
+###########################
+#                         #
+#       Artist            #
+#                         #
+###########################
 
-"""
 class ArtistsIndex(ListView):
     model=Artist
-    contex_object_name='artists'
+    context_object_name='artists'
     template_name='artists.html'
 
 class ArtistPage(DetailView):
     template_name='artist.html'
+    model=Artist
 
     def get_context_data(self, **kwargs):
         context = super(ArtistPage, self).get_context_data(**kwargs)
         try:
-            a = Artist.objects.get(pk=self.args[0])
+            a = Artist.objects.get(pk=self.kwargs['pk'])
             m = ArtistMedia.objects.get(ar=a)
-            context['artist']=a
-            context['media']=m
+            context['a']=a
+            context['m']=m
+            return context
 
         except Artist.DoesNotExist or ArtistMedia.DoesNotExist:
             raise Http404
-"""
-DEPRECATED
-def artists(request,artist=0):
-    artist = int(artist)
-    if artist is 0:
-        a = Artist.objects.all()
-        return render(request, 'artists.html',{'artists':a})
-    else:
-        try:
-            a = Artist.objects.get(pk=artist)
-            d = {'name':a.name,'label':a.label,'genre':a.genre,'origin':a.origin,'stage':a.stage}
-            d['website'] = ''
-            d['twitterwidget'] = ''
-            d['youtubevideo'] = ''
-            d['photo'] = ''
-            return render(request, 'artist.html',d)
-        except Artist.DoesNotExist:
-            raise Http404
-"""
-
 
 
 ###########################
