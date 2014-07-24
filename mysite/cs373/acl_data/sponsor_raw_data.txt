@@ -1,4 +1,3 @@
-Sponsors: 10
 Name: Honda
 Business Type: Automobile
 Stage: Honda stage
@@ -9,6 +8,7 @@ Youtube: http://www.youtube.com/user/Honda
 Website: http://automobiles.honda.com/
 Facebook: https://www.facebook.com/Honda
 Twitter: https://twitter.com/Honda
+
 Name: Miller Lite
 Business Type: Beverage
 Stage: Miller Lite stage
@@ -19,6 +19,7 @@ Youtube: https://www.youtube.com/user/MillerLite
 Website: http://www.millerlite.com/
 Facebook: https://www.facebook.com/MillerLite
 Twitter: https://twitter.com/MillerLite
+
 Name: Samsung Galaxy
 Business Type: Mobile phone
 Stage: Samsung Galaxy stage
@@ -29,6 +30,7 @@ Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
 Website: http://www.samsung.com/us/?cid=ppc-
 Facebook: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
 Twitter: https://twitter.com/SamsungMobileUS
+
 Name: Austin Ventures
 Business type: Investments
 Stage: Austin Ventures stage
@@ -39,6 +41,7 @@ Youtube: PAGE NEEDED
 Website: http://www.austinventures.com
 Facebook: http://www.facebook.com/austinventures
 Twitter: https://twitter.com/AustinVentures
+
 Name: Bacardi
 Business type: Beverage
 Stage: Bacardi stage
@@ -49,6 +52,7 @@ Youtube: http://www.youtube.com/user/BACARDI
 Website: http://www.bacardi.com
 Facebook: https://www.facebook.com/pages/Bacardi-Rum/122379137879986
 Twitter: https://twitter.com/BACARDI
+
 Name: BMI
 Business type: Music/Entertainment
 Stage: BMI stage
@@ -59,6 +63,7 @@ Youtube: www.youtube.com/user/bmivideo
 Website: http://www.bmi.com
 Facebook: www.facebook.com/broadcastmusicinc
 Twitter: https://twitter.com/bmi
+
 Name: H.E.B.
 Business type: Grocery
 Stage: H.E.B. stage
@@ -69,6 +74,7 @@ Youtube: http://www.youtube.com/user/HEB
 Website: http://www.heb.com
 Facebook: http://www.facebook.com/HEB
 Twitter: https://twitter.com/HEB
+
 Name: Sweet Leaf Iced Teas
 Business type: Beverage
 Stage: Sweet Leaf Iced Teas stage
@@ -79,6 +85,7 @@ Youtube: www.youtube.com/user/sweetleaftealive
 Website: http://www.sweetleaftea.com/
 Facebook: www.facebook.com/sweetleaftea
 Twitter: https://twitter.com/SweetLeafTea
+
 Name: Tito's handmade vodka
 Business type: Beverage
 Stage: Tito's handmade vodka stage
@@ -89,6 +96,7 @@ Youtube: www.youtube.com/user/titosvodka
 Website: http://www.titosvodka.com/
 Facebook: https://www.facebook.com/pages/Titos-Handmade-Vodka/108493875838068
 Twitter: https://twitter.com/TitosVodka
+
 Name: Western Digital
 Business type: Computer hardware
 Stage: Western Digital stage
