@@ -1,4 +1,5 @@
 Musicians: 10
+
 Artist: Outkast
 Label: Epic
 Origin: Atlanta, GA
@@ -11,6 +12,7 @@ Video: http://www.youtube.com/watch?v=PWgvGjAhvIw&list=TL147enjedJaFuWQ_-w9yOdlO
 Twitter: https://twitter.com/Outkast
 Facebook: https://www.facebook.com/outkast
 Webpage: http://www.outkast.com/
+
 Artist: Eminem
 Label: Interscope
 Origin: Detroit, MI
@@ -23,6 +25,7 @@ Video: www.youtube.com/watch?v=XbGs_qK2PQA
 Twitter: https://twitter.com/Eminem
 Facebook: https://www.facebook.com/eminem
 Webpage: http://www.eminem.com/
+
 Artist: Pearl Jam
 Label: Monkeywrench
 Origin: Seattle, WA
@@ -35,6 +38,7 @@ Video: http://www.youtube.com/watch?v=qQXP6TDtW0w
 Twitter: https://twitter.com/PearlJam
 Facebook: https://www.facebook.com/PearlJam
 Webpage: http://pearljam.com/
+
 Artist: Beck
 Label: Capitol
 Origin: Los Angeles, CA
@@ -47,6 +51,7 @@ Video: http://www.youtube.com/watch?v=YgSPaXgAdzE
 Twitter: https://twitter.com/beck
 Facebook: https://www.facebook.com/Beck
 Webpage: http://www.beck.com/
+
 Artist: Foster the People
 Label: Columbia
 Origin: Los Angeles, CA
@@ -59,6 +64,7 @@ Video: http://www.youtube.com/watch?v=SDTZ7iX4vTQ
 Twitter: https://twitter.com/fosterthepeople
 Facebook: https://www.facebook.com/fosterthepeople
 Webpage: http://www.fosterthepeople.com/
+
 Artist: Skrillex
 Label: Atlantic
 Origin: Los Angeles, CA
@@ -71,6 +77,7 @@ Video: https://www.youtube.com/watch?v=YJVmu6yttiw
 Twitter: https://twitter.com/Skrillex
 Facebook: https://www.facebook.com/skrillex
 Webpage: http://alientalk.skrillex.com/
+
 Artist: Lana Del Rey
 Label: Interscope
 Origin: New York City, New York
@@ -83,6 +90,7 @@ Video: https://www.youtube.com/watch?v=TdrL3QxjyVw
 Twitter: https://twitter.com/lanadelrey 
 Facebook: https://www.facebook.com/lanadelrey
 Webpage: http://lanadelrey.com/
+
 Artist: Calvin Harris
 Label: Columbia
 Origin: Dumfries, Scotland
@@ -95,6 +103,7 @@ Video: https://www.youtube.com/watch?list=TLz5tMAe9W8u_eWTqfTtOnAE3h2XuOiViD&fea
 Twitter: https://twitter.com/calvinharris
 Facebook: https://www.facebook.com/calvinharris
 Webpage: http://www.calvinharris.co.uk/
+
 Artist: Phantogram
 Label: Barsuk
 Origin: Greenwich, New York
@@ -107,6 +116,7 @@ Video: https://www.youtube.com/watch?feature=player_embedded&v=RsQjC5zVnt8
 Twitter: https://twitter.com/Phantogram
 Facebook: https://www.facebook.com/Phantogram
 Webpage: http://www.phantogram.com/
+
 Artist: Childish Gambino
 Label: Island
 Origin: Stone Mountain, GA
