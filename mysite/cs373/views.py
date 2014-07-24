@@ -86,18 +86,20 @@ class ArtistsIndex(ListView):
 
 class ArtistPage(DetailView):
     model=Artist
+    context_object_name='artist'
     template_name='artist.html'
 
     def get_context_data(self, **kwargs):
         context = super(ArtistPage, self).get_context_data(**kwargs)
         try:
-            a = Artist.objects.get(pk=self.args[0])
+            a = super(ArtistPage,self).get_object()
             m = ArtistMedia.objects.get(ar=a)
-            context['artist']=a
             context['media']=m
 
         except Artist.DoesNotExist or ArtistMedia.DoesNotExist:
             raise Http404
+
+        return context
 """
 DEPRECATED
 def artists(request,artist=0):
