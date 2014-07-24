@@ -68,12 +68,11 @@ class DjangoMethodTests(TestCase):
         s.save()
 
         # test artist
-        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',website='http://www.artist.com/',genre='Artist Genre',stage=s)
+        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre',stage=s)
         self.assertIsNotNone(a)
         self.assertEqual(a.name,'Artist Name')
         self.assertEqual(a.label,'Artist Label')
         self.assertEqual(a.origin,'Artist City')
-        self.assertEqual(a.website,'http://www.artist.com/')
         self.assertEqual(a.genre,'Artist Genre')
         self.assertEqual(a.stage,s)
 
@@ -84,14 +83,13 @@ class DjangoMethodTests(TestCase):
         s.save()
 
         # test artist
-        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',website='http://www.artist.com/',genre='Artist Genre',stage=s)
+        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre',stage=s)
         a.save()
         b = Artist.objects.get(name='Artist Name')
         self.assertIsNotNone(b)
         self.assertEqual(b.name,'Artist Name')
         self.assertEqual(b.label,'Artist Label')
         self.assertEqual(b.origin,'Artist City')
-        self.assertEqual(b.website,'http://www.artist.com/')
         self.assertEqual(b.genre,'Artist Genre')
         self.assertEqual(b.stage,s)
 
@@ -115,7 +113,6 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(a.name,'')
         self.assertEqual(a.label,'')
         self.assertEqual(a.origin,'')
-        self.assertEqual(a.website,'')
         self.assertEqual(a.genre,'')
         self.assertEqual(a.stage,s)
 
@@ -214,6 +211,41 @@ class DjangoMethodTests(TestCase):
         s = Sponsor.objects.get(pk=1)
         self.assertIsNotNone(s)
         self.assertEqual(s.__str__(),'Sponsor Name')
+        
+    def test_get_sponsor(self):
+        # setup stage
+        s = Stage(name='Stage Name')
+        s.save()
+
+        # test artist
+        a = Sponsor(name='sponsor', business_type='business',stage=s)
+        a.save()
+        b = Sponsor.objects.get(name='sponsor')
+        self.assertIsNotNone(b)
+        self.assertEqual(b.name,'sponsor')
+        self.assertEqual(b.business_type,'business')
+        self.assertEqual(b.stage,s)
+
+    def test_empty_sponsor(self):
+        a = Sponsor()
+        try:
+            a.save()
+            self.fail('Should have thrown IntegrityError')
+        except IntegrityError:
+            pass
+
+    def test_empty_sponsor_with_stage(self):
+        # setup stage
+        s = Stage(name='Stage Name')
+        s.save()
+
+        a = Sponsor(stage=s)
+        a.save()
+        a = Sponsor.objects.get(pk=1)
+        self.assertIsNotNone(a)
+        self.assertEqual(a.name,'')
+        self.assertEqual(a.business_type,'')
+        self.assertEqual(a.stage,s)
 
     def test_sponsor_url_1(self):
         s = Sponsor(name='Sponsor One')
@@ -242,126 +274,33 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(s.get_url(),'/sponsors/1/')
         self.assertEqual(s.name,'Sponsor One')
 
-    # Member Tests
-
-    def test_empty_member(self):
-        s = Stage(name='Stage One')
-        a = Artist(name='Artist One',stage=s)
-        m = Member(artist=a)
+    # Media tests
+    
+    
+    def test_empty_media(self):
+        m = ArtistMedia()
+        m.save()
+        m = ArtistMedia.objects.get(pk=1)
         self.assertIsNotNone(m)
-        self.assertEqual(m.first_name,'')
-        self.assertEqual(m.artist,a)
+        self.assertEqual(m.bio,'')
+        self.assertIsNone(m.media)
 
-    def test_get_empty_member(self):
-        s = Stage(name='Stage One')
-        s.save()
-        a = Artist(name='Artist One',stage=s)
-        a.save()
-        m = Member(artist=a)
+    def test_save_media(self):
+        m = ArtistMedia(bio='Media type')
         m.save()
+        m = ArtistMedia.objects.get(pk=1)
         self.assertIsNotNone(m)
-        self.assertEqual(m.first_name,'')
-        self.assertEqual(m.artist,a)
+        self.assertEqual
+        
+    def test_media_length(self):
+        n = 'm'*256
+        self.assertEqual(len(n),256)
 
-    def test_create_member(self):
-        s = Stage(name='Stage One')
-        s.save()
-        a = Artist(name='Artist One',stage=s)
-        a.save()
-        m = Member(artist=a,first_name='First',last_name='Last')
-        self.assertEqual(m.first_name,'First')
-        self.assertEqual(m.last_name,'Last')
-        self.assertEqual(m.artist,a)
+        m = ArtistMedia(bio=n)
+        try:
+            s.save()
+            self.fail('Should have thrown an Exception')
+        except:
+            pass
 
-    def test_get_member(self):
-        s = Stage(name='Stage One')
-        s.save()
-        a = Artist(name='Artist One',stage=s)
-        a.save()
-        m = Member(artist=a,first_name='First',last_name='Last')
-        m.save()
-
-        m = Member.objects.get(pk=1)
-
-        self.assertEqual(m.first_name,'First')
-        self.assertEqual(m.last_name,'Last')
-        self.assertEqual(m.artist,a)
-
-    def test_str_member(self):
-        s = Stage(name='Stage One')
-        s.save()
-        a = Artist(name='Artist One',stage=s)
-        a.save()
-        m = Member(artist=a,first_name='First',last_name='Last')
-        m.save()
-
-        m = Member.objects.get(pk=1)
-
-        self.assertEqual(m.__str__(),'First Last')
-
-        self.assertEqual(m.first_name,'First')
-        self.assertEqual(m.last_name,'Last')
-        self.assertEqual(m.artist,a)
-
-    # Photo Tests
-
-    def test_empty_photo(self):
-        s = Stage()
-        s.save()
-        a = Artist(stage=s)
-        a.save()
-        p = Photo(artist=a)
-        p.save()
-        self.assertIsNotNone(p)
-        self.assertEqual(p.file_name,'')
-        self.assertEqual(p.artist,a)
-
-    def test_create_photo(self):
-        s = Stage()
-        s.save()
-        a = Artist(stage=s)
-        a.save()
-        p = Photo(file_name='/media/1.jpg',artist=a)
-        p.save()
-        self.assertIsNotNone(p)
-        self.assertEqual(p.file_name,'/media/1.jpg')
-        self.assertEqual(p.artist,a)
-
-
-    def test_get_photo(self):
-        s = Stage()
-        s.save()
-        a = Artist(stage=s)
-        a.save()
-        p = Photo(file_name='/media/1.jpg',artist=a)
-        p.save()
-        p = Photo(file_name='/media/2.jpg',artist=a)
-        p.save()
-        p = Photo(file_name='/media/3.jpg',artist=a)
-        p.save()
-
-        p = Photo.objects.get(pk=1)
-
-        self.assertIsNotNone(p)
-        self.assertEqual(p.file_name,'/media/1.jpg')
-        self.assertEqual(p.artist,a)
-
-    def test_str_photo(self):
-        s = Stage()
-        s.save()
-        a = Artist(stage=s)
-        a.save()
-        p = Photo(file_name='/media/1.jpg',artist=a)
-        p.save()
-        p = Photo(file_name='/media/2.jpg',artist=a)
-        p.save()
-        p = Photo(file_name='/media/3.jpg',artist=a)
-        p.save()
-
-        p = Photo.objects.get(pk=1)
-        self.assertEqual(p.__str__(),'/media/1.jpg')
-        p = Photo.objects.get(pk=2)
-        self.assertEqual(p.__str__(),'/media/2.jpg')
-        p = Photo.objects.get(pk=3)
-        self.assertEqual(p.__str__(),'/media/3.jpg')
-
+    
