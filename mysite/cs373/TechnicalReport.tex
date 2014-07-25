@@ -310,18 +310,29 @@ The Media class represents all media informaton that is associated with a sponso
 
 \begin{verbatim}
 attributes:
--id: Integer
+-id: Primary key, Integer
 -bio: A CharField of 255 characters. Biography. 
--photo: A CharField of 255 characters.
+-photo: A CharField of 255 characters. 
 -youtube: A CharField of 255 characters. url for Youtube Channel
 -video: A CharField of 255 characters.
 -twitter: A CharField of 255 characters. url for Twitter
 -facebook:A CharField of 255 characters. url for Facebook
 -twitterwidget: A CharField of 255 characters.
--webpage: 
+-webpage: A Char field of 255 characters.
 
 methods:
 - __str__(): returns the file_name of the photo.
+
+subclasses:
+- SponsorMedia: a media subclass that has a one-to-one relationship with an instance of the Sponsor class
+  attributes:
+  - sp: Foreign key, integer type field
+- StageMedia: a media subclass that has a one-to-one relationship with an instance of the Stage class
+  attributes:
+  - st: Foreign key, integer type field
+- ArtistMedia: a media subclass that has a one-to-one relationship with an instance of the Artist class
+  attributes:
+  - ar: Foreign key, integer type field
 \end{verbatim}
 
 \section{Unit Tests}
@@ -374,7 +385,23 @@ Total tests: 6
 \item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2: Tests that the $get\_url$ is returned in the proper format.
 \end{itemize}
 
+\subsection{Media Test}
 
+Total tests: 6
+
+\begin{itemize}
+
+\item test\_save\_media: Tests that the name matches the passed value given when the Media instance was created.
+
+\item test\_empty\_media: Tests that an Media class attribute can handle NULL values
+
+\item test\_media\_length: Tests the $max\_length$ property of CharField when setting the name of Media.
+
+\item test\_media\_string: Test the Media class String function
+
+\item test\_foreign_key: Tests that the foreign key is correct
+
+\end{itemize}
 \subsection{API Test} 
 The REST API is tested using the django rest framework. The django rest framework has a built in library that allows the tests to mimic API clients that interact with the API.
 Currently only GET requests are allowed. Any other request will throw ??? .
