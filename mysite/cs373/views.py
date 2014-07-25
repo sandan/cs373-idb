@@ -196,10 +196,12 @@ class ArtistDetail(APIView):
         return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 
+
+
 class ArtistMediaDetail(APIView):
 
     def get(self, request, artist_id):
-        try:
+        try: 
             detail = ArtistMedia.objects.get(ar=Artist.objects.get(pk=artist_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -208,10 +210,13 @@ class ArtistMediaDetail(APIView):
 
         return Response(serializer.data, content_type="application/json")
 
+    def post(self, request, artist_id):
+        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
 class StageMediaDetail(APIView):
 
     def get(self, request, stage_id):
-        try:
+        try: 
             detail = StageMedia.objects.get(st=Stage.objects.get(pk=stage_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -220,10 +225,13 @@ class StageMediaDetail(APIView):
 
         return Response(serializer.data, content_type="application/json")
 
+    def post(self, request, stage_id):
+        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
 class SponsorMediaDetail(APIView):
 
     def get(self, request, sponsor_id):
-        try:
+        try: 
             detail = SponsorMedia.objects.get(sp=Sponsor.objects.get(pk=sponsor_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -231,3 +239,6 @@ class SponsorMediaDetail(APIView):
         serializer = SponsorMediaSerializer(detail)
 
         return Response(serializer.data, content_type="application/json")
+
+    def post(self, request, sponsor_id):
+        return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
