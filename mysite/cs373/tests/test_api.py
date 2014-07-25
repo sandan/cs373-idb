@@ -32,6 +32,7 @@ class ArtistAPITest(APITestCase):
 
 	def tearDown(self):
 		self.artist.delete()
+		self.stage.delete()
 
 	def testStageGet(self):
 		response = self.client.get("/api/artists/1/", format="application/json")
@@ -53,7 +54,8 @@ class SponsorsAPITest(APITestCase):
 		self.sponsor.save()
 
 	def tearDown(self):
-		self.stage.delete()
+	    self.sponsor.delete()
+	    self.stage.delete()
 
 	def testStageGet(self):
 		response = self.client.get("/api/sponsors/1/", format="application/json")
@@ -70,7 +72,7 @@ class SponsorsAPITest(APITestCase):
 
 class StageMediaAPITest(APITestCase):
 	def setUp(self):
-		self.stage = Stage(name="new stage")
+		self.stage = Stage(id=1, name="new stage")
 		self.stage.save()
 		self.stage_media = StageMedia(bio="stage bio", st=self.stage)
 		self.stage_media.save()
@@ -83,8 +85,8 @@ class StageMediaAPITest(APITestCase):
 		self.stage.delete()
 
 	def test_stage_media_get(self):
-		response = self.client.get(self.url)
-		self.assertEqual(response.status_code, status.HTTP_200_OK)
+	    response = self.client.get(self.url)
+	    self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 	def test_stage_media_bad_get(self):
 		response = self.client.get(self.bad_url)
@@ -97,9 +99,9 @@ class StageMediaAPITest(APITestCase):
 
 class ArtistMediaAPITest(APITestCase):
 	def setUp(self):
-		self.stage = Stage(name="new stage")
+		self.stage = Stage(id=1, name="new stage")
 		self.stage.save()
-		self.artist = Artist(name="new artist", stage=self.stage)
+		self.artist = Artist(id=1, name="new artist", stage=self.stage)
 		self.artist.save()
 		self.artist_media = ArtistMedia(bio="artist bio", ar=self.artist)
 		self.artist_media.save()
@@ -126,9 +128,9 @@ class ArtistMediaAPITest(APITestCase):
 
 class SponsorMediaAPITest(APITestCase):
 	def setUp(self):
-		self.stage = Stage(name="new stage")
+		self.stage = Stage(id=1, name="new stage")
 		self.stage.save()
-		self.sponsor = Sponsor(name="new sponsor", stage=self.stage)
+		self.sponsor = Sponsor(id=1, name="new sponsor", stage=self.stage)
 		self.sponsor.save()
 		self.sponsor_media = SponsorMedia(bio="sponsor bio", sp=self.sponsor)
 		self.sponsor_media.save()
