@@ -302,6 +302,13 @@ class DjangoMethodTests(TestCase):
             self.fail('Should have thrown an Exception')
         except:
             pass
+        
+    def test_media_string(self):
+        m = ArtistMedia(webpage='www.www.com')
+        m.save()
+        self.assertEqual(m.__string__(), 'www.www.com')
+        
+        
     def test_empty_media_with_stage(self):
         # setup stage
         s = Stage(name='Stage Name')
