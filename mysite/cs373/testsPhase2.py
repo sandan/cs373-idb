@@ -308,21 +308,6 @@ class DjangoMethodTests(TestCase):
         m.save()
         self.assertEqual(m.__string__(), 'www.www.com')
         
-        
-    def test_stage_only(self):
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = ArtistMedia(stage=s)
-        a.save()
-        a = Artist.objects.get(pk=1)
-        self.assertIsNotNone(a)
-        self.assertEqual(a.name,'')
-        self.assertEqual(a.label,'')
-        self.assertEqual(a.origin,'')
-        self.assertEqual(a.genre,'')
-        self.assertEqual(a.stage,s)
-    
     def test_foreign_key(self):
         a = ArtistMedia(ar = 'x')
         a.save()
