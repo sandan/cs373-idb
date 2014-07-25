@@ -286,11 +286,41 @@ methods:
 \subsubsection{Photo}
 DEPRECATED - added as IMAGE to the media class as of the second version.
 
-\subsubsection{Media}
+\subsubsection{Media models}
 The Media class will represent all of the media associated with Stages, Sponsors, and Artists. All Artists, Sponsors, and Stages will associated
 with Media in a many-to-one relationship. The Media class has been included to remove a lot of redundancy in code, and to simplify improving the overall 
 design of our pages. We use the design pattern of aggregation for each instance of a model, and all Media classes will be an aggregate of all media
 associated with an Artist, Stage, or Sponsor. The media components included will be images, videos, website/facebook/youtube channel and twitter feeds.
+
+The Media class has the following attributes and methods:
+\begin{verbatim}
+attributes:
+- id: Primary Key, integer type field
+- Bio: Basic information on an artist, sponsor, or stage; a character type field with a maximum length of 255 characters
+- Photo: a link to an artist, sponsor, or stage's photo; a character type field with a maximum length of 255 characters
+- Youtube: a link to an artist, sponsor, or stage's youtube channel; a character type field with a maximum length of 255 characters
+- Video: a link to an artist, sponsor, or stage's video; a character type field with a maximum length of 255 characters
+- Facebook: a link to an artist, sponsor, or stage's facebook page; a character type field with a maximum length of 255 characters
+- twitterwidget: a link to an artist, sponsor, or stage's twitter feed; a character type field with a maximum length of 255 characters
+- webpage: a link to an artist, sponsor, or stage's webpage: a character type field with a maximum length of 255 characters
+
+methods:
+- __str__(): returns a string that represent a stage, sponsor, or artist's website.
+
+subclasses:
+- SponsorMedia: a media subclass that has a one-to-one relationship with an instance of the Sponsor class
+  attributes:
+  - sp: Foreign key, integer type field
+- StageMedia: a media subclass that has a one-to-one relationship with an instance of the Stage class
+  attributes:
+  - st: Foreign key, integer type field
+- ArtistMedia: a media subclass that has a one-to-one relationship with an instance of the Artist class
+  attributes:
+  - ar: Foreign key, integer type field
+  
+
+\end{verbatim}
+
 
 \subsubsection{Member}
 DEPRECATED - The Member class has not been used in either phase.
@@ -351,13 +381,15 @@ Total tests: 7
 
 \begin{itemize}
 
-\item test\_media\_relate: Test that an instance of a media class can have a one-to-one relationship between Artists, Sponsors, and Stages
+\item test\_media\_length: Tests that an entry cannot exceed the max $
 
 \item test\_save\_media: Tests that the name matches the passed value given when the Media instance was created.
 
 \item test\_empty\_media: Tests that an Media class attribute can handle NULL values
 
-\item test\_get\_media\_name: Tests the $max\_length$ property of CharField when setting the name of Media.
+\item test\_media\_length: Tests the $max\_length$ property of CharField when setting the name of Media.
+
+
 
 \end{itemize}
 
