@@ -9,11 +9,10 @@
       <h1 class='title'>2014 Sponsors</h1>
     <ul class='list-inline text-center'>
     {% if sponsors %}
-        {% for sponsor in sponsors %}
-            <li><h2><a href='{{sponsor.get_url}}'><img src='{{sponsor.img_url}}'></a></h2></li>
+        {% for s in sponsors %}
+            <li><h2><a href='{{s.get_url}}'> {{ s.name }}</a></h2></li>
         {% endfor %}
-    {% else %}
-        <li><h2>No sponsors in the database</h2></li>
+
     {% endif %}
     </ul>
     </div>

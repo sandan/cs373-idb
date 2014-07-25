@@ -27,17 +27,20 @@ class StagesIndex(ListView):
 
 class StagePage(DetailView):
     model=Stage
+    context_object_name='s'
     template_name='stage.html'
 
     def get_context_data(self, **kwargs):
         context = super(StagePage, self).get_context_data(**kwargs)
         try:
-            s = Stage.objects.get(pk=self.args[0])
+            s = super(StagePage,self).get_object()
             m = StageMedia.objects.get(st=s)
-            context['stage']=s
-            context['media']=m
+
         except Stage.DoesNotExist or StageMedia.DoesNotExist:
             raise Http404
+
+        context['m']=m
+        return context
 
 ###########################
 #                         #
@@ -47,22 +50,25 @@ class StagePage(DetailView):
 
 class SponsorsIndex(ListView):
     model=Sponsor
-    context_object_name='sponsor'
+    context_object_name='sponsors'
     template_name='sponsors.html'
 
 class SponsorPage(DetailView):
     model=Sponsor
+    context_object_name='s'
     template_name='sponsor.html'
 
     def get_context_data(self, **kwargs):
         context = super(SponsorPage, self).get_context_data(**kwargs)
         try:
-            sp = Sponsor.objects.get(pk=self.args[0])
-            m = SponsorMedia.objects.get()
-            context['sponsor']=sp
-            context['media']=m
+            s = super(SponsorPage,self).get_object()
+            m = SponsorMedia.objects.get(sp=s)
+
         except Sponsor.DoesNotExist or SponsorMedia.DoesNotExist:
             raise Http404
+
+        context['m']=m
+        return context
 
 ###########################
 #                         #
@@ -76,20 +82,21 @@ class ArtistsIndex(ListView):
     template_name='artists.html'
 
 class ArtistPage(DetailView):
-    template_name='artist.html'
     model=Artist
+    context_object_name='a'
+    template_name='artist.html'
 
     def get_context_data(self, **kwargs):
         context = super(ArtistPage, self).get_context_data(**kwargs)
         try:
-            a = Artist.objects.get(pk=self.kwargs['pk'])
+            a = super(ArtistPage,self).get_object()
             m = ArtistMedia.objects.get(ar=a)
-            context['a']=a
-            context['m']=m
-            return context
 
         except Artist.DoesNotExist or ArtistMedia.DoesNotExist:
             raise Http404
+
+        context['m']=m
+        return context
 
 
 ###########################
@@ -192,7 +199,7 @@ class ArtistDetail(APIView):
 class ArtistMediaDetail(APIView):
 
     def get(self, request, artist_id):
-        try: 
+        try:
             detail = ArtistMedia.objects.get(ar=Artist.objects.get(pk=artist_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -204,7 +211,7 @@ class ArtistMediaDetail(APIView):
 class StageMediaDetail(APIView):
 
     def get(self, request, stage_id):
-        try: 
+        try:
             detail = StageMedia.objects.get(st=Stage.objects.get(pk=stage_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -216,7 +223,7 @@ class StageMediaDetail(APIView):
 class SponsorMediaDetail(APIView):
 
     def get(self, request, sponsor_id):
-        try: 
+        try:
             detail = SponsorMedia.objects.get(sp=Sponsor.objects.get(pk=sponsor_id))
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)

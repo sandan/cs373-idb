@@ -83,7 +83,7 @@ Our current design of the website uses static HTML pages and Twitter Bootstrap t
 Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that is extended from and 
 uses Twitter Bootstrap. We have nine pages in static HTML that provide examples of the web page design and content. The design and content of each page is outlined below.
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{uml_phase2}
+\includegraphics[width=\textwidth]{UML}
  \caption{The current UML schema depicting the relationships between the Django models.}
 \end{figure}
 
@@ -230,18 +230,21 @@ $child$ and $parent$ in the sense of the schema relationship depicted by the UML
 
 \subsubsection{Artist}
 The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
-stage depending on whether they are playing that Stage or not. The entity relation between Sponosor and Artist  The Artist class is implemented using the following:
+stage depending on whether they are playing that Stage or not. We are assuming that an Artist will play on 
+exactly one stage. The Artist class is implemented using the following:
 \begin{verbatim}
 attributes:
-- name: the name of max length 255 characters.
-- label: the artist label with a maximum length of 255 characters.
-- origin: the place of origin the artist/group formed with a maximum length of 255 characters.
-- genre: the genre associated with the artist. May span more than one. maximum length of 255 characters.
+- id: Primary Key, integer type field.
+- name: the name of max length 400 characters.
+- label: the artist label with a maximum length of 400 characters.
+- origin: the place of origin the artist/group formed with a maximum length of 400 characters.
+- website: the official website of the artist or fan site if none. Maximum length of 400 characters.
+- genre: the genre associated with the artist. May span more than one. maximum length of 400 characters.
 - stage: Foreign Key, integer of type field.
 
 methods:
-- get_url(): returns the string "/artists/{id}" . Maximum number of 255 characters.
-- __str__(): returns the name string of the artist.Maximum  number of 255 characters
+- get.url(): returns the string "/artists/{id}" . Maximum of number of 400 characters.
+- __str__(): returns the name string of the artist.
 \end{verbatim}
 
 
@@ -254,13 +257,13 @@ The Sponsor class has the following attributes and methods:
 \begin{verbatim}
 attributes:
 - id: Primary Key, integer type field
-- name: a character type field with a maximum length of 255 characters
-- business_type: a character type field with a maximum length of 255 characters
-- website: a character type field with a maximum length of 255 characters
+- name: a character type field with a maximum length of 400 characters
+- business_type: a character type field with a maximum length of 400 characters
+- website: a character type field with a maximum length of 400 characters
 - stage: Foreign Key, integer of type field
 
 methods:
-- get.url(): returns the string "/sponsors/{id}". Maximum number of 255 characters.
+- get.url(): returns the string "/sponsors/{id}". Maximum number of 400 characters.
 - __str__(): returns a string that represents the name of the sponsor.
 \end{verbatim}
 
@@ -272,32 +275,23 @@ The Stage class has the following attributes and methods:
 \begin{verbatim}
 attributes:
 - id: Primary Key, integer type field
-- name: a character type field with a maximum length of 255 characters
-
+- name: a character type field with a maximum length of 400 characters
+- sponsor: Foreign Key, integer of type field
 
 methods:
 - get.url(): returns the string "/stages/%s/{name}" where name is the stage name.
 - __str__(): returns a string that represents the name of the stage
 \end{verbatim}
 
-\subsubsection{Media}
-The Media class represents all media informaton that is associated with a sponsor, artist, or stage. 
-The Entity relationships are as follows:
-Each Media has a  1 to 0..1 relation with Stage
-Each Media has a  1 to 0..1 relation with Sponsor
-Each Media has a  1 to 0..1 relation with Artist
-
+\subsubsection{Photo}
+The Photo class represents a path to a photo of an Artist. 
+All Photo's are associated with an Artist in a many-to-one relationship.
+This is expressed with the Foreign key being an Artist that the Photo is associated with. 
+The Photo class has the following attributes and methods:
 \begin{verbatim}
 attributes:
--id: Integer
--Bio: A CharField of 255 characters. Biography. 
--Photo: A CharField of 255 characters.
--Youtube: A CharField of 255 characters. url for Youtube Channel
--Video: A CharField of 255 characters.
--Twitter: A CharField of 255 characters. url for Twitter
--Facebook:A CharField of 255 characters. url for Facebook
--twitterwidget: A CharField of 255 characters.
--webpage: 
+-file_name: A CharField of 400 characters. File name of the photo. 
+-artist: The ForeignKey relating a Photo to an Artist.
 
 methods:
 - __str__(): returns the file_name of the photo.

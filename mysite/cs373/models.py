@@ -1,7 +1,5 @@
 from django.db import models
 
-
-
 class Stage(models.Model):
     """
     A reprentation of a stage
@@ -92,7 +90,7 @@ class Media(models.Model):
         """
         returns Webpage link
         """
-        return self.webpage
+        return self.Webpage
 
 class ArtistMedia(Media):
     ar = models.ForeignKey(Artist)

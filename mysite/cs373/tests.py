@@ -1,9 +1,8 @@
 from django.test import TestCase
 from django.db.utils import IntegrityError
 
-# Create your tests here.
-
 from cs373.models import Artist, Stage, Sponsor, Member, Photo
+from rest_framework.test import APIRequestFactory
 
 class DjangoMethodTests(TestCase):
 

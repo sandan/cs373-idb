@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ stage.name }}{% endblock %}
+{% block title %}{{ s.name }}{% endblock %}
 
 {% block main %}
 {% endblock %}
@@ -10,20 +10,33 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-6 col-md-offset-1'>
-            <h1>{{ stage.name }}</h1>
+            <h1>{{ s.name }}</h1>
             <div class='clearfix'>
-                <img class='col-xs-12 col-sm-5 col-md-6 col-lg-5' src='/media/hondastage.png'>
-                <h4>Sponsor: Honda</h4>
-                <h4>Artists: Pearl Jam, Outkast, Eminem</h4>
-                <p>The Honda stage is one of seven stages at the festival, and will include such artists as Eminem, Fitz and the Tantrums, and Phantogram</p>
+                <img class='col-xs-12 col-sm-5 col-md-6 col-lg-5' src='{{ m.photo }}'>
+                <h4 class='csv'>Sponsor:
+                    {% for sponsor in s.sponsor_set.all %}
+                        <span><a href='{{sponsor.get_url}}' >{{sponsor.name}}</a></span>
+                    {% endfor %}
+                </h4>
+                <h4 class='csv'>Artists:
+                    {% for artist in s.artist_set.all %}
+                        <span><a href='{{artist.get_url}}' >{{artist.name}}</a></span>
+                    {% endfor %}
+                </h4>
+                {% if m.website %}
+                <h4><a href='{{m.webpage}}'>{{m.webpage}}</a></h4>
+                {% endif %}
+                <p>{{m.bio}}</p>
             </div>
-            <div class='embed-container'>
-                <iframe class='img img-responsive' src="//www.youtube.com/embed/08H7_vTuq1U?rel=0" frameborder="0" allowfullscreen></iframe>
+            {% if m.youtubevideo %}
+            <!-- 4:3 aspect ratio -->
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class='embed-responsive-item' src='{{m.youtubevideo}}?rel=0' frameborder="0" allowfullscreen></iframe>
             </div>
+            {% endif %}
         </div>
         <div class='col-md-4'>
-            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PearlJam"  data-chrome="nofooter noscrollbar" data-widget-id="489195429154652161">Tweets by @PearlJam</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            {{ m.twitterwidget | safe }}
         </div>
     </div>
 </div>
