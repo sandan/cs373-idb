@@ -309,8 +309,7 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(m.__string__(), 'www.www.com')
         
         
-    def test_empty_media_with_stage(self):
-        # setup stage
+    def test_stage_only(self):
         s = Stage(name='Stage Name')
         s.save()
 
@@ -323,4 +322,10 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(a.origin,'')
         self.assertEqual(a.genre,'')
         self.assertEqual(a.stage,s)
+    
+    def test_foreign_key(self):
+        a = ArtistMedia(ar = 'x')
+        a.save()
+        self.assertEqual(a.ar, 'x')
+        
     
