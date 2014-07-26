@@ -1,7 +1,8 @@
+~/mysite $ python3 manage.py test cs373/tests/
 Creating test database for alias 'default'...
 ..............................
 --------------------------------------------------------
-Ran 30 tests in 0.040s
+Ran 47 tests in 1.920s
 
 OK
 Destroying test database for alias 'default'...

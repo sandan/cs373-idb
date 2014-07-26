@@ -7,7 +7,7 @@
 \usepackage{tikz}
 
 \textheight=10.0truein
-\textwidth=6.8truein
+\textwidth=6.5truein
 \hoffset=-.5truein
 \voffset=-.5truein
 \pagestyle{headings}
@@ -55,21 +55,21 @@
   \and
   Mark Sandan\\  
 }
-\date{ July 24, 2014 }
+\date{ July 25, 2014 }
 \begin{document}
 \thispagestyle{plain}
 \maketitle
 \tableofcontents
 
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{homev2}
- \caption{Splash Page for the second iteration of IDB2 showing the group name and the buttons in the three main pages.}
+\includegraphics[width=\textwidth]{home.png}
+ \caption{Splash Page for the second iteration of IDB2 showing the group name, buttons for the three main pages, and a link to the API on Apiary. The Carousel template from twitter bootstrap is used.}
 \end{figure}
 
 \section{Updates}
 Updates for the second iteration at a glance:
 \begin{itemize}
- \item the splash page and web design has been $fancied up$ 
+ \item Splash page and web design has been $fancied$ $up$ 
 \end{itemize}
 \begin{itemize}
  \item Dynamic webpages supporting our models instead of static webpages
@@ -78,7 +78,7 @@ Updates for the second iteration at a glance:
  \item MySQL is being used currently as the database backend
 \end{itemize}
 \begin{itemize}
- \item Django Rest framework installed to implement the API
+ \item Django Rest framework installed to implement the API and test it
 \end{itemize}
 \begin{itemize}
  \item Refactored the Models used to include a Media models. Photo and Member models have been deprecated.
@@ -92,14 +92,12 @@ The main changes that have been made can be summarized into three categories: dy
 
 To implement a dynamic webpage we are currently using html,css,javascript, and the django template language to access instances of Artists, Sponsors, and Stages to fill the content of the webpages. 
 The REST implementation required installing the django rest framework on the pythonanywhere envioronment which enabled us to return JSON representations of MySQL database instances. 
-The tests for the REST implementation have also been added to the test suite bringing the total number of tests to ???. 
+The tests for the REST implementation have also been added to the test suite.
 
 The models have been refactored to include media classes that provide the dynamic content for the Artist,
 Sponsor, and Stage models when they are loaded into the webpage. The media content contains embedded links to youtube, facebook, twitter, etc. 
 
-Database loading has been relegated to using
-python scripts which have been installed as django commands used with manage.py. They are located in the $mysite/cs373/management/commands/$ directory.
-
+Database loading has been relegated to using python scripts which have been installed as django commands used with manage.py. 
 \section{Introduction}
 Our website is about the 2014 Austin City Limits (ACL) music festival, an annual three-day American music festival that takes place on 46-acres in Zilker Park located in Austin, Texas. 
 The website design has three main pages: Artists, Stages, and Sponsors along with a splash page. An Artist is allowed to perform on one stage but stages can have many artists perform on them.
@@ -131,23 +129,29 @@ The technologies used are:
 Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that is extended from and 
 uses Twitter Bootstrap. We have 24 pages that are dynamically loaded. The design and content of each page is outlined below.
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{uml_phase2}
+\includegraphics[width=\textwidth]{UML.png}
  \caption{The current UML schema depicting the relationships between the Django models. The main three models are Artist, Sponsor, and Stage each of which have an associated Media page.}
 \end{figure}
 
 \subsection{Web Pages}
 Each web page has basic information about a particular artist, sponsor, or stage involved in the ACL music festival.
-All pages will include a navigation bar at the top of their page that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
-Stages pages. In future phases we are considering incorporating a search bar inside of the navigation bar, so that the user can search
-all categories. Mobile browsers are able to view the webpage correctly and set the height and width to a percentage of the size of the screen.
+All pages will include  navigation links that will allow the user to go back to the main "splash" page, as well as reach the Artists, Sponsors, and
+Stages pages. 
+
+In future phases we are considering incorporating a search bar inside of the navigation bar, so that the user can search
+all categories.
+
+Mobile browsers are able to view the webpage correctly and set the height and width to a percentage of the size of the screen.
+Using Django Templating along with Class-based Generic Views we were able to design a website that dynamically loaded pages using the information from our MySQL database.
+
 
 \subsubsection{Splash Page}
 \begin{itemize}
  \item URL: https://theaustinites.pythonanywhere.com/
 \end{itemize}
 
-The "splash" page will be the first page a visitor to the site will see. It will provide button style links to all subcategories (Artists,
-Sponsors, Stages). Currently the page lists the group name and group members.
+The "splash" page will be the first page a visitor to the site will see. It provides button style links to all subcategories (Artists,
+Sponsors, Stages). Currently the page uses the carousel template provided by twitter bootstrap.
 
 \subsubsection{Artists}
 
@@ -159,6 +163,15 @@ Artist Pages can be reached from the home page as well as from the Stage or Spon
 a Stage that was hosted by a Sponsor.The page currently lists the dynamic web pages for music artists:
 \begin{itemize}
  \item Outkast
+ \item Eminem
+ \item Pearl jam
+ \item Beck
+ \item Foster The People
+ \item Skrillex
+ \item Lana Del Rey
+ \item Calvin Harris
+ \item Phantogram
+ \item Childish Gambino
 \end{itemize}
 
 Each Artist page includes the Artist name, an Artist photo, the label, the origin, genre, the sponsor,the stage, a bio,
@@ -174,12 +187,16 @@ Sponsor pages can be reached from the home page as well as from the Artist or St
 Stage, and that particular Artist played on that Stage. The page currently lists ACL festival sponsors:
 \begin{itemize}
  \item Honda
+ \item Miller Lite
+ \item Samsung Galaxy
+ \item Austin Ventures
+ \item Bacardi
+ \item BMI (Broadcast Music Inc.)
+ \item Tito's Handmade Vodka
+ \item H.E.B.
+ \item Sweet Leaf Iced Teas
+ \item Western Digital
 \end{itemize}
-\begin{itemize}
- \item 
-\end{itemize}
-
-
 Each Sponsor page includes the Sponsor name, a sponsor logo, the origin, stage sponsored, the artists playing the stage, the official website to the sponsor,
 a facebook page, a bio, youtube video, and twitter feed.
 
@@ -192,22 +209,60 @@ a facebook page, a bio, youtube video, and twitter feed.
 Stage pages can be reached from the Home page (splash) as well as from the Artist or Sponsor pages depending on whether the Sponsor hosted a
 Stage, and that particular Artist played on that Stage. The page currently lists the following stages:
 \begin{itemize}
- \item 
-\end{itemize}
-\begin{itemize}
- \item 
+ \item Honda Stage
+ \item Miller Lite Stage
+ \item Samsung Galaxy Stage
+ \item Austin ventures Stage
+ \item Bacardi Stage
+ \item BMI Stage
+ \item Tito's Handmade Vodka Stage
 \end{itemize}
 Each Stage page includes the Stage name, a Stage logo, the artists playing the stage, the official website to the sponsor,
 a facebook page, youtube video, and twitter feed.
 
+\subsection{Templates}
+In phase one of the project we used Django templates to write static html files. In phase two we have updated our templates to use python code. Along with context from the views,
+this allowed us to generate a dynamic website. Built-in methods from django models also allows us to access other related instances such as Stages and Sponsors for an Artist. We are able to 
+provide links dynamically as new relationships are being added to the database.
+
+\subsubsection{Base Template}
+Our first template is base.html, which all other templates extend from. The template holds our bootstrap links as well as the main structure for the site.
+We have separated the base template into sections labeled by the block keyword. Each template that extends base.html
+can modify these sections to present a different site. This allows us to make new sites without rewriting code.
+
+\subsubsection{Model Templates}
+Each of the three main Models have their own templates. For example Artist has artists.html and artist.html. The plural template shows the list of artists using python to
+iterate through the artist objects. The singular template uses python to access variables from the objects and call methods to display information.
+
+\subsection{Class-based Generic Views}
+We have rewritten our views for phase two of the project. Previously we used functions to render the html templates. We have moved to Class-Based Generic Views
+that allow us to easily write views for common tasks. 
+
+There are three main types of pages in terms of the 
+generic view design: The splash page that uses the index function view, the Index pages that list
+sponsors, artists, and stages, and the Detail pages that fill out content on a specific object's 
+template.
+
+\subsubsection{ListView}
+The ListView generic class is used to pass the list of objects in the Model table into a template. We used this class in ArtistIndex, StageIndex, SponsorIndex.
+Using this class allowed us to easily pass the list of artists, stages, and sponsors to our templates. Iterating through the list of objects we are able to dynamically
+load the page with the object's name and link to the other model classes they are related too.
+
+\subsubsection{DetailView}
+
+The DetailView generic class is used to pass single objects from the database into a template. We used this
+class in ArtistPage, StagePage, and SponsorPage. This class allowed us to pass an artist, sponsor, or stage to a template. Passing this information to the template allowed for the same template to represent different objects.
+
 \subsection{RESTful  API}
-The API allows GET requests to the following models: Stages, Sponsors, Artists. The  Members and  Photos models have been deprecated.
-The following section will detail the attributes for the modules, and how the server will respond to the GET requests. See 
-the Links section below to view the Apiary API.
+
+The API allows GET requests to the following models: Stages, Sponsors, Artists. The  Members and Photos models have been deprecated since they haven't been used.
+The following section will detail the attributes for the modules and how the server will respond to the GET requests. See 
+the Links section below to view the Apiary API that outlines the GET responses for the Media models.
 
 \subsubsection{Stages}
-When a GET is called on $[/stages]$ it will return a JSON representation of all the Stages in the database.  It will be a list of the stages along with their attributes.
-When a GET is called on $[/stages/{id}]$ it will return a JSON representation of a single Stage in the database with the given id.  It will list the stage and all of it's attributes
+
+When a GET is called on $[/api/stages]$ it will return a JSON representation of all the Stages in the database.  It will be a list of the stages along with their attributes.
+When a GET is called on $[/api/stages/{id}]$ it will return a JSON representation of a single Stage in the database with the given id.  It will list the stage and all of it's attributes
 \\
 Example of single stage:
 \begin{verbatim}
@@ -217,8 +272,9 @@ Example of single stage:
 }
 \end{verbatim}
 \subsubsection{Sponsor}
-When a GET is called on $[/sponsors]$ it will return a JSON representation of all the Sponsors in the database.  It will be a list of the sponsors along with their attributes.
-When a GET is called on $[/sponsors/{id}]$ it will return a JSON representation of a single Sponsor in the database with the given id.  It will list the sponsor and all of it's attributes
+
+When a GET is called on $[/api/sponsors]$ it will return a JSON representation of all the Sponsors in the database.  It will be a list of the sponsors along with their attributes.
+When a GET is called on $[/api/sponsors/{id}]$ it will return a JSON representation of a single Sponsor in the database with the given id.  It will list the sponsor and all of it's attributes.
 \\
 Example of single sponsor response:
 \begin{verbatim}
@@ -227,13 +283,14 @@ Example of single sponsor response:
         "name": "Sponsor name",
         "business_type": "Type of Business",
         "website": "URL of sponsor website",
-        "stage": 12
+        "stage": 12 (id)
 }
 \end{verbatim}
 
 \subsubsection{Artist}
-When a GET is called on $[/artists]$ it will return a JSON representation of all the Artists in the database.  It will be a list of the artists along with their attributes.
-When a GET is called on $[/artists/{id}]$ it will return a JSON representation of a single Artist in the database with the given id.  It will list the artist and all of it's attributes.
+
+When a GET is called on $[/api/artists]$ it will return a JSON representation of all the Artists in the database.  It will be a list of the artists along with their attributes.
+When a GET is called on $[/api/artists/{id}]$ it will return a JSON representation of a single Artist in the database with the given id.  It will list the artist and all of it's attributes.
 \\
 Example of single artist:
 \begin{verbatim}
@@ -249,20 +306,25 @@ Example of single artist:
 \end{verbatim}
 
 \subsection{Django Models}
+
 The Django models created represent the entities we believe are essential to modeling the ACL festival.
 The following subsections document the attributes and intended functionality of each class instance method. The following sections use
 $child$ and $parent$ in the sense of the schema relationship depicted by the UML diagram in Figure 2 and not in the sense of the object oriented inheritance 
 (the only object each model extends is models.Model except the Media classes ArtistMedia, SponsorMedia, and StageMedia that inherit from Media). Currently there are a total of six class.
 
 \subsubsection{Artist}
+
 The Artist class represents the current Artists playing on a sponsored stage. All Artists will be a child of some
 stage depending on whether they are playing that Stage or not. The entity relation between Sponosor and Artist  The Artist class is implemented using the following:
 \begin{verbatim}
 attributes:
-- name: the name of max length 255 characters.
+- id Primary Key, integer
+- name: the unique name of max length 255 characters.
 - label: the artist label with a maximum length of 255 characters.
-- origin: the place of origin the artist/group formed with a maximum length of 255 characters.
-- genre: the genre associated with the artist. May span more than one. maximum length of 255 characters.
+- origin: the place of origin the artist/group formed with a 
+          maximum length of 255 characters.
+- genre: the genre associated with the artist. May span more 
+         than one. maximum length of 255 characters.
 - stage: Foreign Key, integer of type field.
 
 methods:
@@ -272,6 +334,7 @@ methods:
 
 
 \subsubsection{Sponsor}
+
 The Sponsor class represents the ACL sponsors that sponsor a Stage for the Artist to perform on.
 This relationship is expressed using the one-to-many relationship between the Sponsor and the Stage
 class. 
@@ -290,6 +353,7 @@ methods:
 \end{verbatim}
 
 \subsubsection{Stage}
+
 The Stage class is meant to represent the stage that an Artist will perform on. All stages
 have one sponsor. The Stage class extends from the Django models.Models class.
 
@@ -305,11 +369,18 @@ methods:
 - __str__(): returns a string that represents the name of the stage
 \end{verbatim}
 
-\subsubsection{Media}
-The Media class represents all media informaton that is associated with a sponsor, artist, or stage. 
+\subsubsection{Media models}
 
+The Media class will represent all of the media associated with Stages, Sponsors, and Artists. All Artists, Sponsors, and Stages will associated
+with Media in a many-to-one relationship.
+
+The Media class has been included to remove a lot of redundancy in code, and to simplify improving the overall 
+design of our pages. We use the aggregation design pattern for each instance of a model and all Media classes will be an aggregate of all media
+associated with an Artist, Stage, or Sponsor. The media components included will be images, videos, website,facebook,youtube channel and twitter feeds.
+
+The Media class has the following attributes and methods
 \begin{verbatim}
-attributes:
+ attributes:
 -id: Primary key, Integer
 -bio: A CharField of 255 characters. Biography. 
 -photo: A CharField of 255 characters. 
@@ -319,28 +390,41 @@ attributes:
 -facebook:A CharField of 255 characters. url for Facebook
 -twitterwidget: A CharField of 255 characters.
 -webpage: A Char field of 255 characters.
-
-methods:
-- __str__(): returns the file_name of the photo.
-
-subclasses:
-- SponsorMedia: a media subclass that has a one-to-one relationship with an instance of the Sponsor class
-  attributes:
-  - sp: Foreign key, integer type field
-- StageMedia: a media subclass that has a one-to-one relationship with an instance of the Stage class
-  attributes:
-  - st: Foreign key, integer type field
-- ArtistMedia: a media subclass that has a one-to-one relationship with an instance of the Artist class
-  attributes:
-  - ar: Foreign key, integer type field
 \end{verbatim}
 
-\section{Unit Tests}
-The unit tests currently implemented reflect the expected functionality of the django models and database.
-Currently we are using the sqlite3 database as a backend. We assume for each function in the set of tests that the state of the database is reset.
-There are currently 30 tests with at least 4 tests for each model. The following give descriptions of each model test. 
+\begin{verbatim}
+methods:
+- __str__(): returns a string that represent a stage, sponsor, or artist's website.
 
-\subsection{Stage Test}
+subclasses:
+- SponsorMedia: a media subclass that has a one-to-one relationship 
+                with an instance of the Sponsor class
+  attributes:
+  - sp: Foreign key, integer type field
+- StageMedia: a media subclass that has a one-to-one relationship with 
+              an instance of the Stage class
+  attributes:
+  - st: Foreign key, integer type field
+- ArtistMedia: a media subclass that has a one-to-one relationship with an
+               instance of the Artist class
+  attributes:
+  - ar: Foreign key, integer type field
+  
+\end{verbatim}
+
+
+\section{Unit Tests}
+
+The unit tests currently implemented reflect the expected functionality of the django models and database.
+Currently we are using the MySQL database as a backend. We assume for each function in the set of tests that the state of the database is reset.
+There are currently 44 tests in the test suite testing the models and API.
+
+\subsection{Django Model Unit Testing}
+Currently the django models are tested with a MySQL database backend. The database created is temporary. It is created on setup, populated 
+and run to test the attributes and methods of the models we use. Finally, whwn all tests are run the database is destroyed. There are 29 total tests
+for the django models.
+
+\subsubsection{Stage Test}
 Total tests: 7
 \begin{itemize}
 \item test\_create\_empty\_stage: Tests that uninitialized (stateless) Stages can be created.
@@ -355,7 +439,7 @@ Total tests: 7
 is saved in the database table and returns the correct $url$ attribute. 
 \end{itemize} 
 
-\subsection{Artist Test}
+\subsubsection{Artist Test}
 Total tests: 8
 \begin{itemize}
 \item test\_create\_artist: Tests the Artist instance attributes actually match the given values
@@ -373,38 +457,9 @@ that were passed when constructed (including a Stage instance)
 Artists and Stages is valid. Also tests the $get\_url$ method returns the correct url according the id of the instance.
 \end{itemize} 
 
-\subsection{Sponsor Test} 
-Total tests: 6
-\begin{itemize}
-\item test\_empty\_sponsor: Tests that a Sponsor's default values and ID are set correctly.
- 
-\item test\_save\_sponsor: Tests that the name matches the passed value given when the Sponsor instance was created.  
- 
-\item test\_get\_sponsor\_name: Tests the $max\_length$ property of CharField when setting the name of Sponsor.
+\subsubsection{Sponsor Test} 
+Total tests: 9
 
-\item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2, \item test\_sponsor\_url\_3: Tests that the $get\_url$ is returned in the proper format.
-\end{itemize}
-
-\subsection{Media Test}
-
-Total tests: 6
-
-\begin{itemize}
-
-\item test\_save\_media: Tests that the name matches the passed value given when the Media instance was created.
-
-\item test\_empty\_media: Tests that an Media class attribute can handle NULL values
-
-\item test\_media\_length: Tests the $max\_length$ property of CharField when setting the name of Media.
-
-\item test\_media\_string: Test the Media class String function
-
-\item test\_foreign_key: Tests that the foreign key is correct
-
-\end{itemize}
-\subsection{API Test} 
-The REST API is tested using the django rest framework. The django rest framework has a built in library that allows the tests to mimic API clients that interact with the API.
-Currently only GET requests are allowed. Any other request will throw ??? .
 \begin{itemize}
 \item test\_empty\_sponsor: Tests that a Sponsor's default values and ID are set correctly.
  
@@ -415,32 +470,139 @@ Currently only GET requests are allowed. Any other request will throw ??? .
 \item test\_sponsor\_url\_1, \item test\_sponsor\_url\_2: Tests that the $get\_url$ is returned in the proper format.
 \end{itemize}
 
+\subsubsection{Media Test}
+
+Total tests: 5
+
+\begin{itemize}
+
+\item test\_media\_length: Tests that an entry cannot exceed the max length
+
+\item test\_save\_media: Tests that the name matches the passed value given when the Media instance was created.
+
+\item test\_empty\_media: Tests that an Media class attribute can handle NULL values
+
+\item test\_media\_string: Tests the $max\_length$ property of CharField when setting the name of Media.
+
+\item test\_foreign\_key: Tests object foreign key relationship.
+\end{itemize}
+
+\subsection{RESTful API Test} 
+
+The REST API is tested using the django rest framework. The django rest framework has a built in library that allows the tests to mimic API clients that interact with the API.
+Currently only GET requests are allowed. Any other request will return a 405 Method Not Allowed. There are three tests for each of the 
+classes (Stages, Sponsors, Artists, ArtistMedia, StageMedia, and SponsorMedia). 
+
+Each test sets up by creating mock relationships and attributes,
+saving them to the database and then performing various GET requests using the client object from the django rest framework.
+
+\subsubsection{Stages API Test} 
+Total tests: 3
+One stage with an id of 1 is uploaded into the database with name=$new stage$. On tear down, it is deleted.
+\begin{itemize}
+ \item testStageGet: tests the status code of a successful client requesting GET for the first stage.
+ 
+ \item testStageGet2: tests the status code is 404 (Not Found) for an unsuccessful GET request for a stage instance
+ that doesn't exist in the database.
+ 
+ \item testPost: tests the status code is 405 (Method Not Allowed) for an unsuccessful POST request for the first stage.
+\end{itemize}
+
+\subsubsection{Artist API Test} 
+Total tests: 3
+A test stage and artist are uploaded into the database. On tear down they are both deleted.
+\begin{itemize}
+ \item testStageGet: tests the status code of a successful client requesting GET for the first artist
+ 
+ \item testStageGet2: tests the status code is 404 (Not Found) for an unsuccessful GET request for an artist instance
+ that doesn't exist in the database.
+ 
+ \item testPost: tests the status code is 405 (Method Not Allowed) for an unsuccessful POST request for the first artist.
+\end{itemize}
+
+\subsubsection{Sponsors API Test} 
+Total tests: 3
+On setup one stage and one sponsor are created in the database and then deleted on tear down.
+\begin{itemize}
+ \item testStageGet: tests the status code of a successful client requesting GET for the first sponsor
+ 
+ \item testStageGet2: tests the status code is 404 (Not Found) for an unsuccessful GET request for an sponsor instance
+ that doesn't exist in the database.
+ 
+ \item testPost: tests the status code is 405 (Method Not Allowed) for an unsuccessful POST request for the first sponsor.
+\end{itemize}
+
+\subsubsection{StageMedia API Test} 
+Total tests: 3
+On setup a stage and StageMedia are created in the database. Class attributes for the StageMedia test are created.
+Both are deleted on tear down.
+\begin{itemize}
+ \item test\_stage\_media\_get: tests to see if a client request for the stage media object created returns the 200 OK response code.
+ 
+ \item test\_stage\_media\_bad\_get: tests to see if a bad client request to a non-existing stage media object created returns 
+                                     404 Not Found response.
+ 
+ \item test\_stage\_media\_post: Tests that POSTS are not allowed by clients by checking that the 405 status code is returned.
+\end{itemize}
+
+\subsubsection{ArtistMedia API Test} 
+Total tests: 3
+On setup an artist, stage, and ArtistMedia are created in the database. Class attributes for the ArtistMedia test are created.
+All instances are deleted on tear down.
+\begin{itemize}
+ \item test\_artist\_media\_get: tests to see if a client request for the artist media object created returns the 200 OK response code.
+ 
+ \item test\_artist\_media\_bad\_get: tests to see if a bad client request to a non-existing stage artist object created returns 
+                                     404 Not Found response.
+ 
+ \item test\_artist\_media\_post: Tests that POSTS for artists are not allowed by clients by checking that the 405 status code is returned.
+\end{itemize}
+
+\subsubsection{SponsorMedia API Test} 
+Total tests: 3
+On setup a sponsor, stage, and SponsorMedia are created in the database. Class attributes for the SponsorMedia test are created.
+All instances are deleted on tear down.
+\begin{itemize}
+  \item test\_sponsor\_media\_get: tests to see if a client request for the sponsor media object created returns the 200 OK response code.
+ 
+ \item test\_sponsor\_media\_bad\_get: tests to see if a bad client request to a non-existing sponsor media object created returns 
+                                     404 Not Found response.
+ 
+ \item test\_sponsor\_media\_post: Tests that POSTS for sponsors are not allowed by clients by checking that the 405 status code is returned.
+\end{itemize}
+
+
 \section{Expansions}
 This section outlines probable features and functions for the next release.
 \begin{itemize}
+\item An updated API that will include the option to make put requests so that data can be uploaded using django forms
 
-\item More links to more social media accounts (Instagram or SoundCloud) for Artist pages.
+\item An HTTP-404 page
 
-\item Stage pages will link to a map of the festival so users can see their location.
+\item Using Django slugs to implement better looking urls
 
-\item Sponsor models might also include include an attribute to store business content such as the location of their headquarters, the name of their respective CEOs, stocks, etc.
+\item Models for a year class that will expand our site to include previous festivals. Sponsors and stages as well as Artists and stages will then 
+associate with one another in a many-to-many relationship
 
-\item  Tests that will check that the database is correctly populated with its new attributes as well as test all the new methods included.
-
-\item An updated API that will include the option to make put requests so that data can be uploaded using django forms.
+\item Implementation of a search engine, that will allow users to look up a Sponsor, Artist, or Stage by name. The results will also show the members 
+of other categories associated with the particular Artist, Sponsor, or Stage searched.
 \end{itemize}
 
 \subsection{Third Iteration extension}
+
 For the third iteration we are planning to extend the concept of the website to cover years previous to 2014. This would allow 
 the user to have more  expressive queries. For example a user might want to know  how many times an artist has played on a stage
 or was sponsored by some business, the distribution of businesses by industry that have sponsored certain genres, or simply a 
 list of all hip hop artists that have played in ACL from a certain year.
- The propsed change would also enhance the model relationships to become many to many. For example an artist may play on the same stage
- from previous years that were sponsored by different businesses. Also an artist can now play on more than one stage over time. The 
- inclusion of past ACL artists, sponsors, and stages will also allow for more data of each model as a history accumulates. This is our strongest
- reason for the propsed change because the schedule for 2014 has not been published yet and it may take some time before it does get published. Implementing this
- proposal will address our curent problem. We plan on including timelines for each Artist, Sponsor, and Stage page to take advantage of this extension.
- 
+
+The proposed change would also enhance the model relationships to become many to many. For example an artist may play on the same stage
+from previous years that were sponsored by different businesses. Also an artist can now play on more than one stage over time. The 
+inclusion of past ACL artists, sponsors, and stages will also allow for more data of each model as a history accumulates. 
+
+One of the
+reasons for the proposed change is because the schedule for 2014 has not been published yet and it may take some time before it does get published.
+Implementing this proposal will address our current problem. We plan on including timelines for each Artist, Sponsor, and Stage page to take advantage of this extension
+especially with the future feature to include a search engine that will search for data in our database using keywords provided by the user. 
 \section{Links}
 
 \begin{itemize}
