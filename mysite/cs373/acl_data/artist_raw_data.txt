@@ -1,3 +1,5 @@
+Year: 2014
+
 Name: Outkast
 Label: Epic
 Origin: Atlanta, GA
@@ -127,4 +129,44 @@ Video: //www.youtube.com/embed/dwUug-ucBLc
 Twitter: https://twitter.com/donaldglover
 Facebook: https://www.facebook.com/iamdonald
 Webpage: http://childishgambino.com/
+
+Name: Kodaline
+Label: RCA Victor
+Origin: Dublin, Ireland
+Genre: Modern Rock
+Stage:  Miller Lite stage
+Bio: Dublin, Ireland-based modern rock quartet Kodaline specializes in soaring, radio-ready guitar rock that's drawn comparisons to Coldplay, Keane, U2, and Oasis. Formed in the working class town of Swords around the talents of Stephen Garrigan, Vinnie May, Jr, Jason Boland, and Mark Prendergast, the band released an eponymous EP in 2012, with plans to unleash a full-length outing the following year. At the end of 2012, the band was shortlisted for the BBC's Sound of 2013, but were beat to the top spot by Haim. Kodaline released their debut album, In a Perfect World, in June 2013, which was preceded by the singles High Hopes and Love Like This. 
+Photo: http://aclp3.c3cdn.com/wp/wp-content/uploads/2014/04/Kodaline_071-RT-hi-res.jpg
+Youtube: https://www.youtube.com/user/Kodalinemusic
+Video: https://www.youtube.com/watch?v=mtf7hC17IBM
+Twitter: https://twitter.com/kodaline
+Facebook: https://www.facebook.com/Kodaline
+Webpage: http://www.kodaline.com/home/
+
+Name: School of Rock
+Label: School of Rock
+Origin: Austin, Texas
+Genre: Rock
+Stage: Austin Kiddie Limits Stage 
+Bio: School of Rock teaches guitar, bass, vocals, keyboards, drums and combines weekly private music lessons and group band rehearsals to prepare students to take the stage in front of live audiences in an authentic concert setting. To date our students have played thousands of concerts, to more than 100,000 people, at such legendary venues as CBGB's, The Trocadero, The Knitting Factory, The Whiskey, The Roxy, The Experience Music Project, The Big Easy and BB King's Blues Club in Times Square. We have also had the great fortune to be able to perform at music festivals from Lollapalooza and Austin City Limits, to Zappanale in Bad Doberan, Germany.
+Photo: https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/735072_10151549109624391_480901677_n.jpg?oh=6a11b3dcf2a42fa36abbdbb758f31030&oe=544D1658&__gda__=1413509233_076b7c78b9d28a2f6498dbfd34967ba0
+Youtube: https://www.youtube.com/user/AustinSchoolOfRock
+Video: https://www.youtube.com/watch?v=3LKvzRBmhho
+Twitter: https://twitter.com/SchoolOfRockATX
+Facebook: https://www.facebook.com/schoolofrockaustin
+Webpage: http://austin.schoolofrock.com/gallery
+
+
+Name: Asleep at the Wheel
+Label: RCA Victor
+Origin: Paw Paw, West Virginia
+Genre: Western
+Stage:  Honda
+Bio: It all started when Ray Benson, Floyd Domino, and Lucky Oceans, along with a Vermont farm boy named Leroy Preston; Virginian Chris O’Connell; and Gene Dobkin, a bass player and fellow classmate of Benson’s from Antioch College in Yellow Springs, Ohio, joined forces. They began with a simple goal: to play and help revive American roots music. Asleep at the Wheel landed a gig opening for Alice Cooper and Hot Tuna in Washington, DC in 1970. At the height of Vietnam, many Americans were using their choice of music to express their stance on the conflict in southeast Asia. “We wanted to break that mold,” said Benson. “We were concerned more with this amazing roots music, which we felt was being lost amid the politics. We were too country for the rock folks and we were too long-haired for the country folks. But everybody got over it once the music started playing.” A year later, they were coaxed into moving to California by Commander Cody, leader of Commander Cody & His Lost Planet Airmen. But, the band’s big break came when Van Morrison mentioned them in an interview with Rolling Stone. The record offers started coming in and The Wheel got rolling.
+Photo: http://aclp3.c3cdn.com/wp/wp-content/uploads/2014/04/AsleepAtTheWheelPromo.jpg
+Youtube: https://www.youtube.com/user/aatw1969
+Video: https://www.youtube.com/watch?v=ZbdPCouq5yQ&list=PL6BD261FCBF43C0A1
+Twitter: https://twitter.com/aatw1969
+Facebook: https://www.facebook.com/asleepatthewheel
+Webpage: http://asleepatthewheel.com/
 
