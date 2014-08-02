@@ -136,3 +136,25 @@ class StageMedia(models.Model):
 class SponsorMedia(models.Model):
     sponsor      = models.ForeignKey(Sponsor, unique=True)
     components   = models.ForeignKey(Media, unique=True)
+"""
+alternative time model
+"""
+class Year(models.Model):
+    year        = models.DateField()
+    stage       = models.ForeignKey(Stage)
+    sponsor     = models.ForeignKey(Sponsor)
+    artist      = models.ForeignKey(Artist)
+    key         = models.CharField(max_length=99, primary_key=true)
+    
+    @classmethod
+    def create(self, stage, sponsor, artist, yr):
+        """
+        For initialization of the primary key, Django doesn't support multi-column pk's.
+        This is needed to enforce the data integrity between sponsors and stages in relation to time.
+        ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
+        """
+        self.stage=stage
+        self.artist=artist
+        self.sponsor=sponsor
+        self.year=yr
+        self.key=str(sponsor.id)+str(artist.id)+str(yr.year)
