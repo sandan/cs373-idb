@@ -9,7 +9,9 @@ class Stage(models.Model):
     Stages are physical locations on the acl festival map:
     see theaustinites.pythonanywhere.com/stages/
 
-    locations are mappings from the physical stage to an integer
+    Locations are mappings from the physical stage to an integer.
+    For any single year, a stage will have one sponsor and many artists playing.
+    For different years, a stage can potentially have different sponsors and many artists playing.
     """
     location            = models.PositiveSmallIntegerField(unique=True)
     def __str__(self):
@@ -22,6 +24,9 @@ class Sponsor(models.Model):
     """
     A Sponsor is an entity that purchases a stage
     for Music Artists to play on.
+    For any single year, a sponsor can only sponsor one stage.
+    For many different years a sponsor could potentially sponsor
+    a different stage (location).
     """
     name            = models.CharField(max_length=255, unique=True)
     def __str__(self):
@@ -32,7 +37,9 @@ class Sponsor(models.Model):
 
 class Artist(models.Model):
     """
-    An Artist is an entity that plays on a sponsored stage
+    An Artist is an entity that plays on a sponsored stage.
+    For any single year, an artist can only play on one stage.
+    For multiple different years, an artist may play on potentially >1 stage.
     """
     name            = models.CharField(max_length=255, unique=True)
     def __str__(self):
@@ -44,29 +51,64 @@ class Artist(models.Model):
 """
 TIME
 """
+# https://docs.djangoproject.com/en/1.6/ref/models/instances/#django.db.models.Model
+
 class stage_sponsor_yr(models.Model):
+    """
+    create with method not the constructor
+    """
     stage           = models.ForeignKey(Stage)
     sponsor         = models.ForeignKey(Sponsor)
-    year            = models.DateField()
-
+    year            = models.DateField()      #datetime
+    key             = models.CharField(max_length=255, primary_key=True)
+    
+    
+    @classmethod
+    def create(self, stage, sponsor, yr):
+        """
+        For initialization of the primary key, Django doesn't support multi-column pk's.
+        This is needed to enforce the data integrity between sponsors and stages in relation to time.
+        """
+        self.stage=stage
+        self.sponsor=sponsor
+        self.year=yr
+        self.key=str(sponsor.id)+str(yr.year)
+        
     def get_yr(self):
         return self.year
 
 class stage_artist_yr(models.Model):
+    """
+    For initialization of the primary key, Django doesn't support multi-column pk's.
+    This is needed to enforce the data integrity between artists and stages in relation to time.
+    """
     stage           = models.ForeignKey(Stage)
     artist          = models.ForeignKey(Artist)
-    year            = models.DateField()
+    year            = models.DateField()      #datetime
+    key             = models.CharField(max_length=255, unique=True, primary_key=True)
 
     def get_yr(self):
         return self.year
+        
+    @classmethod
+    def create(self, stage, artist, yr):
+        """
+        For initialization of the primary key, Django doesn't support multi-column pk's.
+        This is needed to enforce the data integrity between sponsors and stages in relation to time.
+        ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
+        """
+        self.stage=stage
+        self.artist=artist
+        self.year=yr
+        self.key=str(artist.id)+str(yr.year)
 
 """
 MEDIA
 """
 class Media(models.Model):
     """
-Media resource for Artist, Sponsor, Stage
-"""
+    Media resource for Artist, Sponsor, Stage
+    """
 
     bio             = models.TextField()
     photo           = models.URLField(max_length=255)
@@ -87,7 +129,7 @@ class ArtistMedia(models.Model):
 
 class StageMedia(models.Model):
     name            = models.CharField(max_length=42) #Derivable 
-    year            = models.DateField()
+    year            = models.DateField()           #datetime
     stage           = models.ForeignKey(Stage)
     components      = models.ForeignKey(Media, unique=True)
 
