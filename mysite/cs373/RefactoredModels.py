@@ -66,7 +66,7 @@ class stage_sponsor_yr(models.Model):
     stage           = models.ForeignKey(Stage)
     sponsor         = models.ForeignKey(Sponsor)
     date            = models.DateField()      #datetime
-    key             = models.CharField(max_length=255, primary_key=True)
+    key             = models.CharField(max_length=255, unique=True)
 
 
     @classmethod
@@ -90,7 +90,7 @@ class stage_artist_yr(models.Model):
     stage           = models.ForeignKey(Stage)
     artist          = models.ForeignKey(Artist)
     date            = models.DateField()      #datetime
-    key             = models.CharField(max_length=255, unique=True, primary_key=True)
+    key             = models.CharField(max_length=255, unique=True)
 
     def get_yr(self):
         return self.date.year
