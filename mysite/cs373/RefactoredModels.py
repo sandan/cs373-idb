@@ -29,6 +29,8 @@ class Sponsor(models.Model):
     a different stage (location).
     """
     name            = models.CharField(max_length=255, unique=True)
+    industry            = models.CharField(max_length=255)
+    
     def __str__(self):
         """
         returns name
@@ -42,6 +44,10 @@ class Artist(models.Model):
     For multiple different years, an artist may play on potentially >1 stage.
     """
     name            = models.CharField(max_length=255, unique=True)
+    origin            = models.CharField(max_length=255)
+    label            = models.CharField(max_length=255)
+    genre            = models.CharField(max_length=255)
+    
     def __str__(self):
         """
         returns name
@@ -59,22 +65,22 @@ class stage_sponsor_yr(models.Model):
     """
     stage           = models.ForeignKey(Stage)
     sponsor         = models.ForeignKey(Sponsor)
-    year            = models.DateField()      #datetime
+    date            = models.DateField()      #datetime
     key             = models.CharField(max_length=255, primary_key=True)
 
 
     @classmethod
-    def create(self, stage, sponsor, year):
+    def create(self, stage, sponsor, date):
         """
         For initialization of the primary key, Django doesn't support multi-column pk's.
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         """
-        pkey=str(sponsor.id)+str(year.year)
-        instance=self(stage=stage, sponsor=sponsor, year=year, key=pkey)
+        pkey=str(sponsor.id)+str(date.year)
+        instance=self(stage=stage, sponsor=sponsor, date=date, key=pkey)
         return instance
 
     def get_yr(self):
-        return self.year.year
+        return self.date.year
 
 class stage_artist_yr(models.Model):
     """
@@ -83,21 +89,21 @@ class stage_artist_yr(models.Model):
     """
     stage           = models.ForeignKey(Stage)
     artist          = models.ForeignKey(Artist)
-    year            = models.DateField()      #datetime
+    date            = models.DateField()      #datetime
     key             = models.CharField(max_length=255, unique=True, primary_key=True)
 
     def get_yr(self):
-        return self.year.year
+        return self.date.year
 
     @classmethod
-    def create(self, stage, artist, year):
+    def create(self, stage, artist, date):
         """
         For initialization of the primary key, Django doesn't support multi-column pk's.
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
         """
-        pkey=str(artist.id)+str(year.year)
-        instance=self(stage=stage, artist=artist, year=year,key=pkey)
+        pkey=str(artist.id)+str(date.year)
+        instance=self(stage=stage, artist=artist, date=date,key=pkey)
         return instance
 
 """
