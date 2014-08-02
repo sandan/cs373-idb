@@ -16,7 +16,7 @@ class Stage(models.Model):
         """
         returns location
         """
-        return self.location
+        return str(self.location)
 
 class Sponsor(models.Model):
     """
