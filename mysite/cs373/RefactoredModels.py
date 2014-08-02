@@ -86,6 +86,7 @@ class ArtistMedia(models.Model):
     components       = models.ForeignKey(Media, unique=True)
 
 class StageMedia(models.Model):
+    name            = models.CharField(max_length=42) #Derivable 
     year            = models.DateField()
     stage           = models.ForeignKey(Stage)
     components      = models.ForeignKey(Media, unique=True)
