@@ -11,7 +11,12 @@ class Stage(models.Model):
 
     locations are mappings from the physical stage to an integer
     """
-    location            = models.PositiveSmallIntegerField(unique=True)
+    location        = models.PositiveSmallIntegerField(unique=True)
+    name            = models.CharField(max_length=42) #Derivable 
+    year            = models.DateField()
+    
+    components      = models.ForeignKey(Media, unique=True)
+    
     def __str__(self):
         """
         returns location
@@ -24,6 +29,8 @@ class Sponsor(models.Model):
     for Music Artists to play on.
     """
     name            = models.CharField(max_length=255, unique=True)
+    components   = models.ForeignKey(Media, unique=True)
+    
     def __str__(self):
         """
         returns name
@@ -35,6 +42,11 @@ class Artist(models.Model):
     An Artist is an entity that plays on a sponsored stage
     """
     name            = models.CharField(max_length=255, unique=True)
+    genre            = models.CharField(max_length=255)
+    label            = models.CharField(max_length=255)
+    
+    components       = models.ForeignKey(Media, unique=True)
+    
     def __str__(self):
         """
         returns name
@@ -64,7 +76,7 @@ class stage_artist_yr(models.Model):
 MEDIA
 """
 class Media(models.Model):
-    """
+"""
 Media resource for Artist, Sponsor, Stage
 """
 
@@ -80,17 +92,3 @@ Media resource for Artist, Sponsor, Stage
 
     def __str__(self):
         return self.webpage
-
-class ArtistMedia(models.Model):
-    artist           = models.ForeignKey(Artist, unique=True)
-    components       = models.ForeignKey(Media, unique=True)
-
-class StageMedia(models.Model):
-    name            = models.CharField(max_length=42) #Derivable 
-    year            = models.DateField()
-    stage           = models.ForeignKey(Stage)
-    components      = models.ForeignKey(Media, unique=True)
-
-class SponsorMedia(models.Model):
-    sponsor      = models.ForeignKey(Sponsor, unique=True)
-    components   = models.ForeignKey(Media, unique=True)
