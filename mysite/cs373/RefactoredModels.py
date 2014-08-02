@@ -12,8 +12,8 @@ class Stage(models.Model):
     locations are mappings from the physical stage to an integer
     """
     location        = models.PositiveSmallIntegerField(unique=True)
-    name            = models.CharField(max_length=42) #Derivable 
-    year            = models.DateField()
+    name            = models.CharField(max_length=42) #Derivable depending on year, not unique b/c of year
+    year            = models.DateField() 
     
     components      = models.ForeignKey(Media, unique=True)
     
@@ -79,7 +79,7 @@ class Media(models.Model):
 """
 Media resource for Artist, Sponsor, Stage
 """
-
+    
     bio             = models.TextField()
     photo           = models.URLField(max_length=255)
     youtube         = models.URLField(max_length=255)
