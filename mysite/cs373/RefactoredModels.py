@@ -74,7 +74,7 @@ class stage_sponsor_yr(models.Model):
         return instance
 
     def get_yr(self):
-        return self.year
+        return self.year.year
 
 class stage_artist_yr(models.Model):
     """
@@ -87,7 +87,7 @@ class stage_artist_yr(models.Model):
     key             = models.CharField(max_length=255, unique=True, primary_key=True)
 
     def get_yr(self):
-        return self.year
+        return self.year.year
 
     @classmethod
     def create(self, stage, artist, year):
