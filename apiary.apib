@@ -39,9 +39,9 @@ sponsor sponsoring that stage or different artists playing on that stage.
                     
                    { "location": 1,
                      "years": [2012,2013,2014]
-                   }
+                   },
                    
-                   ...,
+                   ...
                 ]
             }
 
@@ -73,7 +73,7 @@ sponsor sponsoring that stage or different artists playing on that stage.
 
     + Body
     
-            {   "location": 1
+            {   "location": 1,
                 "years": [2012,2013,2014]
             }
 
@@ -104,8 +104,8 @@ and *artists* that play on that stage location for the given year.
         + Body
             
             [
-                {   "location": 1
-                    "year": 2014
+                {   "location": 1,
+                    "year": 2014,
                     "sponsor": sponsor_id,
                     "artists": [id1,id2,...]
                 }
@@ -207,8 +207,8 @@ Collection of all Sponsors that sponsored a Stage for the requested year.
                                 {
             
                                     "id": 42,
-                                    "name": "Artist name"
-                                    "industry": "Label of artist"
+                                    "name": "Artist name",
+                                    "industry": "Label of artist",
                                     "stage_locations":[1,2,3,...]
                                 },
                                 
@@ -245,11 +245,11 @@ Artist related resources of the **ACL API**
                 {
             
                 "id": 42,
-                "name": "Artist name"
-                "label": "Label of artist"
-                "origin": "Where the artist was from"
-                "genre": "Genre of the artist"
-                "years": [2013,...]
+                "name": "Artist name",
+                "label": "Label of artist",
+                "origin": "Where the artist was from",
+                "genre": "Genre of the artist",
+                "years": [2013,...],
                 "stage_locations":[1,2,3,...]
                 },
                 
@@ -329,11 +329,11 @@ It **embeds** *Artist Resources* in the ACL Project API
                                 {
             
                                     "id": 42,
-                                    "name": "Artist name"
-                                    "label": "Label of artist"
-                                    "origin": "Where the artist was from"
-                                    "genre": "Genre of the artist"
-                                    "years": [2013,...]
+                                    "name": "Artist name",
+                                    "label": "Label of artist",
+                                    "origin": "Where the artist was from",
+                                    "genre": "Genre of the artist",
+                                    "years": [2013,...],
                                     "stage_locations":[1,2,3,...]
                                 },
                                 
@@ -379,14 +379,14 @@ The ArtistMedia resource has the following attributes:
     + Body
     
             {
-             "artist" : 42
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
+             "artist" : 42,
+             "bio" : "a description",
+             "photo" : "url",
+             "youtube"  "url",
+             "video" : "url",
+             "twitter" : "url",
+             "facebook" : "url",
+             "twitterwidget" : "twitter handle",
              "webpage" : "url"
             }
             
@@ -421,14 +421,14 @@ The SponsorMedia resource has the following attributes:
     + Body
     
             {
-             "sponsor" : 42
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
+             "sponsor" : 42,
+             "bio" : "a description",
+             "photo" : "url",
+             "youtube"  "url",
+             "video" : "url",
+             "twitter" : "url",
+             "facebook" : "url",
+             "twitterwidget" : "twitter handle",
              "webpage" : "url"
             }
             
@@ -468,17 +468,17 @@ The StageMedia resource has the following attributes:
     + Body
     
             {
-             "stage" : 42
-             "name"  : "Honda Stage"
-             "year"  : 2013
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
-             "webpage" : "url"
+             "stage" : 42,
+             "name"  : "Honda Stage",
+             "year"  : 2013,
+             "bio" : "a description",
+             "photo" : "url",
+             "youtube"  "url",
+             "video" : "url",
+             "twitter" : "url",
+             "facebook" : "url",
+             "twitterwidget" : "twitter handle",
+             "webpage" : "url",
             }
             
 ### Retrieve an StageMedia [GET]
