@@ -76,6 +76,8 @@ class stage_sponsor_yr(models.Model):
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         """
         pkey=str(sponsor.id)+str(date.year)
+        assert type(sponsor) == Sponsor
+        assert type(stage) == Stage
         instance=self(stage=stage, sponsor=sponsor, date=date, key=pkey)
         return instance
 
@@ -102,6 +104,9 @@ class stage_artist_yr(models.Model):
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
         """
+        assert type(stage) == Stage
+        assert type(artist) == Artist
+        
         pkey=str(artist.id)+str(date.year)
         instance=self(stage=stage, artist=artist, date=date,key=pkey)
         return instance
