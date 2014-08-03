@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render
 from django.http import Http404
 from django.views.generic.list import ListView
@@ -14,6 +15,32 @@ from rest_framework import status
 
 def index(request):
     return render(request, 'index.html')
+
+def groupapi1(request):
+    """
+    Get name of all stories in database. For each story get the name of the
+    related characters. To access in template use
+    for story,characters in data:
+        <h2>{{story}}</h2>
+        <ul>
+        for character in characters:
+            <li>{{character}}</li>
+        </ul>
+    """
+    storiesUrl = 'http://domoench.pythonanywhere.com/api/stories/'
+    charactersUrl = 'http://domoench.pythonanywhere.com/api/characters/'
+    context = {'title':'List story and related characters'}
+    stories = requests.get(storiesUrl).json()
+    d = []
+    for story in stories:
+        characters  = []
+        storyName = story['name']
+        for cID in story['characters']:
+            characterName = requests.get(charactersUrl+str(cID)+'/').json()['name']
+            characters.append(characterName)
+        z.append((storyName,characters))
+    context['data'] = d
+    return render(request, 'groupapi.html',context)
 
 ###########################
 #                         #
