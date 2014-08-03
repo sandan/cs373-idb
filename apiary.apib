@@ -15,8 +15,7 @@ The API allows **GET** requests to the following:
 * SponsorMedia
 
 **Note:** The ACL API now allows information to be selected on a per year basis. 
-The earliest available year starts at 2012. ID's for Stages, Sponsors, 
-Artists, and their associated Media each start at 1.
+The earliest available year starts at 2012.
 
 # Group Stage
 Stage related resources of the Austin City Limits Project API
@@ -94,6 +93,38 @@ that have played on that stage during the requested year.
 # Group Sponsor
 Sponsor related resources of the **ACL API**
 
+
+## Sponsors [/api/sponsors/]
+    A JSON list of dictionaries returning all Sponsor information
+
++ Model (application/json)
+    JSON representation of Sponsors resource.
+
+    + Body
+    
+            [   
+                ...,
+                
+                {
+            
+                "id": 42,
+                "name": "Samsung Galaxy",
+                "industry": "Mobile",
+                "years": [2013,...],
+                "stage_locations":[1,2,3,...]
+                },
+                
+                ....
+            ]   
+
+
+### Retrieve all Sponsors [GET]
+A *GET* request for all artists retrieves business information about that
+sponsor as well as a list of years and stage locations each sponsor was involved in at ACL
++ Response 200 (application/json)
+
+    [Sponsors][]
+
 ## Sponsor [/api/sponsors/{id}/]
 
 A single sponsor object.
@@ -116,41 +147,20 @@ The Sponsor resource has the following attributes:
                 "id": 42,
                 "name": "Tito's Handmade Vodka",
                 "industry": "alcohol industry"
+                "years":[2012,2014],
+                "stage_locations":[3,4,2]
             }
 
 ### Retrieve a single Sponsor [GET]
 
 A GET request for a sponsor with given id returns 
 the *id*, *name*, and *industry* the sponsor is associated with.
-Note that sponsor names are unique.
+Note that sponsor names are unique. A list of years and stag locations are also given.
 + Response 200 (application/json)
 
     [Sponsor][]
 
-## Sponsored Stage [/api/sponsors/{id}/{year}]
-The Sponsored stage by the sponsor with given id in the given year
-+ Model (application/json)
-    JSON representation of Sponsor resource.
-
-    + Body
-    
-            {
-                "sponsor_id": 2
-                "year": 2012
-                "location": 42,
-            }
-
-### Retrieve a sponsored stage [GET]
-
-A GET request for a sponsor with given id and year returns 
-the *sponsor_id*, *year*, and *location* of the sponsored stage.
-+ Response 200 (application/json)
-
-    [Sponsored Stage][]
-
-
-## Sponsor Collection [/api/sponsors/year/{year}]
-
+## Sponsor Year [/api/sponsors/year/{year}]
 Collection of all Sponsors that sponsored a Stage for the requested year.
 + Model (application/json)
 
@@ -159,22 +169,32 @@ Collection of all Sponsors that sponsored a Stage for the requested year.
 
         + Body
             
-            [
-                {   "year": 2012
-                    "sponsors": ['id of sponsor 1','id of sponsor 2', etc...]
+            [{
+                  "year" : 2013,
+                  "sponsors": [
+                                ...,
+                                
+                                {
             
-                }
-            ]
+                                    "id": 42,
+                                    "name": "Artist name"
+                                    "industry": "Label of artist"
+                                    "stage_locations":[1,2,3,...]
+                                },
+                                
+                               ...
+                            ]
+                }]
 
             
 ### List All Sponsors for a given year[GET]
 
-A GET request returns a json dictionary with a sponsors key and a list
-of ids corresponding to a sponsor that sponsored some stage during the given year.
+A GET request for SponsorYear returns a json dictionary with the year requested and the sponsors participating in that
+given year.
 
 + Response 200
     
-    [Sponsor Collection][]
+    [Sponsor Year][]
 
     
 # Group Artist
@@ -182,16 +202,16 @@ of ids corresponding to a sponsor that sponsored some stage during the given yea
 Artist related resources of the **ACL API**
 
 ## Artists [/api/artists/]
+    A JSON list of dictionaries returning all Artist information
 
-The Artists resource has the following attributes:
-
-    
 + Model (application/json)
     JSON representation of Artist resource.
 
     + Body
     
             [   
+                ...,
+                
                 {
             
                 "id": 42,
@@ -201,8 +221,9 @@ The Artists resource has the following attributes:
                 "genre": "Genre of the artist"
                 "years": [2013,...]
                 "stage_locations":[1,2,3,...]
+                },
                 
-                }
+                ....
             ]   
 
 
@@ -217,7 +238,6 @@ artist as well as a list of years and stage locations each artist has performed 
 ## Artist [/api/artists/{id}/]
 
 A single Artist object with all its details
-
 The Artist resource has the following attributes:
 
 - id
@@ -233,7 +253,7 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
 
     
 + Model (application/json)
-    JSON representation of Artist resource.
+    A single JSON representation of Artist resource.
 
     + Body
     
@@ -241,11 +261,11 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
                 {
             
                 "id": 42,
-                "name": "Artist name"
-                "label": "Label of artist"
-                "origin": "Where the artist was from"
-                "genre": "Genre of the artist"
-                "years": [2013,...]
+                "name": "Artist name",
+                "label": "Label of artist",
+                "origin": "Where the artist was from",
+                "genre": "Genre of the artist",
+                "years": [2013,...],
                 "stage_locations":[1,2,3,...]
                 
                 }
@@ -254,7 +274,7 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
 
 ### Retrieve an Artist [GET]
 A *GET* request for an artist retrieves music information about that
-artist as well as a list of years the artist has performed at ACL
+artist as well as a list of years and stage locations the artist has performed at ACL
 + Response 200 (application/json)
 
     [Artist][]
@@ -266,19 +286,34 @@ It **embeds** *Artist Resources* in the ACL Project API
 
 + Model (application/json)
 
-        JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+        JSON representation of the Artist Collection Resource.  
+        The Artist resources in the collections are embedded.
 
         + Body
             [
                 {
-                    "year" : 2013
-                    "artists": [id of artist,...]
-                    
+                  "year" : 2013,
+                  "artists": [
+                                ...,
+                                
+                                {
+            
+                                    "id": 42,
+                                    "name": "Artist name"
+                                    "label": "Label of artist"
+                                    "origin": "Where the artist was from"
+                                    "genre": "Genre of the artist"
+                                    "years": [2013,...]
+                                    "stage_locations":[1,2,3,...]
+                                },
+                                
+                               ...
+                            ]
                 }
             ]
 
             
-### List All Artists [GET]
+### List All Artists by Year [GET]
 A GET request returns a json dictionary with an "artists" key whose value
 is a list of artist ids that have performed at ACL in the requested year. The year requested is also included.
 + Response 200
