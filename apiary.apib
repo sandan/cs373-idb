@@ -181,6 +181,39 @@ of ids corresponding to a sponsor that sponsored some stage during the given yea
 
 Artist related resources of the **ACL API**
 
+## Artists [/api/artists/]
+
+The Artists resource has the following attributes:
+
+    
++ Model (application/json)
+    JSON representation of Artist resource.
+
+    + Body
+    
+            [   
+                {
+            
+                "id": 42,
+                "name": "Artist name"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "genre": "Genre of the artist"
+                "years": [2013,...]
+                "stage_locations":[1,2,3,...]
+                
+                }
+            ]   
+
+
+### Retrieve all Artists [GET]
+A *GET* request for all artists retrieves music information about that
+artist as well as a list of years and stage locations each artist has performed at ACL
++ Response 200 (application/json)
+
+    [Artists][]
+
+
 ## Artist [/api/artists/{id}/]
 
 A single Artist object with all its details
@@ -213,6 +246,7 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
                 "origin": "Where the artist was from"
                 "genre": "Genre of the artist"
                 "years": [2013,...]
+                "stage_locations":[1,2,3,...]
                 
                 }
             ]   
@@ -224,29 +258,6 @@ artist as well as a list of years the artist has performed at ACL
 + Response 200 (application/json)
 
     [Artist][]
-    
-## Artist's Stage [/api/artists/{id}/{year}]
-The Artist's performing stage location given by id in the given year
-
-+ Model (application/json)
-    JSON representation of Sponsor resource.
-
-    + Body
-    
-            {
-                "artist_id": 2
-                "year": 2014
-                "location": 4,
-            }
-
-### Retrieve a sponsored stage [GET]
-
-A GET request for a sponsor with given id and year returns 
-the *artist_id*, *year*, and *location* the sponsored stage.
-+ Response 200 (application/json)
-
-    [Artist's Stage][]
-
 
 ## Artist Collection [/api/artists/year/{year}]
 Collection of all Artists for a given year
