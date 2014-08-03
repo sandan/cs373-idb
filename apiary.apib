@@ -15,23 +15,25 @@ The API allows **GET** requests to the following:
 * SponsorMedia
 
 **Note:** The ACL API allows information to be selected on a per year basis. 
-The earliest available year starts at 2012.
+The earliest available year starts at 2012. ID's for Stages, Sponsors, and 
+Artists each start at 1.
 
 # Group Stage
 Stage related resources of the Austin City Limits Project API
 
 ## Stage [/api/stages/{location}/]
-A single stage object.   
+A single stage object. 
 
 The Stage resource has the following attributes:
 
 - location
 
-The stage's *location* is assigned by the ACL Project API at the moment of creation.
-The Stage resource represents a physical location on the Austin City Limits map.
-see http://theaustinites.pythonanywhere.com/stages/.
+The stage's *location* is assigned by a map of the festival.
+The Stage resource represents a physical location in the Austin City Limits map.
+(see http://theaustinites.pythonanywhere.com/stages/ for the mapping).
 Note that depending on the year of the festival, a stage may have a different
 sponsor sponsoring that stage or different artists playing on that stage.
+Locations are usually in the range [1,8]
 
 + Parameters
     + location (integer) ...  a number
@@ -41,14 +43,14 @@ sponsor sponsoring that stage or different artists playing on that stage.
 
     + Body
     
-            {
+            {   "location": 1
                 "years": [2011,2012,2013,2014]
             }
 
 ### Retrieve a single Stage [GET]
-A GET request returns a json dictionary with a key "year"
-and the years that that particular stage location has been in use for the 
-festival.
+A GET request returns a json dictionary with string key "years"
+and the integer years that the requested stage has been in use for the 
+festival. The location is also included to be sure the response matches the request.
 
 + Response 200 (application/json)
 
@@ -66,14 +68,15 @@ and *artists* that play on that stage for the given year.
             
             [
                 {   "location": 1
+                    "year": 2014
                     "sponsor": 'Honda',
                     "artists": ['Kendrick Lamar','Skrilex',...]
                 }
             ]
 
 ### List Stage Information for a given year [GET]
-A GET request for a **Stage Collection** returns the *location*, *sponsor* for 
-the requested stage location and year as well as a *list of artists*
+A GET request for a **Stage Collection** returns the *location*, *year*, *sponsor* for 
+the requested stage location and year, as well as a *list of artists*
 that have played on that stage during the requested year.
 + Response 200
     
@@ -172,12 +175,15 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
                 "label": "Label of artist"
                 "origin": "Where the artist was from"
                 "genre": "Genre of the artist"
+                "years": [2013,...]
                 
                 }
             ]   
 
 
 ### Retrieve an Artist [GET]
+A *GET* request for an artist retrieves music information about that
+artist as well as a list of years 
 + Response 200 (application/json)
 
     [Artist][]
