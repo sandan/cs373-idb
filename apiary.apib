@@ -217,6 +217,7 @@ It **embeds** *Artist Resources* in the ACL Project API
         + Body
             [
                 {
+                    "year" : 2013
                     "artists": [id of artist,...]
                     
                 }
@@ -225,7 +226,7 @@ It **embeds** *Artist Resources* in the ACL Project API
             
 ### List All Artists [GET]
 A GET request returns a json dictionary with an "artists" key whose value
-is a list of artist ids that have performed at ACL in the requested year.
+is a list of artist ids that have performed at ACL in the requested year. The year requested is also included.
 + Response 200
     
     [Artist Collection][]
