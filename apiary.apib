@@ -15,8 +15,8 @@ The API allows **GET** requests to the following:
 * SponsorMedia
 
 **Note:** The ACL API allows information to be selected on a per year basis. 
-The earliest available year starts at 2012. ID's for Stages, Sponsors, and 
-Artists each start at 1.
+The earliest available year starts at 2012. ID's for Stages, Sponsors, 
+Artists, and their associated Media each start at 1.
 
 # Group Stage
 Stage related resources of the Austin City Limits Project API
@@ -45,7 +45,7 @@ Locations are usually in the range [1,8]
     + Body
     
             {   "location": 1
-                "years": [2011,2012,2013,2014]
+                "years": [2012,2013,2014]
             }
 
 ### Retrieve a single Stage [GET]
@@ -63,6 +63,10 @@ festival. The location is also included to be sure the response matches the requ
 A stage collection returns information about it's *sponsor*
 and *artists* that play on that stage location for the given year. 
 
++ Parameters
+    + location (integer) ...  a number
+    + year (integer) ... a year starting from 2012
+    
 + Model (application/json)
 
         JSON representation of the Stage Collection Resource.  
@@ -234,7 +238,7 @@ A single ArtistMedia object with all its details
 
 The ArtistMedia resource has the following attributes:
 
-- ar (the artist)
+- artist
 - bio
 - photo
 - youtube
@@ -255,7 +259,7 @@ The ArtistMedia resource has the following attributes:
     + Body
     
             {
-             "ar" : 42
+             "artist" : 42
              "bio" : "a description"
              "photo" : "url"
              "youtube"  "url"
@@ -276,7 +280,7 @@ A single SponsorMedia object with all its details
 
 The SponsorMedia resource has the following attributes:
 
-- sp (the sponsor)
+- sponsor
 - bio
 - photo
 - youtube
@@ -297,7 +301,7 @@ The SponsorMedia resource has the following attributes:
     + Body
     
             {
-             "sp" : 42
+             "sponsor" : 42
              "bio" : "a description"
              "photo" : "url"
              "youtube"  "url"
@@ -313,12 +317,13 @@ The SponsorMedia resource has the following attributes:
 
     [SponsorMedia][]
     
-## StageMedia [/api/stages/{id}/media/]
-A single StageMedia object with all its details
+## StageMedia [/api/stages/{location}/media/{year}]
+A single StageMedia object with all its details for the given year
 
 The StageMedia resource has the following attributes:
 
-- st (the stage)
+- stage
+- year
 - bio
 - photo
 - youtube
@@ -330,7 +335,10 @@ The StageMedia resource has the following attributes:
 - webpage
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the StageMedia to perform action with.
+    + location (required, number, `1`) ... Numeric mapping of`location
+    ` of the StageMedia to perform action with.
+    + year (required, number, `2014`) ... requested year
+    ` of the StageMedia to perform action with.
 
     
 + Model (application/json)
@@ -339,7 +347,8 @@ The StageMedia resource has the following attributes:
     + Body
     
             {
-             "st" : 42
+             "stage" : 42
+             "year"  : 2013
              "bio" : "a description"
              "photo" : "url"
              "youtube"  "url"
