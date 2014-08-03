@@ -143,7 +143,7 @@ The Sponsored stage by the sponsor with given id in the given year
 ### Retrieve a sponsored stage [GET]
 
 A GET request for a sponsor with given id and year returns 
-the *sponsor_id*, *year*, and *location* the sponsored stage.
+the *sponsor_id*, *year*, and *location* of the sponsored stage.
 + Response 200 (application/json)
 
     [Sponsored Stage][]
@@ -160,7 +160,7 @@ Collection of all Sponsors that sponsored a Stage for the requested year.
         + Body
             
             [
-                {
+                {   "year": 2012
                     "sponsors": ['id of sponsor 1','id of sponsor 2', etc...]
             
                 }
@@ -226,7 +226,7 @@ artist as well as a list of years the artist has performed at ACL
     [Artist][]
     
 ## Artist's Stage [/api/artists/{id}/{year}]
-The Artist's performing stage given by id in the given year
+The Artist's performing stage location given by id in the given year
 
 + Model (application/json)
     JSON representation of Sponsor resource.
@@ -367,6 +367,7 @@ A single StageMedia object with all its details for the given year
 The StageMedia resource has the following attributes:
 
 - stage
+- name (usually a stage's name is just the sponsor's name prefixed to "stage")
 - year
 - bio
 - photo
@@ -392,6 +393,7 @@ The StageMedia resource has the following attributes:
     
             {
              "stage" : 42
+             "name"  : "Honda Stage"
              "year"  : 2013
              "bio" : "a description"
              "photo" : "url"
