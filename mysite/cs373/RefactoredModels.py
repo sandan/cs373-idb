@@ -2,6 +2,7 @@ from django.db import models
 
 """
 Three Main Entities
+..that we are modeling the Austin City Limits Festival with
 """
 
 class Stage(models.Model):
@@ -30,7 +31,7 @@ class Sponsor(models.Model):
     """
     name            = models.CharField(max_length=255, unique=True)
     industry            = models.CharField(max_length=255)
-    
+
     def __str__(self):
         """
         returns name
@@ -43,11 +44,11 @@ class Artist(models.Model):
     For any single year, an artist can only play on one stage.
     For multiple different years, an artist may play on potentially >1 stage.
     """
-    name            = models.CharField(max_length=255, unique=True)
-    origin            = models.CharField(max_length=255)
+    name             = models.CharField(max_length=255, unique=True)
     label            = models.CharField(max_length=255)
     genre            = models.CharField(max_length=255)
-    
+    origin           = models.CharField(max_length=255)
+
     def __str__(self):
         """
         returns name
@@ -56,6 +57,7 @@ class Artist(models.Model):
 
 """
 TIME
+relationship classes
 """
 # https://docs.djangoproject.com/en/1.6/ref/models/instances/#django.db.models.Model
 
@@ -75,9 +77,10 @@ class stage_sponsor_yr(models.Model):
         For initialization of the primary key, Django doesn't support multi-column pk's.
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         """
-        pkey=str(sponsor.id)+str(date.year)
-        assert type(sponsor) == Sponsor
         assert type(stage) == Stage
+        assert type(sponsor) == Sponsor
+
+        pkey=str(sponsor.id)+str(date.year)
         instance=self(stage=stage, sponsor=sponsor, date=date, key=pkey)
         return instance
 
@@ -94,9 +97,6 @@ class stage_artist_yr(models.Model):
     date            = models.DateField()      #datetime
     key             = models.CharField(max_length=255, unique=True)
 
-    def get_yr(self):
-        return self.date.year
-
     @classmethod
     def create(self, stage, artist, date):
         """
@@ -104,15 +104,20 @@ class stage_artist_yr(models.Model):
         This is needed to enforce the data integrity between sponsors and stages in relation to time.
         ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
         """
+
         assert type(stage) == Stage
         assert type(artist) == Artist
-        
+
         pkey=str(artist.id)+str(date.year)
         instance=self(stage=stage, artist=artist, date=date,key=pkey)
         return instance
 
+    def get_yr(self):
+        return self.date.year
+
 """
 MEDIA
+info for dynamic webpages
 """
 class Media(models.Model):
     """
@@ -132,38 +137,17 @@ class Media(models.Model):
     def __str__(self):
         return self.webpage
 
-class ArtistMedia(models.Model):
+class ArtistMedia(Media):
     artist           = models.ForeignKey(Artist, unique=True)
-    components       = models.ForeignKey(Media, unique=True)
 
-class StageMedia(models.Model):
-    name            = models.CharField(max_length=42) #Derivable 
+
+class StageMedia(Media):
+    name            = models.CharField(max_length=42) #Derivable
     year            = models.DateField()           #datetime
     stage           = models.ForeignKey(Stage)
-    components      = models.ForeignKey(Media, unique=True)
 
-class SponsorMedia(models.Model):
+
+class SponsorMedia(Media):
     sponsor      = models.ForeignKey(Sponsor, unique=True)
-    components   = models.ForeignKey(Media, unique=True)
-"""
-alternative time model
-"""
-class Year(models.Model):
-    year        = models.DateField()
-    stage       = models.ForeignKey(Stage)
-    sponsor     = models.ForeignKey(Sponsor)
-    artist      = models.ForeignKey(Artist)
-    key         = models.CharField(max_length=99, primary_key=true)
-    
-    @classmethod
-    def create(self, stage, sponsor, artist, yr):
-        """
-        For initialization of the primary key, Django doesn't support multi-column pk's.
-        This is needed to enforce the data integrity between sponsors and stages in relation to time.
-        ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
-        """
-        self.stage=stage
-        self.artist=artist
-        self.sponsor=sponsor
-        self.year=yr
-        self.key=str(sponsor.id)+str(artist.id)+str(yr.year)
+
+
