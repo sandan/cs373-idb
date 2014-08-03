@@ -1,0 +1,334 @@
+FORMAT: 1A
+HOST: http://theaustinites.pythonanywhere.com/
+
+# Austin City Limits Project API
+ACL Project is a representation of the bands, stages, events, and artists appearing at 
+**Austin City Limits**.
+
+The API allows **GET** requests to the following:
+
+* Stages
+* Sponsors
+* Artists
+* ArtistMedia
+* StageMedia
+* SponsorMedia
+
+
+# Group Stage
+Stage related resources of the Austin City Limits Project API
+
+## Stage [/api/stages/{id}/]
+A single stage object. The Stage resource represents a stage.
+
+The Stage resource has the following attributes:
+
+- id
+- name
+
+The stages *id* is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (integer) ... ID of the Stage in the form of a number
+    
++ Model (application/json)
+    JSON representation of Stage resource.
+
+    + Body
+    
+            {
+                "id": 42,
+                "name": "Stage name"
+            }
+
+### Retrieve a single Stage [GET]
++ Response 200 (application/json)
+
+    [Stage][]
+        
+
+
+## Stage Collection [/api/stages/]
+Collection of all Stages
+
+It **embeds** *Stage Resources* in the ACL Project API
+
++ Model (application/json)
+
+        JSON representation of the Stage Collection Resource.  The Stage resources in the collections are embedded.
+
+        + Body
+            
+            [
+                {
+                    "id": 42,
+                    "name": "Stage name"
+                }
+            ]
+
+### List All Stages [GET]
++ Response 200
+    
+    [Stage Collection][]
+    
+# Group Sponsor
+Sponsor related resources of the **ACL API**
+
+## Sponsor [/api/sponsors/{id}/]
+A single sponsor object.  The Sponsor resource represents a sponsor
+
+The Sponsor resource has the following attributes:
+
+- id
+- name
+- business_type
+- stage
+
+The state *id* is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (integer) ... ID of the Sponsor in the form of a number
+    
++ Model (application/json)
+    JSON representation of Sponsor resource.
+
+    + Body
+    
+            {
+                "id": 42,
+                "name": "Sponsor name",
+                "business_type": "Type of Business",
+                "stage": 12
+            }
+
+### Retrieve a single Sponsor [GET]
++ Response 200 (application/json)
+
+    [Sponsor][]
+
+
+## Sponsor Collection [/api/sponsors/]
+Collection of all Sponsors
+
+It **embeds** *Sponsor Resources* in the ACL Project API
+
++ Model (application/json)
+
+        JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Body
+            
+            [
+                {
+                    "id": 42,
+                    "name": "Sponsor name",
+                    "business_type": "Type of Business",
+                    "stage": 22
+                }
+            ]
+
+            
+### List All Sponsors [GET]
++ Response 200
+    
+    [Sponsor Collection][]
+
+    
+# Group Artist
+Artist related resources of the **ACL API**
+
+## Artist [/api/artists/{id}/]
+A single Artist object with all its details
+
+The Artist resource has the following attributes:
+
+- id
+- name
+- label
+- origin
+- genre
+- stage
+
+The artist **id** is assigned by the ACL Project API at the moment of creation.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Artist to perform action with.
+
+    
++ Model (application/json)
+    JSON representation of Artist resource.
+
+    + Body
+    
+            {
+                "id": 42,
+                "name": "Artist name"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "genre": "Genre of the artist"
+                "stage": 22
+            }
+            
+
+
+### Retrieve an Artist [GET]
++ Response 200 (application/json)
+
+    [Artist][]
+    
+
+## Artist Collection [/api/artists/]
+Collection of all Artists
+
+It **embeds** *Artist Resources* in the ACL Project API
+
++ Model (application/json)
+
+        JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Body
+            [
+                {
+                    "id": 42,
+                    "name": "Artist name"
+                    "label": "Label of artist"
+                    "origin": "Where the artist was from"
+                    "genre": "Genre of the artist"
+                    "stage": 22
+                }
+            ]
+
+            
+### List All Artists [GET]
++ Response 200
+    
+    [Artist Collection][]
+
+# Group Media
+Media related resources for Artist, Stage, and Sponsor
+
+## ArtistMedia [/api/artists/{id}/media/]
+A single ArtistMedia object with all its details
+
+The ArtistMedia resource has the following attributes:
+
+- ar (the artist)
+- bio
+- photo
+- youtube
+- video
+- twitter
+- facebook
+- twitterwidget
+- youtubevideo
+- webpage
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the ArtistMedia to perform action with.
+
+    
++ Model (application/json)
+    JSON representation of ArtistMedia resource.
+
+    + Body
+    
+            {
+             "ar" : 42
+             "bio" : "a description"
+             "photo" : "url"
+             "youtube"  "url"
+             "video" : "url"
+             "twitter" : "url"
+             "facebook" : "url"
+             "twitterwidget" : "twitter handle"
+             "webpage" : "url"
+            }
+            
+### Retrieve an ArtistMedia [GET]
++ Response 200 (application/json)
+
+    [ArtistMedia][]
+
+## SponsorMedia [/api/sponsors/{id}/media/]
+A single SponsorMedia object with all its details
+
+The SponsorMedia resource has the following attributes:
+
+- sp (the sponsor)
+- bio
+- photo
+- youtube
+- video
+- twitter
+- facebook
+- twitterwidget
+- youtubevideo
+- webpage
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the SponsorMedia to perform action with.
+
+    
++ Model (application/json)
+    JSON representation of ArtistMedia resource.
+
+    + Body
+    
+            {
+             "sp" : 42
+             "bio" : "a description"
+             "photo" : "url"
+             "youtube"  "url"
+             "video" : "url"
+             "twitter" : "url"
+             "facebook" : "url"
+             "twitterwidget" : "twitter handle"
+             "webpage" : "url"
+            }
+            
+### Retrieve an SponsorMedia [GET]
++ Response 200 (application/json)
+
+    [SponsorMedia][]
+    
+## StageMedia [/api/stages/{id}/media/]
+A single StageMedia object with all its details
+
+The StageMedia resource has the following attributes:
+
+- st (the stage)
+- bio
+- photo
+- youtube
+- video
+- twitter
+- facebook
+- twitterwidget
+- youtubevideo
+- webpage
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the StageMedia to perform action with.
+
+    
++ Model (application/json)
+    JSON representation of StageMedia resource.
+
+    + Body
+    
+            {
+             "st" : 42
+             "bio" : "a description"
+             "photo" : "url"
+             "youtube"  "url"
+             "video" : "url"
+             "twitter" : "url"
+             "facebook" : "url"
+             "twitterwidget" : "twitter handle"
+             "webpage" : "url"
+            }
+            
+### Retrieve an StageMedia [GET]
++ Response 200 (application/json)
+
+    [StageMedia][]
