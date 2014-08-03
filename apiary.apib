@@ -20,6 +20,37 @@ The earliest available year starts at 2012.
 # Group Stage
 Stage related resources of the Austin City Limits Project API
 
+## Stages [/api/stages/]
+
+The stage's *location* is assigned by a map of the festival.
+The Stage resource represents a physical location in the Austin City Limits map.
+(see http://theaustinites.pythonanywhere.com/stages/ for the mapping).
+Note that depending on the year of the festival, a stage may have a different
+sponsor sponsoring that stage or different artists playing on that stage.
+
++ Model (application/json)
+    JSON representation of Stage resource.
+
+    + Body
+    
+            {   
+                [
+                    ...,
+                    
+                   { "location": 1,
+                     "years": [2012,2013,2014]
+                   }
+                   
+                   ...,
+                ]
+            }
+
+### Retrieve all Stages [GET]
+A GET request returns all stage locations and the years that stage location was involved in.
++ Response 200 (application/json)
+
+    [Stages][]
+    
 ## Stage [/api/stages/{location}/]
 
 A single stage object. 
@@ -33,7 +64,6 @@ The Stage resource represents a physical location in the Austin City Limits map.
 (see http://theaustinites.pythonanywhere.com/stages/ for the mapping).
 Note that depending on the year of the festival, a stage may have a different
 sponsor sponsoring that stage or different artists playing on that stage.
-Locations are usually in the range [1,8]
 
 + Parameters
     + location (integer) ...  a number
@@ -160,7 +190,7 @@ Note that sponsor names are unique. A list of years and stag locations are also 
 
     [Sponsor][]
 
-## Sponsor Year [/api/sponsors/year/{year}]
+## Sponsors Year [/api/sponsors/year/{year}]
 Collection of all Sponsors that sponsored a Stage for the requested year.
 + Model (application/json)
 
@@ -194,7 +224,7 @@ given year.
 
 + Response 200
     
-    [Sponsor Year][]
+    [Sponsors Year][]
 
     
 # Group Artist
@@ -279,7 +309,7 @@ artist as well as a list of years and stage locations the artist has performed a
 
     [Artist][]
 
-## Artist Collection [/api/artists/year/{year}]
+## Artists Year [/api/artists/year/{year}]
 Collection of all Artists for a given year
 
 It **embeds** *Artist Resources* in the ACL Project API
@@ -318,7 +348,7 @@ A GET request returns a json dictionary with an "artists" key whose value
 is a list of artist ids that have performed at ACL in the requested year. The year requested is also included.
 + Response 200
     
-    [Artist Collection][]
+    [Artists Year][]
 
 # Group Media
 Media related resources for Artist, Stage, and Sponsor
