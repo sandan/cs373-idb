@@ -2,7 +2,7 @@ FORMAT: 1A
 HOST: http://theaustinites.pythonanywhere.com/
 
 # Austin City Limits Project API
-ACL Project is a representation of the bands, stages, events, and artists appearing at 
+ACL Project is a representation of the sponsors, stages, and artists appearing at 
 **Austin City Limits**.
 
 The API allows **GET** requests to the following:
@@ -14,22 +14,27 @@ The API allows **GET** requests to the following:
 * StageMedia
 * SponsorMedia
 
+**Note:** The ACL API allows information to be selected on a per year basis. 
+The earliest available year starts at 2012.
 
 # Group Stage
 Stage related resources of the Austin City Limits Project API
 
 ## Stage [/api/stages/{location}/]
-A single stage object. The Stage resource represents a location on the 
-Austin City Limits map (labeled 1 thru 8).  
+A single stage object.   
 
 The Stage resource has the following attributes:
 
 - location
 
-The stages *id* is assigned by the ACL Project API at the moment of creation.
+The stage's *location* is assigned by the ACL Project API at the moment of creation.
+The Stage resource represents a physical location on the Austin City Limits map.
+see http://theaustinites.pythonanywhere.com/stages/.
+Note that depending on the year of the festival, a stage may have a different
+sponsor sponsoring that stage or different artists playing on that stage.
 
 + Parameters
-    + id (integer) ... ID of the Stage in the form of a number
+    + location (integer) ...  a number
     
 + Model (application/json)
     JSON representation of Stage resource.
@@ -37,21 +42,21 @@ The stages *id* is assigned by the ACL Project API at the moment of creation.
     + Body
     
             {
-                "id": 42,
-                "name": "Stage name"
+                "years": [2011,2012,2013,2014]
             }
 
 ### Retrieve a single Stage [GET]
+A GET request returns a json dictionary with a key "year"
+and the years that that particular stage location has been in use for the 
+festival.
+
 + Response 200 (application/json)
 
     [Stage][]
         
-
-
-## Stage Collection [/api/stages/]
-Collection of all Stages
-
-It **embeds** *Stage Resources* in the ACL Project API
+## Stage Collection [/api/stages/{location}/{year}]
+A stage collection returns information about it's *sponsor*
+and *artists* that play on that stage for the given year. 
 
 + Model (application/json)
 
@@ -60,13 +65,16 @@ It **embeds** *Stage Resources* in the ACL Project API
         + Body
             
             [
-                {
-                    "id": 42,
-                    "name": "Stage name"
+                {   "location": 1
+                    "sponsor": 'Honda',
+                    "artists": ['Kendrick Lamar','Skrilex',...]
                 }
             ]
 
-### List All Stages [GET]
+### List Stage Information for a given year [GET]
+A GET request for a **Stage Collection** returns the *location*, *sponsor* for 
+the requested stage location and year as well as a *list of artists*
+that have played on that stage during the requested year.
 + Response 200
     
     [Stage Collection][]
@@ -75,16 +83,12 @@ It **embeds** *Stage Resources* in the ACL Project API
 Sponsor related resources of the **ACL API**
 
 ## Sponsor [/api/sponsors/{id}/]
-A single sponsor object.  The Sponsor resource represents a sponsor
+A single sponsor object.
 
 The Sponsor resource has the following attributes:
-
 - id
 - name
-- business_type
-- stage
-
-The state *id* is assigned by the ACL Project API at the moment of creation.
+- industry
 
 + Parameters
     + id (integer) ... ID of the Sponsor in the form of a number
@@ -96,39 +100,40 @@ The state *id* is assigned by the ACL Project API at the moment of creation.
     
             {
                 "id": 42,
-                "name": "Sponsor name",
-                "business_type": "Type of Business",
-                "stage": 12
+                "name": "Tito's Handmade Vodka",
+                "industry": "alcohol industry"
             }
 
 ### Retrieve a single Sponsor [GET]
+A GET request for a sponsor with given id returns 
+the *id*, *name*, and *industry* the sponsor is associated with.
+Note that sponsor names are unique.
 + Response 200 (application/json)
 
     [Sponsor][]
 
 
-## Sponsor Collection [/api/sponsors/]
-Collection of all Sponsors
-
-It **embeds** *Sponsor Resources* in the ACL Project API
-
+## Sponsor Collection [/api/sponsors/year/{year}]
+Collection of all Sponsors that sponsored a Stage for the requested year.
 + Model (application/json)
 
-        JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+        JSON representation of the Sponsor Collection Resource.  
+        The Sponsor resources in the collections are embedded.
 
         + Body
             
             [
                 {
-                    "id": 42,
-                    "name": "Sponsor name",
-                    "business_type": "Type of Business",
-                    "stage": 22
+                    "sponsors": ['id of sponsor 1','id of sponsor 2', etc...]
+            
                 }
             ]
 
             
-### List All Sponsors [GET]
+### List All Sponsors for a given year[GET]
+A GET request returns a json dictionary with a sponsors key and a list
+of ids corresponding to a sponsor.
+
 + Response 200
     
     [Sponsor Collection][]
@@ -147,7 +152,6 @@ The Artist resource has the following attributes:
 - label
 - origin
 - genre
-- stage
 
 The artist **id** is assigned by the ACL Project API at the moment of creation.
 
@@ -160,15 +164,17 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
 
     + Body
     
-            {
+            [   
+                {
+            
                 "id": 42,
                 "name": "Artist name"
                 "label": "Label of artist"
                 "origin": "Where the artist was from"
                 "genre": "Genre of the artist"
-                "stage": 22
-            }
-            
+                
+                }
+            ]   
 
 
 ### Retrieve an Artist [GET]
@@ -177,8 +183,8 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
     [Artist][]
     
 
-## Artist Collection [/api/artists/]
-Collection of all Artists
+## Artist Collection [/api/artists/year/{year}]
+Collection of all Artists for a given year
 
 It **embeds** *Artist Resources* in the ACL Project API
 
@@ -189,17 +195,15 @@ It **embeds** *Artist Resources* in the ACL Project API
         + Body
             [
                 {
-                    "id": 42,
-                    "name": "Artist name"
-                    "label": "Label of artist"
-                    "origin": "Where the artist was from"
-                    "genre": "Genre of the artist"
-                    "stage": 22
+                    "artists": [id of artist,...]
+                    
                 }
             ]
 
             
 ### List All Artists [GET]
+A GET request returns a json dictionary with an artists key whose value
+is a list of artist id's.
 + Response 200
     
     [Artist Collection][]
