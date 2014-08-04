@@ -437,7 +437,7 @@ A single StageMedia object with all its details for the given year
 
 The StageMedia resource has the following attributes:
 
-- stage
+- location
 - name (usually a stage's name is just the sponsor's name prefixed to "stage")
 - year
 - bio
@@ -463,7 +463,7 @@ The StageMedia resource has the following attributes:
     + Body
     
             {
-             "stage" : 42,
+             "location" : 42,
              "name"  : "Honda Stage",
              "year"  : 2013,
              "bio" : "a description",
@@ -480,3 +480,51 @@ The StageMedia resource has the following attributes:
 + Response 200 (application/json)
 
     [StageMedia][]
+    
+## StageMediaList [/api/stages/{location}/media/]
+A list of StageMedia objects with all its details for the given stage location
+The StageMedia resource has the following attributes:
+
+- location
+- name (usually a stage's name is just the sponsor's name prefixed to "stage")
+- year
+- bio
+- photo
+- youtube
+- video
+- twitter
+- facebook
+- twitterwidget
+- youtubevideo
+- webpage
+
++ Parameters
+    + location (required, number, `1`) ... Numeric mapping of`location
+    ` of the StageMedia to perform action with.
+    
++ Model (application/json)
+    JSON representation of StageMedia resource.
+
+    + Body
+    
+            [
+                {
+                
+                    "location" : 42,
+                    "name"  : "Honda Stage",
+                    "year"  : 2013,
+                    "bio" : "a description",
+                    "photo" : "url",
+                    "youtube"  "url",
+                    "video" : "url",
+                    "twitter" : "url",
+                    "facebook" : "url",
+                    "twitterwidget" : "twitter handle",
+                    "webpage" : "url",
+                }
+            ]
+        
+### Retrieve a list of StageMedia [GET]
++ Response 200 (application/json)
+
+    [StageMediaList][]
