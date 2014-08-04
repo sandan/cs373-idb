@@ -323,9 +323,7 @@ It **embeds** *Artist Resources* in the ACL Project API
             [
                 {
                   "year" : 2013,
-                  "artists": [
-                                ...,
-                                
+                     ...,
                                 {
             
                                     "id": 42,
@@ -336,15 +334,15 @@ It **embeds** *Artist Resources* in the ACL Project API
                                     "stage_location": 5
                                 },
                                 
-                               ...
-                            ]
+                      ...
+                            
                 }
             ]
 
             
 ### List All Artists by Year [GET]
 A GET request returns a json dictionary with an "artists" key whose value
-is a list of artist ids that have performed at ACL in the requested year. The year requested is also included.
+is a list of artist ids and information for ACL in the requested year. The year requested is also included.
 + Response 200
     
     [Artists Year][]
