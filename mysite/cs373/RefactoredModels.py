@@ -143,7 +143,7 @@ class ArtistMedia(Media):
 
 class StageMedia(Media):
     name            = models.CharField(max_length=42) #Derivable
-    year            = models.DateField()           #datetime
+    date            = models.DateField()           #datetime
     stage           = models.ForeignKey(Stage)
 
 
