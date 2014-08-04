@@ -192,6 +192,7 @@ Note that sponsor names are unique. A list of years and stag locations are also 
 
 ## Sponsors Year [/api/sponsors/year/{year}]
 Collection of all Sponsors that sponsored a Stage for the requested year.
+**Note:** that a Sponsor may only sponsor at most one stage for any given year.
 + Model (application/json)
 
         JSON representation of the Sponsor Collection Resource.  
@@ -207,7 +208,7 @@ Collection of all Sponsors that sponsored a Stage for the requested year.
                                     "id": 42,
                                     "name": "Artist name",
                                     "industry": "Label of artist",
-                                    "stage_locations":[1,2,3,...]
+                                    "stage_location":1
                                 },
                                 
                                ...
