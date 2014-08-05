@@ -1,6 +1,8 @@
+Year: 2013
+
 Name: Honda
 Business_Type: Automobile
-Stage: Honda stage
+Location: 1
 Bio: Honda Motor Co., Ltd. is a Japanese public multinational corporation primarily known as a manufacturer of automobiles and motorcycles. Honda has been the world's largest motorcycle manufacturer since 1959, as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year. Honda became the second-largest Japanese automobile manufacturer in 2001. Honda was the eighth largest automobile manufacturer in the world behind General Motors, Volkswagen Group, Toyota, Hyundai Motor Group, Ford, Nissan, and PSA in 2011. Honda was the first Japanese automobile manufacturer to release a dedicated luxury brand, Acura, in 1986. Aside from their core automobile and motorcycle businesses, Honda also manufactures garden equipment, marine engines, personal watercraft and power generators, amongst others. Since 1986, Honda has been involved with artificial intelligence/robotics research and released their ASIMO robot in 2000. They have also ventured into aerospace with the establishment of GE Honda Aero Engines in 2004 and the Honda HA-420 HondaJet, which began production in 2012. Honda has three joint-ventures in China (Honda China, Dongfeng Honda, and Guangqi Honda). In 2013, Honda invested about 5.7% (US$ 6.8 billion) of its revenues in research and development. Also in 2013, Honda became the first Japanese automaker to be a net exporter from the United States, exporting 108,705 Honda and Acura models while importing only 88,357.
 Photo: http://sequelmagazine.org/wp-content/uploads/2014/05/Honda.jpg
 Video: //www.youtube.com/embed/DBqVgNob9Mw
@@ -11,18 +13,18 @@ Twitter: https://twitter.com/Honda
 
 Name: Austin Ventures
 Business_Type: Investments
-Stage: Austin Ventures stage
+Location: 3
 Bio: Austin Ventures (AV) is a private equity firm focused on venture capital and growth equity investments in business services and supply chain, financial services, new media, Internet, and information services companies nationally with a focus on Texas. The firm, which is based in Austin, Texas, was founded in 1984.[1] AV has raised approximately $3.9 billion since inception across ten private equity funds. In September 2008, the firm announced the closing of Austin Ventures X with $900 million of investor commitments which will be used to fund start-up capital for emerging companies and growth capital for expansion rounds and recapitalizations
 Photo: http://d7txhf74xpsji.cloudfront.net/img/logo.png
 Video: //www.youtube.com/embed/u8iB84-oRz8
-Youtube: PAGE NEEDED
+Youtube: NULL
 Webpage: http://www.austinventures.com
 Facebook: http://www.facebook.com/austinventures
 Twitter: https://twitter.com/AustinVentures
 
 Name: BMI
 Business_Type: Music/Entertainment
-Stage: BMI stage
+Location: 4
 Bio: Broadcast Music, Inc. (BMI) is one of three United States performing rights organizations, along with ASCAP and SESAC. It collects license fees on behalf of songwriters, composers, and music publishers and distributes them as royalties to those members whose works have been performed. In FY 2013, BMI collected more than $944 million in licensing fees and distributed $814 million in royalties.BMI songwriters create all forms of music in all genres, from mainstream pop and country, to death metal and even hiphop. BMI represents artists such as Fifth Harmony, Lil Wayne, Birdman, Mariah Carey, Lady Gaga, Taylor Swift, Eminem, Rihanna and Shakira; bands as diverse as Maroon 5, Evanescence, Nickelback and Linkin Park; legends such as Sam Cooke, Willie Nelson, Fats Domino and Dolly Parton; as well as composers such as Harry Gregson-Williams, John Williams and Danny Elfman and musical songwriters Richard & Robert Sherman.
 Photo: http://rbr.com/wp-content/uploads/BMI.jpg
 Video: //www.youtube.com/embed/GDKEFyyTdzU
@@ -36,12 +38,42 @@ Business_Type: Automobile
 Location: 2
 Bio: AMD (NYSE: AMD) designs and integrates technology that powers millions of intelligent devices, including the personal computers, tablets, game consoles and cloud servers that define the new era of surround computing. AMD solutions enable people everywhere to realize the full potential of their favorite devices and applications to push the boundaries of what is possible
 Photo:https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1601655_209824802544830_1584214066_o.jpg
-Video: https://www.youtube.com/watch?v=I7dReusG2aM
+Video: https://www.youtube.com/embed/I7dReusG2aM
 Youtube: https://www.youtube.com/user/amd
 Webpage: http://www.amd.com/en-us
 Facebook: https://www.facebook.com/AMD
 Twitter: https://twitter.com/amd
 
-rosetta
+Name: Rosetta Stone
+Business_Type: Software
+Location: 8
+Bio: Rosetta Stone is proprietary computer-assisted language learning (CALL) software published by Rosetta Stone Inc. The software uses images, text, sound, and video to teach words and grammar by spaced repetition, without translation. Rosetta Stone calls their approach Dynamic Immersion (a term which they have trademarked).The software's title and logo allude to the Rosetta Stone, an ancient stone slab on which the Decree of Memphis is inscribed in three writing systems.
+Photo: http://rs.aedsoftware.com/images/rs.jpg
+Video: https://www.youtube.com/embed/o2y-ASAad0M
+Youtube: https://www.youtube.com/user/rosettastone
+Webpage: http://www.rosettastone.com
+Facebook: https://www.facebook.com/RosettaStone
+Twitter: https://twitter.com/rosettastone
 
+Name: Samsung Galaxy
+Business_Type: Mobile phone
+Location: 6
+Bio: Samsung Galaxy (stylized as Samsung GALAXY) is a series of Android-powered mobile computing devices designed, manufactured and marketed by Samsung Electronics. The product line includes the Galaxy S series of high-end smartphones, the Galaxy Tab series of tablets, the Galaxy Note series of tablets and phablets with the added functionality of a stylus and the first version of the Galaxy Gear Smartwatch, with later versions dropping the Galaxy branding.
+Photo: http://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Smartphone.jpeg/1280px-Smartphone.jpeg
+Video: //www.youtube.com/embed/-XseHZyvGtg
+Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
+Webpage: http://www.samsung.com/us/?cid=ppc-
+Facebook: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
+Twitter: https://twitter.com/SamsungMobileUS
+
+Name: Bud Light
+Business_Type: Beverages
+Location: 5
+Bio: MProducts Bud Light is brewed using a blend of premium aroma hop varieties, both American-grown and imported, and a combination of barley malts and rice. Its superior drinkability and refreshing flavor makes it the world’s favorite light beer.
+Photo: https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10154292_10152252584940095_7812743642277583150_n.png?oh=f70fe379eb367aea927e6d8a03708aee&oe=54349901&__gda__=1413058327_b99fccd99948cc23729f035f52005758
+Video: https://www.youtube.com/watch?v=AQim7UXz-Mc
+Youtube: https://www.youtube.com/channel/UC1O6nGbccGhl2akEVaSpKsA
+Webpage: http://www.budlight.com/
+Facebook: https://www.facebook.com/BudLight
+Twitter: https://twitter.com/budlight
 
