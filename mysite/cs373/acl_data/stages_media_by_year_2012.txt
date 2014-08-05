@@ -31,17 +31,14 @@ Name: BMI Stage
 Photo: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
 Webpage: http://www.bmi.com
 Facebook: www.facebook.com/broadcastmusicinc
-Bio: The BMI has been a part of the Austin City Limits festival for years, and will feature such artists as Foster the People, Sphinx, and Blue Bear
-Youtube: NULL
 Video: //www.youtube.com/embed/x_0KDgBlZOY
 Twitter: https://twitter.com/bmi
 
 Location: 5
 Name: Barton Springs stage
-Photo: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/11/SamsungBoothCES20091-640x245.jpg
-Webpage: http://www.samsung.com
-Facebook: https://www.facebook.com/SamsungMobileUSA
-Bio: The Samsung stage is one of seven stages at the festival, and will include such artists as Outkast, Interpol, and St. Vincent
+Photo: https://irs2.4sqi.net/img/general/600x600/126184_m7vsC8WwE2wRREuNN_jb59hXlmmfXCZ8tPuMR0LrrEA.jpg
+Webpage: http://austintexas.gov/department/barton-springs-pool
+Facebook: https://www.facebook.com/pages/Barton-Springs-Austin-TX/357001375983
 Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
 Video: //www.youtube.com/embed/6UixED1WM0E
 Twitter: https://twitter.com/SamsungMobile
