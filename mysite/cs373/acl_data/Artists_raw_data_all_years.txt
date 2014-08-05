@@ -2,7 +2,6 @@ Name: School of Rock
 Label: School of Rock
 Origin: Austin, TX
 Genre: Rock
-Stage: Austin Kiddie Limits Stage
 Bio: School of Rock teaches guitar, bass, vocals, keyboards, drums and combines weekly private music lessons and group band rehearsals to prepare students to take the stage in front of live audiences in an authentic concert setting. To date our students have played thousands of concerts, to more than 100,000 people, at such legendary venues as CBGB's, The Trocadero, The Knitting Factory, The Whiskey, The Roxy, The Experience Music Project, The Big Easy and BB King's Blues Club in Times Square. We have also had the great fortune to be able to perform at music festivals from Lollapalooza and Austin City Limits, to Zappanale in Bad Doberan, Germany.
 Photo: https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/735072_10151549109624391_480901677_n.jpg?oh=6a11b3dcf2a42fa36abbdbb758f31030&oe=544D1658&__gda__=1413509233_076b7c78b9d28a2f6498dbfd34967ba0
 Youtube: https://www.youtube.com/user/AustinSchoolOfRock
@@ -15,7 +14,6 @@ Name: Childish Gambino
 Label: Island
 Origin: Stone Mountain, GA
 Genre: Hip-hop
-Stage: Google Play stage
 Bio: When he's not busy writing for television, performing with his sketch group Derrick Comedy, or acting on the NBC comedy Community, Donald Glover somehow finds the time to make beats and rap as his alter ego, Childish Gambino. The project took on a life of its own after Glover found someone to rhyme over the beats he’d been making in his spare time. In 2008, he released his first record as Childish Gambino, Sick Boi, and followed it up the next year with Poindexter. In 2010 he released two mixtapes, I Am Just a Rapper and I Am Just a Rapper 2, which found him rapping over indie rock gems like Sleigh Bells' "Infinity Guitars" and Grizzly Bear’s "Two Weeks." Later that year, he released his third full-length underground album, Culdesac. The year 2011 found him going legit with Camp, his official debut for the Glass Note label. In 2012, Glover released a mixtape titled Royalty, which he released as a free download and which featured a range of musicians including Beck and Das Racist's Heems. He also appeared on Leona Lewis' track "Trouble" from her album Glassheart. In 2013, Glover revealed he had left Community, but would still appear in a handful of episodes in Season 5, and he concentrated on his music career. He returned again to music as Childish Gambino and released the single "3005" from third album, Because the Internet, which was released in late 2013.
 Photo: http://www.billboard.com/bbcom/photos/stylus//2605889-acl-2012-childish-gambino-617-409.jpg
 Youtube: https://www.youtube.com/iamdonald
@@ -28,7 +26,6 @@ Name: Jack White
 Label: Third Man Records
 Origin: Nashville, TN
 Genre: Alternative
-Stage: AMD stage
 Bio: Born the youngest of ten children, raised in Southwest Detroit and a resident of Nashville since 2005, Jack White is one of the most prolific and renowned artists of the past fifteen years.When the White Stripes started in 1997 no one, least of all Jack, ever expected that a red-and-white two-piece band would take hold in the mainstream world. With the release of 2001’s White Blood Cells the band was thrust on magazine covers and captivating audiences through worldwide touring. “Fell in Love With a Girl” served as the band’s breakthrough hit and its accompanying Michel Gondry Lego clip was chosen by Pitchfork Media as the #1 music video of the 2000’s.
 Photo: https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/1146682_632074723492431_1920529399_n.jpg
 Youtube: https://www.youtube.com/user/jackwhite
@@ -41,7 +38,6 @@ Name: Black Keys
 Label: Nonesuch
 Origin: Akron, OH
 Genre: Rock and Roll
-Stage: Bud Light stage
 Bio: Natives of Akron, Ohio, the Black Keys released their debut, The Big Come Up, in 2002, receiving strong reviews and sales, and leading to a contract with Fat Possum by the end of the year. That label released Thickfreakness, recorded in a 14-hour session, in the spring of 2003, and the Keys supported the album with an opening tour for Sleater-Kinney. The Black Keys' momentum escalated considerably with their 2004 album Rubber Factory, which not only received strong reviews but some high-profile play, including a video for "10 A.M. Automatic" featuring comedian David Cross. The band's highly touted live act was documented on a 2005 DVD, released the same year as Chulahoma — an EP of blues covers — appeared. The Black Keys made the leap to the major labels with 2006's Magic Potion, a moodier record that continued to build their fan base. The band capitalized on that moodiness with 2008's Attack & Release, whose production by Danger Mouse signaled that the Black Keys were hardly just blues-rock purists. Salvaged from sessions intended as a duet album with Ike Turner, who died before the record could be finished, the album was the Black Keys' biggest to date, debuting in the Billboard Top 15 and earning strong reviews. Following their second live DVD, the Black Keys spent 2009 on side projects, with Auerbach releasing his solo album Keep It Hid in the beginning of the year, and Carney forming the band Drummer, in which he played bass. At the end of 2009, Blakroc, a rap-rock collaboration between the band and producer Damon Dash, appeared.
 Photo: https://scontent-a.xx.fbcdn.net/hphotos-xaf1/t1.0-9/34190_437541655308_7403432_n.jpg
 Youtube: https://www.youtube.com/user/theblackkeys
@@ -54,7 +50,6 @@ Name: Kodaline
 Label: RCA Victor
 Origin: Dublin, Ireland
 Genre: Modern Rock
-Stage: AMD stage
 Bio: Dublin, Ireland-based modern rock quartet Kodaline specializes in soaring, radio-ready guitar rock that's drawn comparisons to Coldplay, Keane, U2, and Oasis. Formed in the working class town of Swords around the talents of Stephen Garrigan, Vinnie May, Jr, Jason Boland, and Mark Prendergast, the band released an eponymous EP in 2012, with plans to unleash a full-length outing the following year. At the end of 2012, the band was shortlisted for the BBC's Sound of 2013, but were beat to the top spot by Haim. Kodaline released their debut album, In a Perfect World, in June 2013, which was preceded by the singles High Hopes and Love Like This.
 Photo: http://aclp3.c3cdn.com/wp/wp-content/uploads/2014/04/Kodaline_071-RT-hi-res.jpg
 Youtube: https://www.youtube.com/user/Kodalinemusic
@@ -67,7 +62,6 @@ Name: Kendrick Lamar
 Label: Interscope Records
 Origin: Compton, CA
 Genre: Hip-hop
-Stage: Honda stage
 Bio: Platinum-selling, Grammy-nominated rapper Kendrick Lamar is one of the rare artists who has achieved critical and commercial success while earning the respect and support of those who inspired him. A native of Compton, California, Lamar originally rapped as K. Dot and released a series of mixtapes under that name. Youngest Head N***a in Charge (2003), issued when he was only 16 years old, caught the attention of Top Dawg Entertainment and led to a long-term association that helped raise the rapper's profile. Training Day (2005) and C4 (2009) also preceded his decision to go by his birth name. The latter was issued the same year he became part of Black Hippy — beside fellow Top Dawg artists Ab-Soul, Jay Rock, and ScHoolboy Q — a group that, for the most part, appeared on one another's mixtapes and albums. Overly Dedicated (2010) was the first Kendrick Lamar mixtape and fared well enough to enter Billboard's R&B/Hip-Hop Albums chart that October. His first official album, Section.80 (2011), was released as a digital download the following year and entered the Billboard 200 at number 113.By that point in his career, Lamar's reputation had been strengthened through guest appearances on dozens of tracks, and he had the support of veteran West Coast stars as well. During a 2011 concert, Dr. Dre, Snoop Dogg, and Game dubbed him "The New King of the West Coast," a notion Dre endorsed more significantly by signing Lamar to the Aftermath label. Lamar's Good Kid, M.A.A.D City was released in October 2012 and debuted at number two on the Billboard 200. Three of its singles — "Swimming Pools (Drank)," "Poetic Justice," and "Bitch Don't Kill My Vibe" — reached the Top Ten of Billboard's Hot R&B/Hip-Hop chart, with each one enjoying lengthy stays on playlists of urban U.S. radio stations. More significantly, the album showcased Lamar as an exceptional storyteller capable of making compelling concept albums. When the nominees for the 56th Annual Grammy Awards were announced, Lamar was listed in seven categories, including Best New Artist and Album of the Year. He won none of the awards. Rather than rest, Lamar remained active with appearances on tracks by the likes of Tame Impala, YG, and fellow Top Dawg affiliate SZA. He planned his third album for release later that year.
 Photo: http://www.kendricklamar.com/sites/g/files/g20001396/f/styles/media_gallery_large/public/201306/17332206-6421-4f66-9a70-3be34c6f87b1.jpg?itok=iYxBCUn_
 Youtube: https://www.youtube.com/user/KendrickLamarVEVO
@@ -80,7 +74,6 @@ Name: Muse
 Label: Warner Bros Records
 Origin: UK
 Genre: Rock
-Stage: Samsung Galaxy stage
 Bio: Muse's fusion of progressive rock, glam, electronica, and Radiohead-influenced experimentation is crafted by guitarist/vocalist Matthew Bellamy, bassist Chris Wolstenholme, and drummer Dominic Howard. Bored by the sleepy life provided by their hometown of Teignmouth, Devon, the three British friends began playing music together. They started the first incarnation of their band while only 13 years old, changing the name of the group from Gothic Plague to Fixed Penalty to Rocket Baby Dolls as time passed. By 1997, the bandmates settled on the name Muse and released their self-titled debut EP on Dangerous Records, followed by the Muscle Museum EP in 1998. The group's emotive, passionate sound and live presence drew critical acclaim and industry buzz, and Muse signed a deal with Maverick Records after a trip to New York's CMJ festival. The singles "Cave" and "Uno" preceded their debut full-length album, Showbiz, which was released toward the end of 1999. Two years later, Muse issued The Origin of Symmetry and had a major hit with "Hyper Music," which helped propel the album to platinum status in the U.K.
 Photo: http://musecdn.warnerartists.com/ugc-1/gallery/4243/10769_original.jpg
 Youtube: https://www.youtube.com/muse
@@ -93,7 +86,6 @@ Name: The Black Angels
 Label: Nick Stern & Lauren Pattenaude at Vector Management
 Origin: Austin,TX
 Genre: Psychedelic/Experimental
-Stage: Budlight stage
 Bio: Since Aristotle, man has organized his knowledge vertically in separate and unrelated groups---Science, Religion, Sex, Relaxation, Work, etc. The main emphasis in his language, his system of storing knowledge, has been on the identification of objects rather than on the relationships between objects. He is now forced to use his tools or reasoning separately and for one situation at a time. Had man been able to see past this hypnotic way of thinking, to distrust it (as did Einstein), and to resystematize his knowledge so that it would all be related horizontally, he would now enjoy the perfect sanity which comes from being able to deal with his life in its entirety.It is possible for Man to alter his mental state and thus alter his point of view (that is, his own basic relation with the outside world which determines how he stores his information). He then can restructure his thinking and change his language so that his thoughts bear more relation to his life and his problems, therefore approaching them more sanely.It is this quest for pure sanity that forms the basis of The Black Angels.
 Photo: https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/773682_10151642529077542_779089494_o.jpg
 Youtube:
@@ -106,7 +98,6 @@ Name: Outkast
 Label: Epic
 Origin: Atlanta, GA
 Genre: Hip-hop
-Stage: Samsung Galaxy stage
 Bio: Outkast (stylized as OutKast) is an American hip hop duo formed in 1992, in East Point, Atlanta, Georgia, composed of Atlanta-based rappers Andre "Andre 3000" Benjamin and Antwan "Big Boi" Patton. They were originally known as Two Shades Deep but later changed the group's name to OutKast. The group's original musical style was a mixture of Dirty South and G-funk. Subsequently however, funk, soul, rock, electronic music, spoken word poetry, jazz and blues elements have been added to the group's musical palette.The duo is one of the most successful hip-hop groups of all time, having received six Grammy Awards. Between six studio albums and a greatest hits release, Outkast has sold over 25 million records. Meanwhile they have garnered widespread critical acclaim, with publications such as Rolling Stone and Pitchfork Media listing albums such as Aquemini and Stankonia among the best of their era.
 Photo: http://factmag-images.s3.amazonaws.com/wp-content/uploads/2014/01/OutKast-bestival-1.28.2014.jpg
 Youtube: www.youtube.com/user/OutkastVEVO
@@ -119,7 +110,6 @@ Name: Eminem
 Label: Interscope
 Origin: Detroit, MI
 Genre: Hip-hop
-Stage: Honda stage
 Bio: Marshall Bruce Mathers III (born October 17, 1972), better known by his stage name Eminem and by his alter ego Slim Shady, is an American rapper, record producer, songwriter, and actor. In addition to his solo career, Eminem is a member of the group D12, as well as one half of the hip hop duo Bad Meets Evil, alongside Royce da 5'9". Eminem is the best-selling artist of the 2000s in the United States. He has been listed and ranked as one of the greatest artists of all time by many magazines, including Rolling Stone magazine which ranked him 82nd on its list of The 100 Greatest Artists of All Time. The same magazine declared him The King of Hip Hop. Including his work with D12 and Bad Meets Evil, Eminem has achieved ten number-one albums on the Billboard 200. Eminem has sold more than 115 million albums and singles worldwide. As of June 2014, he is the second best selling male artist of the Nielsen Soundscan era, the sixth best overall selling artist in the United States, and the best-selling hip-hop artist having sold 45,160,000 albums and 31 million digital singles.
 Photo: http://www.eminem.net/social_plugins/eminem.jpg
 Youtube: www.youtube.com/user/EminemMusic
@@ -132,7 +122,6 @@ Name: Pearl Jam
 Label: Monkeywrench
 Origin: Seattle, WA
 Genre: Alternative rock
-Stage: Miller Lite stage
 Bio: Pearl Jam is an American rock band, formed in Seattle, Washington in 1990. Since its inception, the band's line-up has included Stone Gossard (guitar), Jeff Ament (bass), Mike McCready (guitar), and Eddie Vedder (vocals). The band's fifth and current drummer is Matt Cameron of Soundgarden, who has been with the band since 1998. Formed after the demise of Gossard and Ament's previous band, Mother Love Bone, Pearl Jam broke into the mainstream with its debut album, Ten, in 1991. One of the key bands of the grunge movement in the early 1990s, over the course of the band's career, its members became noted for their refusal to adhere to traditional music industry practices, including refusing to make music videos, giving interviews and engaging in a much-publicized boycott of Ticketmaster. In 2006, Rolling Stone described the band as having "spent much of the past decade deliberately tearing apart their own fame." To date, the band has sold more than 31.5 million records in the U.S, and an estimated 60 million worldwide. Pearl Jam has outlasted and outsold many of its contemporaries from the alternative rock breakthrough of the early 1990s, and is considered one of the most influential bands of the decade. Stephen Thomas Erlewine of Allmusic referred to Pearl Jam as "the most popular American rock & roll band of the '90s."
 Photo: http://captainsdead.com/wp-content/uploads/2009/11/pearl-jam.jpg
 Youtube: http://www.youtube.com/channel/UClQT6Vnsm6BUm0I5kR26EkQ
@@ -145,7 +134,6 @@ Name: Beck
 Label: Capitol
 Origin: Los Angeles, CA
 Genre: Alternative rock
-Stage: Austin Ventures stage
 Bio: Once known primarily through his ‘90s anti-anthem, “Loser,” Beck Hansen has evolved from scruffy sonic collagist to funk-and-soul revivalist to one of popular music’s most esteemed and vital singer/songwriters. After a six-year break between solo releases, this year marked the arrival of one of his finest moments, Morning Phase. The glittering, expertly crafted folk opus is—as Beck has been from the very beginning—singularly hypnotic.
 Photo: http://rocksongwriting.com/wp-content/uploads/2011/10/beck.jpg
 Youtube: http://www.youtube.com/user/BeckVEVO
@@ -158,7 +146,6 @@ Name: Foster the People
 Label: Columbia
 Origin: Los Angeles, CA
 Genre: Indie pop
-Stage: BMI stage
 Bio: Los Angeles electro-indie-pop-rock band Foster the People never had much official “indie” status, having been scooped up to the major leagues within their first year of performing. After making a decent splash at music festivals and creating a serious buzz with infectious numbers such as “Pumped Up Kicks” and “Helena Beat,” Foster the People are making good with a debut album that’s as fresh as sunshine and as refreshing as a surf wave. The group have touches of California sunbaked pop in their repertoire, but there’s also a dark Euro-disco groove lurking under the hooks of “Don’t Stop (Color On the Walls)” and the thick, goth-like wash of “Waste.” Singer Mark Foster plays and programs enough keyboards to give the songs a grand entrance, while other members contribute to the production to jazz up and space out tracks like “Miss You” and “Life On the Nickel.” “Warrant” works under an ambient haze. “Houdini” charges with an unforgiving groove, squeaky synths and a falsetto that reaches back to the ‘70s disco era.
 Photo: http://fanart.tv/fanart/music/e0e1a584-dd0a-4bd1-88d1-c4c62895039d/artistbackground/foster-the-people-4eccdf9b1e46b.jpg
 Youtube: http://www.youtube.com/user/fosterthepeopleVEVO
@@ -171,7 +158,6 @@ Name: Skrillex
 Label: Atlantic
 Origin: Los Angeles, CA
 Genre: Dubstep
-Stage: Bacardi stage
 Bio: Sonny Moore found club and mainstream stardom beginning in 2008, when he swapped his gig as post-hardcore frontman for From First to Last and created the dancefloor-oriented project Skrillex. He originally used the name for live DJ sets, but in 2009 the project moved into the studio with Skrillex remixing the likes of Lady Gaga (“Bad Romance”) and Snoop Dogg (“Sensual Seduction”). In 2010, the self-released digital download EP My Name Is Skrillex appeared, combining the Benny Benassi and Deadmau5 styles of electro with the over the top samples and giant noises of acts like the Chemical Brothers and Fatboy Slim. Moore would sign with Deadmau5’s Mau5trap label that same year, where he would release his second EP, Scary Monsters & Nice Sprites, along with the club hit “Kill Everybody.” If topping the club charts didn't prove the producer had arrived, a 2011 appearance on the revived Beavis & Butthead television series did, along with his collaboration with the surviving members of the Doors called "Breakin' a Sweat." The recording of the track was captured in the documentary film RE:GENERATION, while the song itself landed on Skrillex's Bangarang EP, which appeared in early 2012.
 Photo: http://assets-s3.rollingstone.com/assets/images/story/skrillex-im-gonna-go-at-it-hard-next-year-20131104/20131104-skrillex-x1800-1383580557.jpg
 Youtube: https://www.youtube.com/user/TheOfficialSkrillex
@@ -184,7 +170,6 @@ Name: Lana Del Rey
 Label: Interscope
 Origin: New York City, New York
 Genre: Chamber pop
-Stage: Bacardi Stage
 Bio: Vocalist Lana Del Rey makes atmospheric, orchestral, retro-'60s-sounding pop that showcases her torchy image and sensuous singing style. A native of Lake Placid, New York, Del Rey released both the "Kill Kill" single and a 2010 debut album under her given name, Lizzy Grant, tagging the album "a.k.a. Lana Del Rey." It would be a few years before Grant would undergo a complete transformation into her alter ego, modeling the Lana Del Rey persona into a Hollywood pop femme fatale character. A video for the single "Video Games" appeared online in August of 2011 and drew considerable buzz, as did a secret show she performed at Brooklyn's Glasslands Gallery that September. Del Rey's EP, featuring the songs "Video Games" and "Blue Jeans," was released in fall 2011. Amidst a heavy dose of hype, her debut album Born to Die was announced by Interscope for release early the following year. Del Rey cemented the anticipation around the album with an appearance on Saturday Night Live, becoming the first artist since Natalie Imbruglia in 1998 to perform on the show before the release of her debut album. Born to Die hit number one in several European countries, reached number two on the U.S. charts, and eventually sold several million copies worldwide. By the end of 2012, Del Rey had released her next work, a mini-album titled Paradise, with a trailer single called "Ride." Songs from Paradise also found their way into the soundtrack of Tropico, a short film Del Rey worked on in collaboration with director Anthony Mandler. The strangely psychedelic take on biblical themes premiered at the Cinerama Dome in Hollywood in early December before being released online. The year 2014 saw the release of a much-anticipated Born to Die follow-up in the form of Ultraviolence, a somewhat darker and more mature look into Del Rey's sound produced by the Black Keys' Dan Auerbach.
 Photo: http://courantblogs.com/sound-check/wp-content/uploads/2012/01/110722_LanaDelRey_08-051c_20120118_123848.jpg
 Youtube: https://www.youtube.com/user/LanaDelRey
@@ -197,7 +182,6 @@ Name: Calvin Harris
 Label: Columbia
 Origin: Dumfries, Scotland
 Genre: Electro
-Stage: Austin Ventures stage
 Bio: Calvin Harris (born Adam Richard Wiles on 17 January 1984) is a Scottish singer-songwriter, record producer and DJ. His gold-selling debut album, I Created Disco, was released in 2007 and contained the top ten singles "Acceptable in the 80s" and "The Girls". He has written and produced records for other recording artists including Kylie Minogue's X and his number-one collaboration with English rapper Dizzee Rascal, "Dance wiv Me". His second studio album Ready for the Weekend was released on 17 August 2009 and reached number one in the UK Album Charts on 23 August. It includes the chart-topper "I'm Not Alone", the UK top five hit "Ready for the Weekend", which was released on 10 August, and the track "Flashback", which was released as the third single from the album on 2 November 2009. The fourth single from the album, "You Used to Hold Me", was released on 8 February 2010 as a CD single and download. A remix album titled L.E.D. Festival was released in July 2010 as a free album in the August issue of Mixmag.
 Photo: http://images.forwallpaper.com/files/images/2/2a03/2a03d7d9/79288/calvin-harris.jpg
 Youtube: https://www.youtube.com/user/CalvinHarrisVEVO
@@ -210,7 +194,6 @@ Name: Phantogram
 Label: Barsuk
 Origin: Greenwich, New York
 Genre: Electronic
-Stage: Tito's handmade vodka stage
 Bio: Phantogram are an electronic rock duo from upstate New York whose music incorporates psychedelic pop vocals, J Dilla-style hip-hop beats, and shoegazing sensibility. Founded in 2007 and based in Saratoga Springs, New York, the duo is comprised of longtime friends Josh Carter (guitar, vocals) and Sarah Barthel (keyboards, vocals), who originally hail from the nearby small town of Greenwich, New York. Originally known as Charlie Everywhere and associated with the local independent label Sub-Bombin Records, the duo released the eponymous Phantogram EP in March 2009 and sparked widespread interest with two songs in particular, "Mouthful of Diamonds" and "When I'm Small." Phantogram subsequently released the Running from the Cops EP in May 2009 on the international label BBE Records. The duo finally made its full-length album debut with Eyelid Movies (2010), an 11-track album featuring the four previously released EP songs "Mouthful of Diamonds," "When I'm Small," "Running from the Cops," and "Bloody Palms." The album was released internationally by BBE Records, domestically by Barsuk Records, and on vinyl by Ghostly International. The duo returned in late 2011 with the Nightlife EP, which sold enough to hit the lower reaches of the U.S. charts. They continued to tour heavily but found the time to collaborate with OutKast's Big Boi on his second album Vicious Lies and Dangerous Rumours (2012) and also featured on the Flaming Lips track "Young Lust" in 2013. Their success continued in 2013 when fan favorite "When I'm Small" appeared on the MTV adaptation of the hit U.K. show Skins and they released a four-song, self-titled EP. Toward the end of the year they returned to Upstate New York and began to write and record their second full-length album. The pair traveled to L.A. to put the finishing touches on the record, titled Voices, with producer John Hill (Santigold, M.I.A.). It was released by their new label Republic in early 2014.
 Photo: http://www.poppressinternational.com/wp-content/uploads/2014/04/phantogram-live-stubbs-austin-texas-7.jpg
 Youtube: https://www.youtube.com/user/PhantogramMusic
@@ -223,7 +206,6 @@ Name: Asleep at the Wheel
 Label: Bismeaux Records
 Origin: Paw Paw, WV
 Genre: Western
-Stage: Honda stage
 Bio: It all started when Ray Benson, Floyd Domino, and Lucky Oceans, along with a Vermont farm boy named Leroy Preston; Virginian Chris O’Connell; and Gene Dobkin, a bass player and fellow classmate of Benson’s from Antioch College in Yellow Springs, Ohio, joined forces. They began with a simple goal: to play and help revive American roots music. Asleep at the Wheel landed a gig opening for Alice Cooper and Hot Tuna in Washington, DC in 1970. At the height of Vietnam, many Americans were using their choice of music to express their stance on the conflict in southeast Asia. “We wanted to break that mold,” said Benson. “We were concerned more with this amazing roots music, which we felt was being lost amid the politics. We were too country for the rock folks and we were too long-haired for the country folks. But everybody got over it once the music started playing.” A year later, they were coaxed into moving to California by Commander Cody, leader of Commander Cody & His Lost Planet Airmen. But, the band’s big break came when Van Morrison mentioned them in an interview with Rolling Stone. The record offers started coming in and The Wheel got rolling.
 Photo: http://aclp3.c3cdn.com/wp/wp-content/uploads/2014/04/AsleepAtTheWheelPromo.jpg
 Youtube: https://www.youtube.com/user/aatw1969
@@ -236,7 +218,6 @@ Name: The Avett Brothers
 Label: American Recordings
 Origin: Concord, NC
 Genre: Rock
-Stage: Honda stage
 Bio: If you put your ear to the street, you can hear the rumble of the world in motion; people going to and from work, to school, to the grocery store. You may even hear the whisper of their living rooms, their conversation, their complaints, and if you're lucky, their laughter. If you're almost anywhere in America , you'll hear something different, something special, something you recognize but haven't heard in a long time. It is the sound of a real celebration. It is not New Year's, and it is not a political convention. It is neither a prime time game-show, nor a music video countdown, bloated with fame and sponsorship. What you are hearing is the love for a music. It is the unbridled outcry of support for a song that sings to the heart, that dances with the soul. The jubilation is in the theaters, the bars, the music clubs, the festivals. The love is for a band. The songs are honest: just chords with real voices singing real melodies. But, the heart and the energy with which they are sung, is really why people are talking, and why so many sing along.
 They are a reality in a world of entertainment built with smoke and mirrors, and when they play, the common man can break the mirrors and blow the smoke away, so that all that's left behind is the unwavering beauty of the songs. That's the commotion, that's the celebration, and wherever The Avett Brothers are tonight, that's what you'll f
 Youtube: https://www.youtube.com/channel/UCJlAF3BOWRidnBHehwPS7mA
