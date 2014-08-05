@@ -386,6 +386,8 @@ The ArtistMedia resource has the following attributes:
             }
             
 ### Retrieve an ArtistMedia [GET]
+**Note:** Some values of the attribute may not return a value depending on the available information given online.
+
 + Response 200 (application/json)
 
     [ArtistMedia][]
@@ -428,6 +430,8 @@ The SponsorMedia resource has the following attributes:
             }
             
 ### Retrieve an SponsorMedia [GET]
+**Note:** Some values of the attributes may not return a value depending on the available information given online.
+
 + Response 200 (application/json)
 
     [SponsorMedia][]
@@ -477,6 +481,9 @@ The StageMedia resource has the following attributes:
             }
             
 ### Retrieve an StageMedia [GET]
+**Note:** Some values of the attribute may not return a value depending on the available information given online.
+Sponsor media may be used in the event a stage doesn't have the corresponding information.
+
 + Response 200 (application/json)
 
     [StageMedia][]
@@ -527,6 +534,9 @@ The StageMedia resource has the following attributes:
             ]
         
 ### Retrieve a list of StageMedia [GET]
+**Note:** Some values of the attribute may not return a value depending on the available information given online.
+Sponsor media may be used in the event a stage doesn't have the corresponding information.
+
 + Response 200 (application/json)
 
     [StageMediaList][]
