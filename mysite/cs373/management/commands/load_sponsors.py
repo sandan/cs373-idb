@@ -38,9 +38,10 @@ class Command(BaseCommand):
             for line in F:
                 if (line == "\n"):
                     #new sponsor+media
+                    current_sponsor = self.create_sponsor(sponsor_dict)
                     sponsor_dict.clear()
                     self.create_sponsor_media(sponsor_media_dict,current_sponsor)
-
+                    sponsor_media_dict.clear()
                 else:
 
                     info=line.split(': ')
@@ -52,26 +53,19 @@ class Command(BaseCommand):
                     if (key == 'name' or key=='business_type'):
                         sponsor_dict[key]=val
 
-                    elif (key== 'stage'):
-                        s=Stage.objects.get(name=val)
-                        current_sponsor=self.create_sponsor(sponsor_dict,s)
-
                     else:
                         sponsor_media_dict[key]=val
 
 
 
-    def create_sponsor(self, sponsor_data, stage):
+    def create_sponsor(self, sponsor_data):
         a=Sponsor(**sponsor_data)
-        a.stage=stage
-        stage.save()
         a.save()
         self.stdout.write("+created sponsor: "+sponsor_data['name'])
         return a
 
     def create_sponsor_media(self, data, sponsor):
         sm=SponsorMedia(**data)
-        sponsor.save()
         sm.sp=sponsor
         sm.save()
 
