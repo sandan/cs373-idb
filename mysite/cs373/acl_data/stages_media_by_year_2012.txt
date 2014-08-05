@@ -31,6 +31,13 @@ Facebook: www.facebook.com/broadcastmusicinc
 Video: //www.youtube.com/embed/x_0KDgBlZOY
 Twitter: https://twitter.com/bmi
 
+Location: 5
+Name: Google Play Stage
+Photo: http://i.huffpost.com/gen/772372/thumbs/o-AUSTIN-CITY-LIMITS-facebook.jpg
+Facebook: www.facebook.com/google
+Video: //www.youtube.com/embed/1WtR5LGWEh4
+Twitter: https://twitter.com/google
+
 Location: 6
 Name: Bud Light stage
 Photo: http://www.ldsystems.com/wp-content/uploads/2013/11/PROJECTS-ACL-02.jpg
