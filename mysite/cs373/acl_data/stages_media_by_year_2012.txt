@@ -18,11 +18,15 @@ Twitter: https://twitter.com/amd
 
 Location: 3
 Name: Austin Ventures stage
-Photo: http://liveboxphoto.com/blog/wp-content/uploads/2012/10/Austin-Ventures-Stage-VIP-Area-Day-3-0443.jpg
-Facebook: https://www.facebook.com/austinventures?rf=109609875732799
-Youtube: 
-Video: 
-Twitter: 
+Photo: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
+Webpage: http://www.austinventures.com
+Facebook: www.facebook.com/austinventures
+Bio: The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
+Youtube: NULL
+Video: //www.youtube.com/embed/W1ClmSpViho
+Twitter: https://twitter.com/AustinVentures
+
+Location: 4
 Name: Miller Lite stage
 Photo: http://livedesignonline.com/site-files/livedesignonline.com/files/uploads/2013/08/1.jpg
 Webpage: http://www.millerlite.com
@@ -31,6 +35,16 @@ Bio: The Miller Lite stage is one of seven stages at the festival, and will incl
 Youtube: http://www.youtube.com/channel/MillerLite
 Video: //www.youtube.com/embed/SS672gJ2ISU
 Twitter: https://twitter.com/MillerLite
+
+Location: 5
+Name: BMI Stage
+Photo: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
+Webpage: http://www.bmi.com
+Facebook: www.facebook.com/broadcastmusicinc
+Bio: The BMI has been a part of the Austin City Limits festival for years, and will feature such artists as Foster the People, Sphinx, and Blue Bear
+Youtube: NULL
+Video: //www.youtube.com/embed/x_0KDgBlZOY
+Twitter: https://twitter.com/bmi
 
 Name: Samsung Galaxy stage
 Photo: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/11/SamsungBoothCES20091-640x245.jpg
@@ -59,14 +73,7 @@ Youtube: NULL
 Video: //www.youtube.com/embed/aEjzAvV_ID8
 Twitter: https://twitter.com/BACARDI
 
-Name: BMI Stage
-Photo: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
-Webpage: http://www.bmi.com
-Facebook: www.facebook.com/broadcastmusicinc
-Bio: The BMI has been a part of the Austin City Limits festival for years, and will feature such artists as Foster the People, Sphinx, and Blue Bear
-Youtube: NULL
-Video: //www.youtube.com/embed/x_0KDgBlZOY
-Twitter: https://twitter.com/bmi
+
 
 Name: Tito's handmade vodka stage
 Photo: http://www.austinpost.org/files/dawes2.jpg
