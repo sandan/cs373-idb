@@ -22,6 +22,8 @@ class Command(BaseCommand):
             for line in F:
                 if (line == "\n"):
                     #new artist+media
+                    
+                    current_artist = self.create_artist(artist_dict)
                     artist_dict.clear()
                     self.create_artist_media(artist_media_dict,current_artist)
                     artist_media_dict.clear()
@@ -37,27 +39,20 @@ class Command(BaseCommand):
                     if (key == 'name' or key=='label' or key== 'origin' or key=='genre' ):
                         artist_dict[key]=val
 
-                    elif (key== 'stage'):
-                        s=Stage.objects.get(name=val)
-                        current_artist=self.create_artist(artist_dict,s)
-
                     else:
                         artist_media_dict[key]=val
 
 
 
-    def create_artist(self, artist_data, stage):
+    def create_artist(self, artist_data):
         a=Artist(**artist_data)
-        a.stage=stage
-        stage.save()
         a.save()
         self.stdout.write("+created artist: "+artist_data['name'])
         return a
 
     def create_artist_media(self, data, artist):
         am=ArtistMedia(**data)
-        artist.save()
-        am.ar=artist
+        am.artist = artist
         am.save()
 
         self.stdout.write("+created media for: "+ artist.name)
