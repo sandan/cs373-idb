@@ -9,7 +9,7 @@ Video: //www.youtube.com/embed/08H7_vTuq1U
 Twitter: https://twitter.com/HondaStage
 
 Location: 2
-Name: BevIntel
+Name: BevIntel stage
 Photo: https://scontent-a.xx.fbcdn.net/hphotos-prn2/t1.0-9/1002625_635011863207321_1348357454_n.jpg
 Facebook: https://www.facebook.com/bevintel
 Youtube: https://www.youtube.com/channel/UCuVBx5Q7uD3pUKqKJddVSaQ
@@ -17,7 +17,7 @@ Video: //www.youtube.com/embed/EiO-h-SWkJU
 Twitter: https://twitter.com/BevintelGO
 
 Location: 3
-Name: Austin Ventures
+Name: Austin Ventures stage
 Photo: http://liveboxphoto.com/blog/wp-content/uploads/2012/10/Austin-Ventures-Stage-VIP-Area-Day-3-0443.jpg
 Facebook: http://www.facebook.com/austinventures
 Youtube: NULL
@@ -25,7 +25,7 @@ Video: //www.youtube.com/embed/u8iB84-oRz8
 Twitter: https://twitter.com/AustinVentures
 
 Location: 4
-Name: BMI
+Name: BMI stage
 Photo: http://www.bmi.com/news/200410/images/acl_broussard-stage.jpg
 Facebook: www.facebook.com/broadcastmusicinc
 Youtube: http://www.youtube.com/user/bmivideo
@@ -33,7 +33,7 @@ Video: //www.youtube.com/embed/GDKEFyyTdzU
 Twitter: https://twitter.com/bmi
 
 Location: 5
-Name: Miller Lite
+Name: Miller Lite stage
 Photo: http://img.sxsw.com/2013/events/MillerLite.jpg
 Facebook: https://www.facebook.com/MillerLite
 Youtube: https://www.youtube.com/user/MillerLite
@@ -41,7 +41,7 @@ Video: //www.youtube.com/embed/ORh3JaJRtuw
 Twitter: https://twitter.com/MillerLite
 
 Location: 6
-Name: Samsung Galaxy
+Name: Samsung Galaxy stage
 Photo: http://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Smartphone.jpeg/1280px-Smartphone.jpeg
 Facebook: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
 Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
@@ -49,7 +49,7 @@ Video: //www.youtube.com/embed/-XseHZyvGtg
 Twitter: https://twitter.com/SamsungMobileUS
 
 Location: 7
-Name: RetailMeNot
+Name: RetailMeNot stage
 Photo: https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t1.0-9/31667_387752922238_7302218_n.jpg
 Facebook: https://www.facebook.com/RetailMeNot
 Youtube: https://www.youtube.com/user/RetailMeNot
@@ -57,7 +57,7 @@ Video: //www.youtube.com/embed/Q2d8V72tHSA
 Twitter: https://twitter.com/retailmenot
 
 Location: 8
-Name: Austin Kiddie Limits presented by Lifeway
+Name: Austin Kiddie Limits stage presented by Lifeway
 Photo: http://t0.gstatic.com/images?q=tbn:ANd9GcTJTUJePKaSm3u2jtEFuZOFkh8-s27RGeIDgs20p1vRoy-AiMNd
 Facebook: https://www.facebook.com/LifewayKefir
 Youtube: https://www.youtube.com/user/lifewaykefir
