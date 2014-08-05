@@ -34,15 +34,6 @@ Facebook: www.facebook.com/broadcastmusicinc
 Video: //www.youtube.com/embed/x_0KDgBlZOY
 Twitter: https://twitter.com/bmi
 
-Location: 5
-Name: Barton Springs stage
-Photo: https://irs2.4sqi.net/img/general/600x600/126184_m7vsC8WwE2wRREuNN_jb59hXlmmfXCZ8tPuMR0LrrEA.jpg
-Webpage: http://austintexas.gov/department/barton-springs-pool
-Facebook: https://www.facebook.com/pages/Barton-Springs-Austin-TX/357001375983
-Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
-Video: //www.youtube.com/embed/6UixED1WM0E
-Twitter: https://twitter.com/SamsungMobile
-
 Location: 6
 Name: Bud Light stage
 Photo: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
