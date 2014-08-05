@@ -7,6 +7,7 @@ Video: //www.youtube.com/embed/u8iB84-oRz8
 Youtube: NULL
 Webpage: http://www.austinventures.com
 Facebook: http://www.facebook.com/austinventures
+Twitter: https://twitter.com/AustinVentures
 
 Name: AMD
 Business_Type: Technology
