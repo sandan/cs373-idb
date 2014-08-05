@@ -12,7 +12,7 @@ Name: AMD
 Business_Type: Technology
 Bio: AMD (NYSE: AMD) designs and integrates technology that powers millions of intelligent devices, including the personal computers, tablets, game consoles and cloud servers that define the new era of surround computing. AMD solutions enable people everywhere to realize the full potential of their favorite devices and applications to push the boundaries of what is possible
 Photo:https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1601655_209824802544830_1584214066_o.jpg
-Video: https://www.youtube.com/watch?v=I7dReusG2aM
+Video: //www.youtube.com/embed/I7dReusG2aM
 Youtube: https://www.youtube.com/user/amd
 Webpage: http://www.amd.com/en-us
 Facebook: https://www.facebook.com/AMD
@@ -32,7 +32,7 @@ Name: GooglePlay
 Business_Type: Entertainment
 Bio: Music, movies & tv, apps, books, newsstand and games play your heart out
 Photo: https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/946985_290541897748665_884893214_n.png
-Video: https://www.youtube.com/watch?v=9bKsQOxIavE
+Video: //www.youtube.com/embed/9bKsQOxIavE
 Youtube: https://www.youtube.com/user/googlepla
 Webpage: https://play.google.com/store
 Facebook: https://www.facebook.com/GooglePlay
@@ -42,7 +42,7 @@ Name: Bud Light
 Business_Type: Beverages
 Bio: MProducts Bud Light is brewed using a blend of premium aroma hop varieties, both American-grown and imported, and a combination of barley malts and rice. Its superior drinkability and refreshing flavor makes it the world’s favorite light beer.
 Photo: https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10154292_10152252584940095_7812743642277583150_n.png?oh=f70fe379eb367aea927e6d8a03708aee&oe=54349901&__gda__=1413058327_b99fccd99948cc23729f035f52005758
-Video: hhttps://www.youtube.com/watch?v=AQim7UXz-Mc
+Video: //www.youtube.com/embed/AQim7UXz-Mc
 Youtube: https://www.youtube.com/channel/UC1O6nGbccGhl2akEVaSpKsA
 Webpage: http://www.budlight.com/
 Facebook: https://www.facebook.com/BudLight
@@ -62,7 +62,7 @@ Name: Rosetta Stone
 Business_Type: Software
 Bio: Rosetta Stone is proprietary computer-assisted language learning (CALL) software published by Rosetta Stone Inc. The software uses images, text, sound, and video to teach words and grammar by spaced repetition, without translation. Rosetta Stone calls their approach Dynamic Immersion (a term which they have trademarked).The software's title and logo allude to the Rosetta Stone, an ancient stone slab on which the Decree of Memphis is inscribed in three writing systems.
 Photo: http://rs.aedsoftware.com/images/rs.jpg
-Video: https://www.youtube.com/embed/o2y-ASAad0M
+Video: //www.youtube.com/embed/o2y-ASAad0M
 Youtube: https://www.youtube.com/user/rosettastone
 Webpage: http://www.rosettastone.com
 Facebook: https://www.facebook.com/RosettaStone
@@ -92,7 +92,7 @@ Name: RetailMe Not
 Business_Type: Online Coupons
 Bio: RetailMeNot is the #1 Digital Coupon Destination in the World. We make it easy to spend less and shop more for things you want.Our goal is to be the most useful site for internet shoppers looking for savings
 Photo: https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t1.0-9/31667_387752922238_7302218_n.jpg
-Video: https://www.youtube.com/watch?v=Q2d8V72tHSA
+Video: //www.youtube.com/embed/Q2d8V72tHSA
 Youtube: https://www.youtube.com/user/RetailMeNot
 Webpage: http://www.retailmenot.com/
 Facebook: https://www.facebook.com/RetailMeNot
@@ -102,7 +102,7 @@ Name: Bevintel
 Business_Type: Hospitality Industry
 Bio: Bevintel is a leading provider of inventory and profit management services for the hospitality industry.Bevintel is a customizable and affordable loss control service dedicated to providing bar and restaurant owners/management with profit enhancement tools and cost saving systems to maximize profit on their liquor, beer and wine inventory.
 Photo: https://scontent-a.xx.fbcdn.net/hphotos-prn2/t1.0-9/1002625_635011863207321_1348357454_n.jpg
-Video: https://www.youtube.com/watch?v=EiO-h-SWkJU
+Video: //www.youtube.com/embed/EiO-h-SWkJU
 Youtube: https://www.youtube.com/channel/UCuVBx5Q7uD3pUKqKJddVSaQ
 Webpage: http://www.bevintel.com/
 Facebook: https://www.facebook.com/bevintel
@@ -112,7 +112,7 @@ Name: Lifeway
 Business_Type: Food/Beverages
 Bio: The Lifeway Foods story begins in 1986 with kefir, a milk-based cultured drink that is popular in Eastern Europe and is said to be more nutritional than yogurt. That year, Russian immigrant Michael Smolyansky began manufacturing kefir in his basement to bring the taste of his native country to the U.S. After Michael Smolyansky passed away in 2002, his daughter Julie Smolyansky assumed the role of President, while his son Edward Smolyansky assumed the role of Chief Financial Officer and Treasurer. Today, Lifeway is the country’s leading manufacturer of kefir, with multiple flavors and varieties that include lowfat, whole milk and organic versions as well as a children’s line, and a provider of other probiotic natural and organic dairy products for health-conscious consumers.
 Photo: http://t0.gstatic.com/images?q=tbn:ANd9GcTJTUJePKaSm3u2jtEFuZOFkh8-s27RGeIDgs20p1vRoy-AiMNd
-Video: https://www.youtube.com/watch?v=IYV0WYJsVVU&list=UUJenA8uG5uhiYNMLrzZkBPQ
+Video: //www.youtube.com/embed/IYV0WYJsVVU&list=UUJenA8uG5uhiYNMLrzZkBPQ
 Youtube: https://www.youtube.com/user/lifewaykefir
 Webpage: http://www.lifeway.net/
 Facebook: https://www.facebook.com/LifewayKefir
