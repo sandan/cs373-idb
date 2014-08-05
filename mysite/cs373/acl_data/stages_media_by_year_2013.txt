@@ -1,5 +1,4 @@
-Year: 2013
-
+Date: 2013, 10, 4
 Location: 1
 Name: Honda stage
 Photo: http://fifehonda.hondaoffife.com/wp-content/uploads/2014/06/hondastage.png
