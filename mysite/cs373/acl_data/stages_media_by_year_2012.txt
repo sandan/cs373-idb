@@ -19,9 +19,7 @@ Twitter: https://twitter.com/amd
 Location: 3
 Name: Austin Ventures stage
 Photo: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
-Webpage: http://www.austinventures.com
 Facebook: www.facebook.com/austinventures
-Bio: The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
 Youtube: NULL
 Video: //www.youtube.com/embed/W1ClmSpViho
 Twitter: https://twitter.com/AustinVentures
@@ -29,27 +27,22 @@ Twitter: https://twitter.com/AustinVentures
 Location: 4
 Name: BMI Stage
 Photo: http://www.bmi.com/images/photoblog/2013/cache/photo_16_hangout_fest_05_18_13_jpg-770x0.jpg
-Webpage: http://www.bmi.com
 Facebook: www.facebook.com/broadcastmusicinc
 Video: //www.youtube.com/embed/x_0KDgBlZOY
 Twitter: https://twitter.com/bmi
 
 Location: 6
 Name: Bud Light stage
-Photo: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
-Webpage: http://www.austinventures.com
-Facebook: www.facebook.com/austinventures
-Bio: The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
-Youtube: NULL
-Video: //www.youtube.com/embed/W1ClmSpViho
-Twitter: https://twitter.com/AustinVentures
+Photo: http://www.ldsystems.com/wp-content/uploads/2013/11/PROJECTS-ACL-02.jpg
+Facebook: https://www.facebook.com/BudLight
+Youtube:  https://www.youtube.com/channel/UC1O6nGbccGhl2akEVaSpKsA
+Video: //www.youtube.com/embed/D7HuemhX__U
+Twitter: https://twitter.com/budlight
 
 Location: 8
 Name: Austin Kiddie Limits stage presented by HEB
-Photo: http://farm6.staticflickr.com/5340/10126692123_1eb635e5d2_z.jpg
-Webpage: http://www.austinventures.com
-Facebook: www.facebook.com/austinventures
-Bio: The Austin Ventures stage has been a part of the Austin City limits festiva for years, and will feature artists such as Beck, Falls, and Polica
-Youtube: NULL
-Video: //www.youtube.com/embed/W1ClmSpViho
+Photo: http://wholesomegenerationmag.com/wp-content/files/DSC_0185_2.jpg
+Facebook: www.facebook.com/heb
+Youtube: https://www.youtube.com/user/HEB
+Video: //www.youtube.com/embed/4INd-hxeXeY
 Twitter: https://twitter.com/AustinVentures
