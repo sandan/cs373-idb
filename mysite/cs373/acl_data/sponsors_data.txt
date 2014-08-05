@@ -10,7 +10,7 @@ Twitter: https://twitter.com/AustinVentures
 
 Name: AMD
 Industry: Technology
-Bio: AMD (NYSE: AMD) designs and integrates technology that powers millions of intelligent devices, including the personal computers, tablets, game consoles and cloud servers that define the new era of surround computing. AMD solutions enable people everywhere to realize the full potential of their favorite devices and applications to push the boundaries of what is possible
+Bio: AMD designs and integrates technology that powers millions of intelligent devices, including the personal computers, tablets, game consoles and cloud servers that define the new era of surround computing. AMD solutions enable people everywhere to realize the full potential of their favorite devices and applications to push the boundaries of what is possible
 Photo:https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1601655_209824802544830_1584214066_o.jpg
 Video: //www.youtube.com/embed/I7dReusG2aM
 Youtube: https://www.youtube.com/user/amd
