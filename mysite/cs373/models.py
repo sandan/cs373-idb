@@ -1,104 +1,175 @@
 from django.db import models
 
+"""
+Three Main Entities
+..that we are modeling the Austin City Limits Festival with
+"""
+
 class Stage(models.Model):
     """
-    A reprentation of a stage
-    """
-    name            = models.CharField(max_length=255, unique=True)
-    #sponsor        = models.ForeignKey(Sponsor)
+    Stages are physical locations on the acl festival map:
+    see theaustinites.pythonanywhere.com/stages/
 
-    def get_url(self):
-        """
-        returns url
-        """
-        return "/stages/%s/" % self.id
+    Locations are mappings from the physical stage to an integer.
+    For any single year, a stage will have one sponsor and many artists playing.
+    For different years, a stage can potentially have different sponsors and many artists playing.
+    """
+    location            = models.PositiveSmallIntegerField(unique=True)
+
+    def get_absolute_url(self):
+
+        return "/stages/%i/" % self.id
+
+
 
     def __str__(self):
         """
-        returns stage name
+        returns location
         """
-        return self.name
+        return str(self.location)
+
 
 class Sponsor(models.Model):
     """
-    A representation of a Sponsor
+    A Sponsor is an entity that purchases a stage
+    for Music Artists to play on.
+    For any single year, a sponsor can only sponsor one stage.
+    For many different years a sponsor could potentially sponsor
+    a different stage (location).
     """
-
-    name            = models.CharField(max_length=255)
-    business_type   = models.CharField(max_length=255)
-    stage           = models.ForeignKey(Stage, blank=True, null=True)
-
-
-    def get_url(self):
-        """
-        returns url
-        """
-        return "/sponsors/%s/" % self.id
-
-    def img_url(self):
-        return '/images/sponsor/%i.jpg' % self.name.lower().replace(' ','')
+    name            = models.CharField(max_length=255, unique=True)
+    industry            = models.CharField(max_length=255)
 
     def __str__(self):
         """
-        returns Sponsor name
+        returns name
         """
         return self.name
 
+    def get_absolute_url(self):
+
+        return "/sponsors/%i/" % self.id
 
 class Artist(models.Model):
     """
-    A representation of an artist
+    An Artist is an entity that plays on a sponsored stage.
+    For any single year, an artist can only play on one stage.
+    For multiple different years, an artist may play on potentially >1 stage.
     """
-    name            = models.CharField(max_length=255, unique=True)
-    label           = models.CharField(max_length=255)
-    origin          = models.CharField(max_length=255)
-    genre           = models.CharField(max_length=255)
-    stage           = models.ForeignKey(Stage)
-
-
-    def get_url(self):
-        """
-        returns url
-        """
-        return "/artists/%s/" % self.id
+    name             = models.CharField(max_length=255, unique=True)
+    label            = models.CharField(max_length=255)
+    genre            = models.CharField(max_length=255)
+    origin           = models.CharField(max_length=255)
 
     def __str__(self):
         """
-        returns Artist name
+        returns name
         """
         return self.name
 
+    def get_absolute_url(self):
+
+        return "/artists/%i/" % self.id
+
+"""
+TIME
+relationship classes
+"""
+# https://docs.djangoproject.com/en/1.6/ref/models/instances/#django.db.models.Model
+
+class stage_sponsor_yr(models.Model):
+    """
+    create with method not the constructor
+    """
+    stage           = models.ForeignKey(Stage)
+    sponsor         = models.ForeignKey(Sponsor)
+    date            = models.DateField()      #datetime
+    key             = models.CharField(max_length=255, unique=True)
+
+
+    @classmethod
+    def create(self, stage, sponsor, date):
+        """
+        For initialization of the primary key, Django doesn't support multi-column pk's.
+        This is needed to enforce the data integrity between sponsors and stages in relation to time.
+        """
+        assert type(stage) == Stage
+        assert type(sponsor) == Sponsor
+
+        pkey=str(sponsor.id)+str(date.year)
+        instance=self(stage=stage, sponsor=sponsor, date=date, key=pkey)
+        return instance
+
+    def get_yr(self):
+        return self.date.year
+
+
+
+
+class stage_artist_yr(models.Model):
+    """
+    For initialization of the primary key, Django doesn't support multi-column pk's.
+    This is needed to enforce the data integrity between artists and stages in relation to time.
+    """
+    stage           = models.ForeignKey(Stage)
+    artist          = models.ForeignKey(Artist)
+    date            = models.DateField()      #datetime
+    key             = models.CharField(max_length=255, unique=True)
+
+    @classmethod
+    def create(self, stage, artist, date):
+        """
+        For initialization of the primary key, Django doesn't support multi-column pk's.
+        This is needed to enforce the data integrity between sponsors and stages in relation to time.
+        ex: relationship=stage_artist_yr.create(stage, artist, (datetime) yr)
+        """
+
+        assert type(stage) == Stage
+        assert type(artist) == Artist
+
+        pkey=str(artist.id)+str(date.year)
+        instance=self(stage=stage, artist=artist, date=date,key=pkey)
+        return instance
+
+    def get_yr(self):
+        return self.date.year
+
+"""
+MEDIA
+info for dynamic webpages
+"""
 class Media(models.Model):
     """
     Media resource for Artist, Sponsor, Stage
     """
 
-    bio=models.TextField()
-    photo= models.CharField(max_length=255)
-    youtube=models.URLField(max_length=255)
-    video=models.CharField(max_length=255)
-    twitter=models.CharField(max_length=255)
-    facebook=models.URLField(max_length=255)
-    # holds the html code for twitter timeline widget
-    twitterwidget = models.CharField(max_length=255)
-    # holds the src of youtube video
-    # ex. src='{{media.youtubevideo}}'
-    youtubevideo = models.URLField(max_length=255)
-    webpage=models.URLField(max_length=255)
+    bio             = models.TextField()
+    photo           = models.URLField(max_length=255)
+    youtube         = models.URLField(max_length=255)
+    video           = models.URLField(max_length=255)
+    youtubevideo    = models.URLField(max_length=255)
+    twitter         = models.URLField(max_length=255)
+    twitterwidget   = models.URLField(max_length=255)
+    facebook        = models.URLField(max_length=255)
+    webpage         = models.URLField(max_length=255)
 
     def __str__(self):
-        """
-        returns Webpage link
-        """
-        return self.Webpage
+        return self.webpage
 
 class ArtistMedia(Media):
-    ar = models.ForeignKey(Artist)
+    artist           = models.ForeignKey(Artist, unique=True)
+
 
 class StageMedia(Media):
-    st = models.ForeignKey(Stage)
+    name            = models.CharField(max_length=255) #Derivable
+    year            = models.DateField()           #datetime
+    stage           = models.ForeignKey(Stage)
+
+    def get_absolute_url(self):
+        return "/stages/{:d}/{:d}/".format(self.stage.id,self.year.year)
+
 
 class SponsorMedia(Media):
-    sp = models.ForeignKey(Sponsor)
+    sponsor      = models.ForeignKey(Sponsor, unique=True)
 
 
