@@ -55,7 +55,7 @@
   \and
   Mark Sandan\\  
 }
-\date{ July 25, 2014 }
+\date{ August 7, 2014 }
 \begin{document}
 \thispagestyle{plain}
 \maketitle
@@ -63,33 +63,37 @@
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{home.png}
- \caption{Splash Page for the second iteration of IDB2 showing the group name, buttons for the three main pages, and a link to the API on Apiary. The Carousel template from twitter bootstrap is used.}
+ \caption{Splash Page for the second iteration of IDB3 showing the group name, buttons for the three main pages, and a link to the API on Apiary. The Carousel template from twitter bootstrap is used.}
 \end{figure}
 
 \section{Updates}
-Updates for the second iteration at a glance:
+Updates for the third iteration at a glance:
 \begin{itemize}
- \item Splash page and web design has been $fancied$ $up$ 
+ \item Augmented the old model to include time relationships  
 \end{itemize}
 \begin{itemize}
- \item Dynamic webpages supporting our models instead of static webpages
+ \item Added a search engine (Django Haystack + Whoosh)
 \end{itemize}
 \begin{itemize}
- \item MySQL is being used currently as the database backend
+ \item Added more robust tests for models and api
 \end{itemize}
 \begin{itemize}
- \item Django Rest framework installed to implement the API and test it
+ \item API changed to reflect the fact that we are modeling the history of ACL
 \end{itemize}
 \begin{itemize}
- \item Refactored the Models used to include a Media models. Photo and Member models have been deprecated.
+ \item An About page added 
 \end{itemize}
 \begin{itemize}
- \item Django commands have been installed to load data from formatted text files for Artist, Stage, and Sponsor
+ \item New embedded media added
 \end{itemize}
 
 \subsection{Summary}
-The main changes that have been made can be summarized into three categories: dynamic functionality, REST implementation, and the model refactoring. 
+The third iteration enhances the previous model of the Austin City Limits festival by including entities
+from different years of the festival. Our group decided to begin starting from the year 2012 since the structure of
+stages, sponsors, and artists with relation to time are more structured and interesting. 
 
+Use cases now include being able to search for artists, sponsors, and stages from different years. Each index page reachable
+from the 
 To implement a dynamic webpage we are currently using html,css,javascript, and the django template language to access instances of Artists, Sponsors, and Stages to fill the content of the webpages. 
 The REST implementation required installing the django rest framework on the pythonanywhere envioronment which enabled us to return JSON representations of MySQL database instances. 
 The tests for the REST implementation have also been added to the test suite.
