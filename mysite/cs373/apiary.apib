@@ -1,8 +1,8 @@
 FORMAT: 1A
-HOST: http://theaustinites.pythonanywhere.com/
+HOST: http://theaustinites.pythonanywhere.com/api
 
 # Austin City Limits Project API
-ACL Project is a representation of the sponsors, stages, and artists appearing at 
+ACL Project is a representation of the bands, stages, events, and artists appearing at 
 **Austin City Limits**.
 
 The API allows **GET** requests to the following:
@@ -10,82 +10,82 @@ The API allows **GET** requests to the following:
 * Stages
 * Sponsors
 * Artists
-* ArtistMedia
-* StageMedia
-* SponsorMedia
-
-**Note:** The ACL API now allows information to be selected on a per year basis. 
-The earliest available year starts at 2012.
+* Members
+* Photos
 
 # Group Stage
 Stage related resources of the Austin City Limits Project API
 
-## Stage [/api/stages/{location}/]
-
-A single stage object. 
+## Stage [/stages/{id}]
+A single stage object. The Stage resource represents a stage.
 
 The Stage resource has the following attributes:
 
-- location
+- id
+- name
 
-The stage's *location* is assigned by a map of the festival.
-The Stage resource represents a physical location in the Austin City Limits map.
-(see http://theaustinites.pythonanywhere.com/stages/ for the mapping).
-Note that depending on the year of the festival, a stage may have a different
-sponsor sponsoring that stage or different artists playing on that stage.
-Locations are usually in the range [1,8]
+The stages *id* is assigned by the ACL Project API at the moment of creation.
 
 + Parameters
-    + location (integer) ...  a number
+    + id (integer) ... ID of the Stage in the form of a number
     
-+ Model (application/json)
-    JSON representation of Stage resource.
++ Model (application/hal+json)
+    HAL+JSON representation of Stage resource.
 
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/stages/42>;rel="self"
+        
     + Body
     
-            {   "location": 1
-                "years": [2012,2013,2014]
+            {
+                "_links": {
+                    "self": { "href": "stages/42" }
+                },
+                "id": 42,
+                "name": "Stage name"
             }
 
 ### Retrieve a single Stage [GET]
-
-A GET request returns a json dictionary with string key "years"
-and the integer years that the requested stage has been in use for the 
-festival. The location is also included to be sure the response matches the request.
-
 + Response 200 (application/json)
 
     [Stage][]
         
-## Stage Collection [/api/stages/{location}/{year}]
 
-A stage collection returns information about it's *sponsor*
-and *artists* that play on that stage location for the given year. 
 
-+ Parameters
-    + location (integer) ...  a number
-    + year (integer) ... a year starting from 2012
-    
-+ Model (application/json)
+## Stage Collection [/stages]
+Collection of all Stages
 
-        JSON representation of the Stage Collection Resource.  
-        The Stage resources in the collections are embedded.
+It **embeds** *Stage Resources* in the ACL Project API
 
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Stage Collection Resource.  The Stage resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/stages>;rel="self"
+            
         + Body
             
-            [
-                {   "location": 1
-                    "year": 2014
-                    "sponsor": sponsor_id,
-                    "artists": [id1,id2,...]
+            {
+                "_links": {
+                    "self": { "href": "/stages" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "stages/42" }
+                            },
+                            "id": 42,
+                            "name": "Stage name"
+                        }
+                    ]
                 }
-            ]
-
-### List Stage Information for a given year [GET]
-
-A GET request for a **Stage Collection** returns the *location*, *year*, *sponsor id* for 
-the requested stage location and year, as well as a *list of artist ids*
-that have played on that stage during the requested year.
+            }
+            
+### List All Stages [GET]
 + Response 200
     
     [Stage Collection][]
@@ -93,158 +93,104 @@ that have played on that stage during the requested year.
 # Group Sponsor
 Sponsor related resources of the **ACL API**
 
-
-## Sponsors [/api/sponsors/]
-    A JSON list of dictionaries returning all Sponsor information
-
-+ Model (application/json)
-    JSON representation of Sponsors resource.
-
-    + Body
-    
-            [   
-                ...,
-                
-                {
-            
-                "id": 42,
-                "name": "Samsung Galaxy",
-                "industry": "Mobile",
-                "years": [2013,...],
-                "stage_locations":[1,2,3,...]
-                },
-                
-                ....
-            ]   
-
-
-### Retrieve all Sponsors [GET]
-A *GET* request for all artists retrieves business information about that
-sponsor as well as a list of years and stage locations each sponsor was involved in at ACL
-+ Response 200 (application/json)
-
-    [Sponsors][]
-
-## Sponsor [/api/sponsors/{id}/]
-
-A single sponsor object.
+## Sponsor [/sponsors/{id}]
+A single sponsor object.  The Sponsor resource represents a sponsor
 
 The Sponsor resource has the following attributes:
 
 - id
 - name
-- industry
+- business_type
+- website
+- stage
+
+The state *id* is assigned by the ACL Project API at the moment of creation.
 
 + Parameters
     + id (integer) ... ID of the Sponsor in the form of a number
     
-+ Model (application/json)
-    JSON representation of Sponsor resource.
++ Model (application/hal+json)
+    HAL+JSON representation of Sponsor resource.
 
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/sponsor/42>;rel="self"
+        
     + Body
     
             {
+                "_links": {
+                    "self": { "href": "sponsors/42" }
+                },
                 "id": 42,
-                "name": "Tito's Handmade Vodka",
-                "industry": "alcohol industry"
-                "years":[2012,2014],
-                "stage_locations":[3,4,2]
+                "name": "Sponsor name",
+                "business_type": "Type of Business",
+                "website": "URL of sponsor website",
+                "stage": 12
             }
 
 ### Retrieve a single Sponsor [GET]
-
-A GET request for a sponsor with given id returns 
-the *id*, *name*, and *industry* the sponsor is associated with.
-Note that sponsor names are unique. A list of years and stag locations are also given.
 + Response 200 (application/json)
 
     [Sponsor][]
 
-## Sponsor Year [/api/sponsors/year/{year}]
-Collection of all Sponsors that sponsored a Stage for the requested year.
-+ Model (application/json)
 
-        JSON representation of the Sponsor Collection Resource.  
-        The Sponsor resources in the collections are embedded.
+## Sponsor Collection [/sponsors]
+Collection of all Sponsors
 
+It **embeds** *Sponsor Resources* in the ACL Project API
+
++ Model (application/hal+json)
+
+        HAL+JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/sponsors>;rel="self"
+            
         + Body
             
-            [{
-                  "year" : 2013,
-                  "sponsors": [
-                                ...,
-                                
-                                {
+            {
+                "_links": {
+                    "self": { "href": "/sponsors" }
+                },
+                "_embedded": {
+                    "stages": [
+                        {
+                            "_links" : {
+                                "self": { "href": "sponsor/42" }
+                            },
+                            "id": 42,
+                            "name": "Sponsor name",
+                            "business_type": "Type of Buisiness",
+                            "website": "URL of sponsor"
+                            "stage": 22
+                        }
+                    ]
+                }
+            }
             
-                                    "id": 42,
-                                    "name": "Artist name"
-                                    "industry": "Label of artist"
-                                    "stage_locations":[1,2,3,...]
-                                },
-                                
-                               ...
-                            ]
-                }]
-
-            
-### List All Sponsors for a given year[GET]
-
-A GET request for SponsorYear returns a json dictionary with the year requested and the sponsors participating in that
-given year.
-
+### List All Sponsors [GET]
 + Response 200
     
-    [Sponsor Year][]
+    [Sponsor Collection][]
 
     
 # Group Artist
-
 Artist related resources of the **ACL API**
 
-## Artists [/api/artists/]
-    A JSON list of dictionaries returning all Artist information
-
-+ Model (application/json)
-    JSON representation of Artist resource.
-
-    + Body
-    
-            [   
-                ...,
-                
-                {
-            
-                "id": 42,
-                "name": "Artist name"
-                "label": "Label of artist"
-                "origin": "Where the artist was from"
-                "genre": "Genre of the artist"
-                "years": [2013,...]
-                "stage_locations":[1,2,3,...]
-                },
-                
-                ....
-            ]   
-
-
-### Retrieve all Artists [GET]
-A *GET* request for all artists retrieves music information about that
-artist as well as a list of years and stage locations each artist has performed at ACL
-+ Response 200 (application/json)
-
-    [Artists][]
-
-
-## Artist [/api/artists/{id}/]
-
+## Artist [/artists/{id}]
 A single Artist object with all its details
+
 The Artist resource has the following attributes:
 
 - id
 - name
 - label
 - origin
+- website
 - genre
+- stage
 
 The artist **id** is assigned by the ACL Project API at the moment of creation.
 
@@ -252,206 +198,244 @@ The artist **id** is assigned by the ACL Project API at the moment of creation.
     + id (required, number, `1`) ... Numeric `id` of the Artist to perform action with.
 
     
-+ Model (application/json)
-    A single JSON representation of Artist resource.
++ Model (application/hal+json)
+    HAL+JSON representation of Artist resource.
 
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/42>;rel="self"
+        
     + Body
     
-            [   
-                {
-            
+            {
+                "_links": {
+                    "self": { "href": "artists/42" }
+                },
                 "id": 42,
-                "name": "Artist name",
-                "label": "Label of artist",
-                "origin": "Where the artist was from",
-                "genre": "Genre of the artist",
-                "years": [2013,...],
-                "stage_locations":[1,2,3,...]
-                
-                }
-            ]   
+                "name": "Artist name"
+                "label": "Label of artist"
+                "origin": "Where the artist was from"
+                "website": "URL to the artist"
+                "genre": "Genre of the artist"
+                "stage": 22
+            }
+            
 
 
 ### Retrieve an Artist [GET]
-A *GET* request for an artist retrieves music information about that
-artist as well as a list of years and stage locations the artist has performed at ACL
 + Response 200 (application/json)
 
     [Artist][]
-
-## Artist Collection [/api/artists/year/{year}]
-Collection of all Artists for a given year
+    
+## Artist Collection [/artists]
+Collection of all Artists
 
 It **embeds** *Artist Resources* in the ACL Project API
 
-+ Model (application/json)
++ Model (application/hal+json)
 
-        JSON representation of the Artist Collection Resource.  
-        The Artist resources in the collections are embedded.
+        HAL+JSON representation of the Sponsor Collection Resource.  The Sponsor resources in the collections are embedded.
 
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists>;rel="self"
+            
         + Body
-            [
-                {
-                  "year" : 2013,
-                  "artists": [
-                                ...,
-                                
-                                {
             
-                                    "id": 42,
-                                    "name": "Artist name"
-                                    "label": "Label of artist"
-                                    "origin": "Where the artist was from"
-                                    "genre": "Genre of the artist"
-                                    "years": [2013,...]
-                                    "stage_locations":[1,2,3,...]
+            {
+                "_links": {
+                    "self": { "href": "/artists" }
+                },
+                "_embedded": {
+                    "artists": [
+                        {
+                            {
+                                "_links": {
+                                    "self": { "href": "artists/42" }
                                 },
-                                
-                               ...
-                            ]
+                                "id": 42,
+                                "name": "Artist name"
+                                "label": "Label of artist"
+                                "origin": "Where the artist was from"
+                                "website": "URL to the artist"
+                                "genre": "Genre of the artist"
+                                "stage": 22
+                            }
+                        }
+                    ]
                 }
-            ]
-
+            }
             
-### List All Artists by Year [GET]
-A GET request returns a json dictionary with an "artists" key whose value
-is a list of artist ids that have performed at ACL in the requested year. The year requested is also included.
+### List All Artists [GET]
 + Response 200
     
     [Artist Collection][]
 
-# Group Media
-Media related resources for Artist, Stage, and Sponsor
+# Group Member
+Member related resources of the **ACL API**
 
-## ArtistMedia [/api/artists/{id}/media/]
-A single ArtistMedia object with all its details
+## Member [/artists/{artist_id}/members/{id}]
+A single Member object with all its details
 
-The ArtistMedia resource has the following attributes:
+The Member resource has the following attributes:
 
-- artist
-- bio
-- photo
-- youtube
-- video
-- twitter
-- facebook
-- twitterwidget
-- youtubevideo
-- webpage
+- id
+- first_name
+- last_name
+- artist_id
+
+The member **id** is assigned by the ACL Project API at the moment of creation.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the ArtistMedia to perform action with.
+    + id (required, number, `1`) ... Numeric `id` of the Member to perform action with.
+    + artist_id (required, number, `1`) ... Numberic `id` of the Artist.
 
     
-+ Model (application/json)
-    JSON representation of ArtistMedia resource.
++ Model (application/hal+json)
+    HAL+JSON representation of Member resource.
 
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/members/42>;rel="self"
+        
     + Body
     
             {
-             "artist" : 42
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
-             "webpage" : "url"
+                "_links": {
+                    "self": { "href": "artists/22/members/42" }
+                },
+                "id": 42,
+                "first_name": "Member's first name"
+                "last_name": "Member's last name"
+                "aritst_id": 22
             }
             
-### Retrieve an ArtistMedia [GET]
+
+
+### Retrieve an Member [GET]
 + Response 200 (application/json)
 
-    [ArtistMedia][]
+    [Member][]
+    
+## Member Collection [/artists/{artist_id}/members]
+Collection of all Members
 
-## SponsorMedia [/api/sponsors/{id}/media/]
-A single SponsorMedia object with all its details
+It **embeds** *Member Resources* in the ACL Project API
 
-The SponsorMedia resource has the following attributes:
++ Model (application/hal+json)
 
-- sponsor
-- bio
-- photo
-- youtube
-- video
-- twitter
-- facebook
-- twitterwidget
-- youtubevideo
-- webpage
+        HAL+JSON representation of the Member Collection Resource.  The Member resources in the collections are embedded.
+
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/members>;rel="self"
+            
+        + Body
+            
+            {
+                "_links": {
+                    "self": { "href": "/artists/22/members" }
+                },
+                "_embedded": {
+                    "members": [
+                        {
+                            "_links": {
+                                "self": { "href": "artists/22/members/42" }
+                            },
+                            "id": 42,
+                            "first_name": "Member's first name"
+                            "last_name": "Member's last name"
+                            "aritst_id": 22
+                        }
+                    ]
+                }
+            }
+            
+### List All Members [GET]
++ Response 200
+    
+    [Member Collection][]
+
+
+# Group Photo
+Photo related resources of the **ACL API**
+
+## Photo [/artists/{artist_id}/photos/{id}]
+A single Photo object with all its details
+
+The Photo resource has the following attributes:
+
+- id
+- file_name
+- artist_id
+
+The photo **id** is assigned by the ACL Project API at the moment of creation.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the SponsorMedia to perform action with.
+    + id (required, number, `1`) ... Numeric `id` of the Photo to perform action with.
+    + artist_id (required, number, `1`) ... Numberic `id` of the Artist.
 
     
-+ Model (application/json)
-    JSON representation of ArtistMedia resource.
++ Model (application/hal+json)
+    HAL+JSON representation of Photo resource.
 
+    + Headers
+    
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/photos/42>;rel="self"
+        
     + Body
     
             {
-             "sponsor" : 42
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
-             "webpage" : "url"
+                "_links": {
+                    "self": { "href": "artists/22/photos/42" }
+                },
+                "id": 42,
+                "file_name": "photo.jpg"
+                "artist_id": 22
             }
             
-### Retrieve an SponsorMedia [GET]
+
+
+### Retrieve an Photo [GET]
 + Response 200 (application/json)
 
-    [SponsorMedia][]
+    [Photo][]
     
-## StageMedia [/api/stages/{location}/media/{year}]
-A single StageMedia object with all its details for the given year
+## Photo Collection [/artists/{artist_id}/photos]
+Collection of all Photos
 
-The StageMedia resource has the following attributes:
+It **embeds** *Photo Resources* in the ACL Project API
 
-- stage
-- name (usually a stage's name is just the sponsor's name prefixed to "stage")
-- year
-- bio
-- photo
-- youtube
-- video
-- twitter
-- facebook
-- twitterwidget
-- youtubevideo
-- webpage
++ Model (application/hal+json)
 
-+ Parameters
-    + location (required, number, `1`) ... Numeric mapping of`location
-    ` of the StageMedia to perform action with.
-    + year (required, number, `2014`) ... requested year
-    ` of the StageMedia to perform action with.
+        HAL+JSON representation of the Photo Collection Resource.  The Photo resources in the collections are embedded.
 
-    
-+ Model (application/json)
-    JSON representation of StageMedia resource.
-
-    + Body
-    
+        + Headers
+            
+            Link: <https://theaustinites.pythonanywhere.com/artists/22/photos>;rel="self"
+            
+        + Body
+            
             {
-             "stage" : 42
-             "name"  : "Honda Stage"
-             "year"  : 2013
-             "bio" : "a description"
-             "photo" : "url"
-             "youtube"  "url"
-             "video" : "url"
-             "twitter" : "url"
-             "facebook" : "url"
-             "twitterwidget" : "twitter handle"
-             "webpage" : "url"
+                "_links": {
+                    "self": { "href": "/artists/22/photos" }
+                },
+                "_embedded": {
+                    "photos": [
+                        {
+                            "_links": {
+                                "self": { "href": "artists/22/photos/42" }
+                            },
+                            "id": 42,
+                            "file_name": "photo.jpg"
+                            "artist_id": 22
+                        }
+                    ]
+                }
             }
             
-### Retrieve an StageMedia [GET]
-+ Response 200 (application/json)
+### List All Photos [GET]
++ Response 200
+    
+    [Photo Collection][]
 
-    [StageMedia][]

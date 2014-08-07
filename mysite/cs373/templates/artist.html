@@ -21,9 +21,49 @@
                     <h4><small><span title='GENRE' class='glyphicon glyphicon-headphones'></span> </small>{{a.genre}}</h4>
                     <h4><small><span title='ORIGIN' class='glyphicon glyphicon-map-marker'></span> </small>{{a.origin}}</h4>
                     <h4><small><span title='WEBSITE' class='glyphicon glyphicon-link'></span> </small><a href='{{m.webpage}}'>{{m.webpage}}</a></h4>
+                    <a href="{{m.youtube}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Youtube-icon.png" alt="HTML tutorial" width="60" height="60"></a>
+                    <a href="{{m.facebook}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Facebook-icon.png" alt="HTML tutorial" width="60" height="60"></a>
+                    <a href="{{m.twitter}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Twitter-icon.png" alt="HTML tutorial" width="60" height="60"></a>
                 </div>
             </div>
             <p>{{m.bio}}</p>
+
+            {% if stages %}
+            <h4 class='csv'>Stages performed on:
+                    {% for st in stages %}
+                    <dl>
+                        <li><h2> <a href="{{st.get_absolute_url}}">{{ st.name }} ({{ st.year.year }})</a></h2></li>
+                    </dl>
+
+                    {% endfor %}
+
+            {% else %}
+            <p style=" text-indent: 5em;">
+                No information yet, stay tuned...
+              </p>
+            {% endif %}
+            </h4>
+            {% if sponsors %}
+            <h4 class='csv'>Sponsors:
+                    {% for sp in sponsors %}
+                    <dl>
+                        <li><h2> <a href="{{sp.get_absolute_url}}">{{ sp.name }}</a></h2></li>
+                    </dl>
+                        <!--<span><a href='{{artist.get_absolute_url}}' >{{artist.name}}</a></span>-->
+                    {% endfor %}
+            </h4>
+            {% else %}
+            <p style=" text-indent: 5em;">
+                No information yet, stay tuned...
+              </p>
+            {% endif %}
+
+
+
+
+
+
+
         </div>
         <div class='col-sm-5 col-md-5 col-lg-4'>
             {% if m.video %}
@@ -32,7 +72,15 @@
                 <iframe class='embed-responsive-item' src='{{m.video}}?rel=0' frameborder="0" allowfullscreen></iframe>
             </div>
             {% endif %}
-            {{m.twitterwidget | safe}}
+
+             <a class="twitter-timeline"  data-widget-id="492504488607903744" data-screen-name = '{{m.twitterwidget}}' >Tweets by @{{m.twitterwidget}}</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+
+
         </div>
     </div>
 </div>

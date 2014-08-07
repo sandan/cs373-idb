@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %} {{a.name}} {% endblock %}
+
+
+{% block main %}
+{% endblock %}
+
+
+{% block content %}
+<div id='artist' class='container'>
+    <div class='row'>
+        <div class='col-sm-7 col-md-5 col-lg-6'>
+            <h3>About the ACL Internet Database</h3>
+            <p>The ACL Internet Database is a website made to showcase all things Austin City Limits.  It gives detailed information on the Stages, Sponsors, and Artists throughout the years in an easy to consume format.  The design of the database allows intuitive transitions whether it's year to year or finding what artist played on what stage.</p>
+            <h3>Group Leaders</h3>
+            <ol>
+               <li>Mark Sandan</li>
+               <li>Jesus Hernandez</li>
+               <li>?</li>
+            </ol>
+            <h3>Group Members and Roles</h3>
+            <h5><span style="font-weight:bold">Mark Sandan</span></h5>
+            <p>Expanded and redesigned models, API, and testing to include multiple years.  Assisted with load data, views/urls, and API docs.  Edited the Tech Report.</p>
+            <h5><span style="font-weight:bold">Jesus Hernandez</span></h5>
+            <h5><span style="font-weight:bold">Kyle Nicola</span></h5>
+            <p>Designed and implemented initial models and API.  Assisted with context views.  Contributed content for Tech Report and About page.</p>
+            <h5><span style="font-weight:bold">Sheeyla Garcia</span></h5>
+            Assisted with gathering data,editing scripts to load data, social media icons and widgets,templates and design.Contributed with initial unit test documentation on Tech Report.
+            <h5><span style="font-weight:bold">Stephen Ridings</span></h5>
+            Assisted with initial models, designed and implemented static pages, gathered data and loaded database, tested pages and API, assisted with design implementation of dynamic pages, contributed to the tech report.
+            <h5><span style="font-weight:bold">Carlos Rodriguez</span></h5>
+            <h3>Tools Used</h3>
+            <ul>
+                <li><a href="https://www.djangoproject.com/">Django</a></li>
+                <li><a href="http://www.pythonanywhere.com/">PythonAnywhere</a></li>
+                <li><a href="http://www.django-rest-framework.org/">Django Rest Framework</a></li>
+                <li><a href="http://getbootstrap.com/2.3.2/">Twitter Bootstrap</a></li>
+                <li><a href="http://haystacksearch.org/">Django Haystack</a></li>
+                <li><a href="https://bitbucket.org/mchaput/whoosh/wiki/Home">Whoosh</a></li>
+                <li><a href="http://apiary.io/">Apiary</a></li>
+            </ul>
+
+            <h3>References</h3>
+            <ul>
+                <li><a href="http://www.aclfestival.com/">Austin City Limits Festival</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

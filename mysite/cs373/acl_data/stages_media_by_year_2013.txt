@@ -1,4 +1,4 @@
-Date: 2013, 10, 4
+Year: 2013,10,4
 Location: 1
 Name: Honda stage
 Photo: http://fifehonda.hondaoffife.com/wp-content/uploads/2014/06/hondastage.png
@@ -21,10 +21,10 @@ Photo: http://liveboxphoto.com/blog/wp-content/uploads/2012/10/Austin-Ventures-S
 Facebook: http://www.facebook.com/austinventures
 Youtube: NULL
 Video: //www.youtube.com/embed/W1ClmSpViho
-Twitter: Twitter: https://twitter.com/AustinVentures
+Twitter: https://twitter.com/AustinVentures
 
 Location: 8
-Name: Austin Kiddie Limits stage presented by Rosetta Stone
+Name: Austin Kiddie Limits stage by Rosetta Stone
 Photo: http://www.gooneybirdkids.com/wp-content/uploads/2013/10/img-131006-08.jpg
 Facebook: https://www.facebook.com/RosettaStone
 Youtube: https://www.youtube.com/user/rosettastone
@@ -43,7 +43,7 @@ Location: 5
 Name: Bud Light stage
 Photo: http://www.ldsystems.com/wp-content/uploads/2013/11/PROJECTS-ACL-02.jpg
 Facebook: https://www.facebook.com/BudLight
-Youtube:  https://www.youtube.com/channel/UC1O6nGbccGhl2akEVaSpKsA
+Youtube: https://www.youtube.com/channel/UC1O6nGbccGhl2akEVaSpKsA
 Video: //www.youtube.com/embed/D7HuemhX__U
 Twitter: https://twitter.com/budlight
 
@@ -54,6 +54,3 @@ Facebook: https://www.facebook.com/SamsungMobileUSA
 Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
 Video: //www.youtube.com/embed/cuIH1A72pNA
 Twitter: https://twitter.com/SamsungMobile
-
-
-

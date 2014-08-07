@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand,CommandError
 from cs373.models import ArtistMedia, Artist, Stage
 
-#see load_sponsors
+
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
@@ -22,7 +22,7 @@ class Command(BaseCommand):
             for line in F:
                 if (line == "\n"):
                     #new artist+media
-                    
+
                     current_artist = self.create_artist(artist_dict)
                     artist_dict.clear()
                     self.create_artist_media(artist_media_dict,current_artist)
@@ -40,7 +40,8 @@ class Command(BaseCommand):
                         artist_dict[key]=val
 
                     else:
-                        artist_media_dict[key]=val
+                        if (val.lower() !='null'):
+                            artist_media_dict[key]=val
 
 
 

@@ -6,20 +6,30 @@
 <div class='container'>
     <div class='row'>
         <div class='col-sm-8 col-sm-push-4 col-md-8 col-md-push-4'>
-            <img id='map' src='http://aclp1.c3cdn.com/wp/wp-content/uploads/2013/09/ACL13_web_WKD1_960x584.jpeg'>
+            <img id='map' src='https://farm4.staticflickr.com/3914/14666561069_b53db383ea_b.jpg' />
         </div>
         <div class='col-sm-4 col-sm-pull-8 col-md-4 col-md-pull-8'>
-            {% if stages%}
-            <ul id='stages-list' class='list-unstyled text-center'>
-                {% for stage in stages %}
-                <li><a href='{{stage.get_url}}'>{{stage.name}}</a></li>
+            {% if medias %}
+
+            {% for t in years %}
+                <h1 class='title'>{{t}} Stages Lineup</h1>
+                {% for s in mediae %}
+                <dl>
+                    {% if s.year.year == t %}
+                        <li><h2> <a href="{{s.get_absolute_url}}"> {{s.stage.location}} - {{ s.name }} </a></h2></li>
+                    {% endif %}
+                </dl>
                 {% endfor %}
-            </ul>
+
+            {% endfor %}
+
             {% else %}
-            <p>No stages in Database</p>
+                <li><h2>There are no stages. Check back later</h2></li>
             {% endif %}
         </div>
+
     </div>
+
 </div>
 
 {% endblock %}

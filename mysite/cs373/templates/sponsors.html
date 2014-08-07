@@ -6,15 +6,31 @@
 <div class='container'>
   <div class='row text-center'>
     <div>
-      <h1 class='title'>2014 Sponsors</h1>
-    <ul class='list-inline text-center'>
-    {% if sponsors %}
-        {% for s in sponsors %}
-            <li><h2><a href='{{s.get_url}}'> {{ s.name }}</a></h2></li>
+  <ul id='sponsors' class='list-inline'>
+  {% if sp %}
+
+  <!--
+    {% for a in artists %}
+      <li><h2><a href="{{a.get_absolute_url}}">{{a.name}}</a></h2></li>
+    {% endfor %}
+-->
+
+    {% for t in years %}
+        <h1 class='title'>{{t}} Sponsors Lineup</h1>
+        {% for s in sp %}
+        <dl>
+            {% if s.get_yr == t %}
+                <li><h2> <a href="{{s.sponsor.get_absolute_url}}">{{s.sponsor.name}}</a></h2></li>
+            {% endif %}
+        </dl>
         {% endfor %}
 
-    {% endif %}
-    </ul>
+    {% endfor %}
+
+ {% else %}
+    <li><h2>There are no sponsors. Check back later</h2></li>
+  {% endif %}
+  </ul>
     </div>
   </div>
 </div>

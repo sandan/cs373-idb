@@ -6,6 +6,34 @@ Group Members:    Stephen Ridings, Mark Sandan, Jesus Hernandez, Carlos Rodrigue
 Proposed project: Austin City Limits (ACL)
 Example Pages:    Artists, Sponsors and Events
 
+
+
+There will be three phases.
+
+Phase I Features:
+-   Collect data on ten artists, ten sponsors, and all the events (7).
+    Identify common attributes of the data and insure that every data item has a value for that attribute.
+    Make sure to collect enough information to make it a rich experience.
+-   Create a RESTful API using Apiary. Log into Apiary with your GitHub credentials and connect Apiary to your private repos.
+    Think carefully about the types and format of the requests and responses, primary keys, foreign key constraints, and validations.
+-   Create a set of Django models to represent the data and that corresponds to the API.
+    Think carefully about the types of the models and about the many-to-many relationships between artists, sponsors, and events.
+-   Create a set of unit tests of the Django models.
+-   Create a static HTML page for three unique artists, three unique sponsors, and three unique events that displays all of the data collected.
+    The pages must be served by Django on PythonAnywhere using Django templates to embed the static content into HTML.
+    Design the splash page well. Design the navigation well.
+    Use Twitter Bootstrap to present information in an organized way. Make sure to embed the different media. Make sure that everything that can be linkable is.
+    Create a responsive design that looks good on mobile devices.
+-   Write an initial technical report.
+    The audience comprises other software developers, as opposed to users.
+    For this phase make it at least 10 pages.
+    Document the RESTful API and the Django models well.
+    Format the report clearly, attractively, and consistently, using good headers, figures, and grammar.
+
+
+
+The pages MUST contain the following:
+
 Splash Page Features:
 - the group name
 - the group members
@@ -40,7 +68,8 @@ Event Page Features:
 - sponsors
 
 
-The technical report contains the following:
+
+The technical report MUST contain the following:
 - Title:        The group name, the group members.
 - Introduction: What is the problem? What are the use cases?
 - Design:       RESTful API, Django models.

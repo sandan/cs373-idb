@@ -1,23 +1,6 @@
 from django.core.management.base import BaseCommand,CommandError
 from cs373.models import SponsorMedia, Sponsor, Stage
-"""
-Make sure the format is as follows  (where attribute follows from the model):
-[attribute: value
-attribute: value
-.
-.
-.
-attribute: value ] for 1 entry
 
-[attribute: value
-attribute: value
-.
-.
-.
-attribute: value ] for another entry, also make sure there is a newline at the end of the file
-so that there is an empty line separating the last block and the EOF
-
-"""
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
@@ -50,11 +33,13 @@ class Command(BaseCommand):
                     val=info[1].strip()
 
 
-                    if (key == 'name' or key=='business_type'):
+
+                    if (key == 'name' or key=='industry'):
                         sponsor_dict[key]=val
 
                     else:
-                        sponsor_media_dict[key]=val
+                        if (val.lower() != 'null'):
+                            sponsor_media_dict[key]=val
 
 
 
@@ -66,7 +51,7 @@ class Command(BaseCommand):
 
     def create_sponsor_media(self, data, sponsor):
         sm=SponsorMedia(**data)
-        sm.sp=sponsor
+        sm.sponsor=sponsor
         sm.save()
 
         self.stdout.write("+created media for: "+ sponsor.name)

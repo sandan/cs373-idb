@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import Http404
-from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from cs373.models import *
 from itertools import chain
@@ -15,6 +14,9 @@ from rest_framework import status
 def index(request):
     return render(request, 'index.html')
 
+def about(request):
+    return render(request, 'about.html')
+
 ###########################
 #                         #
 #       Stage             #
@@ -25,7 +27,7 @@ class StagesIndex(ArchiveIndexView):
     def get_context_data(self, **kwargs):
         context = super(ArchiveIndexView, self).get_context_data(**kwargs)
         context['years']=sorted(set([s.get_yr() for s in stage_sponsor_yr.objects.order_by('-date')]), reverse=True)
-        context['mediae']=StageMedia.objects.order_by('-year','name')
+        context['mediae']=StageMedia.objects.order_by('-year','stage__location')
         return context
 
 class StagePage(DetailView):
@@ -44,8 +46,8 @@ class StagePage(DetailView):
             raise Http404
 
         context['m']=m
-        context['sponsors']={sp.sponsor for sp in stage_sponsor_yr.objects.filter(stage=s)}
-        context['artists']={a.artist for a in stage_artist_yr.objects.filter(stage=s)}
+        context['sponsors']={sp.sponsor for sp in stage_sponsor_yr.objects.filter(stage=s) if sp.date.year==int(self.kwargs['yr'])}
+        context['artists']={a.artist for a in stage_artist_yr.objects.filter(stage=s) if a.date.year==int(self.kwargs['yr'])}
         return context
 
 ###########################
@@ -59,6 +61,7 @@ class SponsorsIndex(ArchiveIndexView):
     def get_context_data(self, **kwargs):
         context = super(ArchiveIndexView, self).get_context_data(**kwargs)
         context['years']=sorted(set([s.get_yr() for s in stage_sponsor_yr.objects.order_by('-date')]), reverse=True)
+        context['sp']=stage_sponsor_yr.objects.order_by('-date','sponsor__name')
         return context
 
 
@@ -78,6 +81,14 @@ class SponsorPage(DetailView):
             raise Http404
 
         context['m']=m
+
+        context['artists'] = set()
+        for sponsor_stage in stage_sponsor_yr.objects.filter(sponsor=s):
+            for sponsor_artist in stage_artist_yr.objects.filter(stage=sponsor_stage.stage, date__year=sponsor_stage.date.year):
+                context['artists'].add(sponsor_artist.artist)
+
+        context['stages']  = { media for r in stage_sponsor_yr.objects.filter(sponsor=s) for media in r.stage.stagemedia_set.filter(year__year=r.date.year) }
+
         return context
 
 ###########################
@@ -91,6 +102,7 @@ class ArtistsIndex(ArchiveIndexView):
     def get_context_data(self, **kwargs):
         context = super(ArchiveIndexView, self).get_context_data(**kwargs)
         context['years']=sorted(set([s.get_yr() for s in stage_artist_yr.objects.order_by('-date')]), reverse=True)
+        context['ar']=stage_artist_yr.objects.order_by('-date','artist__name')
         return context
 
 class ArtistPage(DetailView):
@@ -110,7 +122,11 @@ class ArtistPage(DetailView):
 
         context['m']=m
         context['stages']={ media for r in stage_artist_yr.objects.filter(artist=a) for media in r.stage.stagemedia_set.filter(year__year=r.date.year) }
-        context['sponsors']={sp.sponsor for st in stage_artist_yr.objects.filter(artist=a) for sp in stage_sponsor_yr.objects.filter(date__year=st.date.year)}
+
+        context['sponsors']= set()
+        for stage_artists in stage_artist_yr.objects.filter(artist=a):
+            for stage_sponsor in stage_sponsor_yr.objects.filter(stage=stage_artists.stage, date__year=stage_artists.date.year):
+                context['sponsors'].add(stage_sponsor.sponsor)
 
         return context
 

@@ -6,14 +6,29 @@
 <div class='container'>
   <div class='row text-center'>
     <div>
-      <h1 class='title'>2014 Artist Lineup</h1>
   <ul id='artists' class='list-inline'>
-  {% if artists %}
+  {% if ar %}
+
+  <!--
     {% for a in artists %}
-      <li><h2><a href='{{a.get_url}}'>{{a.name}}</a></h2></li>
+      <li><h2><a href="{{a.get_absolute_url}}">{{a.name}}</a></h2></li>
     {% endfor %}
-  {% else %}
-    <li><h2>There are no artists. Check back later</h2></li>
+-->
+
+    {% for t in years %}
+        <h1 class='title'>{{t}} Artist Lineup</h1>
+        {% for s in ar %}
+        <dl>
+            {% if s.get_yr == t %}
+                <li><h2> <a href="{{s.artist.get_absolute_url}}">{{s.artist.name}}</a></h2></li>
+            {% endif %}
+        </dl>
+        {% endfor %}
+
+    {% endfor %}
+
+ {% else %}
+    <li><h2>There are no artists, please check back later.</h2></li>
   {% endif %}
   </ul>
     </div>

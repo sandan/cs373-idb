@@ -43,9 +43,14 @@
               <li><a href="/artists/">Artists</a></li>
               <li><a href="/stages/">Stages</a></li>
               <li><a href="/sponsors/">Sponsors</a></li>
+              <li><a href="/about/">About</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
+        <form action="/search/" method="get">
+Search: <input type="text" name="q">
+<input type="submit">
+</form>
       </nav>
       {% block main %}
       {% endblock %}

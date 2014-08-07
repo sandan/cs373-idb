@@ -28,7 +28,7 @@ Webpage: http://www.heb.com
 Facebook: http://www.facebook.com/HEB
 Twitter: https://twitter.com/HEB
 
-Name: GooglePlay
+Name: Google Play
 Industry: Entertainment
 Bio: Music, movies & tv, apps, books, newsstand and games play your heart out
 Photo: https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/946985_290541897748665_884893214_n.png
@@ -88,7 +88,7 @@ Webpage: http://www.samsung.com/us/?cid=ppc-
 Facebook: https://www.facebook.com/SamsungMobileUSA/app_544972968896298
 Twitter: https://twitter.com/SamsungMobileUS
 
-Name: RetailMe Not
+Name: RetailMeNot
 Industry: Online Coupons
 Bio: RetailMeNot is the #1 Digital Coupon Destination in the World. We make it easy to spend less and shop more for things you want.Our goal is to be the most useful site for internet shoppers looking for savings
 Photo: https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t1.0-9/31667_387752922238_7302218_n.jpg
@@ -127,3 +127,4 @@ Youtube: http://www.youtube.com/user/Honda
 Webpage: http://automobiles.honda.com/
 Facebook: https://www.facebook.com/Honda
 Twitter: https://twitter.com/Honda
+

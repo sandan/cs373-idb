@@ -17,12 +17,39 @@
                 </a>
                 <div class="media-body">
                     <h2 class="media-heading">{{s.name}}</h2>
-                    <h4><small><span title='BUSINESS TYPE' class='glyphicon glyphicon-briefcase'></span> </small>{{s.business_type}}</h4>
-                    <h4><small><span title='STAGE' class='glyphicon glyphicon-headphones'></span> </small>{{s.stage}}</h4>
+                    <h4><small><span title='BUSINESS TYPE' class='glyphicon glyphicon-briefcase'></span> </small>{{s.industry}}</h4>
                     <h4><small><span title='WEBSITE' class='glyphicon glyphicon-link'></span> </small><a href='{{m.webpage}}'>{{m.webpage}}</a></h4>
+                    <a href="{{m.youtube}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Youtube-icon.png" alt="HTML tutorial" width="60" height="60"></a>
+                    <a href="{{m.facebook}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Facebook-icon.png" alt="HTML tutorial" width="60" height="60"></a>
+                    <a href="{{m.twitter}}"><img style="border:0;" src="http://icons.iconarchive.com/icons/designbolts/flat-social-media/256/Twitter-icon.png" alt="HTML tutorial" width="60" height="60"></a>
                 </div>
             </div>
             <p>{{m.bio}}</p>
+
+            {% if artists %}
+            <h4 class='csv'>Artists:
+
+                        {% for artist in artists %}
+                        <dl>
+                            <li><h2><a href='{{artist.get_absolute_url}}' >{{artist.name}}</a></h2></li>
+                        </dl>
+                        {% endfor %}
+                        </dl>
+
+            </h4>
+            {% endif %}
+
+            {% if stages %}
+            <h4 class='csv'>Stages:
+
+                {% for stage in stages %}
+                <dl>
+                <li><h2><a href='{{stage.get_absolute_url}}' >{{stage.name}}({{stage.year.year}})</a></h2></li>
+                </dl>
+                {% endfor %}
+
+            </h4>
+            {% endif %}
         </div>
         <div class='col-sm-5 col-md-5 col-lg-4'>
             {% if m.youtubevideo %}
@@ -30,9 +57,13 @@
             <div class="embed-responsive embed-responsive-4by3">
                 <iframe class='embed-responsive-item' src='{{m.youtubevideo}}?rel=0' frameborder="0" allowfullscreen></iframe>
             </div>
+
             {% endif %}
-            {{m.twitterwidget | safe}}
+            <a class="twitter-timeline"  data-widget-id="492504488607903744" data-screen-name = '{{m.twitterwidget}}' >Tweets by @{{m.twitterwidget}}</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
         </div>
+
     </div>
 </div>
 {% endblock %}

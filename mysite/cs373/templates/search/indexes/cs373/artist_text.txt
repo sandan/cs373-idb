@@ -1,0 +1,5 @@
+{{ object.name }}
+{{ object.genre }}
+{{ object.label }}
+{{ object.origin }}
+{{ object.artistmedia_set.first.bio }}

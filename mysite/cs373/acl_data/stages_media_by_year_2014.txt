@@ -1,4 +1,4 @@
-Date: 2014, 10, 3
+Year: 2014,10,3
 Location: 1
 Name: Honda stage
 Photo: http://fifehonda.hondaoffife.com/wp-content/uploads/2014/06/hondastage.png
@@ -56,7 +56,7 @@ Video: //www.youtube.com/embed/Q2d8V72tHSA
 Twitter: https://twitter.com/retailmenot
 
 Location: 8
-Name: Austin Kiddie Limits stage presented by Lifeway
+Name: Austin Kiddie Limits stage by Lifeway
 Photo: http://t0.gstatic.com/images?q=tbn:ANd9GcTJTUJePKaSm3u2jtEFuZOFkh8-s27RGeIDgs20p1vRoy-AiMNd
 Facebook: https://www.facebook.com/LifewayKefir
 Youtube: https://www.youtube.com/user/lifewaykefir

@@ -13,30 +13,65 @@
             <h1>{{ s.name }}</h1>
             <div class='clearfix'>
                 <img class='col-xs-12 col-sm-5 col-md-6 col-lg-5' src='{{ m.photo }}'>
-                <h4 class='csv'>Sponsor:
-                    {% for sponsor in s.sponsor_set.all %}
-                        <span><a href='{{sponsor.get_url}}' >{{sponsor.name}}</a></span>
-                    {% endfor %}
-                </h4>
-                <h4 class='csv'>Artists:
-                    {% for artist in s.artist_set.all %}
-                        <span><a href='{{artist.get_url}}' >{{artist.name}}</a></span>
-                    {% endfor %}
-                </h4>
-                {% if m.website %}
+
+                {% if m.webpage %}
                 <h4><a href='{{m.webpage}}'>{{m.webpage}}</a></h4>
                 {% endif %}
-                <p>{{m.bio}}</p>
+<!--                <p>{{m.bio}}</p> -->
             </div>
             {% if m.youtubevideo %}
             <!-- 4:3 aspect ratio -->
-            <div class="embed-responsive embed-responsive-4by3">
+            <div class="embed-responsive embed-responsive-5by4">
                 <iframe class='embed-responsive-item' src='{{m.youtubevideo}}?rel=0' frameborder="0" allowfullscreen></iframe>
             </div>
             {% endif %}
+            <h4 class='csv'>Sponsors:
+            {% if sponsors %}
+                    {% for sp in sponsors %}
+                    <dl>
+                        <li><h2> <a href="{{sp.get_absolute_url}}">{{ sp.name }}</a></h2></li>
+                    </dl>
+
+                    {% endfor %}
+
+            {% else %}
+              <p style=" text-indent: 5em;">
+                No information yet, stay tuned...
+              </p>
+            {% endif %}
+            </h4>
+            <h4 class='csv'> Artists:
+            {% if artists %}
+
+                    {% for ar in artists %}
+                    <dl>
+                        <li><h2> <a href="{{ar.get_absolute_url}}">{{ ar.name }}</a></h2></li>
+                    </dl>
+                        <!--<span><a href='{{artist.get_absolute_url}}' >{{artist.name}}</a></span>-->
+                    {% endfor %}
+
+             {% else %}
+              <p style=" text-indent: 5em;">
+                No information yet, stay tuned...
+              </p>
+            {% endif %}
+            </h4>
+            <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyClSpl954lP3m5y6BEye54FZqVEbqU7rWo&q=Austin+City+Limits+,Austin+Texas"</iframe>
+        <br />
+        <small>
+            <a href="https://www.google.com/maps/embed/v1/place?key=AIzaSyClSpl954lP3m5y6BEye54FZqVEbqU7rWo&q=Austin+City+Limits+,Austin+Texas"></a>
+        </small>
+        </iframe>
+    </section>
+
+
+
         </div>
         <div class='col-md-4'>
-            {{ m.twitterwidget | safe }}
+            <a class="twitter-timeline"  data-widget-id="492504488607903744" data-screen-name = '{{m.twitterwidget}}' >Tweets by @{{m.twitterwidget}}</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
         </div>
     </div>
 </div>

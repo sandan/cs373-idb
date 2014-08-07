@@ -23,6 +23,8 @@ urlpatterns = patterns('',
 
     url(r'^$', index, name='index'),
 
+    url(r'about/$', about, name="about"),
+
     url(r'stages/$', StagesIndex.as_view(model=StageMedia, date_field='year', template_name='stages.html', context_object_name='medias', allow_future=True)),
     url(r'stages/(?P<pk>\d+)/(?P<yr>[-\w]+)/$', StagePage.as_view(), name='stage_detail'),
 

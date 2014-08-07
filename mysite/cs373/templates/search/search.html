@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class='container'>
     <h2>Search</h2>
 
     <form method="get" action=".">
-        <table>
-            {{ form.as_table }}
+         <table>
+            {{ form.as_p }}
             <tr>
+
                 <td>&nbsp;</td>
                 <td>
+
                     <input type="submit" value="Search">
                 </td>
             </tr>
@@ -19,7 +22,21 @@
 
             {% for result in page.object_list %}
                 <p>
+                    {% if result.model_name == 'artist'%}
+
                     <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
+                    <p>Origin: {{result.object.origin}}, Record Label: {{result.object.label}}, Genre: {{result.object.genre}}</p>
+                    <p>{{result.object.artistmedia_set.first.bio | slice:":250"}}{% if result.object.artistmedia_set.first.bio|length >= 250 %}...{% endif %}</p>
+
+                    {% elif result.model_name == 'sponsor'%}
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
+                    <p> Industry: {{result.object.industry}}</p>
+                    <p>{{result.object.sponsormedia_set.first.bio | slice:":250"}}{% if result.object.sponsormedia_set.first.bio|length >= 250 %}...{% endif %}</p>
+
+                    {% else %}
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
+                    {% endif %}
+                    &nbsp;
                 </p>
             {% empty %}
                 <p>No results found.</p>
@@ -33,7 +50,8 @@
                 </div>
             {% endif %}
         {% else %}
-            {# Show some example queries to run, maybe query syntax, something else? #}
+         No Results found.
         {% endif %}
     </form>
+</div>
 {% endblock %}
