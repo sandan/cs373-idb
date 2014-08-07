@@ -92,20 +92,28 @@ The third iteration enhances the previous model of the Austin City Limits festiv
 from different years of the festival. Our group decided to begin starting from the year 2012 since the structure of
 stages, sponsors, and artists with relation to time are more structured and interesting. 
 
-Use cases now include being able to search for artists, sponsors, and stages from different years. Each index page reachable
-from the 
-To implement a dynamic webpage we are currently using html,css,javascript, and the django template language to access instances of Artists, Sponsors, and Stages to fill the content of the webpages. 
-The REST implementation required installing the django rest framework on the pythonanywhere envioronment which enabled us to return JSON representations of MySQL database instances. 
-The tests for the REST implementation have also been added to the test suite.
+Use cases now include being able to search for artists, sponsors, and stages from different years. 
+Each index page reachable from the main page lists the artists by year, sponsors by year, and stages by year.
 
-The models have been refactored to include media classes that provide the dynamic content for the Artist,
-Sponsor, and Stage models when they are loaded into the webpage. The media content contains embedded links to youtube, facebook, twitter, etc. 
+The webpage still uses dynamic information using html,css,javascript, and the django template language 
+to access instances of Artists, Sponsors, and Stages to fill the content of the webpages. 
+The REST implementation required installing the django rest framework on the pythonanywhere envioronment which enabled us to return JSON representations of MySQL database instances. 
+The tests for the REST implementation have also been added to the test suite. New tests have been added to the test
+suite that exercise the API and models more rigorously.
+
+The models have been refactored to include time classes that relate stages and sponsors (many to many) and 
+similarly for sponsors and artists (also many to many). The media content contains embedded links to youtube, facebook, twitter, etc. 
 
 Database loading has been relegated to using python scripts which have been installed as django commands used with manage.py. 
+
 \section{Introduction}
 Our website is about the 2014 Austin City Limits (ACL) music festival, an annual three-day American music festival that takes place on 46-acres in Zilker Park located in Austin, Texas. 
-The website design has three main pages: Artists, Stages, and Sponsors along with a splash page. An Artist is allowed to perform on one stage but stages can have many artists perform on them.
-A sponsor is a business entity that may or may not sponsor a stage. A stage is a physical location in the ACL festival that many artists play on. 
+The website design has three main index pages listing Artists, Stages, and Sponsors along with a splash page.
+
+The current model is as follows:
+Stages are modelled as
+For any given year, an Artist can play on a single stage being allowed to perform on one stage but stages can have many artists 
+perform on them. A sponsor is a business entity that may or may not sponsor a stage. A stage is a physical location in the ACL festival that many artists play on. 
 It can have only one sponsor that sponsors it for any given year. Artists and Sponsors are related through Stages.
 
 The website allows anyone to view pages about the current Artists, Sponsors, and Stages involved in the festival. A user can find links from a specific artist page to the stage they're playing on
@@ -125,13 +133,19 @@ The technologies used are:
  \item Apiary: an online service to provide an API for client-side web access to our databases.
 \end{itemize}
 \begin{itemize}
- \item MySQL: The current database backend using the mysql.connector.django engine.
+ \item MySQL: The current database backend using the mysql.connector.django engine (1.1.6)
 \end{itemize}
-
+\begin{itemize}
+ \item Django Haystack: Search framework consistent with Django framework that allows you to integrate with models (2.2.0)
+ \end{itemize}
+\begin{itemize}
+ \item Whoosh: Search backend that is written in python
+ \end{itemize}
 \section{Design}
 
 Using Django's templating language we are able to reuse html files by extending from them. Currently we only have a single base html page that is extended from and 
 uses Twitter Bootstrap. We have 24 pages that are dynamically loaded. The design and content of each page is outlined below.
+jh
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{UML.png}
  \caption{The current UML schema depicting the relationships between the Django models. The main three models are Artist, Sponsor, and Stage each of which have an associated Media page.}
