@@ -506,46 +506,55 @@ Total tests: 3
 
 \begin{itemize}
  \item test\_types: creates a Stage, Artist, and Sponsor and asserts their types ar Stage, Artist, and Sponsor respectively
- \item test\_types\_relationships1: tests different combinations of creating the stage_artist_yr object to relate a Stage and an Artist
- \item test\_types\_relationships2: tests different combinations of creating the stage_sponsort_yr object to relate a Stage and a Sponsor
+ \item test\_types\_relationships1: tests different combinations of creating the stage\_artist\_yr object to relate a Stage and an Artist
+ \item test\_types\_relationships2: tests different combinations of creating the stage\_sponsort\_yr object to relate a Stage and a Sponsor
 \end{itemize}
 
 \subsubsection{StageRelationship Test}
 Total tests: 2
 
 \begin{itemize}
- \item test\_relationship1: creates a Stage and an Artist and relates them with the stage_artist_yr object. Tests accessing the Stage and Artist from the stage_artist_yr.
- \item test\_relationship2: creates a Stage and a Sponsor and relates them with the stage_sponsor_yr object. Tests accessing the Stage and Sponsor from the stage_sponsor_yr.
- 
+ \item test\_relationship1: creates a Stage and an Artist and relates them with the stage\_artist\_yr object. Tests accessing the Stage and Artist from the stage\_artist\_yr.
+ \item test\_relationship2: creates a Stage and a Sponsor and relates them with the stage\_sponsor\_yr object. Tests accessing the Stage and Sponsor from the stage\_sponsor\_yr.
 \end{itemize}
 
 \subsubsection{Constraint Test}
 Total tests: 4
 \begin{itemize}
+ \item test\_constraint\_violation1: Tests that an artist playing on two different stage locations for the same year throws an error (per the model of ACL)
+ \item test\_constraint\_violation2: Tests that a sponsor sponsoring two different stage locations for the same year throws an error (per the model of ACL)
+ \item test\_no\_constraint\_violation1: Tests that an artist playing on two different stage locations for different years doesn't throw an error (per the model of ACL)
+ \item test\_no\_constraint\_violation2: Tests that a sponsor sponsoring two different stage locations for different years doesn't throw an error (per the model of ACL)
+\end{itemize}
 
-\end{itemize} 
 
 \subsubsection{MultiRelation Test} 
 Total tests: 4
 
 \begin{itemize}
-
+ \item test\_access\_artist\_stage0: Tests accessing the artist from a stage through a stage_artist_yr object by counting the number of artists associated to the stage.
+ \item test\_access\_artist\_stage1: Tests accessing the stage from the artist through a stage_artist_yr object by asserting the associated stage for all artists are the same.
+ \item test\_access\_artist\_stage2: Tests accessing the sponsor from a stage through a stage_sponsor_yr object by counting the number of sponsors associated to the stage.
+ \item test\_access\_artist\_stage3: Tests accessing the stage from the sponsor through a stage_sponsor_yr object by asserting the associated stage for all sponsors are the same.
 \end{itemize}
+
 
 \subsubsection{CrossRelation Test}
 
 Total tests: 2
 
 \begin{itemize}
-
+ \item test\cross\rel1: Tests retrieving stage, sponsor, artist through stage_artist_yr and stage_sponsor_yr from another related stage, artist, and sponsor
+ \item test\cross\rel2: Tests retrieving stage, sponsor, artist from stage_artist_yr and stage_sponsor_yr objects
 \end{itemize}
+
 
 \subsubsection{Simulations Test}
 
 Total tests: 1
 
 \begin{itemize}
-
+ \item test_simulation
 \end{itemize}
 
 
