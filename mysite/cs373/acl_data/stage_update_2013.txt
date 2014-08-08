@@ -1,0 +1,8 @@
+Year: 2013,10,4
+Location: 6
+Name: Samsung Galaxy stage
+Photo: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/11/SamsungBoothCES20091-640x245.jpg
+Facebook: https://www.facebook.com/SamsungMobileUSA
+Youtube: http://www.youtube.com/channel/UCWwgaK7x0_FR1goeSRazfsQ
+Video: //www.youtube.com/embed/cuIH1A72pNA
+Twitter: https://twitter.com/SamsungMobile
