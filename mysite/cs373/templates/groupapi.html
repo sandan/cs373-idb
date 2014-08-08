@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} {{characterName}} {% endblock %}
+
+
+{% block main %}
+{% endblock %}
+
+
+{% block content %}
+<div class='container'>
+<h1>{{characterName}}</h1>
+<blockquote>
+  <p>{{characterQuote}}</p>
+</blockquote>
+{{characterBio | safe }}
+</div>
+{% endblock %}

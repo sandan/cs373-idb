@@ -2,6 +2,8 @@ from django.conf.urls import patterns, url
 from cs373.views import *
 from django.views.generic.dates import ArchiveIndexView
 
+handler404 = 'cs373.views.page_not_found'
+
 urlpatterns = patterns('',
     url(r'api/stages/$', StageList.as_view()),
     url(r'api/stages/(?P<pk>[0-9]+)/$', StageDetail.as_view()),
@@ -24,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^$', index, name='index'),
 
     url(r'about/$', about, name="about"),
+    url(r'thesixpotters/$', groupapi),
 
     url(r'stages/$', StagesIndex.as_view(model=StageMedia, date_field='year', template_name='stages.html', context_object_name='medias', allow_future=True)),
     url(r'stages/(?P<pk>\d+)/(?P<yr>[-\w]+)/$', StagePage.as_view(), name='stage_detail'),

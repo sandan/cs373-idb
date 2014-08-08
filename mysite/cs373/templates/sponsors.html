@@ -20,7 +20,7 @@
         {% for s in sp %}
         <dl>
             {% if s.get_yr == t %}
-                <li><h2> <a href="{{s.sponsor.get_absolute_url}}">{{s.sponsor.name}}</a></h2></li>
+                <li><h2 style='font-family:courier'> <a href="{{s.sponsor.get_absolute_url}}"><button type='button' class='btn btn-default btn-lg'>{{s.sponsor.name}}</button></a></h2></li>
             {% endif %}
         </dl>
         {% endfor %}
@@ -28,7 +28,7 @@
     {% endfor %}
 
  {% else %}
-    <li><h2>There are no sponsors. Check back later</h2></li>
+    <li><h2 style='font-family:courier'><button type='button' class='btn btn-default btn-lg'>There are no sponsors. Check back later</button></h2></li>
   {% endif %}
   </ul>
     </div>

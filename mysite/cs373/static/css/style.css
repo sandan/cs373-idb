@@ -17,6 +17,7 @@ body
 
 #main
 {
+
   background: #FFFFFF;
 }
 
@@ -39,6 +40,7 @@ body
   background: #FFFFFF !important;
   border: #FFFFFF solid 1px;
   color: #4ECDC4 !important;
+
 }
 
 .jumbotron
@@ -155,4 +157,31 @@ body
 {
     display:block;
     color: #FFF !important;
+}
+button:hover
+{
+    background-color:#556270  !important;
+    color: #FFF !important;
+    font-weight:bold !important;
+    border-radius:100px !important;
+}
+button
+{
+    background-color: white !important;
+    color: #4ECDC4 !important;
+    font-weight:bold !important;
+    border-radius:100px !important;
+}
+ul
+{
+    list-style-type: none !important;
+}
+dl
+{
+    list-style-type: none !important;
+}
+
+.highlighted
+{
+    font-weight:900;
 }

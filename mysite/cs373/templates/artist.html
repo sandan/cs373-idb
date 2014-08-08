@@ -32,7 +32,7 @@
             <h4 class='csv'>Stages performed on:
                     {% for st in stages %}
                     <dl>
-                        <li><h2> <a href="{{st.get_absolute_url}}">{{ st.name }} ({{ st.year.year }})</a></h2></li>
+                        <li><h2 style='font-family:courier'> <a href="{{st.get_absolute_url}}"><button type='button' class='btn btn-default btn-lg'>{{ st.name }} ({{ st.year.year }})</button></a></h2></li>
                     </dl>
 
                     {% endfor %}
@@ -47,7 +47,7 @@
             <h4 class='csv'>Sponsors:
                     {% for sp in sponsors %}
                     <dl>
-                        <li><h2> <a href="{{sp.get_absolute_url}}">{{ sp.name }}</a></h2></li>
+                        <li><h2 style='font-family:courier'> <a href="{{sp.get_absolute_url}}"><button class='btn btn-default btn-lg'>{{ sp.name }}</button></a></button></h2></li>
                     </dl>
                         <!--<span><a href='{{artist.get_absolute_url}}' >{{artist.name}}</a></span>-->
                     {% endfor %}

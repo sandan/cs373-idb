@@ -29,6 +29,7 @@ class Stage(models.Model):
         return str(self.location)
 
 
+
 class Sponsor(models.Model):
     """
     A Sponsor is an entity that purchases a stage
@@ -49,6 +50,7 @@ class Sponsor(models.Model):
     def get_absolute_url(self):
 
         return "/sponsors/%i/" % self.id
+
 
 class Artist(models.Model):
     """
@@ -167,7 +169,6 @@ class StageMedia(Media):
 
     def get_absolute_url(self):
         return "/stages/{:d}/{:d}/".format(self.stage.id,self.year.year)
-
 
 class SponsorMedia(Media):
     sponsor      = models.ForeignKey(Sponsor, unique=True)

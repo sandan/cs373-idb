@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load highlight %}
+{% block title %}Search{% endblock %}
 
 {% block content %}
 <div class='container'>
@@ -11,7 +13,6 @@
 
                 <td>&nbsp;</td>
                 <td>
-
                     <input type="submit" value="Search">
                 </td>
             </tr>
@@ -19,19 +20,32 @@
 
         {% if query %}
             <h3>Results</h3>
-
-            {% for result in page.object_list %}
                 <p>
+                {% for result in page.object_list %}
                     {% if result.model_name == 'artist'%}
 
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
-                    <p>Origin: {{result.object.origin}}, Record Label: {{result.object.label}}, Genre: {{result.object.genre}}</p>
-                    <p>{{result.object.artistmedia_set.first.bio | slice:":250"}}{% if result.object.artistmedia_set.first.bio|length >= 250 %}...{% endif %}</p>
+                    <a href="{{ result.object.get_absolute_url }}">{% highlight result.object.name with query %}</a>
+                    <p>Origin: {% highlight result.object.origin with query %}, Record Label: {% highlight result.object.label with query %}, Genre: {% highlight result.object.genre with query %}</p>
+                    <p>{% highlight result.object.artistmedia_set.first.bio with query %}</p>
 
                     {% elif result.model_name == 'sponsor'%}
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
+                    <a href="{{ result.object.get_absolute_url }}">{% highlight result.object.name with query %}</a>
                     <p> Industry: {{result.object.industry}}</p>
-                    <p>{{result.object.sponsormedia_set.first.bio | slice:":250"}}{% if result.object.sponsormedia_set.first.bio|length >= 250 %}...{% endif %}</p>
+                    <p>{% highlight result.object.sponsormedia_set.first.bio with query %}</p>
+
+                    {% elif result.model_name == 'stagemedia'%}
+                    <div class="media">
+                        <!--<a class="pull-left" href="{{ result.object.get_absolute_url }}">-->
+                        <a class="pull-left" href="{{result.object.photo}}" data-lightbox="image-{{result.object.id}}" data-title="{{result.object.name}}">
+                            <img class="media-object" width='120px' src="{{result.object.photo}}" alt="...">
+
+                            </a>
+                        <!--</a>-->
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                        <a class="pull-left" href="{{ result.object.get_absolute_url }}">{% highlight result.object.name with query %} ({{ result.object.year.year }})</a></h4>
+                        </div>
+                    </div>
 
                     {% else %}
                     <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>

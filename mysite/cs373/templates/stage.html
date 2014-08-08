@@ -29,7 +29,7 @@
             {% if sponsors %}
                     {% for sp in sponsors %}
                     <dl>
-                        <li><h2> <a href="{{sp.get_absolute_url}}">{{ sp.name }}</a></h2></li>
+                        <li><h2 style='font-family:courier'> <a href="{{sp.get_absolute_url}}"><button class='btn btn-default btn-lg'>{{ sp.name }}</button></a></h2></li>
                     </dl>
 
                     {% endfor %}
@@ -45,7 +45,7 @@
 
                     {% for ar in artists %}
                     <dl>
-                        <li><h2> <a href="{{ar.get_absolute_url}}">{{ ar.name }}</a></h2></li>
+                        <li><h2 style='font-family:courier'> <a href="{{ar.get_absolute_url}}"><button class='btn btn-default btn-lg'>{{ ar.name }}</button></a></h2></li>
                     </dl>
                         <!--<span><a href='{{artist.get_absolute_url}}' >{{artist.name}}</a></span>-->
                     {% endfor %}

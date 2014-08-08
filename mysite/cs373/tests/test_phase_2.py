@@ -12,26 +12,24 @@ class DjangoMethodTests(TestCase):
     def test_create_empty_stage(self):
         s = Stage()
         self.assertIsNotNone(s)
-        self.assertEqual(s.name,'')
+        self.assertEqual(s.location,'')
 
     def test_create_stage(self):
-        s = Stage(name='Stage Name')
+        s = Stage(location=1)
         self.assertIsNotNone(s)
-        self.assertEqual(s.name,'Stage Name')
+        self.assertEqual(s.location,1)
 
     def test_get_stage(self):
-        s = Stage(name='Stage Name')
+        s = Stage(location=2)
         s.save()
-        b = Stage.objects.get(name='Stage Name')
+        b = Stage.objects.get(location=2)
         self.assertIsNotNone(b)
-        self.assertEqual(b.name,'Stage Name')
+        self.assertEqual(b.location,2)
         self.assertEqual(b,s)
 
-    def test_stage_name(self):
-        n = 's'*401
-        self.assertEqual(len(n),401)
-
-        s = Stage(name=n)
+    def test_stage_location(self):
+        n = 9999999999999999999L
+        s = Stage(location=n)
         try:
             s.save()
             self.fail('Should have thrown an Exception')
@@ -39,51 +37,30 @@ class DjangoMethodTests(TestCase):
             pass
 
     def test_stage_url_1(self):
-        q = Stage(id=1, name='Stage Name')
+        q = Stage(location=1)
         q.save()
         self.assertEqual(q.get_url(),'/stages/1/')
 
     def test_stage_url_2(self):
-        f = Stage(id=1, name='Stage One')
-        f.save()
-        f = Stage(id=2, name='Stage Two')
+        f = Stage(location=2)
         f.save()
         self.assertEqual(f.get_url(),'/stages/2/')
-
-    def test_stage_url_3(self):
-        z = Stage(id=1, name='Stage One')
-        z.save()
-        z = Stage(id=2, name='Stage Two')
-        z.save()
-        z = Stage(id=3, name='Stage Three')
-        z.save()
-        z = Stage.objects.get(name='Stage Two')
-        self.assertEqual(z.get_url(),'/stages/2/')
 
     # Artist Tests
 
     def test_create_artist(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
         # test artist
-        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre',stage=s)
+        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre')
         self.assertIsNotNone(a)
         self.assertEqual(a.name,'Artist Name')
         self.assertEqual(a.label,'Artist Label')
         self.assertEqual(a.origin,'Artist City')
         self.assertEqual(a.genre,'Artist Genre')
-        self.assertEqual(a.stage,s)
-
 
     def test_get_artist(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
 
         # test artist
-        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre',stage=s)
+        a = Artist(name='Artist Name',label='Artist Label',origin='Artist City',genre='Artist Genre')
         a.save()
         b = Artist.objects.get(name='Artist Name')
         self.assertIsNotNone(b)
@@ -91,90 +68,34 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(b.label,'Artist Label')
         self.assertEqual(b.origin,'Artist City')
         self.assertEqual(b.genre,'Artist Genre')
-        self.assertEqual(b.stage,s)
 
-    def test_empty_artist(self):
-        a = Artist()
-        try:
-            a.save()
-            self.fail('Should have thrown IntegrityError')
-        except IntegrityError:
-            pass
-
-    def test_empty_artist_with_stage(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = Artist(stage=s)
-        a.save()
-        a = Artist.objects.get(stage=s)
-        self.assertIsNotNone(a)
-        self.assertEqual(a.name,'')
-        self.assertEqual(a.label,'')
-        self.assertEqual(a.origin,'')
-        self.assertEqual(a.genre,'')
-        self.assertEqual(a.stage,s)
-
-    def test_artist_name(self):
-        n = 's'*401
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = Artist(name=n,stage=s)
-
-        try :
-            a.save()
-            self.fail('Should have thrown an Exception')
-        except :
-            pass
-
-        a = Artist(label=n,stage=s)
-
-        try :
-            a.save()
-            self.fail('Should have thrown an Exception')
-        except :
-            pass
 
     def test_artist_url_1(self):
-        # setup stage
-        s = Stage(id=1)
-        s.save()
 
-        a = Artist(stage=s)
+        a = Artist()
         a.save()
         self.assertEqual(a.get_url(),'/artists/1/')
 
 
     def test_artist_url_2(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = Artist(id=1,name='Artist One',stage=s)
+        a = Artist(id=1,name='Artist One')
         a.save()
 
-        a = Artist(id=2,name='Artist Two',stage=s)
+        a = Artist(id=2,name='Artist Two')
         a.save()
 
-        a = Artist(id=3,name='Artist Three',stage=s)
+        a = Artist(id=3,name='Artist Three')
         a.save()
         self.assertEqual(a.get_url(),'/artists/3/')
 
     def test_artist_url_3(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = Artist(id=1, name='Artist One',stage=s)
+        a = Artist(id=1, name='Artist One')
         a.save()
 
-        a = Artist(id=2, name='Artist Two',stage=s)
+        a = Artist(id=2, name='Artist Two')
         a.save()
 
-        a = Artist(id=3, name='Artist Three',stage=s)
+        a = Artist(id=3, name='Artist Three')
         a.save()
 
         a = Artist.objects.get(name='Artist One')
@@ -187,7 +108,6 @@ class DjangoMethodTests(TestCase):
         s.save()
         self.assertIsNotNone(s)
         self.assertEqual(s.name,'')
-        self.assertIsNone(s.stage)
 
     def test_save_sponsor(self):
         s = Sponsor(name='Sponsor Name')

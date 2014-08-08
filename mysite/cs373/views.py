@@ -1,9 +1,11 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.http import Http404
 from django.views.generic.detail import DetailView
 from cs373.models import *
 from itertools import chain
 from django.views.generic.dates import ArchiveIndexView
+import requests
+import random
 
 ### API imports
 from cs373.serializers import *
@@ -11,11 +13,49 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+def page_not_found(request):
+    return render(request, '404.html')
+
 def index(request):
     return render(request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')
+
+def groupapi(request):
+    # characterUrl = 'http://domoench.pythonanywhere.com/api/characters/'
+    # storiesUrl = 'http://domoench.pythonanywhere.com/api/stories/'
+    # artifactUrl = 'http://domoench.pythonanywhere.com/api/artifacts/'
+
+    # character = requests.get(characterUrl)
+    # character = character.json()
+    # character = random.choice(character)
+
+    # stories = requests.get(storiesUrl)
+    # stories = stories.json()
+    # story_list = []
+    # for story in stories:
+    #     if character['id'] in story['characters']:
+    #         story_list.append(story['name'])
+
+    # artifacts = requests.get(artifactUrl)
+    # artifacts = artifacts.json()
+    # for artifact in artifacts:
+    #     if character['id'] in artifact['owners']:
+    #         artifact_list = artifact['name']
+
+    # context = {'characterName':character['name']}
+    # context['characterBio'] = character['description']
+    # context['characterQuote'] = character['quote']
+    # context['stories'] = story_list
+    # context['artifacts'] = artifact_list
+
+    context = {'characterName':'Harry Potter'}
+    context['characterBio'] = "<p>Harry Potter is The Boy Who Lived, one of the most famous wizards of his time. In July 1980, Voldemort tried to murder Harry Potter while he was still a baby, afraid of a prophecy that said Potter would be the one to defeat him. His mother Lily Potter sacrificed herself for Harry, which gave Harry an ancient form of protection magic based on love. This protection caused Voldemort's killing curse to backfire onto himself, but left Harry with a lightning-shaped cursed scar on his forehead. This created a connection between Harry and Voldemort, allowing Harry to speak Parseltongue.</p>\r\n\r\n<p>Harry was raised by his aunt Petunia and uncle Vernon Dursley, who resented everything abnormal, including Harry. It wasn't until his 11th birthday that Potter discovered he was a wizard, and began attending Hogwarts School of Witchcraft and Wizardry with the inheritance his parents left behind. Here he met his dearest friends Ron Weasley and Hermione Granger. Harry became one of the youngest seekers for the Gryffindor Quidditch team during his first year. He also became one of the youngest Triwizard Tournament contestants during his fourth year.</p>\r\n\r\n<p>Along with other friends, Ron, Hermione, and Harry went on many adventures thrwarting evil throughout their school career. They stopped Professor Quirrell from bringing back Voldemort with the Philosopher's Stone. They stopped Tom Riddle's revival of the Chamber of Secrets. And finally in their last year at Hogwarts, they defeated Voldemort once and for all.</p>"
+    context['characterQuote'] = "Every great wizard in history has started out as nothing more than what we are now, students. If they can do it, why not us?"
+
+    return render(request,'groupapi.html',context)
+
 
 ###########################
 #                         #
