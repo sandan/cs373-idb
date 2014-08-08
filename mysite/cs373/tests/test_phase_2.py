@@ -12,7 +12,7 @@ class DjangoMethodTests(TestCase):
     def test_create_empty_stage(self):
         s = Stage()
         self.assertIsNotNone(s)
-        self.assertEqual(s.location,'')
+        self.assertEqual(s.location,None)
 
     def test_create_stage(self):
         s = Stage(location=1)
@@ -28,23 +28,13 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(b,s)
 
     def test_stage_location(self):
-        n = 9999999999999999999L
+        n = 9999999999999999999
         s = Stage(location=n)
         try:
             s.save()
             self.fail('Should have thrown an Exception')
         except:
             pass
-
-    def test_stage_url_1(self):
-        q = Stage(location=1)
-        q.save()
-        self.assertEqual(q.get_url(),'/stages/1/')
-
-    def test_stage_url_2(self):
-        f = Stage(location=2)
-        f.save()
-        self.assertEqual(f.get_url(),'/stages/2/')
 
     # Artist Tests
 
@@ -74,7 +64,7 @@ class DjangoMethodTests(TestCase):
 
         a = Artist()
         a.save()
-        self.assertEqual(a.get_url(),'/artists/1/')
+        self.assertEqual(a.get_absolute_url(),'/artists/{:d}/'.format(a.id))
 
 
     def test_artist_url_2(self):
@@ -86,7 +76,7 @@ class DjangoMethodTests(TestCase):
 
         a = Artist(id=3,name='Artist Three')
         a.save()
-        self.assertEqual(a.get_url(),'/artists/3/')
+        self.assertEqual(a.get_absolute_url(),'/artists/{:d}/'.format(a.id))
 
     def test_artist_url_3(self):
         a = Artist(id=1, name='Artist One')
@@ -99,7 +89,7 @@ class DjangoMethodTests(TestCase):
         a.save()
 
         a = Artist.objects.get(name='Artist One')
-        self.assertEqual(a.get_url(),'/artists/1/')
+        self.assertEqual(a.get_absolute_url(),'/artists/{:d}/'.format(a.id))
 
     # Sponsor Tests
 
@@ -107,7 +97,7 @@ class DjangoMethodTests(TestCase):
         s = Sponsor()
         s.save()
         self.assertIsNotNone(s)
-        self.assertEqual(s.name,'')
+
 
     def test_save_sponsor(self):
         s = Sponsor(name='Sponsor Name')
@@ -133,39 +123,15 @@ class DjangoMethodTests(TestCase):
         self.assertEqual(s.__str__(),'Sponsor Name')
 
     def test_get_sponsor(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
 
         # test artist
-        a = Sponsor(name='sponsor', business_type='business',stage=s)
+        a = Sponsor(name='sponsor', industry='business')
         a.save()
         b = Sponsor.objects.get(name='sponsor')
         self.assertIsNotNone(b)
         self.assertEqual(b.name,'sponsor')
-        self.assertEqual(b.business_type,'business')
-        self.assertEqual(b.stage,s)
+        self.assertEqual(b.industry,'business')
 
-    #def test_empty_sponsor(self):
-    #    a = Sponsor()
-    #    try:
-    #        a.save()
-    #        self.fail('Should have thrown IntegrityError')
-    #    except IntegrityError:
-    #        pass
-
-    def test_empty_sponsor_with_stage(self):
-        # setup stage
-        s = Stage(name='Stage Name')
-        s.save()
-
-        a = Sponsor(stage=s)
-        a.save()
-        a = Sponsor.objects.get(stage=s)
-        self.assertIsNotNone(a)
-        self.assertEqual(a.name,'')
-        self.assertEqual(a.business_type,'')
-        self.assertEqual(a.stage,s)
 
     def test_sponsor_url_1(self):
         s = Sponsor(id=1, name='Sponsor One')
@@ -177,7 +143,7 @@ class DjangoMethodTests(TestCase):
         s = Sponsor(id=3, name='Sponsor Three')
         s.save()
 
-        self.assertEqual(s.get_url(),'/sponsors/3/')
+        self.assertEqual(s.get_absolute_url(),'/sponsors/{:d}/'.format(s.id))
         self.assertEqual(s.name,'Sponsor Three')
 
     def test_sponsor_url_2(self):
@@ -191,7 +157,7 @@ class DjangoMethodTests(TestCase):
         s.save()
 
         s = Sponsor.objects.get(name='Sponsor Two')
-        self.assertEqual(s.get_url(),'/sponsors/2/')
+        self.assertEqual(s.get_absolute_url(),'/sponsors/{:d}/'.format(s.id))
         self.assertEqual(s.name,'Sponsor Two')
 
     def test_sponsor_url_3(self):
@@ -205,17 +171,16 @@ class DjangoMethodTests(TestCase):
         s.save()
 
         s = Sponsor.objects.get(name='Sponsor One')
-        self.assertEqual(s.get_url(),'/sponsors/1/')
+        self.assertEqual(s.get_absolute_url(),'/sponsors/{:d}/'.format(s.id))
         self.assertEqual(s.name,'Sponsor One')
 
     # Media tests
 
     def test_empty_media(self):
-        s = Stage(name='s')
-        s.save()
-        a = Artist(name='z', stage=s)
+
+        a = Artist(name='z')
         a.save()
-        m = ArtistMedia(ar=a)
+        m = ArtistMedia(artist=a)
         try:
             m.save()
             self.fail('Should have thrown an Exception')
@@ -223,16 +188,15 @@ class DjangoMethodTests(TestCase):
             pass
 
     def test_save_media(self):
-        s = Stage(name='s')
-        s.save()
-        a = Artist(name='z', stage=s)
+
+        a = Artist(name='z')
         a.save()
-        m = ArtistMedia(ar=a)
+        m = ArtistMedia(artist=a)
         m.save()
 
-        m = ArtistMedia.objects.get(ar=a)
+        m = ArtistMedia.objects.get(artist=a)
         self.assertIsNotNone(m)
-        self.assertEqual(m.ar,a)
+        self.assertEqual(m.artist,a)
 
     def test_media_length(self):
         n = 'm'*256
@@ -240,27 +204,18 @@ class DjangoMethodTests(TestCase):
 
         m = ArtistMedia(bio=n)
         try:
-            s.save()
+            m.save()
             self.fail('Should have thrown an Exception')
         except:
             pass
 
     def test_media_string(self):
-        s = Stage(name='s')
-        s.save()
-        a = Artist(name='z', stage=s)
+
+        a = Artist(name='z')
         a.save()
-        m = ArtistMedia(ar=a, webpage='www.www.com')
+        m = ArtistMedia(artist=a, webpage='www.www.com')
         m.save()
         self.assertEqual(super(ArtistMedia,m).__str__(), 'www.www.com')
 
-    def test_foreign_key(self):
-        s = Stage(name='s')
-        s.save()
-        a = Artist(name='z', stage=s)
-        a.save()
-        m = ArtistMedia(ar=a)
-        m.save()
-        self.assertEqual(m.ar, a)
 
 
