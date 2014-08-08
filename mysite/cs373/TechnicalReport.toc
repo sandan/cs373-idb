@@ -1,0 +1,51 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Updates}{3}
+\contentsline {subsection}{\numberline {1.1}Summary}{3}
+\contentsline {section}{\numberline {2}Introduction}{3}
+\contentsline {section}{\numberline {3}New Features}{4}
+\contentsline {subsection}{\numberline {3.1}Search}{4}
+\contentsline {subsection}{\numberline {3.2}New Models}{4}
+\contentsline {subsection}{\numberline {3.3}Technology Stack}{4}
+\contentsline {section}{\numberline {4}Design}{5}
+\contentsline {subsection}{\numberline {4.1}Web Pages}{5}
+\contentsline {subsubsection}{\numberline {4.1.1}Splash Page}{5}
+\contentsline {subsubsection}{\numberline {4.1.2}Artists}{6}
+\contentsline {subsubsection}{\numberline {4.1.3}Sponsors}{7}
+\contentsline {subsubsection}{\numberline {4.1.4}Stages}{8}
+\contentsline {subsection}{\numberline {4.2}Templates}{9}
+\contentsline {subsubsection}{\numberline {4.2.1}Base Template}{9}
+\contentsline {subsubsection}{\numberline {4.2.2}Model Templates}{9}
+\contentsline {subsection}{\numberline {4.3}Class-based Generic Views}{9}
+\contentsline {subsubsection}{\numberline {4.3.1}ArchiveIndexView}{9}
+\contentsline {subsubsection}{\numberline {4.3.2}ListView}{9}
+\contentsline {subsubsection}{\numberline {4.3.3}DetailView}{10}
+\contentsline {subsection}{\numberline {4.4}RESTful API}{10}
+\contentsline {subsubsection}{\numberline {4.4.1}Stages}{10}
+\contentsline {subsubsection}{\numberline {4.4.2}Sponsor}{10}
+\contentsline {subsubsection}{\numberline {4.4.3}Artist}{10}
+\contentsline {subsection}{\numberline {4.5}Django Models}{11}
+\contentsline {subsubsection}{\numberline {4.5.1}Artist}{11}
+\contentsline {subsubsection}{\numberline {4.5.2}Sponsor}{11}
+\contentsline {subsubsection}{\numberline {4.5.3}Stage}{12}
+\contentsline {subsubsection}{\numberline {4.5.4}stage\_sponsor\_yr}{12}
+\contentsline {subsubsection}{\numberline {4.5.5}stage\_artist\_yr}{12}
+\contentsline {subsubsection}{\numberline {4.5.6}Media models}{13}
+\contentsline {subsubsection}{\numberline {4.5.7}Stage Sponsor Time relation}{14}
+\contentsline {subsubsection}{\numberline {4.5.8}Stage Artist Time relation}{14}
+\contentsline {section}{\numberline {5}Unit Tests}{14}
+\contentsline {subsection}{\numberline {5.1}Django Model Unit Testing}{14}
+\contentsline {subsubsection}{\numberline {5.1.1}Type Test}{14}
+\contentsline {subsubsection}{\numberline {5.1.2}StageRelationship Test}{15}
+\contentsline {subsubsection}{\numberline {5.1.3}Constraint Test}{15}
+\contentsline {subsubsection}{\numberline {5.1.4}MultiRelation Test}{15}
+\contentsline {subsubsection}{\numberline {5.1.5}CrossRelation Test}{15}
+\contentsline {subsubsection}{\numberline {5.1.6}Simulations Test}{15}
+\contentsline {subsection}{\numberline {5.2}RESTful API Test}{15}
+\contentsline {subsubsection}{\numberline {5.2.1}Stages API Test}{15}
+\contentsline {subsubsection}{\numberline {5.2.2}Artist API Test}{16}
+\contentsline {subsubsection}{\numberline {5.2.3}Sponsors API Test}{16}
+\contentsline {subsubsection}{\numberline {5.2.4}StageMedia API Test}{16}
+\contentsline {subsubsection}{\numberline {5.2.5}ArtistMedia API Test}{16}
+\contentsline {subsubsection}{\numberline {5.2.6}SponsorMedia API Test}{17}
+\contentsline {section}{\numberline {6}Six Potters API Testing}{17}
+\contentsline {section}{\numberline {7}Links}{17}

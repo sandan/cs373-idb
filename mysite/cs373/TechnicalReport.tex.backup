@@ -514,9 +514,9 @@ Total tests: 3
 Total tests: 2
 
 \begin{itemize}
- \item test\_relationship1: creates a Stage, Artist, and Sponsor and asserts their ty
- \item test\_relationship2: tests different combinations of creating the stage_artist_yr object to relate a Stage and an Artist
- 
+ \item test\_types: creates a Stage, Artist, and Sponsor and asserts their types ar Stage, Artist, and Sponsor respectively
+ \item test\_types\_relationships1: tests different combinations of creating the stage_artist_yr object to relate a Stage and an Artist
+ \item test\_types\_relationships2: tests different combinations of creating the stage_sponsort_yr object to relate a Stage and a Sponsor
 \end{itemize}
 
 \subsubsection{Constraint Test}
