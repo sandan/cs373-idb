@@ -604,17 +604,32 @@ On setup one stage and one sponsor are created in the database and then deleted 
 \end{itemize}
 
 \subsubsection{StageMedia API Test} 
-Total tests: 3
+Total tests: 4
 On setup a stage and StageMedia are created in the database. Class attributes for the StageMedia test are created.
 Both are deleted on tear down.
 \begin{itemize}
- \item test\_stage\_media\_get: tests to see if a client request for the stage media object created returns the 200 OK response code.
+ \item test\_stage\_media\_get1: tests to see if a client request for the stage media object created returns the 200 OK response code.
+ 
+ \item test \_stage\_media\_get2: tests to see if a client request for the stage media object created returns the 200 OK response code, using a different year than stage_media_get1.
  
  \item test\_stage\_media\_bad\_get: tests to see if a bad client request to a non-existing stage media object created returns 
                                      404 Not Found response.
  
  \item test\_stage\_media\_post: Tests that POSTS are not allowed by clients by checking that the 405 status code is returned.
 \end{itemize}
+
+\subsubsection{StageMediaList API Test}
+Total tests: 3
+On setup a stage and StageMedia are created in the database. Class attributes for the StageMedia test are created.
+Both are deleted on tear down.
+\begin{itemize}
+\item test\_stage\_media\_get: tests to see if a client request for the stage media list created returns the 200 OK response code.
+
+\item test\_stage\_media\_bad\_get: tests to see if a bad client request to a non-existing stage media list created returns
+                                     404 Not Found response.
+\item test\_stage\_media\_post: Tests that POSTS are not allowed by clients by checking that the 405 status code is returned.
+\end{itemize}
+
 
 \subsubsection{ArtistMedia API Test} 
 Total tests: 3
