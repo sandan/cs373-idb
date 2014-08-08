@@ -1,0 +1,33 @@
+\section{Updates}
+Updates for the third iteration at a glance:
+\begin{itemize}
+ \item An About page has been created to provide an overview of our website
+\end{itemize}
+\begin{itemize}
+ \item Splash page and web design have been tweaked to include better navigation and usability
+\end{itemize}
+\begin{itemize}
+ \item Search capability implemented using Haystack and Whoosh
+\end{itemize}
+\begin{itemize}
+ \item Created a dynamic page implementing another group's API in order to test it 
+\end{itemize}
+\begin{itemize}
+ \item Created a presentation that overviews all three phases of our concluding IDB project
+\end{itemize}
+
+Summary
+The main changes that have been made can be summarized into three main categories: search implementation, model refactoring, and website layout tweakings.
+In order to implement the search functionality we installed Haystack to utilize as the search framework and Whoosh as the search engine.
+The models were drastically changed to include intermediary models. These models represented relationships and represent the concept of time, which would allow us to expand our database to include artists, sponsors and stages used over the years.
+The website itself was also expanded to include an About page with information about our team and the Splash page was also updated.
+
+Technology Stack
+The technologies used are:
+• PythonAnywhere: a web hosting service with python environments supported.
+Currently we use Python 3.4 and Django 1.6+.
+• Twitter Bootstrap 3.2: a web hosting service with python environments supported Python 3.4, Django 1.6.
+• Apiary: an online service to provide an API for client-side web access to our databases.
+• MySQL: The current database backend using the mysql.connector.django engine.
+• Haystack: A simplified search framework that allows you to use third-party search engines as its core.
+• Whoosh: a full-text indexing and searching library implemented in pure Python.
