@@ -1,0 +1,2184 @@
+commit f12c6c665ab42dc6b60a712e7dae12cd9544dc65
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Aug 7 21:34:35 2014 +0000
+
+    resync project with repo. resolve issue #68
+
+commit c1b6c3ac29278f4773da58ecbdc23f2371cb799d
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Aug 7 00:41:43 2014 +0000
+
+    IDB3
+
+commit 86c22baa39518ab7b6097af31e279a955100b436
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Wed Aug 6 18:23:29 2014 -0500
+
+    adding updates
+    
+    Technical report for idb3
+
+commit 252f264f1f98afdbe36af066260d46b47a82caee
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Aug 6 18:23:14 2014 -0500
+
+    added very simple search_indexes.py
+
+commit 7ef2c4c23b8476d6659615c540dac92e97d740ca
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Aug 6 18:21:33 2014 -0500
+
+    simple search templates
+
+commit e58f7f2277bca578b08d18fb46a24764623600e3
+Author: jh6779 <jesushernandez@utexas.edu>
+Date:   Wed Aug 6 18:15:18 2014 -0500
+
+    Add haystack and whoosh to settings.py
+
+commit c3c7d6623027d2023cbb7f7783a4309a49192697
+Author: jh6779 <jesushernandez@utexas.edu>
+Date:   Wed Aug 6 18:13:06 2014 -0500
+
+    Update urls.py to use haystack urls
+
+commit 10ca58b323b4a83f12fb3795dd4cf31e5dfa7220
+Author: sandan <masandan91@gmail.com>
+Date:   Wed Aug 6 22:52:55 2014 +0000
+
+    urls, views, and models
+
+commit 20685e44b2f9ab97500a9efa6ca6881fb903dad9
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Tue Aug 5 13:44:08 2014 -0500
+
+    updated the stage location img
+
+commit 2faa61fd8dfed49a1343723e91948b8ac9491808
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Aug 5 11:51:58 2014 -0500
+
+    Update ACLassociations.txt
+
+commit f26eb6d905ff30b2f2d3559eeff33b8ec3056862
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Aug 5 09:50:07 2014 -0500
+
+    Create stage_artist_relations
+
+commit 4ab76b0016c28ef88edd5bda5d01ad27a5cd3150
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Aug 5 14:23:23 2014 +0000
+
+    organized data into folders
+
+commit c6ae8e32c02aa1e959a35f161eadaa7b902f07e2
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Tue Aug 5 02:32:23 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+    
+    removed a line
+
+commit 6aaa8ed20f38df41ea25dedf0dfcefb22864a328
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Tue Aug 5 02:08:13 2014 -0500
+
+    Updated sponsors_data.txt
+    
+    Updated to add space after ':'
+
+commit 763dccbb6f9e022863f3e96255b4c6dd12f3d108
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Tue Aug 5 02:04:00 2014 -0500
+
+    Update sponsors_data.txt
+    
+    Updated to remove extra ': ' from data
+
+commit d2fa8b4367882cd8e59db2ecebc1431316f83066
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Tue Aug 5 01:28:45 2014 -0500
+
+    Updated sponsors_data.txt
+    
+    Updated sponsors_data.txt to change business_type to industry
+
+commit f99108c28c40c2a3fce021da5794ad32a18b7887
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Aug 5 00:01:09 2014 -0500
+
+    Create stage_sponsor_relations
+
+commit c692264904734a09010ebb53bbed7b6ed719bbe0
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 23:49:59 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 50bfe38248ccf3eb3a593615f41711bd712f24e4
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:51:14 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 8f461a5f26c10139b9ff7072475d00b27fb5e8b7
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:43:11 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 1f0e75154f7ebd4474993e019ade41c4313285a4
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:41:30 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 7997bdb6cd9e1b3fc398b9e9edf1f74598d05c14
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:32:48 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit b5dbb94cbcde47936458ce03d88a3428fd7e65b0
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:30:55 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit f0629bb37b3e6e5a0dc42bb6ebd2ea3423a16039
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:20:46 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 496e84a10d0d8a77485b3cd1659c1ae314fa274d
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 22:17:02 2014 -0500
+
+    Update stages_media_by_year_2012.txt
+
+commit 7eba384bff40cdad3271fdc252c4c0b23f57404c
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 21:59:13 2014 -0500
+
+    Updated load stages
+    
+    Updated load stages to parse data for database
+
+commit 88a13a76011da02314039cec316aa95913125d72
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 21:47:55 2014 -0500
+
+    Update stages_media_by_year_2013.txt
+
+commit 9ab5c4b456f51b6ea403840686812090cb579f4f
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 21:46:56 2014 -0500
+
+    Update stages_media_by_year_2014.txt
+
+commit 50f614ef7c366931910038a30462c7b530555b1d
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 21:30:50 2014 -0500
+
+    updated loader for sponsors
+
+commit 3ac1602f38eed997a589279558e2ab4a3ec8b71b
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 21:26:32 2014 -0500
+
+    Updated load_artists
+    
+    Updated load_artists to parse artist file and load info into database
+
+commit f1b6c8776018f3eb30721ad71f2a32005884f20e
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 21:13:31 2014 -0500
+
+    Rename stages_media_by_year to stages_media_by_year_2012.txt
+
+commit fceef925ac7204b75513a35b12b8eed6fb65521b
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 21:13:12 2014 -0500
+
+    Rename stage_media_by_year_2014.txt to stages_media_by_year_2014.txt
+
+commit 2140617f793b6fc6a6d202f99588fc01079725df
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 21:12:47 2014 -0500
+
+    Rename stages_raw_data_for_2014.txt to stage_media_by_year_2014.txt
+
+commit 45074697b7961e5ea95019a76e852627069e9360
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 21:11:31 2014 -0500
+
+    made consistent stage names
+
+commit c7c13b980d1c6d8a553b4f381e1c6d7de73d6faa
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 21:11:19 2014 -0500
+
+    Updated artists raw data
+    
+    Updated artists raw data and removed stage attribute
+
+commit 0c7439c4f389dfe36946e1b3b2e4aac48b537812
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 21:11:00 2014 -0500
+
+    made consistent stage names
+
+commit f393ecf61482cef28ab2304b606b84d25cb170cc
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 21:10:57 2014 -0500
+
+    Update sponsors_data.txt
+
+commit ef280fb8d080fe519ec55533afaea8e4cf7fe075
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Mon Aug 4 21:07:05 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit dd8be6cfb73451a53007ffb2c2fd268c9532c453
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Mon Aug 4 20:54:24 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit f67a49704fea83eacb5393e492f5908ec83a1b15
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Mon Aug 4 20:44:52 2014 -0500
+
+    added stages media info for 2013
+
+commit 1ed72e14790fb1ed966c6462acd748c588ababad
+Merge: 34c6708 d105f0f
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Aug 4 20:38:47 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit 34c6708d53931f1c9e3762896b419e19680ed593
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Aug 4 20:38:37 2014 -0500
+
+    Reformatted data for 2014 stages to include location. Resolves #61
+
+commit d105f0fb7105a69036652c8fbdb2226b7f5edd51
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 20:37:59 2014 -0500
+
+    Update stages_media_by_year
+
+commit e5fb49e677454db81c09c467ea7e7c1a4d70c167
+Merge: 0875804 7f3f237
+Author: mark <msandan_91@msn.com>
+Date:   Tue Aug 5 01:30:46 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 08758045ce60e344f68131def31df35a2297a7e2
+Author: mark <msandan_91@msn.com>
+Date:   Tue Aug 5 01:30:30 2014 +0000
+
+    files for search
+
+commit 7f3f237cd04e7913ee4b0a9ceaf743856df83385
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 20:25:14 2014 -0500
+
+    Update sponsors_data.txt
+
+commit 635acb42b1ebf57c7e5805cd94ae7e59ad2478db
+Merge: b06e15b 53d6ead
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Aug 4 20:11:28 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit b06e15b2ac2946fffde2589c27d2eea01378d788
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Aug 4 20:11:14 2014 -0500
+
+    Artists raw data for 2012-2013. Resolves #60
+
+commit 53d6ead24466e0cfe64933859a8c8b121a5b8e63
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Aug 4 20:08:18 2014 -0500
+
+    Update and rename stages_raw_data.txt to stages_media_by_year
+
+commit a8371c57851c78b9af63a1e5bb956fcf983800b2
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 20:07:00 2014 -0500
+
+    Update sponsors_data.txt
+
+commit 8373b85c51c378a2779407c6805e3adb570d0510
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 20:06:42 2014 -0500
+
+    updated links to the video
+
+commit d064ffda4013dd8a23a3406fa4cd35bde2c02f51
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Mon Aug 4 20:00:48 2014 -0500
+
+    one file contaning all sponosor.data
+
+commit 85bcdee389b3c4af4d4c9ca199ef8d76f4120d42
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 19:45:06 2014 -0500
+
+    Update sponsors 2013 data
+    
+    Corrected spelling error
+
+commit 50f25f0dbdb8b5563a04bc2649402bbc524d7a14
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 19:39:49 2014 -0500
+
+    Updated sponsors
+    
+    Updated sponsors w/ correct locations for 2014
+
+commit e34dd0071b87574d522337a6c9d23b0b0d8eb3ae
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Mon Aug 4 19:29:14 2014 -0500
+
+    Added sponsors 2012 data
+
+commit 9013ceab5cd5fd7682fe20156a65e73104e1fe56
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 19:14:36 2014 -0500
+
+    Update sponosors_data_2013.txt
+
+commit 531f4dab536c56d7113d41dbb49195f6310e5031
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 19:13:44 2014 -0500
+
+    Update
+    
+    Update
+
+commit 07e33d67d2ee3a579ada419e00039b38bb8a27ff
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Aug 4 19:12:36 2014 -0500
+
+    Update sponsors_data_2014.txt
+
+commit e4f8efa9974556c5a7a7beba9eacf5e59bcb3c6b
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 19:10:34 2014 -0500
+
+    Updated sponsors w/ correct locations for 2014
+    
+    Updated sponsors w/ correct locations for 2014
+
+commit 438f01cbd76f6c7ab488cfab58e1e8f58fd4d8df
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 19:03:35 2014 -0500
+
+    Update ACL associations
+    
+    Updated locations for bevintel and retailmenot
+
+commit cc75f4f99cb65a36607dcf220ee04835f6c70647
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Aug 4 18:51:58 2014 -0500
+
+    Update ACLassociations
+    
+    Updated to correct dates for Bud Light - 2012 & 2013
+
+commit 1ddea374678e443145cacdf7c89e1635d52cdad3
+Author: mark <msandan_91@msn.com>
+Date:   Mon Aug 4 14:29:40 2014 +0000
+
+    latest and greatest models, test for models, serializers, views, urls, and tests for api
+
+commit edd21198444b1f4c0693f4a57a6dcb54bba97479
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Mon Aug 4 09:22:17 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 2140d6e09b8de445c86dc79020614c2bfa0fad0e
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sun Aug 3 23:52:55 2014 -0500
+
+    Update RefactoredModels.py
+    
+    changed year to date in stagemedia
+
+commit a99cc626c2bb487f2d3a29972f3962f49d7107d7
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 23:22:04 2014 -0500
+
+    updated stagemedia and added stagemedia list capability
+
+commit 6a95e88b80e2e1dc70c36d355978f7e336367150
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 22:50:25 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 4896d4c96c1fedcb2ea53b0343a2d2ebdf683a82
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 22:49:14 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 0a5b85a659c79710b0e6d74dc5db28611a885dd2
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 21:16:52 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit eedd7c495d46b02ebb0d6422560a43b8606bdc1b
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 21:16:27 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit d513965c32b5283796932702ddff307b3e1ddf93
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 21:12:25 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit f79066557c756cb0157aadd7369b4efaae65299d
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 20:20:21 2014 -0500
+
+    updated stage_location to represent the fact that  an artist can only play on one stage a yr
+
+commit 7097843f305812c9249a0988a011e78fa57c60a0
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 20:19:19 2014 -0500
+
+    don't need to give years for artist/year call
+
+commit 0d72eff9a8e860bcc542ba40c64e5d853c96ea0c
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Sun Aug 3 18:26:12 2014 -0500
+
+    added view function for group api
+
+commit 1bb0effa8b5ed6a6d55f32e5a8612e75cc6e111f
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 13:43:15 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 4357d41ff5ad41dd052b1f2c384fcbc56cbbbe15
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 13:36:28 2014 -0500
+
+    made stages more compatible
+
+commit 5f5de12e70d6d202165d1ff1cf9efdcec4e1446c
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sun Aug 3 13:24:46 2014 -0500
+
+    Made backward compatible with artists and sponsors
+
+commit a46e3ad262b58aa8962dbba207886b85d7127f72
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 13:23:39 2014 -0500
+
+    Made the api more backward compatible for sponsors and artists
+
+commit 09dccdfec1c145075e3ad5e33b0c415edcd431c6
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 12:57:31 2014 -0500
+
+    updating to make it more backward compatible
+
+commit 4fb45a81626d76c0fee85abccd709a6767d4a80c
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:40:56 2014 -0500
+
+    updated stage_id -> location and added name attribute to stage media
+
+commit 7ce07badc2a35d95b5a8e22036071be163e3e744
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:35:17 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 261574ab1f3145f717b0af9a05987e53ec0895a3
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:27:10 2014 -0500
+
+    added get methods for stage given id and year for sponsor and artist
+
+commit 04ba3da4da8dd64c9af752834eb6a2c7bc26ba7e
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:17:37 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 54faa44173a953ca5cdc7ee50d981e0661a9f804
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:12:15 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit beb0d44b586c9a54f457090b030ae635f5acf9f9
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:10:40 2014 -0500
+
+    Updated list of artists
+
+commit fb61b48348d2d5ed50086b8c99b370dd75b1e9a8
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Aug 3 00:07:57 2014 -0500
+
+    updating artist GET
+
+commit 9291a05abeb78fc0267fa66a1c93cf0df6f3621b
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 23:59:02 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit d8674bac5130e6c752d62701c8948ac80595dc9c
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 23:55:31 2014 -0500
+
+    Draft of updated API
+
+commit 1ae51b71909e55e4f07ea15d3664c0ad3cf4e424
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 23:45:38 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 3d3991cb890287f37be183d793a95b5de2a93865
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 23:38:18 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 0d1344da4b825f3826bf219ec4de554d3c41666a
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 23:04:53 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit f592c586bec3bbcd328e441b83017486706e837b
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 23:04:05 2014 -0500
+
+    Update apiary.apib
+    
+    Included year information to access resources by year.
+
+commit 35752ce3db7c7dc22eab648fcbeb0ba9a328aea8
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 22:06:31 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit e36d9f423bc2147981eb251adaba83d4142907e4
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sat Aug 2 22:03:53 2014 -0500
+
+    updating to latest API
+
+commit 6330dc041248813fdce14e65fc1ee95f4b04be78
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 21:29:33 2014 -0500
+
+    Update RefactoredModels.py
+    
+    The tested model
+
+commit c355d5efa9d7e6d6006facc1c9661d5bf17b8920
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 21:29:05 2014 -0500
+
+    Create TestsForRefactoredModel.py
+    
+    Rigorous tests to get a feel for the new model. Enforces the constraints, added type safety checking in time models, and tested filters, adding via parent models (stage, artist, sponsor).
+
+commit 09880427b1222098f31c94d2210e0e851a986d4e
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 19:18:02 2014 -0500
+
+    Update RefactoredModels.py
+    
+    added assertions for the intermediary models to make sure they take the right types
+
+commit e890d5e11a4a929bab89317784ed71b2325d9f84
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 18:38:54 2014 -0500
+
+    Update RefactoredModels.py
+    
+    http://stackoverflow.com/questions/17965166/django-datetime-primary-key-doesnt-constrain-unique
+    making the key field with primary-key doesn't reinforce unique constraint...
+
+commit 2425e5c97711b20e651c1aed4b6f8deb4e013435
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 18:04:09 2014 -0500
+
+    Update RefactoredModels.py
+    
+    changed the year attribute to date since we pass in a datetime object
+
+commit 8b7219d518376d5a563e8c8ce72fdfb16222b708
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 17:55:47 2014 -0500
+
+    Update RefactoredModels.py
+    
+    changed the return of the get_yr to self.year.year instead of self.year which returns the datetime object not the year
+
+commit 905f8c40704e89f935159ba7363d2303e67a7405
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 17:50:03 2014 -0500
+
+    Update RefactoredModels.py
+    
+    Changed yr to year in parameter list of intermediary time models, also made the create methods return something...
+
+commit 43371c0240fd03a3901df210053d04bb135a8a4d
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Sat Aug 2 15:25:55 2014 -0500
+
+    Update RefactoredModels.py
+    
+    Alternate time class
+
+commit 93a9953115dfa04a2dcd310a27d745545c0f0a5d
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Fri Aug 1 21:59:27 2014 -0500
+
+    added 2014,2013 sponsors,not done
+
+commit 022e11b64a858676c0f32f6cfe8f97ee00e90468
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 21:58:06 2014 -0500
+
+    Update RefactoredModels.py
+    
+    Updated comments to express time relationships. Also added primary key cols to enforce the time constraints.
+
+commit f5cf056cbb855428609bdfe04315b320b6760805
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Fri Aug 1 21:24:12 2014 -0500
+
+    added data for each year
+
+commit b58d84bfb155e50f89db40831d12c34d59d438de
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 20:43:50 2014 -0500
+
+    Update RefactoredModels.py
+
+commit b0eee21f80ef0e2d2809006ce5bb8a15aebfa3bf
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 20:35:05 2014 -0500
+
+    Update RefactoredModels.py
+    
+    Undoing the merge of the media models and their respective classes to keep the relationships simple.
+
+commit 738f14bfc0aff14deeb5b9fedf4468d5059c2432
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 20:26:58 2014 -0500
+
+    Update RefactoredModels.py
+
+commit baea3169a727ab9f1060616757fae151d84284bc
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Fri Aug 1 20:23:01 2014 -0500
+
+    Update artist_raw_data_2014.txt
+    
+    added the Avett Brothers
+
+commit e03733e470549b471c1ce0d9a22f06a475d2a118
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 20:20:52 2014 -0500
+
+    Update RefactoredModels.py
+    
+    Merged the media models into their respective classes
+
+commit df24de646a62a253747a7cabcf983f364a51f0f4
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Fri Aug 1 20:07:16 2014 -0500
+
+    Update artist_raw_data_2014.txt
+
+commit a5a3d67d3b57853a648f11cd61447c0ff0afdabd
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 20:07:13 2014 -0500
+
+    Update RefactoredModels.py
+    
+    added name attribute for a stage once the year is known so it can get it's name from the corresponding sponsor
+
+commit 4cee6831736bc9f032c821d7018dc303bf5dcfbe
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Fri Aug 1 20:04:05 2014 -0500
+
+    img shows physical stage locations
+
+commit 05acea15079528d1a1b639579ef932aa13e0399a
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Fri Aug 1 19:54:56 2014 -0500
+
+    Just changed the layout a bit
+    
+    Just to make it easier for me!
+
+commit 2cbd6db6e3bd8010a04c8737a47295b27fe65879
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Fri Aug 1 19:45:08 2014 -0500
+
+    Rename artist_raw_data.txt to artist_raw_data_2014.txt
+
+commit 5f5625323d76896721bbf13ba9e27a006eb632b5
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Fri Aug 1 19:43:55 2014 -0500
+
+    updated artist_raw_data
+    
+    It now holds data for artist that played only in 2014
+
+commit a49f30e06f67a9da64619241809afb6b9af9e59d
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Fri Aug 1 19:41:31 2014 -0500
+
+    Association data for artists, sponsors, stages 2012-2014
+
+commit 485806427f721bdc85068ca063f2c98320af5fa7
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Aug 1 19:39:14 2014 -0500
+
+    Delete ACLassociations.odt
+
+commit 3e5ee376c2ad79f57680241145fb912feb3f0e81
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Fri Aug 1 19:38:06 2014 -0500
+
+    Associations between artists, sponsors, and stages resolves #55
+
+commit f7f5c8b54cf6e05318dfb1bc8999ddee1f3796bc
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Aug 1 19:20:37 2014 -0500
+
+    Create RefactoredModels.py
+    
+    first draft
+
+commit f05da8f0e01a2ce5f71ab242c60da0f4731c6fb2
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Wed Jul 30 23:54:51 2014 -0500
+
+    Adding admin section for the models
+
+commit eb92b8d5ac0b0cbf0cd4b631f0505b99751ca321
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Wed Jul 30 17:47:00 2014 -0500
+
+    updating serializer to include ids
+
+commit 4d0ddb88c5b99a182305945631819f6f8e6e6dbd
+Author: sandan <masandan91@gmail.com>
+Date:   Sat Jul 26 01:51:03 2014 +0000
+
+    git sha for the project
+
+commit e458efa399498b8c3e81acfff7b45889b3d64000
+Author: sandan <masandan91@gmail.com>
+Date:   Sat Jul 26 01:49:22 2014 +0000
+
+    git log for the IDB2 project
+
+commit 386d96db3032a23d487b61e5147c01869ae3dc5b
+Author: sandan <masandan91@gmail.com>
+Date:   Sat Jul 26 01:42:24 2014 +0000
+
+    deleted old model.html
+
+commit b3f324afa50981c2250279f1cf00c830338fb5b3
+Merge: 52744aa 42f4ef8
+Author: sandan <masandan91@gmail.com>
+Date:   Sat Jul 26 01:39:09 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 52744aae069d47c2a44ba4b10adf076f7bd96571
+Author: sandan <masandan91@gmail.com>
+Date:   Sat Jul 26 01:38:09 2014 +0000
+
+    pydoc for models.py
+
+commit 42f4ef83c5eb364e1136cb76da90fa7829051d23
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Jul 25 20:25:31 2014 -0500
+
+    Update README.md
+
+commit 4cce05ef1968fafe95b9ab4d7aab35ddeec076e4
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Jul 25 20:16:45 2014 -0500
+
+    Update README.md
+
+commit 99fa127a6b10ef3e2c60b69229a31a9178b8233b
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Fri Jul 25 20:15:13 2014 -0500
+
+    iteration2 files and folders
+
+commit 1fd134ddabd83564edb05b39eadbffb0e66ecdd8
+Author: sandan <masandan91@gmail.com>
+Date:   Fri Jul 25 23:19:59 2014 +0000
+
+    updating tests
+
+commit 7210cf3483fc57ef0535586bd5c864f2f10a1d35
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Fri Jul 25 17:53:21 2014 -0500
+
+    test_api moved and deleted
+
+commit 0226c2a7c3d53c7fc959b21f8b9476ea23ae4378
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Fri Jul 25 17:50:09 2014 -0500
+
+    adding tests folder
+
+commit a0609e749c66036a99e0bd77b0f316f30b27a3b9
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 17:45:01 2014 -0500
+
+    Update test_api.py
+    
+    Updated API tests for Artists, Sponsors, and Stages
+
+commit fff199027a893e18b1ed80fa9b1a2dcb9022c627
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Fri Jul 25 17:32:24 2014 -0500
+
+    updating views to return 405s on the media details
+
+commit bc8b78b774ee40b8ce3fd905e8b520fbe3156416
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 17:15:12 2014 -0500
+
+    Phase 2 API tests
+    
+    Phase 2 API tests for Sponsor, Stage, and Artist
+
+commit bd187eee0f5538deee462f9671fe4f862190e951
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 16:09:16 2014 -0500
+
+    Update technicalReport
+    
+    Added test_sponsor_url_3
+
+commit 8e322d8904535ab79bd9579f92a427c94efd25f9
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 15:10:44 2014 -0500
+
+    Update testsPhase2.py
+    
+    removed member and photo, added media
+
+commit 54ae43770f2704f49512270d71c81ca609f2fd2d
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Fri Jul 25 13:59:24 2014 -0500
+
+    updated with media classes and get methods.
+
+commit 257a19866919f3bb662e464f69279216c12510b6
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 00:05:38 2014 -0500
+
+    Update TechnicalReport.tex
+    
+    Updated to include Media subclasses under Django models subsection, and Media tests under test subsection
+
+commit 0c0d2e6be68f410c88c5ca5145ed69db791ee115
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Fri Jul 25 00:00:21 2014 -0500
+
+    Update testsPhase2.py
+    
+    Updated tests - 5 total
+
+commit 92aace86e80e0ce50318c59db4ca6fc08328febb
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 23:56:27 2014 -0500
+
+    Updated tests
+    
+    Updated tests - 6 total
+
+commit 4553fec02b116a41f845d68d59dce7828e8a51d6
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 22:34:16 2014 -0500
+
+    Updated UML to fix duplicate variable names
+
+commit fe0500895dac66ab6a3ce097f6c8102de9cdfd05
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 22:32:00 2014 -0500
+
+    Updated UML to fix duplicate variable names
+
+commit 708c732e3d313cb8c81096cd3ce39ca5fe835aa8
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Thu Jul 24 22:00:19 2014 -0500
+
+    Technical report including a summary of changes, future extensions, and revised sections
+
+commit 6b3fdffb096e1f71a677186c4d4fa02d0ac1d46e
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 21:04:46 2014 -0500
+
+    Update testsPhase2.py
+
+commit 00e59a9c06ce521a6ed9df133c666963afad4581
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 21:03:35 2014 -0500
+
+    Update UpdatedReport.tex
+
+commit 37f03ff1a80d453eaba5d53b59fd0298ae9c057a
+Author: jh6779 <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 19:55:35 2014 -0500
+
+    minor update to index template
+
+commit 8690bc29bc14831f85469fad5f349c6d22890cc9
+Author: sandan <masandan91@gmail.com>
+Date:   Fri Jul 25 00:14:44 2014 +0000
+
+    rest api impl , templates updated, and db re-populated from acl_data
+
+commit 2233bdd581ef4f0c219f5022ac69b6a0b32d5222
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Thu Jul 24 18:39:15 2014 -0500
+
+    this is a working API with 3.4 python on pythonanywhere
+
+commit c9b58316b025ceef48025ea883e96a960e1ee130
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Thu Jul 24 18:12:25 2014 -0500
+
+    Update artist_raw_data.txt
+    
+    updated the embedded youtube links
+
+commit 27e0c1028357519df4d10c1d606d412592fa3268
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 17:44:08 2014 -0500
+
+    updated phase2 models
+
+commit b502252a6088425dadeffe6516d7155f50ed2209
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 17:27:13 2014 -0500
+
+    Updated tests
+    
+    Updated tests for media
+
+commit 1b833b20fbecaf3cae28383f78f3325e3773b804
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 17:22:04 2014 -0500
+
+    Updated sponsor_raw_data
+    
+    Updated sponsor data to include fixes for embedded youtube videos
+
+commit 78cbe13a1f8b9a67ddafca6c7ca2f137e390c477
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 17:18:51 2014 -0500
+
+    Updated stages_raw_data
+    
+    Updated stages data to fix youtube embedded video links
+
+commit f96c628bf98366dc580d0ed0ac2d5de3f725fb14
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 17:16:55 2014 -0500
+
+    Updated artist's raw data
+    
+    Updated to fix embedded Youtube video links
+
+commit e264fadb48a2130961a535da344ee8d218e2d48f
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 17:09:10 2014 -0500
+
+    Updated phase2Tests.py
+    
+    Updated tests - Media section still needs to be reviewed
+
+commit 566bc3b4c5d60cfca8a63330664ffcddda1850fb
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 16:59:59 2014 -0500
+
+    Update testPhase2.py
+    
+    Updated Artist tests to include newer models
+
+commit bda4a442442eafb4096df8966efa55b57b9dc469
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 24 16:31:39 2014 -0500
+
+    Phase 2 tests
+    
+    Phase 2 tests to include media, and remove photo and member.
+
+commit 36c59085c36b0017ebdd55a33ca690e8065713c9
+Author: jh6779 <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 16:05:52 2014 -0500
+
+    fixed iframe loading site if youtube was blank
+
+commit 172e71c048661ec4b88b7ca96514c55eda498cdb
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Thu Jul 24 15:31:13 2014 -0500
+
+    updated image for Gambino
+
+commit ebafdf110d61f47ba337e4e5a43efc31036b138b
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Thu Jul 24 14:12:22 2014 -0500
+
+    updated UML
+
+commit 663551d944b080cf280175940219242a1421b4d1
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Thu Jul 24 14:08:28 2014 -0500
+
+    Update models.py
+
+commit 10b4a0a8bc78d2d7d3a21a4316afba395aa0f25a
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 18:54:22 2014 +0000
+
+    changed the raw data format to match models
+
+commit e3bac36f30d488616f3df55a737312c5b3678878
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Thu Jul 24 12:34:22 2014 -0500
+
+    edited the UML Diagrams
+
+commit d295cdaae6dc2edd2c7fc52958f11f2e2ab8f307
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Thu Jul 24 12:32:32 2014 -0500
+
+    fixed the entity relations in UML
+
+commit e501d67116d1b73ffde56cee45e8728f9462a711
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Thu Jul 24 12:02:38 2014 -0500
+
+    added UML diagrams
+
+commit e2c5ea87383f819518dad3e8eb73386f1dc725e0
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Thu Jul 24 11:34:36 2014 -0500
+
+    Update stages_raw_data.txt
+
+commit 36a33822bda754fec36f08c90ca75bcd2005ceb8
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Thu Jul 24 11:11:14 2014 -0500
+
+    Update artist_raw_data.txt
+
+commit 0526e9a7ec19a0ad6ff17c2e0abe49b36e35e063
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Thu Jul 24 11:09:31 2014 -0500
+
+    Update stages_raw_data.txt
+
+commit 60e8095f9fa54e50d1c5b92cca587b989e9a5533
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Thu Jul 24 11:09:00 2014 -0500
+
+    Update sponsor_raw_data.txt
+
+commit 638e344265976723e93741369599090d8cff54b3
+Merge: 8020256 dde5df1
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 15:55:41 2014 +0000
+
+    added generic views and set attributes for media class.
+
+commit 80202569c70673b4e12bc5d0c50499d8be515322
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 15:53:57 2014 +0000
+
+    changed to generic views and set attributes to media class
+
+commit dde5df1583417908ebcc7ed875bf251b2631f01f
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 01:58:46 2014 -0500
+
+    update sponsors template
+
+commit b4b8a00fc04824da396807785f2a7ab6a69440e7
+Merge: f93b4dd 92ad4f9
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 01:56:40 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit f93b4dd412fe25c5213e51ffd3aef8144fbc2567
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 01:56:20 2014 -0500
+
+    Phase 2 Models UML to reflect updates
+
+commit 92ad4f99e0d6dc358a3cdaa43e00368fd2d0dbc4
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 01:52:25 2014 -0500
+
+    update stages template
+
+commit 0669c2ec9849db04510544da2f77179e96f75eab
+Merge: 67c8034 c5349c1
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 01:47:40 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 67c80349b190b729161d82722d3d8674e1d936af
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 01:47:20 2014 -0500
+
+    artist template update fix wrong variable name
+
+commit c5349c121e915b2af6b75ca4034bc1934a7a937e
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 01:15:53 2014 -0500
+
+    Phase 2 Models UML corrected
+
+commit 5b4207774b93fa06b6cbedeb1a7e516c77a8ecba
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 24 01:11:39 2014 -0500
+
+    Phase 2 Models UML
+
+commit 522cd83e4f3401db335538a81413a6ff6958faa4
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 24 00:20:17 2014 -0500
+
+    updated ArtistPage view and artist template
+
+commit 3adea3f4affd7a70f5d55db20ba8de36329f8064
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:49:34 2014 -0500
+
+    update urls.py to name regex as pk
+
+commit 7f0d353c38d38c7a6236b40f436cd5f8008bc6bb
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:47:10 2014 -0500
+
+    forgot to update context_object_name misspelled
+
+commit a8630e3dbfb8387a94b5133af96a7abf2101141a
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:45:58 2014 -0500
+
+    forgot to update context_object_name
+
+commit f832626a879f93bc919dd5c3e9151fa5358498c5
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:43:41 2014 -0500
+
+    updated ArtistIndex and artists template
+
+commit 233094f5ce3d9fe5043df1d66abaafb5e573bf4f
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:22:13 2014 -0500
+
+    fixed href in artists template
+
+commit c8562f2443022e516428b108ab46dd55c5e100e9
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 23:15:18 2014 -0500
+
+    update artists template to use object_list for generic view
+
+commit d24e6ce2d15a1c58bbd069ff11d907c39927c2e8
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 03:34:21 2014 +0000
+
+    fixed up the views and urls
+
+commit 9aad596cc45c244380f06361af1c12c3d864f662
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 03:09:21 2014 +0000
+
+    added stages impl
+
+commit 6ee3dfd1d941b00017b0e0525bc90ea82e1378d5
+Merge: 74bf9c8 7c1f1de
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 03:00:28 2014 +0000
+
+    idb2
+
+commit 74bf9c8f447f614a60da9943b2ecc6fd5af10f8e
+Author: sandan <masandan91@gmail.com>
+Date:   Thu Jul 24 02:58:33 2014 +0000
+
+    version two dynamic
+
+commit 7c1f1de54bb4e673f61c25213b21a032b2440f3c
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 21:39:19 2014 -0500
+
+    unique charfields must be 255 or less in length
+
+commit 640dbd560dbca4e86583afdfce15b5cd31f4ee67
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 21:01:27 2014 -0500
+
+    fix errors with django rest framework
+
+commit ec341d9c463b0621215e391348bf1c718908ec05
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 17:48:23 2014 -0700
+
+    Updated stage's data
+    
+    Updated stage's data w/ proper spacing
+
+commit 30df02fff03ae9574601ade96fd3ddb1ca16abce
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 17:46:41 2014 -0700
+
+    Updated sponsor's data
+    
+    Updated sponsor's data w/ proper spacing
+
+commit c91e7b3bee55800959619db681eed5f954b6621b
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 17:45:40 2014 -0700
+
+    Updated artist's data
+    
+    Updated artist's data w/proper spacing
+
+commit dbf2e7db47f4e6dc6fef27fba1bd361a00dc527d
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 19:01:57 2014 -0500
+
+    Updated stage data
+    
+    Updated stage data to include all artists playing a stage
+
+commit 6ddc32aba8e7b50d399a4a6794d1a794963cad73
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 19:01:24 2014 -0500
+
+    Updated artist's data
+    
+    Updated artist's data to include: label, origin, genre, and stage.
+
+commit 34e743c2bd00a12ed72f83f3b8aaf21a32107c92
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 18:42:34 2014 -0500
+
+    updated raw stages data
+    
+    Changed 'Stage' to 'stage' after each sponsor to stick to conventions in other files
+
+commit 65d1ee0310820a58d8ce608f0243eb171b33c743
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Wed Jul 23 18:39:16 2014 -0500
+
+    Updated Sponsor data
+    
+    Updated sponsor data to include business type and stage
+
+commit a5ff2f28b6324b69e217daac51a5318c50908021
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 16:48:34 2014 -0500
+
+    adding rest_framework to isntalled apps
+
+commit 6f9ee636c033859ead1e87ffb6841d4ce6e48642
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 16:27:20 2014 -0500
+
+    added twitterwidget and youtubevideo to models.py. updated artist.html to use variables passed in instead of artist object
+
+commit 8be2d924d74dafd5b5ee00b6ab7bae005f39a56d
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 16:07:47 2014 -0500
+
+    changed models.py back. Added stylesheets for site. updated artist template
+
+commit 42e594143cecf80a3015a7105581384c2a93db89
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 15:16:26 2014 -0500
+
+    Modified models.py to have media inside Artist, Sponsor, Stage.
+
+commit 7cf329ed1eadb1d5a3bdd336163c871a45087704
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 23 15:06:22 2014 -0500
+
+    modified settings.py to use mysql instead of sqlite
+
+commit 88ca3f55e484f6cda4fa201182de1cf135254663
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Wed Jul 23 09:31:04 2014 -0500
+
+    Subclassed Media classes for each main class.
+
+commit ac2b94a7b335a128b61f84a45164f39cfeaa6bec
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:31:16 2014 -0500
+
+    Update models.py
+    
+    Changed Image to photo in media class also commented out the photo method in Artist
+
+commit fe0b73a7f7fa876cd0414cb0b70d045e9a92db14
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Tue Jul 22 20:19:53 2014 -0500
+
+    Updated phase 2 report
+    
+    Updated report for phase 2 to include new additions to pages, removal of member class and the creation of Media class that our previous photo class will fall into.
+
+commit ca6281689e8a963e10fa83a2d09e42a8a66d7972
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:16:17 2014 -0500
+
+    Update models.py
+    
+    Added foreign key relationships to other classes
+
+commit 8de5713b96445a527dbd6e4e5c30669661a9a351
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:15:36 2014 -0500
+
+    Update models.py
+
+commit 78335601d5636b13f1c31d2d695db2a1d4ca6f23
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:14:31 2014 -0500
+
+    Update models.py
+
+commit b520738735a6ef1ce5e6e5a8f4ee5fb65003e2f8
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:12:46 2014 -0500
+
+    Update models.py
+    
+    Changed model attributes.
+
+commit 1e43226bd1e94e42b6fa1dfeca5e1930f0132b89
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 20:09:04 2014 -0500
+
+    Update models.py
+    
+    removed Member and Photo. Added media class to hold media resources.
+
+commit 37243a0cf493feb8a0fbff4bdcd0d511b67eef50
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Tue Jul 22 19:32:09 2014 -0500
+
+    Added the loading script (parses but doesn't load into DB yet)
+
+commit 1d8db1c505657ee4c00d35540293d575e59a1a56
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Tue Jul 22 18:18:54 2014 -0500
+
+    adjusting serializer so that it accounts for updated model
+
+commit 9be45a2166a78f68d756c1e53f80f5948a187d41
+Merge: 7ff7b01 8efd011
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Tue Jul 22 18:16:26 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 7ff7b018dea452a03e61207117ce79356d45dc27
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Tue Jul 22 18:16:07 2014 -0500
+
+    adding api functionality
+
+commit 8efd0114813f962520a1f05d67ad322a03169443
+Merge: 361655e c479c93
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Tue Jul 22 23:11:27 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 361655e141b27b488b9cdcbd9a468d10b229fb9a
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Tue Jul 22 23:11:03 2014 +0000
+
+    updated files
+
+commit c479c93336bc29cc00f476b40a238e421c04f8df
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Tue Jul 22 18:09:05 2014 -0500
+
+    Update artist_raw_data.txt
+
+commit 8e8cd29f202eabdbaf4a48d37b7cdcd390a17573
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Mon Jul 21 23:25:46 2014 -0500
+
+    Took the liberty to change some artist pic links to higher def pictures and a few artists videos to more known hits
+
+commit a3a78d4b1ee99a1a41924218b5540fd9519bf574
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Jul 21 20:33:02 2014 -0500
+
+    Raw Data for stages
+    
+    Raw data for 7/10 stages
+
+commit 2647b693f8954c61bc35a29a81f7007a7674e15b
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Mon Jul 21 20:11:44 2014 -0500
+
+    Raw Data for sponsors
+    
+    Raw Data for 10/10 sponsors
+
+commit 889d951b9cd8c473f6d529d1bf40ea061033e5ed
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Mon Jul 21 19:28:26 2014 -0500
+
+    Finished gathering data for all artists
+
+commit e5265e2ce2dedfc97e5c06fcb96da2c07166376f
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Mon Jul 21 19:01:29 2014 -0500
+
+    Included more artist names in the artist raw data
+
+commit 83a5a8d3e5942ee05f0a05305f77bf8635609413
+Author: kylenicola <kylenicola@users.noreply.github.com>
+Date:   Mon Jul 21 18:53:05 2014 -0500
+
+    Update apiary.apib
+
+commit 858a47694ad975c265760ed1584677aee2c0ea50
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Mon Jul 21 18:32:50 2014 -0500
+
+    Added the raw data for artists (incomplete, will finish tonight)
+
+commit 552338fe3307de6fbf0831da5ca939d2864e432f
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Mon Jul 21 17:57:24 2014 -0500
+
+    added dynamic templates
+
+commit 29cb8dfe05d08f1df04920f7d15a357d1653ed52
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Jul 14 21:58:30 2014 -0500
+
+    Update README.md
+
+commit b156085c0673667850f637dd5ce39ac76c82e31b
+Author: Mark Sandan <msandan@utexas.edu>
+Date:   Mon Jul 14 21:58:12 2014 -0500
+
+    Create README.md
+
+commit d5a083166ec4d75254e85949ff476363d19ff80c
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:57:09 2014 +0000
+
+    project folder with cs373 django application
+
+commit 2c044fa9ab1f9eed58be949669c1e3819bc5ff80
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:55:40 2014 +0000
+
+    reset
+
+commit 966291a389adc138a790d08e9cf277ccbc1c5e25
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:49:37 2014 +0000
+
+    project folder with the cs373 application
+
+commit 4888ab33dae5c379990e36f0cd268341fe3f258b
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:48:42 2014 +0000
+
+    resetting
+
+commit 079ea873413b462e2dc37cb5a2a1d582e00b1a00
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:35:12 2014 +0000
+
+    app files
+
+commit e70c1ad0f95c1aa832d5f30444e5d9b702a699a3
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:24:04 2014 +0000
+
+    project folder including cs373 app
+
+commit b49acda50addbcaba302a02ab75d95f2d8a82e38
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:22:14 2014 +0000
+
+    project folder including cs373 app
+
+commit ed068a94f8de0585a7bd285e1d59d52fd2ba3eb2
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:14:54 2014 +0000
+
+    app files
+
+commit b3fffec624aafd9b5ebd390524e9ca220e76dbb6
+Merge: eea9979 e32da26
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:13:42 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit e32da26b01768fa77dbd08285978cc86b1994a44
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:05:40 2014 +0000
+
+    project folder
+
+commit eea99796e7f646ca8f50baf73c2363b0563326ba
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 02:01:17 2014 +0000
+
+    app in mysite/cs373
+
+commit 892ed7aa13fb96991afc5a939d7cb1a55bc8c4e2
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 01:47:43 2014 +0000
+
+    project folder
+
+commit 5df5dcebe3ab00cc7b2c1778087d12fb75538cd2
+Author: sandan <masandan91@gmail.com>
+Date:   Tue Jul 15 01:42:02 2014 +0000
+
+    project folder including the cs373 app
+
+commit de7440158f4b584c5123e3d2cbd302dfa3a4b2d6
+Author: sandan <msandan_91@msn.com>
+Date:   Fri Jul 11 01:06:43 2014 +0000
+
+    github SHA of project
+
+commit 38303b58abaa7b7707b039360a15e85d3c2a5f6e
+Author: sandan <msandan_91@msn.com>
+Date:   Fri Jul 11 01:04:31 2014 +0000
+
+    commit log
+
+commit 7f5cec2d0f4a8795a5d47983251e55936bc3018c
+Author: sandan <msandan_91@msn.com>
+Date:   Fri Jul 11 01:02:49 2014 +0000
+
+    models.html using Tyler's technique
+
+commit d381186f544520f85ac63308e0e7a7de48486aa4
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Thu Jul 10 19:49:01 2014 -0500
+
+    Proofread technical report.
+
+commit 49038f46212dbbabcf21b1262b99ed119397994b
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 19:11:51 2014 -0500
+
+    Updated to fix dead youtube link
+
+commit 79a6cc234d6d73a9678b913752313a566f17593f
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 19:11:10 2014 -0500
+
+    Updated to fix dead youtube link
+
+commit 2ebdf0acbb9f71a8ae6e0337998c83096cd0b819
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 19:10:38 2014 -0500
+
+    Updated to fix dead youtube link
+
+commit 5937cb2fa6b2ceb64ca04df4acc40e8c39d83a91
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 19:10:17 2014 -0500
+
+    Updated to fix dead youtube link
+
+commit 1c9044278c55e8002eedd551de46957189839391
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 19:09:33 2014 -0500
+
+    Updated to fix youtube channel link
+
+commit 2ac7ba21bacc78a490209e51cb04fb897a7ba1fc
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Thu Jul 10 19:04:18 2014 -0500
+
+    added the repo link
+
+commit eb25b46193079003520c6447d54a9a1a3538fb4e
+Merge: d040a17 95ace1b
+Author: sandan <msandan_91@msn.com>
+Date:   Thu Jul 10 23:48:43 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit d040a17efa0a6b5a20d5558289b5d7a65313e8f5
+Author: sandan <msandan_91@msn.com>
+Date:   Thu Jul 10 23:47:03 2014 +0000
+
+    pydoc for models.html
+
+commit 95ace1b59ae25f7988d28b6f13259d355a175ed8
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 10 18:39:59 2014 -0500
+
+    updated html links
+
+commit 83e535d3ee2149991069a0088cd2be01677b469d
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 18:24:25 2014 -0500
+
+    Changed title of page to Sponsors (was Stages)
+
+commit 70ff483f2dc1d95b1913ec112841c01726633351
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Thu Jul 10 18:09:57 2014 -0500
+
+    woops, forgot to unedit out the import
+
+commit ba968ee5cf0502f7e719367ff774aa19a0b6a74e
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Thu Jul 10 18:08:42 2014 -0500
+
+    adding descriptions to classes and all the functions
+
+commit f0bf2a77b6ad1c9fc2ca7cc9f60d47b6f6329928
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Thu Jul 10 17:52:59 2014 -0500
+
+    making sure all things are referenced the same way
+
+commit be638a2e5a67fe6460af08f995be01ef6413607a
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 17:28:36 2014 -0500
+
+    Updated miller-lite.html to fix unicode error
+
+commit dcf73613f1cf7a46b5fbabf51e90963407cb8112
+Merge: 3f6a2aa 03c362e
+Author: sandan <msandan_91@msn.com>
+Date:   Thu Jul 10 22:15:35 2014 +0000
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 3f6a2aa6c30e0089b27dab4db7b57e1a2897664f
+Author: sandan <msandan_91@msn.com>
+Date:   Thu Jul 10 22:14:51 2014 +0000
+
+    tests.out output from tests.py
+
+commit 03c362e7116c056bdf645aaed28246508c0a3b92
+Author: Stephen Ridings <SRidings777@aol.com>
+Date:   Thu Jul 10 16:56:21 2014 -0500
+
+    Update outkast.html
+    
+    Updated outkast.html with fixes for unicode error
+
+commit e958eaf68dbaead3d62598c5f79904441b79e166
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Thu Jul 10 16:53:54 2014 -0500
+
+    Updated Outkast.html to resolve unicode error
+
+commit db191a2d756dde65b1dfdcf86558c9cbf3926043
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Thu Jul 10 16:41:40 2014 -0500
+
+    tenth draft of report.
+
+commit 01404eb54512ce78472becb781fe1eb2eef6d5c4
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Thu Jul 10 15:33:50 2014 -0500
+
+    9th draft with Stephen and Sheeyla's edits
+
+commit 38c0cd2265b11b31c797ea112da71e5b614e2534
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Thu Jul 10 15:06:02 2014 +0000
+
+    udated template urls. Updated views to serve the static files.
+
+commit faa1f9ca623ea0c911f63f85b36a55c9095102e5
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Wed Jul 9 23:16:26 2014 -0500
+
+    All static HTML pages with updated formatting for mobile resolves #4 resolves #6 resolves #7
+
+commit 4535dadfc4545ce445e36d649daeee3cb137c209
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Wed Jul 9 19:49:33 2014 -0500
+
+    Updated Report.tex to include an Extension section
+
+commit b6ed630f416884a150acad709ce1122c4e0201d5
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Wed Jul 9 19:23:11 2014 -0500
+
+    eigth draft report with pdf.
+
+commit 54e2ff69840da62b916e3dfe57f5602efb40d02a
+Merge: f16f785 62285e3
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Wed Jul 9 19:06:44 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit f16f785b264dfc2824055fac68d380e770aec771
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Wed Jul 9 19:06:33 2014 -0500
+
+    seventh draft report. Included Kyle's Apiary documentation.
+
+commit 62285e33892976992fb9cb0b37368a1234d40ec7
+Merge: ba21b81 66c7247
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Wed Jul 9 18:18:32 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit ba21b8188b15cca8b4a97e225c61a48671e02950
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Wed Jul 9 18:18:23 2014 -0500
+
+    Stephen's tech report edits for WEB DESIGN (Begin line 51)
+
+commit 66c7247c68a1b6640e69c9e8989a91f8b7c7729b
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 9 23:03:21 2014 +0000
+
+    added more tests
+
+commit edb9c60c9d85051f593906b8d5a30866ff94044c
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Wed Jul 9 17:29:23 2014 -0500
+
+    Current splash page
+
+commit 3fbc55017965e451fc0b1a9a93ac55a57b6bd749
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Wed Jul 9 00:21:12 2014 -0500
+
+    sixth draft of Tech Report
+
+commit fe49645d1c8d9b5482b63bf59d0badb793a49016
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Tue Jul 8 23:23:26 2014 -0500
+
+    Modified UML
+
+commit 0bc0ffd6004f6258124f1733e346803dc670ac84
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Tue Jul 8 22:24:05 2014 -0500
+
+    deleting Events model because it isn't going to be used (i think)
+
+commit e7a9eb78b7ac219c36645a1a641435c482aab440
+Merge: 20c2e91 12e685d
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Tue Jul 8 21:36:51 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 20c2e91cc00144df330bda8d748f897543f29fd2
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Tue Jul 8 21:36:42 2014 -0500
+
+    fifth draft of Tech report with pdf.
+
+commit 12e685dae7e54b879f1632ff0939edf4380877f6
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 9 02:23:23 2014 +0000
+
+    modified urls.py and views.py to match the api
+
+commit 6310f965215a41f60e980ec7fcdc07c66c8f0601
+Merge: 077db57 e05cc46
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Tue Jul 8 21:17:19 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit 077db57030aa7893a25f3583f7b6e2730ed6b995
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Tue Jul 8 21:17:09 2014 -0500
+
+    modified UML diagrams
+
+commit e05cc4669b6b267647ac47befbfb9b28b5e86b44
+Merge: 88b893b 2bf8499
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Tue Jul 8 21:16:13 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 88b893b5f6fda2d75cf285e39cf3d903f2ea593c
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Tue Jul 8 21:15:15 2014 -0500
+
+    4th draft of Tech report with pdf.
+
+commit 2bf8499a654b05218ef5cc8f11d9e67d901495fc
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Tue Jul 8 21:14:16 2014 -0500
+
+    added UML diagrams
+
+commit 0017de7162427d8b53d94afd18264c81be9e5436
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 20:38:12 2014 -0500
+
+    Updating the API from kyle's project API
+
+commit d2c4d1f96c005451bde8e6eacd87411d50ae8b35
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 9 01:23:40 2014 +0000
+
+    added unit tests for some of the models
+
+commit 643540d956cf8c4200116f0e15fa1b7a24f1be54
+Author: Carlos Andres Rodriguez <cyberthug@users.noreply.github.com>
+Date:   Tue Jul 8 20:05:39 2014 -0500
+
+    Fixed the Event str method.
+
+commit 5e88f7e7b1ae59d99b5f64b0f40bad43cc496592
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Tue Jul 8 20:04:12 2014 -0500
+
+    Update aclMarket.html
+
+commit fc12a6764b72a268cd101f017426f2f87cb381ea
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Tue Jul 8 20:03:52 2014 -0500
+
+    Update aclEats.html
+
+commit c7c45bf5a7393940270c914a1210b2c3565e5153
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Tue Jul 8 20:03:31 2014 -0500
+
+    Update aclKiddie.html
+
+commit eb6b55c54adc8765c8e644e6ccdff85bd1da1b5c
+Author: Carlos Andres Rodriguez <cyberthug@users.noreply.github.com>
+Date:   Tue Jul 8 19:43:51 2014 -0500
+
+    Added the Event model to models.py
+
+commit 1128a6e37377bf91c1be3f83c62ccec4ede1723f
+Author: GarciaSheeyla <sayla2691@utexas.edu>
+Date:   Tue Jul 8 19:37:29 2014 -0500
+
+    Updated class names to match api naming convention
+
+commit fe3e6a1e80dca0cd0812363ed885e215d98c2852
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:32:31 2014 -0500
+
+    Fixing GET,POST for Artist Collection
+
+commit 4817d10e271493b0224bdec7e87a0539cbd721be
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:31:11 2014 -0500
+
+    Adding Artist collection
+
+commit d88c26d5602581e0fd46d9dfdba14c87a4236df1
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:30:06 2014 -0500
+
+    Adding Artist collection
+
+commit b902413377f8a2dc83f26af552d9e2b639a01683
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:25:59 2014 -0500
+
+    Fixing GET Response Body
+
+commit 3c24aefc4a44c9f9226e479282f627aedef99369
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:23:36 2014 -0500
+
+    fixing up GET, POST, DELETE for Artist
+
+commit 29faf1083948df2f99d5f6679bb28aacbf377c4d
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Tue Jul 8 17:21:33 2014 -0500
+
+    Transferring blueprint from apiary.io- current API
+
+commit c06577f1095aaa4011fcbc47ea77c08bfe6d3502
+Merge: af31d7e 6996cae
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Mon Jul 7 21:57:03 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit af31d7e7e84e43ca27d1e88439bc840a92d6297d
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Mon Jul 7 21:56:40 2014 -0500
+
+    third draft tech report
+
+commit 6996cae08bcaee50988754e129ae70f95403334e
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Tue Jul 8 01:49:28 2014 +0000
+
+    unit tests added
+
+commit 362b762a380168bb712e49eea836d47a84571c34
+Author: Sheeyla Garcia <sayla2691@utexas.edu>
+Date:   Mon Jul 7 20:47:12 2014 -0500
+
+    created html files for events #5
+
+commit 15684c0440023c689b2415bf76305f8ae31e29e9
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Mon Jul 7 20:35:36 2014 -0500
+
+    Made get functions for the Stage, Sponsor and Artist classes in models.py
+
+commit 2cab664bc8331fe466b89d9fecc2d5a8badab27a
+Merge: 32fddf9 fe669d1
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Jul 7 20:06:02 2014 -0500
+
+    Merge branch 'master' of github.com:sandan/cs373-idb
+
+commit 32fddf95945cf5873021b14876e3443aad678c01
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Jul 7 20:05:35 2014 -0500
+
+    Updated static html pages - 3 artists, 2 sponsors (no miller lite)
+
+commit fe669d1380df3b5a6828b369d7b85c45bc3132d8
+Author: Carlos A. Rodriguez <car3564@utexas.edu>
+Date:   Mon Jul 7 19:50:46 2014 -0500
+
+    Cleaned up some code in models.py so it looks more organized and it's easier to read
+
+commit 3b4e53c59138de92ba336e0cad94163e158be962
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Mon Jul 7 23:48:38 2014 +0000
+
+    have 3 sponsors
+
+commit fa42d91034f3cc2f054aaacb7d3e18d7a0ef7530
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Mon Jul 7 23:44:32 2014 +0000
+
+    added artists and stages main page
+
+commit f689e2227b409919ffb8c91761d337e54d485e7c
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Mon Jul 7 23:39:41 2014 +0000
+
+    added 2 sponsors and modified view and urls to be more generic
+
+commit 5f77108a327c6a5a12f786a197ad3ae7db7a3e6d
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Jul 7 18:16:40 2014 -0500
+
+    updated static html page for Pearl Jam
+
+commit 3723f5ac99a86cf5620a2cc494ba5f2f1211f8d7
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Jul 7 18:03:19 2014 -0500
+
+    Updated static html page for Pearl Jam
+
+commit 743672c35f00caa3e58ec11cb9c191d983458c41
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Mon Jul 7 17:38:54 2014 -0500
+
+    Static html page for Pearl Jam
+
+commit 1471f1e5b7363bbbfcd31989f65701c525bddb8c
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Mon Jul 7 22:26:52 2014 +0000
+
+    simple home page with a nav bar
+
+commit 5d8d197d66a177d82fc8631183affd0e507bed3c
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Sun Jul 6 18:10:40 2014 -0500
+
+    second draft of tech report
+
+commit 7e26f4857c0e436fc4f96e6fe68f81efa479bde8
+Author: Mark <mas5774@cs.utexas.edu>
+Date:   Sun Jul 6 17:53:23 2014 -0500
+
+    first technical draft report
+
+commit ace58590fe9e63449c5ab8427ddd8ab7844b0af0
+Author: Mark Sandan <masandan91@gmail.com>
+Date:   Sun Jul 6 14:33:59 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 8a6513f86f41b9bb87db3faf68efb323a68c46f9
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sun Jul 6 14:27:58 2014 -0500
+
+    used pep8 naming convention to rename Artist_Photo->ArtistPhoto
+
+commit ca4473c7a555427355229da55f76e6900983dfd1
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Sun Jul 6 14:01:20 2014 +0000
+
+    simple static page example using bootstrap
+
+commit 6589b46c0576c90db5bd3364cf29f8562c660e8c
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sun Jul 6 08:54:58 2014 -0500
+
+    moving files
+
+commit 5002cc640903d18f302a2a6225fc1899acf1f921
+Merge: c35aec7 588affb
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sun Jul 6 08:40:33 2014 -0500
+
+    moved things to folder, added back in acl data
+
+commit 588affbd44ef365fb66d5386364e5262e37749be
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sun Jul 6 08:31:48 2014 -0500
+
+    added folders, readded data
+
+commit c35aec7975a367be2a15a7f52217211ac0d523a8
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Sun Jul 6 05:16:44 2014 +0000
+
+    added django app files. Using existing models.py
+
+commit 6634426c643fd98503e51fb1405c8d0cec647a6b
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sat Jul 5 20:22:24 2014 -0500
+
+    renamed things, changed stage/sponsor relationship
+
+commit 7095eb1a29ac624d982d200b8c91c80d420b364a
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sat Jul 5 18:40:47 2014 -0500
+
+    making sure some fields are unique
+
+commit febeb9b20b02ac856b478e305099945392b6e1df
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sat Jul 5 18:36:10 2014 -0500
+
+    change unicode functions to str and commented out the ImageFields
+
+commit 147b98d1170299177352bcaf9c587b0eae123070
+Merge: 52eaff5 160d06d
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sat Jul 5 18:33:33 2014 -0500
+
+    Merge branch 'master' of https://github.com/sandan/cs373-idb
+
+commit 52eaff5e6aff70d2fb2a99ac0ec1eba2ef68f991
+Author: Kyle Nicola <kyle.a.nicola@gmail.com>
+Date:   Sat Jul 5 18:33:15 2014 -0500
+
+    created the models for our app
+
+commit 160d06dc9055400020c156cdce187d67af4bcb7a
+Author: Kyle Nicola <kyle.a.nicola@utexas.edu>
+Date:   Sat Jul 5 21:00:56 2014 +0000
+
+    okay, last time i'm deleting this...maybe.
+
+commit f0db5bee610cdc863fe97c77842301b403cda4ae
+Author: Kyle Nicola <kyle.a.nicola@utexas.edu>
+Date:   Sat Jul 5 20:47:20 2014 +0000
+
+    readding project to use more recent versions of django/python
+
+commit 65ab339236bd4bdb8a13b1617746862883259ddc
+Author: Kyle Nicola <kyle.a.nicola@utexas.edu>
+Date:   Sat Jul 5 20:44:54 2014 +0000
+
+    deleting project so we can use more recent version
+
+commit 098cfe8fa4844d7213e5a8014c302bf96e4359ff
+Author: Kyle Nicola <kyle.a.nicola@utexas.edu>
+Date:   Sat Jul 5 20:38:38 2014 +0000
+
+    Adding theaustinites project to our github account
+
+commit 6d148641ada22279f2586c2c1bb049f3f982dd7b
+Author: Stephen Ridings <sridings777@aol.com>
+Date:   Wed Jul 2 19:07:37 2014 -0500
+
+    Data for 3 sponsors, artists, and events
+
+commit 3930108432231d3c2ae240cac6f73b3d8533f761
+Author: Jesus Hernandez <jesushernandez@utexas.edu>
+Date:   Wed Jul 2 18:51:10 2014 -0500
+
+    h6779 artist and sponsor info
+
+commit 8a48b636c770cfda3fdfd41d47226066da64aa2d
+Author: Carlos Andres Rodriguez <cyberthug@users.noreply.github.com>
+Date:   Tue Jul 1 14:03:35 2014 -0500
+
+    Updated README
+    
+    Fix some alignment issues.
+
+commit 5f297be73cc365de9294c8565764a93c9c231cd3
+Author: Carlos Andres Rodriguez <cyberthug@users.noreply.github.com>
+Date:   Tue Jul 1 14:00:34 2014 -0500
+
+    Created README
+    
+    README includes requirements, responsibilities and other assignment information.
